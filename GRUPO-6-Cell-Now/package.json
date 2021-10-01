@@ -1,0 +1,22 @@
+{
+  "name": "grupo-6-cell-now",
+  "version": "1.0.0",
+  "description": "tienda de celulares",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alejandrolederman/GRUPO-6-Cell-Now.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alejandrolederman/GRUPO-6-Cell-Now/issues"
+  },
+  "homepage": "https://github.com/alejandrolederman/GRUPO-6-Cell-Now#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
