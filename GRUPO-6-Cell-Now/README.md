@@ -1,9 +1,14 @@
 # GRUPO-6-Cell-Now
-tienda de celulares 
 
-● En esta web no solo podras comprar celulares, sino que podras acceder a toda la informacion necesaria para que pueda elegir la mejor opcion segun tus nececidades. Contara con enlaces a las mejores review de los mas destacados yutubers. Y desarroyaremos una seccion muy novedosa que te recomendara el equipo mas coveniente segun las respuesta de un breve cuestionario.
+
+● Nuestra web esta destinada a la comercializacion de celulares.
+ 
+
+● En esta web no solo podrás comprar celulares, sino que podrás acceder a toda la información necesaria para que pueda elegir la mejor opción según tus necesidades. Contara con enlaces a las mejores review de los mas destacados yutubers. Y desarrollaremos una sección muy novedosa que te recomendara el equipo mas conveniente según las respuesta de un breve cuestionario.
 
 ● Este equipo cuenta con los mejores integrantes que se pudieron elegir de forma random  JAJAJAJA :)
+    
+    
     - Alejandro Lederman 
          Mail: alejandro.lederman@live.com.ar
     
