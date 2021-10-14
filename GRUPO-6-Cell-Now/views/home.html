@@ -5,28 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/99d2f24388.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" />
+<style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');</style>
+
     <title>mas que solo celulares</title>
 </head>
 <body>
     <header class="main-header">
-        <img src="/img/LOGO CELL NOW.jpg" class="logo" alt="imagen">
+        <div class="main-header-top-bar">
+            <img src="/img/LOGO CELL NOW.jpg" class="logo">
         
         <div class="form" action="#" method="GET">
-            <div class="input">Busca lo que quieras </div>
+            <div class="input">Busca lo que quieras...</div>
         </div> 
+           
+        <h3 class="menu-right-header">
+            <i class="fas fa-user">Usuario</i>
+            <i class="fas fa-shopping-cart"></i>
+            <i class="fas fa-question-circle"></i>
+        </h3>
 
-        <div class="copy-header">
-            <div><i class="fas fa-user">Usuario</i></div>
-            <div><i class="fas fa-shopping-cart"></i></div>
-            <div><i class="fas fa-question-circle"></i></div>
-        </div>
-    </header>
+    </header>  
 
     <main>
-        <section>
-        <div class="main-navbar">
-            <ul class="left-navbar">
+    <nav class="main-navbar-left">
+        <div class="list-left">
+                <ul class="left-navbar">
                 <h2>¿ que celular estas buscando?</h2>
                 <li><a href="#">por marca</a></li> 
                 <li><a href="#">por precio</a></li> 
@@ -35,25 +41,34 @@
                 <li><a href="#">por reseña</a></li>
                 <li><a href="#">por ubicacion</a></li>
             </ul>
+        </div>
+    </nav>
+        <div>
+            <img src="/img/LOGO CELL NOW.jpg" class="imagen-main" alt="imagen">
+        </div>
+        <nav class="main-navbar">
+        <div class="list-right">
             <ul class="right-navbar">
                 <h2>mi cuenta</h2>
                 <li><a href="#">ultimos vistos por mi</a></li> 
                 <li><a href="#">mas vistos por mi</a></li> 
+            </ul>
 
+            <ul class="right-navbar">
                 <li><a href="#">mis favoritos </a></li>
                 <li><a href="#">mis reseñas </a></li>
+            </ul>
 
-
+            <ul class="right-navbar">
                 <li><a href="#">ayudanos a mejorar </a></li>
                 <li><a href="#">pociones de usuario </a></li>
             </ul>
         </div>
-        </section>
-
-
-
-
-
+        </nav>
+ 
     </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
