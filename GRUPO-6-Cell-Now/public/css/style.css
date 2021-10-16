@@ -18,9 +18,7 @@ h3{
 }
 
 .main-header{
-    background-image: url(/img/muchos-celulares.jpeg);
-    background-size: contain;
-    background-color: #f0bf83;
+    background: #2596be;
     padding: 30px;
     font-size: 12px;
 }
@@ -40,10 +38,16 @@ h3{
 .menu-right-header{
     font-weight: 400;
     text-align: right;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-items: center;
+}
+h3 i{
+    margin: 0 10px;
 }
 
 .form{
-    flex-grow: 1;
+    flex-grow: 0.6;
 }
 
 header .form .input{   
@@ -63,16 +67,14 @@ header .form .submit{
 }
 
 main{
-    background-color:#EEF739 ;
     width: 100%;
     padding: 15px;
     font-size: 12px;
     display: flex;
-    align-self: center;
-   
+    justify-content: space-between;   
 }
 
-  ul{
+ul{
     list-style: none;
     margin: 0;
     padding: 0;
@@ -91,11 +93,13 @@ main{
     text-decoration: none;
     color: #222222;
     display: inline-block;
-    padding: 5px 0;
-   
-    
+    padding: 10px 0;    
 }
 
 .main-navbar-right{
-    margin-right: -15px;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+   width: 254px;
+   text-align: end;
 }
