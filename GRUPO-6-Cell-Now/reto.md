@@ -1,0 +1,1 @@
+el primer esprin no presento grandes complicaciones, pero creemos que podriamos haber colocado mas color y mas contenido a los wireframes

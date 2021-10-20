@@ -6,7 +6,8 @@
 
 body{
     font-family: "Roboto";
-    background-color: #ebebeb;   
+    background-color: #ebebeb; 
+    width: 100%;  
 }
 
 p{
@@ -27,7 +28,8 @@ h3{
     display: flex;
     flex-wrap: nowrap;
     justify-content:space-between;
-    
+    align-items: center;
+    align-content: center;
 }
 
 .logo{
@@ -42,21 +44,22 @@ h3{
     flex-wrap: nowrap;
     justify-items: center;
 }
+header .form .input{
+    background-color: #FFF;
+    border: 1px solid #000;
+    outline: none;
+    color: #666;
+    width: 100%;
+    padding: 10px;
+    margin: 40px 5px;  
+}
+
 h3 i{
     margin: 0 10px;
 }
 
 .form{
     flex-grow: 0.6;
-}
-
-header .form .input{   
-    background-color: #FFF;
-    border: 1px solid #000;
-    outline: none;
-    color: #666;
-    padding: 5px;
-    margin: 50px 5px;  
 }
 
 header .form .submit{
@@ -74,6 +77,12 @@ header .form .submit{
     justify-content: space-between;   
 }
 
+.main-first-second{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 ul{
     list-style: none;
     margin: 0;
@@ -81,7 +90,7 @@ ul{
 } 
 
 .main-navbar-left, .main-navbar-right{
-    border: #000 solid 5px;
+    
     margin: 5px;
 }
 
@@ -91,7 +100,6 @@ ul{
 
 .right-navbar a, .left-navbar a{
     text-decoration: none;
-    color: #222222;
     display: inline-block;
     padding: 10px 0;    
 }
@@ -103,4 +111,48 @@ ul{
    width: 254px;
    text-align: end;
 }
+.main-first-comprar{
+    width: 100%;
+    padding: 15px;
+    font-size: 12px;
+    display: flex;   
+}
 
+.boton-comprar{
+    background-color: #39b54a;
+    border:none;
+    color: white;
+    font-size: 20px;
+    padding: 5px 10px;
+    border-radius: 15px;
+}
+
+.article-comprar{
+    border: solid red 5px;
+    display: flex;
+    flex-wrap: nowrap;
+}
+nav  div {
+    border:green solid 5px;
+    margin: 0 15px;
+}
+.description{
+    border: turquoise solid 10px;
+}
+article{
+    border: solid red 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 90%;
+    padding: 100px;
+    justify-content: space-between;
+
+}
+
+main div{
+    margin-right: 15px;
+}
+
+.no-disponible{
+    width: 210px;
+}

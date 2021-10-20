@@ -29,3 +29,8 @@
 > https://cell-mundo.com
 > https://www.stylestore.com.ar/tecno/celulares
 > https://tienda.movistar.com.ar
+
+
+
+link de trello:
+https://trello.com/alejandro50749293/boards
