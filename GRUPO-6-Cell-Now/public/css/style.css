@@ -50,11 +50,11 @@ text-decoration: none;
 header .form .input{
     background-color: #FFF;
     border: 1px solid #000;
-    outline: none;
+    
     color: #666;
     width: 100%;
     padding: 10px;
-    margin: 40px 5px;  
+    margin: 40px 0;  
 }
 
 h3 i{
@@ -193,10 +193,15 @@ main div{
     }
 }
 
-@media(max-width: 450px){
+@media(min-width: 768px){
 
-    .main-first-second{
-        justify-content: center;
-    }
-
+    .main-header-top-bar{
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: center;
+        }
+    
+    
 }
