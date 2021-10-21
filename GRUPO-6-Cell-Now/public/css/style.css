@@ -35,7 +35,7 @@ text-decoration: none;
 }
 
 .menu-right-header{
-    font-size: 50px;
+    
     text-align: right;
     display: flex;
     flex-wrap: nowrap;
@@ -50,7 +50,6 @@ text-decoration: none;
 header .form .input{
     background-color: #FFF;
     border: 1px solid #000;
-    
     color: #666;
     width: 100%;
     padding: 10px;
@@ -162,7 +161,7 @@ main div{
     width: 210px;
 }
 
-@media(max-width: 360px){
+@media(max-width: 366px){
    
     .menu-right-header h3 i{
        display: none;
@@ -181,6 +180,12 @@ main div{
     align-content: center;
     }
 } 
+
+@media(max-width: 450px){
+    .main-first-second{
+        justify-content: center;
+    }
+}
 
 @media(max-width: 632px){
 
@@ -201,6 +206,10 @@ main div{
         justify-content: space-around;
         align-items: center;
         align-content: center;
+        }
+
+        div .menu-right-header i{
+            size: 5px;           
         }
     
     
