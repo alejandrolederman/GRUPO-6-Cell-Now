@@ -17,28 +17,27 @@
     <header class="header-login">
        <nav class="busqueda">
             <img src="/img/LOGO CELL NOW.jpg" class="logo-login">
-       
-       
-        
-        
-            <div class="form" action="#" method="GET">
-                <div class="input">Busca lo que quieras</div>
-                <div class="submit"><i class="fa fa-search"></i></div>    
-                
-              
-             <i class="fas fa-user"></i>
-             <span>username</span>
-             <i class="fas fa-shopping-cart"></i>
-             <i class="far fa-question-circle"></i>
-             
+             <section class="search">
+                         
+               
+                    <!-- <div class="form" action="#" method="GET"> -->
+                    <!-- <section class="buscar"> -->
+                        <input type="text" name="nombre" placeholder="Busca lo que quieras" class="input">
+                         <!-- <div clas= "lupa"><i class="fa fa-search"></i></div>
+                    </section> -->
+                 <i class="fas fa-user"></i>
+                <span>username</span>
+                <i class="fas fa-shopping-cart"></i>
+                <i class="far fa-question-circle"></i>       
+              </section>     
            
-            </div>
+           
         </nav>
          <div class="nombre">
             CELLNOW.COM
          </div>
     </header>
-    <main>
+    <main class="main-login">
       <div class="main-left">
         <h3>Qué celu buscas?</h3>
         <ul>
@@ -47,20 +46,22 @@
             <li><a href="#">Por gama</a></li>
             <li><a href="#">Por año de salida</a></li>
             <li><a href="#">Por reseñas</a></li>
-            <li><a href="#">Por ubicacion</a></li>
+            <li><a href="#">Por ubicación</a></li>
         </ul>
         <h3>Ayudame a buscar!</h3>
       </div>
-      <div> 
+      <div class="main-right"> 
         <h1>BIENVENIDO</h1>
-        <form action="/" method="post">
-            <label for="user"> NOMBRE DE USUARIO</label>
-            <input type="text" name="user" required minlength="8" requiere maxlength="16">
-            <label for="password"> CONTRASEÑA</label>
-            <input type="password" name= "clave">
-            <button name= "button"> INGRESAR</button>
-        </form>
-       </div>
+        
+            <h2>NOMBRE DE USUARIO</h2>
+            
+            <input type="text" name="user" required minlength="8" requiere maxlength="16" placeholder="mínimo 8 carácteres" class="usuario">
+           <h2>CONTRASEÑA</h2>
+            <input type="password" name= "clave" placeholder="mínimo 8 carácteres alfanuméricos" required minlength="8" class="contraseña">
+            <div>
+            <button class="button" name= "button"><span> INGRESAR</span></button>  </div>   
+       </d
+       iv>
 
     </main>
     <footer>

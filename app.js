@@ -12,21 +12,21 @@ app.listen (port, ()=>{
 });
 
 app.get("/", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/home.html"))
- }) ;
-
- app.get("/views/comprar.html", (req, res)=>{
-     res.sendFile(path.resolve(__dirname, "./views/comprar.html"))
- }) ;
-
- app.get("/views/login.html", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/login.html"))
-}) ;
+ }) ;
 
-app.get("/views/formulario-registro.html", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/formulario-registro.html"))
-}) ;
+//  app.get("/views/comprar.html", (req, res)=>{
+//      res.sendFile(path.resolve(__dirname, "./views/comprar.html"))
+//  }) ;
 
-app.get("/views/carrito-de-compras.html", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/carrito-de-compras.html"))
-}) ;
+//  app.get("/views/login.html", (req, res)=>{
+//     res.sendFile(path.resolve(__dirname, "./views/login.html"))
+// }) ;
+
+// app.get("/views/formulario-registro.html", (req, res)=>{
+//     res.sendFile(path.resolve(__dirname, "./views/formulario-registro.html"))
+// }) ;
+
+// app.get("/views/carrito-de-compras.html", (req, res)=>{
+//     res.sendFile(path.resolve(__dirname, "./views/carrito-de-compras.html"))
+// }) ;
