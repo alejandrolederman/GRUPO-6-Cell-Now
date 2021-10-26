@@ -19,7 +19,7 @@ h3{
 }
 
 .main-header{
-    background: #2596be;
+    /* background: #2596be; */
     padding: 30px;
     font-size: 12px;
 }
@@ -359,6 +359,9 @@ main div{
      color: white;
  }
  h2, h2 a{
+     color: white;
+ }
+ .product{
      color: white;
  }
 
