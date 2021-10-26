@@ -358,6 +358,9 @@ main div{
  i{
      color: white;
  }
+ h2, h2 a{
+     color: white;
+ }
 
 @media(max-width: 366px){
 
