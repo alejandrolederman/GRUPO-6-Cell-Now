@@ -16,6 +16,7 @@ p{
 
 h3{
     font-size: 24px;
+    padding: 0.3%;
 }
 
 .main-header{
@@ -161,6 +162,54 @@ main div{
     width: 210px;
 }
 
+#submit,
+#reset {
+    font-weight: 300;
+    background-color: white;
+    height: 25px;
+    transition: 250ms;
+    border: #666;
+    padding-bottom: 5px;
+    border-radius: 5px;
+    margin-left: auto;
+    width: 100%;
+    margin-right: auto;
+    align-content: center;
+    justify-content: center;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+}
+
+input.submit:hover {
+    background-color: #1259c3;
+}
+footer {
+    text-align: center;
+}
+.box.submit:hover {
+    background-color: #1259c3;
+    border: none;
+    height: 25px;
+}
+.box.reset:hover {
+    background-color: #1259c3;
+    border: none;
+    height: 25px;
+}
+
+.register-total {
+    padding: 2%;
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 60%;
+    align-items: center;
+   }
+
 @media(max-width: 366px){
    
     .menu-right-header h3 i{
@@ -179,13 +228,29 @@ main div{
     align-items: center;
     align-content: center;
     }
-} 
-
+    
+    .register {
+    background-color: #ebebeb;
+    font-size: 12px;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-evenly;
+    }
+    .register-total {
+    padding: 2%;
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 60%;
+    align-items: center;
+   }
 @media(max-width: 450px){
     .main-first-second{
         justify-content: center;
     }
-}
+
 
 @media(max-width: 632px){
 
@@ -211,6 +276,4 @@ main div{
         div .menu-right-header i{
             size: 5px;           
         }
-    
-    
 }

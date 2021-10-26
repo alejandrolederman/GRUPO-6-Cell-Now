@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/99d2f24388.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"rel="stylesheet" />
+<style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');</style>
+
+    <title>Formulario de registro </title>
+</head>
+<body>
+    <header class="header-login">
+       <nav class="busqueda">
+            <img src="/img/LOGO CELL NOW.jpg" class="logo-login">
+       
+       
+        
+        
+            <div class="form" action="#" method="GET">
+                <div class="input">Busca lo que quieras</div>
+                <div class="submit"><i class="fa fa-search"></i></div>    
+                
+              
+             <i class="fas fa-user"></i>
+             <span>username</span>
+             <i class="fas fa-shopping-cart"></i>
+             <i class="far fa-question-circle"></i>
+             
+           
+            </div>
+        </nav>
+         <div class="nombre">
+            CELLNOW.COM
+         </div>
+    </header>
+    <main>
+      <div class="main-left">
+        <h3>Qué celu buscas?</h3>
+        <ul>
+            <li><a href="#">Por marca</a></li>
+            <li><a href="#">Por precio</a></li>
+            <li><a href="#">Por gama</a></li>
+            <li><a href="#">Por año de salida</a></li>
+            <li><a href="#">Por reseñas</a></li>
+            <li><a href="#">Por ubicacion</a></li>
+        </ul>
+        <h3>Ayudame a buscar!</h3>
+      </div>
+    </main>
+
+    <main class= "register">
+        <h3>Registrate!</h3>
+        <form action= "/" method="POST" class= "register-total">
+            <input type= "text" name="name" placeholder= "Nombre y apellido" required minlength="2" maxlength="10">
+            <input type="text" name="user"  placeholder= "Nombre de usuario" required>
+            <input type= "email" name= "email" placeholder="E-mail" type="email">
+            <br>
+            <label for= "birth_date"> <b>Fecha de nacimiento</b></label>
+            <br>
+            <input type= "text" name="dni" placeholder="DNI"> 
+            </div>
+
+        <h4>Intereses</h4>
+            <div class="interests">
+                <div>
+                    <input type= "checkbox" name= "interests" value="a" id="a">
+                    <label for= "a">Samsung</label>
+                </div>
+                <div>
+                    <input type= "checkbox" name= "interests" value="b" id="b">
+                    <label for= "b">Apple</label>
+                </div>
+                <div>
+                    <input type= "checkbox" name= "interests" value="c" id="c">
+                    <label for= "c">LG</label>
+                </div>
+                <div>
+                    <input type= "checkbox" name= "interests" value="d" id="d">
+                    <label for= "d">Motorola</label>
+                </div>
+                <div>
+                    <input type= "checkbox" name= "interests" value="e" id="e">
+                    <label for= "e">Huawei</label>
+                </div>
+                <div>
+                    <input type= "checkbox" name= "interests" value="f" id="f">
+                    <label for= "f">Xiaomi</label>
+                </div>
+                <div>
+                    <input type= "checkbox" name= "interests" value="g" id="g">
+                    <label for= "g">Sony</label>
+                </div>
+            </div>
+        <h4>Elegí tu foto del usuario</h4>
+            <input type= "file" name="avatar">
+            <br>
+            <br>
+            <input type= "password" name="pass" placeholder="Elegí tu contraseña" minlength="6">
+            <input type= "password" name="pass_confirm" placeholder="Confirma tu contraseña">
+            <br>
+            <br>
+            <input type= "submit" value="Enviar">
+            <input type= "reset" value="Borrar">
+            <br>
+            <br>
+        </form>
+    </main>
+    <footer>
+        <h4>Trabajá con nosotros!</h4>
+        <p>Copyright cellnow.com since 2021 ver legales</p>
+
+    </footer>
+    
+</body>
+</html>
