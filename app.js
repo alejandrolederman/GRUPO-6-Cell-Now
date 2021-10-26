@@ -19,16 +19,13 @@ app.get("/", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/login.html"))
  }) ;
 
- app.get("/views/register", (req, res)=>{
-    res.sendFile(path.resolve(__dirname, "./views/formulario-registro.html"))
- }) ;
 
  app.get("/views/comprar", (req, res)=>{
      res.sendFile(path.resolve(__dirname, "./views/comprar.html"))
  }) ;
 
-app.get('/register', (req, res) => {
-    res.sendFile(path.join(__dirname, './views/register.html'))
+app.get('/views/register', (req, res) => {
+    res.sendFile(path.join(__dirname, './views/formulario-registro.html'))
 })
 
 app.get("/views/carrito-de-compras", (req, res)=>{
