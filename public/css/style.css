@@ -16,6 +16,7 @@ p{
 
 h3{
     font-size: 24px;
+    padding: 0.3%;
 }
 
 .main-header{
@@ -341,6 +342,11 @@ main div{
      animation-timing-function: linear;
      animation-direction: alternate;
  }
+
+ .text-color {
+     color: white;
+ }
+ 
  @keyframes agrandar{
      from{
          transform: scale(1.0);
@@ -398,13 +404,29 @@ main div{
     align-items: center;
     align-content: center;
     }
-} 
-
+    
+    .register {
+    background-color: #ebebeb;
+    font-size: 12px;
+    display: flex;
+    align-content: space-between;
+    justify-content: space-evenly;
+    }
+    .register-total {
+    padding: 2%;
+    font-family: "Roboto";
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 60%;
+    align-items: center;
+   }
 @media(max-width: 450px){
     .main-first-second{
         justify-content: center;
     }
-}
+
 
 @media(max-width: 632px){
 
@@ -432,6 +454,4 @@ main div{
         div .menu-right-header i{
             size: 5px;           
         }
-    
-    
 }
