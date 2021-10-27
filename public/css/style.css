@@ -456,9 +456,9 @@ main div{
         flex-wrap: wrap;
         justify-content: start;
     }
-    .main-navbar-right{
+    /* .main-navbar-right{
         display: none;
-    }
+    } */
 }
 
 @media(min-width: 768px){
