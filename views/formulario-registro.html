@@ -14,29 +14,28 @@
 </head>
 <body>
     <header class="header-login">
-       <nav class="busqueda">
-            <img src="/img/LOGO CELL NOW.jpg" class="logo-login">
-       
-       
-        
-        
-            <div class="form" action="#" method="GET">
-                <div class="input">Busca lo que quieras</div>
-                <div class="submit"><i class="fa fa-search"></i></div>    
+        <nav class="busqueda">
+             <img src="/img/LOGO CELL NOW.jpg" class="logo-login">
+              <section class="search">
+                          
                 
-              
-             <i class="fas fa-user"></i>
-             <span>username</span>
-             <i class="fas fa-shopping-cart"></i>
-             <i class="far fa-question-circle"></i>
-             
-           
-            </div>
-        </nav>
-         <div class="nombre">
-            CELLNOW.COM
-         </div>
-    </header>
+                     <!-- <div class="form" action="#" method="GET"> -->
+                     <!-- <section class="buscar"> -->
+                         <input type="text" name="nombre" placeholder="Busca lo que quieras" class="input">
+                          <!-- <div clas= "lupa"><i class="fa fa-search"></i></div>
+                     </section> -->
+                  <i class="fas fa-user"></i>
+                 <span>username</span>
+                 <i class="fas fa-shopping-cart"></i>
+                 <i class="far fa-question-circle"></i>       
+               </section>     
+            
+            
+         </nav>
+          <div class="nombre">
+             CELLNOW.COM
+          </div>
+     </header>
     <main>
       <div class="main-left">
         <h3>Qué celu buscas?</h3>
@@ -103,8 +102,8 @@
             <input type= "password" name="pass_confirm" placeholder="Confirma tu contraseña">
             <br>
             <br>
-            <input type= "submit" value="Enviar">
-            <input type= "reset" value="Borrar">
+            <button class="button" name= "button"><span> Enviar</span></button>
+            <button class="button" name= "button"><span> Borrar</span></button>
             <br>
             <br>
         </form>
