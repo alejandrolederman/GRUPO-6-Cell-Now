@@ -13,21 +13,21 @@ app.listen (port, ()=>{
 
 app.get("/", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/home.html"))
- }) ;
+});
 
- app.get("/views/login", (req, res)=>{
+app.get("/views/login", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/login.html"))
- }) ;
+ });
 
 
- app.get("/views/comprar", (req, res)=>{
+app.get("/views/comprar", (req, res)=>{
      res.sendFile(path.resolve(__dirname, "./views/comprar.html"))
- }) ;
+ });
 
 app.get('/views/register', (req, res) => {
     res.sendFile(path.join(__dirname, './views/formulario-registro.html'))
-})
+});
 
 app.get("/views/carrito-de-compras", (req, res)=>{
     res.sendFile(path.resolve(__dirname, "./views/carrito-de-compras.html"))
-}) ;
+});
