@@ -136,6 +136,7 @@ ul{
     border-radius: 15px;
 }
 
+
 .article-comprar{
     border: solid red 5px;
     display: flex;
@@ -352,7 +353,13 @@ main div{
  .text-color {
      color: white;
  }
- 
+
+ .registerTotal {
+    display: flex;
+    flex-direction: column;
+    padding: 5%; 
+}
+
  @keyframes agrandar{
      from{
          transform: scale(1.0);
@@ -417,7 +424,13 @@ main div{
     justify-content: space-evenly;
     }
 
-    .register-total {
+    .registerTotal {
+        display: flex;
+        flex-direction: column;
+        padding: 5%; 
+    }
+
+    /* /* .register-total {
     padding: 2%;
     font-family: "Roboto";
     display: flex;
@@ -425,8 +438,9 @@ main div{
     flex-wrap: nowrap;
     justify-content: center;
     width: 60%;
-    align-items: center;
-   }
+    align-items: center; */
+
+   
 }
 
 @media(max-width: 450px){
