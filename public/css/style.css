@@ -346,7 +346,7 @@ main div{
  .text-color {
      color: white;
  }
- 
+
  @keyframes agrandar{
      from{
          transform: scale(1.0);
@@ -406,15 +406,10 @@ main div{
     align-content: space-between;
     justify-content: space-evenly;
     }
-    .register-total {
-    padding: 2%;
-    font-family: "Roboto";
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    width: 60%;
-    align-items: center;
+    .registerTotal {
+        display: flex;
+        flex-direction: column;
+        padding: 5%;
    }
 @media(max-width: 450px){
     .main-first-second{
