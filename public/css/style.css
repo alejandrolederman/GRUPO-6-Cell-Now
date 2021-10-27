@@ -19,8 +19,13 @@ h3{
     padding: 0.3%;
 }
 
+h2, .cuenta, .product{
+    color: white;
+}
+
+
 .main-header{
-    background: #2596be;
+    /* background: #2596be; */
     padding: 30px;
     font-size: 12px;
 }
@@ -72,13 +77,14 @@ header .form .submit{
     width: 10%;
 }
 
-.main-first{
+ .main-first{
     width: 100%;
     padding: 15px;
     font-size: 12px;
     display: flex;
+    flex-wrap: wrap;
     justify-content:space-evenly;   
-}
+}   
 
 .main-first-second{
     display: flex;
@@ -211,7 +217,7 @@ main div{
  .busqueda{
      display: flex;
    }
-   main{
+   /* main{
        display: flex;
        flex-direction: column;
        justify-items: flex-start
@@ -226,7 +232,7 @@ main div{
      color: white;
      margin-top: 400px;
      border: gray solid 2px;
- }
+ } */
  .buscar{
      display: flex; 
      width: 500px; 
@@ -361,14 +367,14 @@ main div{
      background-image: url(/img/burbujas2.jpg);
      background-size: 100%;
  }
+ 
  i{
      color: white;
  }
 
 @media(max-width: 366px){
 
-    .carrito-compras-li{
-       
+    .carrito-compras-li{  
        flex-wrap: wrap;
        flex-direction: column;
        align-content: flex-start;
@@ -380,8 +386,6 @@ main div{
         flex-direction: column;
     }
 
-    
-   
     .menu-right-header h3 i{
        display: none;
     }
@@ -406,6 +410,7 @@ main div{
     align-content: space-between;
     justify-content: space-evenly;
     }
+
     .register-total {
     padding: 2%;
     font-family: "Roboto";
@@ -416,12 +421,15 @@ main div{
     width: 60%;
     align-items: center;
    }
+}
+
 @media(max-width: 450px){
+   
     .main-first-second{
         justify-content: center;
     }
 
-
+}
 @media(max-width: 632px){
 
     .main-first{
@@ -433,8 +441,6 @@ main div{
     }
 }
 
-
-
 @media(min-width: 768px){
 
     .main-header-top-bar{
@@ -442,7 +448,7 @@ main div{
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
-        align-content: center;
+        align-content: center; 
         }
 
         div .menu-right-header i{
