@@ -14,96 +14,85 @@
 </head>
 <body>
     <header class="header-login">
-        <nav class="busqueda">
-             <img src="/img/LOGO CELL NOW.jpg" class="logo-login">
-              <section class="search">
-                          
-                
-                     <!-- <div class="form" action="#" method="GET"> -->
-                     <!-- <section class="buscar"> -->
-                         <input type="text" name="nombre" placeholder="Busca lo que quieras" class="input">
-                          <!-- <div clas= "lupa"><i class="fa fa-search"></i></div>
-                     </section> -->
-                  <i class="fas fa-user"></i>
-                 <span>username</span>
-                 <i class="fas fa-shopping-cart"></i>
-                 <i class="far fa-question-circle"></i>       
-               </section>     
-            
-            
-         </nav>
-          <div class="nombre">
-             CELLNOW.COM
-          </div>
-     </header>
-    <main>
-      <div class="main-left">
-        <h3>Qué celu buscas?</h3>
-        <ul>
-            <li><a href="#">Por marca</a></li>
-            <li><a href="#">Por precio</a></li>
-            <li><a href="#">Por gama</a></li>
-            <li><a href="#">Por año de salida</a></li>
-            <li><a href="#">Por reseñas</a></li>
-            <li><a href="#">Por ubicacion</a></li>
-        </ul>
-        <h3>Ayudame a buscar!</h3>
-      </div>
-    </main>
-
+        <nav class="main-header-top-bar">
+            <a href="/views/home.html"><img src="/img/LOGO CELL NOW.jpg" class="logo"></a>
+                <div class="search">
+                    <div class="form">
+                        <input type="text" name="nombre" placeholder="Busca lo que quieras           " class="input">
+                    </div>  
+                    <div class="menu-right-header">
+                            <a href="/views/formulario-registro.html"><i class="fas fa-user"></i></a>
+                            <a href="/views/formulario-registro.html"><span class="header-usuraio">   username    </span></a>
+                            <a href= "/views/carrito-de-compras.html"><i class="fas fa-shopping-cart"></i></a>
+                            <i class="far fa-question-circle"></i> 
+                        </div>      
+                </div>     
+        </nav>
+            <div class="nombre">
+                CELLNOW.COM
+            </div>
+    </header>
     <main class = "register">
-        <h3 class="text-color">>Registrate!</h3>
+        <h3 class="text-color">Registrate!</h3>
         <form action= "/" method="POST" class= "registerTotal">
-            <input type= "text" name="name" placeholder= "Nombre y apellido" required minlength="2" maxlength="10">
-            <input type="text" name="user"  placeholder= "Nombre de usuario" required>
-            <input type= "email" name= "email" placeholder="E-mail" type="email">
-            <br>
-            <label for= "birth_date"> <b class="text-color">Fecha de nacimiento</b></label>
-            <br>
-            <input type= "text" name="dni" placeholder="DNI"> 
+            <div>
+                <input type= "text" name="name" placeholder= "Nombre y apellido" required minlength="2" maxlength="10" class="nombre-registro">
+                <input type="text" name="user"  placeholder= "Nombre de usuario" required class="nombre-registro">
+                <input type= "email" name= "email" placeholder="E-mail" type="email" class="nombre-registro">
+                <br>
+            <div class="fecha-registro">
+                <label >Fecha de nacimiento: </label>
+                <input type="date" name="fecha" placeholder="" class="nombre-registro">
+            </div>   
+                <br>
+                <input type= "text" name="dni" placeholder="DNI" class="nombre-registro"> 
             </div>
 
-        <h4 class="text-color">Intereses</h4>
-            <div class="interests"> 
-                <div>
-                    <input type= "checkbox" name= "interests" value="a" id="a">
-                    <label for= "a" class="text-color">Samsung</label>
+            <h4 class="text-color">Intereses</h4>
+                <div class="interests"> 
+                    <div>
+                        <input type= "checkbox" name= "interests" value="a" id="a">
+                        <label for= "a" class="text-color">Samsung</label>
+                    </div>
+                    <div>
+                        <input type= "checkbox" name= "interests" value="b" id="b">
+                        <label for= "b" class="text-color">Apple</label>
+                    </div>
+                    <div>
+                        <input type= "checkbox" name= "interests" value="c" id="c">
+                        <label for= "c" class="text-color">LG</label>
+                    </div>
+                    <div>
+                        <input type= "checkbox" name= "interests" value="d" id="d">
+                        <label for= "d" class="text-color">Motorola</label>
+                    </div>
+                    <div>
+                        <input type= "checkbox" name= "interests" value="e" id="e">
+                        <label for= "e" class="text-color">Huawei</label>
+                    </div>
+                    <div>
+                        <input type= "checkbox" name= "interests" value="f" id="f">
+                    <lab    el for= "f" class="text-color">Xiaomi</label>
+                    </div>
+                    <div>
+                        <input type= "checkbox" name= "interests" value="g" id="g">
+                        <label for= "g" class="text-color">Sony</label>
+                    </div>
                 </div>
-                <div>
-                    <input type= "checkbox" name= "interests" value="b" id="b">
-                    <label for= "b" class="text-color">Apple</label>
-                </div>
-                <div>
-                    <input type= "checkbox" name= "interests" value="c" id="c">
-                    <label for= "c" class="text-color">LG</label>
-                </div>
-                <div>
-                    <input type= "checkbox" name= "interests" value="d" id="d">
-                    <label for= "d" class="text-color">Motorola</label>
-                </div>
-                <div>
-                    <input type= "checkbox" name= "interests" value="e" id="e">
-                    <label for= "e" class="text-color">Huawei</label>
-                </div>
-                <div>
-                    <input type= "checkbox" name= "interests" value="f" id="f">
-                    <label for= "f" class="text-color">Xiaomi</label>
-                </div>
-                <div>
-                    <input type= "checkbox" name= "interests" value="g" id="g">
-                    <label for= "g" class="text-color">Sony</label>
-                </div>
-            </div>
-        <h4 class="text-color">Elegí tu foto del usuario</h4>
-            <input type= "file" name="avatar">
+                <br>
+                <br>
+        <h4 class="text-color imagen-perfil">Elegí tu foto de perfil</h4>
+        <input type= "file" name="avatar" class="imagen-perfil">
             <br>
             <br>
-            <input type= "password" name="pass" placeholder="Elegí tu contraseña" minlength="6">
-            <input type= "password" name="pass_confirm" placeholder="Confirma tu contraseña">
+        <input type= "password" name="pass" placeholder="Elegí tu contraseña" minlength="6" class="pass-registro">
+        <input type= "password" name="pass_confirm" placeholder="Confirma tu contraseña" class="pass-registro">
             <br>
             <br>
-            <button class="button" name= "button"><span> Enviar</span></button>
-            <button class="button" name= "button"><span> Borrar</span></button>
+        <div>
+            <button class="button" name= "button"><span> ENVIAR</span></button> 
+            <button class="button" name= "button"><span> BORRAR</span></button>
+        </div> 
             <br>
             <br>
         </form>

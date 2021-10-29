@@ -15,54 +15,44 @@
 </head>
 <body>
     <header class="header-login">
-       <nav class="busqueda">
-            <img src="/img/LOGO CELL NOW.jpg" class="logo-login">
-             <section class="search">
-                         
-               
-                   
-                        <input type="text" name="nombre" placeholder="Busca lo que quieras" class="input">
-                        
-                 <i class="fas fa-user"></i>
-                <span>username</span>
-                <i class="fas fa-shopping-cart"></i>
-                <i class="far fa-question-circle"></i>       
-              </section>     
-           
-           
+        <nav class="main-header-top-bar">
+            <a href="/views/home.html"><img src="/img/LOGO CELL NOW.jpg" class="logo"></a>
+                <div class="search">
+                    <div class="form">
+                        <input type="text" name="nombre" placeholder="Busca lo que quieras           " class="input">
+                    </div>  
+                    <div class="menu-right-header">
+                            <a href="/views/formulario-registro.html"><i class="fas fa-user"></i></a>
+                            <a href="/views/formulario-registro.html"><span class="header-usuraio">   username    </span></a>
+                            <a href= "/views/carrito-de-compras.html"><i class="fas fa-shopping-cart"></i></a>
+                            <i class="far fa-question-circle"></i> 
+                        </div>      
+                </div>     
         </nav>
-         <div class="nombre">
-            CELLNOW.COM
-         </div>
-    </header>
-    <main class="main-login">
-      <div class="main-left">
-        <h3>Qué celu buscas?</h3>
-        <ul>
-            <li><a href="#">Por marca</a></li>
-            <li><a href="#">Por precio</a></li>
-            <li><a href="#">Por gama</a></li>
-            <li><a href="#">Por año de salida</a></li>
-            <li><a href="#">Por reseñas</a></li>
-            <li><a href="#">Por ubicación</a></li>
-        </ul>
-        <h3>Ayudame a buscar!</h3>
-      </div>
-      <div class="main-right"> 
-        <h1>BIENVENIDO</h1>
-        
-            <h2>NOMBRE DE USUARIO</h2>
-            
-            <input type="text" name="user" required minlength="8" requiere maxlength="16" placeholder="mínimo 8 carácteres" class="usuario">
-           <h2>CONTRASEÑA</h2>
-            <input type="password" name= "clave" placeholder="mínimo 8 carácteres alfanuméricos" required minlength="8" class="contraseña">
-            <div>
-            <button class="button" name= "button"><span> INGRESAR</span></button>  </div>   
-       </d
-       iv>
+            <div class="nombre">
+                CELLNOW.COM
+            </div>
+     </header>
+    <main>
+      <div class="main-login"> 
+        <h1 class="h1-login">BIENVENIDO</h1>
+        <form action="/" method="post">
+            <div class="main-div-login">
+            <!-- <label for="user"> NOMBRE DE USUARIO</label> -->
+            <input type="text" name="user" placeholder="nombre de usuario" required minlength="8" requiere maxlength="16" class="nombre-registro">
+        </div>
+        <div class="main-div-login">
+            <!-- <label for="password"> CONTRASEÑA</label> -->
+            <input type= "password" name="pass" placeholder="contraseña" minlength="6" class="pass-registro">
+        </div>
+        <div class="main-div-login">
+            <button class="button" name= "button"><span> ingresar</span></button> 
+        </div>
+        </form>
+       </div>
 
     </main>
-    <footer class="footer-login">
+    <footer>
         <H4>Trabajá con nosotros!</H4>
         <p>Copyright cellnow.com since 2021 ver legales</p>
 

@@ -6,8 +6,11 @@
 
 body{
     font-family: "Roboto";
-    background-color: #ebebeb; 
-    width: 100%;  
+     height: 100%;
+     background: rgb(160, 157, 157); 
+       background-image: url(/img/burbujas2.jpg);
+     background-size: 100%; 
+     background-size: 100%;  
 }
 
 p{
@@ -16,16 +19,14 @@ p{
 
 h3{
     font-size: 24px;
-    padding: 0.3%;
 }
 
-h2, .cuenta, .product{
-    color: white;
+footer{
+    color: #FFF;
 }
-
 
 .main-header{
-    /* background: #2596be; */
+    background: #2596be;
     padding: 30px;
     font-size: 12px;
 }
@@ -35,40 +36,58 @@ h2, .cuenta, .product{
     margin-top: 20px;
 }
 
-  i, a{
+i, a, .header-usuraio{
 text-decoration: none;
-    color: black;
+color: #FFF;
 }
 
-.menu-right-header{
-    
+/* HASTA ACA ES EL BODY Y TODO LO GENERAL*/
+
+/* DESDE ACA ES EL HEDER, HUBICACION DEL LOGO, LA BARRA DE BUSQUEDA, REGISTRO DE USUARIO, CARRITO Y ICONO DE AYUDA*/
+
+i{
+    color: white;
+}
+
+h2, h2 a, li{
+    color: white;
+}
+
+.product{
+    color: white;
+}
+
+.busqueda{
+    display: flex;
+  }
+
+.menu-right-header{ 
     text-align: right;
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
+    color: #FFF;
 }
 
 .menu-right-header i{
     margin-left: 10px;
-    font-size: 40px;
+    font-size: 15px;
 }
 
 header .form .input{
     background-color: #FFF;
     border: 1px solid #000;
     color: #666;
-    width: 100%;
-    padding: 10px;
-    margin: 40px 0;  
+    padding: 5px;
+    margin: 40px 40px;
+    text-align:justify;
+    width: 80%;
+   
 }
 
-h3 i{
+ h3 i{
     margin: 0 10px;
-}
-
-.form{
-    flex-grow: 0.6;
-}
+} 
 
 header .form .submit{
     background-color: #FFF;
@@ -77,16 +96,35 @@ header .form .submit{
     width: 10%;
 }
 
- .main-first{
+.input{
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900
+}
+
+.nombre{
+    margin: 5px 0px 0px 10px;
+    color: white;
+    width: 130px;
+    animation-name: agrandar;
+    animation-iteration-count: infinite;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+}
+
+/* HASTA ACA ES EL HEADER*/
+
+/* ACA COMIENZA EL MAIN QUE CONTIENE main-navbar-left, ACTUALMENTE LOGO EN EL MEDIO Y main-navbar-right*/
+
+.main-first{
     width: 100%;
     padding: 15px;
     font-size: 12px;
     display: flex;
-    flex-wrap: wrap;
     justify-content:space-evenly;   
-}   
+}
 
-.main-first-second{
+.main-second{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
@@ -120,78 +158,60 @@ ul{
     text-align: end;
 }
 
-.main-first-comprar{
-    width: 100%;
-    padding: 15px;
-    font-size: 12px;
-    display: flex;   
+main ul li a{
+    color: white; 
+    text-decoration: none;
 }
 
-.boton-comprar{
-    background-color: #39b54a;
-    border:none;
-    color: white;
-    font-size: 20px;
-    padding: 5px 10px;
-    border-radius: 15px;
-}
+/* HASTA ACA ES EL PRIMER MAIN*/
 
-
-.article-comprar{
-    border: solid red 5px;
-    display: flex;
-    flex-wrap: nowrap;
-}
-
-nav  div {
-    border:green solid 5px;
-    margin: 0 15px;
-}
-
-.description{
-    border: turquoise solid 10px;
-}
-
-article{
-    border: solid red 5px;
-    display: flex;
-    flex-wrap: nowrap;
-    width: 90%;
-    padding: 100px;
-    justify-content: space-between;
-}
-
-main div{
-    margin-right: 15px;
-}
+/* ACA COMIENZA EL SEGUNDO MAIN QUE CONTIENE LOS PRODUCTOS DESTACADOS*/
 
 .no-disponible{
     width: 210px;
 }
 
+/* .main-first-comprar{
+       width: 100%;
+    padding: 15px;
+    font-size: 12px;
+    display: flex;
+    justify-content:space-evenly;  
+}  */
 
+.main-second-div{
+    margin: 0 10px;
+}
+
+/* ACA FINALIZA EL SEGUNDO MAIN*/
+
+/* ACA COMIENZA EL HTML DE CARRITO DE COMPRAS*/
+
+.carrito-prudctos{
+    margin: 10px;
+}
 
 .no-disponible-carrito{
     width: 110px;
-    flex-grow: 0.3;
-}
+    padding: 5px;
+    flex-grow: 0.2;
+} 
 
-.carrito-compras-li{
-    box-shadow: 0px 0px 10px rgb(186, 186, 196);
-    width: 800px;
+ .carrito-compras-li{
+    box-shadow: 10px 0px 10px rgb(186, 186, 196);
     display:flex;
-   
-    
-    
+    align-content: space-around;
     margin-bottom: 10px;
-}
-.desclipcion-carrito-compras{
+} 
+
+.descripcion-carrito-compras{
     flex-grow: 0.7;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
     align-content: center;
     align-items: center;
-}
+} 
 
 .boton-compra-carrito{
     background-color: red;
@@ -203,191 +223,161 @@ main div{
     margin-right: 20px;
     width: 50%;
     margin-left: 45%;
+}  
+
+/* ACA TERMINA EL HTML CARRITO DE COMPRAS*/
+
+/* ACA COMIENZA EL HTML DE COMPRAR*/
+
+
+
+.main-comprar{
+    width: 100%; 
 }
-.logo-login{
-    margin: 5px 0px 0px 5px;
-    width: 130px;
- }
- main ul li a{
-     color: white; 
-     text-decoration: none;
- }
- header nav {  
-     align-items: center;
- }
- .busqueda{
-     display: flex;
-   }
-   /* main{
-       display: flex;
-       flex-direction: column;
-       justify-items: flex-start
-   }
-  header{
-      
-      width: 100%;
-      height: 30%;
+
+.texto-comprar{
+    color: #FFF;
+}
+
+.article-comprar{
     
-  }*/
- .footer-login{
-     color: white;
-     margin-top: 400px;
-     border: gray solid 2px;
- } 
- .buscar{
-     display: flex; 
-     width: 500px; 
- }
- .search{
-     
-     color: white;
-     display: flex;
-     justify-content: space-around;
-     width: 100%;   
-     align-items: center;
- }
- div.form{
-     display: flex;
- }
- .input{
-     display: flex;
-     width: 700px;
-     
-     }
-     .input::placeholder{
-         background-image: url(/img/lupa.png);
-         background-size: 30px 30px;
-         background-repeat: no-repeat;
-         background-position: right center;    
-     }
- .main-login{
-     display: flex;
-     flex-direction: row;
-     justify-content: space-between;   
-    }
- .main-left{
-     color: white;
-     padding: 10px;
-     display: flex;
-     flex-direction: column;
-     width: fit-content;
-     border: solid 3px gray;   
- }
- .main-right{
-     color: red;
-     margin-left: 5px;
-     padding: 30px;
-     border: solid gray 2px;
-     text-align: left;
-     flex-direction: column;
-     width: 700px;
-     margin-top: 0px;
-     flex-grow: 1;    
- }
- h1{   
-     text-align: center;
-     margin: 10px 0;
- }
- .button{
-     font-family: "Roboto";
-     color: white;
-     border: none;
-     background: green;
-     margin-top: 15px;
-     font-size: 20px;
-     width: 300px;
-     margin-left: 200px;
-     cursor: pointer;
-     border-radius: 5px;
-     position: relative;
-     overflow: hidden;
-     }
-     button::after{
-         content: "";
-         width: 100%;
-         position: absolute;
-         z-index: 1;
-         top: 0;
-         left: calc(-100% - 80px);
-         border-bottom: 80px solid rgb(39, 182, 39);
-         border-right: 80px solid transparent;
-         transition: .4s ease-in-out all;
-     }
-     button:hover::after{
-         left: 0;
-     }
-     .button span{
-         position: relative;
-         z-index: 2;
-         transition: .3s ease all;
-     }
- li{
-     color: white;
-     margin-top: 7px;
- }
- ul li a{
-     color: white;
-     text-decoration: none;
- }
- .usuario{
-     flex-direction: row;
-     width: 600px;  
- }
- .contraseña{   
-     width: 600px;  
- }
- main .main-left h3{
-     margin-top: 20px;
- }
- .nombre{
-     margin: 5px 0px 0px 10px;
-     color: white;
-     width: 130px;
-     animation-name: agrandar;
-     animation-iteration-count: infinite;
-     animation-duration: 1s;
-     animation-timing-function: linear;
-     animation-direction: alternate;
- }
+    margin: 10px;
+    display: flex; 
+    flex-wrap: wrap;
+} 
 
- .text-color {
-     color: white;
- }
+.imagen-comprar{
+    width: 100%;  
+  
+} 
 
- .registerTotal {
+.producto-comprar{
+    align-items: center;
+}
+
+.descripcion-producto-comprar{
+    width: 100%;
+    
+} 
+.button-comprar{
+    align-items: end;
+}
+
+/* article{
+    border: solid red 5px;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 90%;
+    padding: 100px;
+    justify-content: space-between;
+} */
+
+
+/*ACA COMIENZA EL HTML DEL FORMULARIO DE REGISTRO*/
+
+label{
+    color: #FFF;
+}
+.register{
     display: flex;
     flex-direction: column;
-    padding: 5%; 
 }
 
- @keyframes agrandar{
-     from{
-         transform: scale(1.0);
-     }
-     to{
-         transform: scale(1.2);
-     }
- }
- body{
-     width: 100%;
-     height: 100%;
-     background-image: url(/img/burbujas2.jpg);
-     background-size: 100%;
- }
- 
- i{
-     color: white;
- }
- h2, h2 a{
-     color: white;
- }
- .product{
-     color: white;
- }
+.fecha-registro{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
 
-@media(max-width: 366px){
+.fecha-registro label, .text-color{
+    color: #FFF;
+    margin-left: 15px;
+}
 
-    .carrito-compras-li{  
+.nombre-registro, .pass-registro{
+    width: 90%;
+    padding: 8px;
+    margin: 15px;
+    border-radius: 10px; 
+    box-shadow: 10px 0px 10px rgb(127, 127, 129);
+}
+
+.interests, .imagen-perfil{
+    margin-left: 15px;
+}
+
+.imagen-perfil{
+    width: 100%;
+}
+
+.button{
+    font-family: "Roboto";
+    color: white;
+    border: none;
+    background: green;
+    margin-top: 15px;
+    font-size: 20px;
+    width: 300px;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+}
+
+button::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: calc(-100% - 80px);
+    border-bottom: 80px solid rgb(39, 182, 39);
+    border-right: 80px solid transparent;
+    transition: .4s ease-in-out all;
+}
+
+button:hover::after{
+    left: 0;
+}
+.button span{
+    position: relative;
+    z-index: 2;
+    transition: .3s ease all;
+}
+
+/* HASTA ACA ES EL HTML DEL FORMULARIO DE REGISTRO*/
+
+/* ACA COMIENZA EL HTML DEL LOGIN*/
+
+.h1-login{
+    color:#FFF
+}
+
+.main-login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.main-login form{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    align-content: center;
+}
+
+.main-div-login{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* ACA VAN LAS @MEDIA*/
+
+@media(max-width: 632px){
+
+    .carrito-compras-li{
        flex-wrap: wrap;
        flex-direction: column;
        align-content: flex-start;
@@ -409,56 +399,102 @@ main div{
     }
 
     .main-header-top-bar{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    align-content: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+        align-content: center;
+    }
+
+    .input{
+        display: block;
+        margin-top: 15px;
+    }
+
+    .header-usuraio{
+        display: none;
+    }
+
+    .menu-right-header{
+        display: flex;
+        justify-content: space-around;
+        margin: 15px 0;
     }
     
-    .register {
-    background-color: #ebebeb;
-    font-size: 12px;
-    display: flex;
-    align-content: space-between;
-    justify-content: space-evenly;
+    .nombre{
+        text-align: center;
     }
-
-    .registerTotal {
-        display: flex;
-        flex-direction: column;
-        padding: 5%; 
-    }
-
-    /* /* .register-total {
-    padding: 2%;
-    font-family: "Roboto";
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    width: 60%;
-    align-items: center; */
-
-   
-}
+} 
 
 @media(max-width: 450px){
-   
-    .main-first-second{
+    
+    .main-second{
         justify-content: center;
     }
 
+    .article-comprar{
+        display: flex;
+        flex-direction: column;
+    }
+
+    div .producto-comprar{
+        border: black solid 5px;
+    }
 }
+
 @media(max-width: 632px){
 
     .main-first{
         flex-wrap: wrap;
         justify-content: start;
     }
-    /* .main-navbar-right{
-        display: none;
+
+    /* .main-first-comprar{
+        flex-wrap: wrap;
+        justify-content: start;
     } */
+
+    .main-navbar-right li{
+        display: none;
+    }
+    .right-navbar{
+        align-self: center;
+        
+    }
+}
+
+@media(min-width:632px){
+
+    .main-header-top-bar{
+        
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content:space-between;
+        align-items: center;
+        align-content: center;
+        
+    }
+
+    .input{
+        
+        flex-grow: 0.3;
+    }
+
+    .menu-right-header{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+    }
+
+    .search{
+        display: flex;
+        flex-wrap: wrap;
+      
+        
+    }
+
+
 }
 
 @media(min-width: 768px){
@@ -468,10 +504,10 @@ main div{
         flex-wrap: nowrap;
         justify-content: space-around;
         align-items: center;
-        align-content: center; 
-        }
+        align-content: center;
+    }
 
-        div .menu-right-header i{
-            size: 5px;           
-        }
+    div .menu-right-header i{
+        size: 5px;           
+    }  
 }

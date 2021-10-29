@@ -13,24 +13,28 @@
     <title>mas que solo celulares</title>
 </head>
 <body>
-    <header class="main-header">
-        <div class="main-header-top-bar">
-            <img src="/img/LOGO CELL NOW.jpg" class="logo">
-        
-        <div class="form" action="#" method="GET">
-            <div class="input">Busca lo que quieras...</div>
-        </div> 
-           
-        <h3 class="menu-right-header">
-            <i class="fas fa-user">Usuario</i>
-            <i class="fas fa-shopping-cart"></i>
-            <i class="fas fa-question-circle"></i>
-        </h3>
+    <header class="header-login">
+        <nav class="main-header-top-bar">
+            <a href="/views/home.html"><img src="/img/LOGO CELL NOW.jpg" class="logo"></a>
+                <div class="search">
+                    <div class="form">
+                        <input type="text" name="nombre" placeholder="Busca lo que quieras           " class="input">
+                    </div>  
+                    <div class="menu-right-header">
+                            <a href="/views/formulario-registro.html"><i class="fas fa-user"></i></a>
+                            <a href="/views/formulario-registro.html"><span class="header-usuraio">   username    </span></a>
+                            <a href= "/views/carrito-de-compras.html"><i class="fas fa-shopping-cart"></i></a>
+                            <i class="far fa-question-circle"></i> 
+                        </div>      
+                </div>     
+        </nav>
+            <div class="nombre">
+                CELLNOW.COM
+            </div>
+     </header>  
 
-    </header>  
-
-    <main class="main-first">
-        <nav class="main-navbar-left">
+    <main class="main-comprar">
+         <!-- <nav class="main-navbar-left">
                 <ul class="left-navbar">
                 <h2>¿ que celular estas buscando?</h2>
                 <li><a href="#">por marca</a></li> 
@@ -40,38 +44,63 @@
                 <li><a href="#">por reseña</a></li>
                 <li><a href="#">por ubicacion</a></li>
             </ul>
-        </nav>
+        </nav>  -->
+        
+        <article class="article-comprar">
+            <div class="producto-comprar">
+                <img src="/img/galaxy fold 3.webp" alt="" class="imagen-comprar">
+            </div>
+            <div class="descripcion-producto-comprar">
+                <H2>MARCA</H2>
+                <H3 class="texto-comprar">MODELO && REPUTACION</H3>
 
-         
+                <H3 class="texto-comprar">PRECIO</H3>
+
+                <ul>
+                    <li>Formas de Pago</li>
+                    <li>Promociones</li>
+                    <li>Descuentos</li>
+                    <li>Caracteristicas mas valoradas</li>
+                    <li>Especificaciones tecnicas</li>
+                    <li>Ver reseña</li>
+                </ul>
+
+                <div class="main-div-login button-comprar">
+                    <button class="button" name= "button"><span> COMPRAR</span></button> 
+                </div>
+            </div>
+
+        </article>
+
+        
     </main>
+
+    
 
     <h3 class="product">Productos Similares</h3>
 
-    <main class="main-first">
+    <main class="main-second">
         
-        <div>
+        <div class="main-second-div">
+            <a href="/views/comprar.html"><img src="/img/galaxy fold 3.webp" class="no-disponible"></a>
+            <h2>Precio</h2>
+        </div>
+        <div class="main-second-div">
             <img src="/img/imagen no disponible.png" class="no-disponible">
             <h2>Precio</h2>
         </div>
-        <div>
+        <div class="main-second-div">
             <img src="/img/imagen no disponible.png" class="no-disponible">
             <h2>Precio</h2>
         </div>
-        <div>
+        <div class="main-second-div">
             <img src="/img/imagen no disponible.png" class="no-disponible">
             <h2>Precio</h2>
         </div>
-        <div>
+        <div class="main-second-div">
             <img src="/img/imagen no disponible.png" class="no-disponible">
             <h2>Precio</h2>
         </div>
-        <div>
-            <img src="/img/imagen no disponible.png" class="no-disponible">
-            <h2>Precio</h2>
-        </div>
-
-
-
     </main>
     <footer>
 
