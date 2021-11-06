@@ -13,25 +13,8 @@
     <title>Formulario de registro </title>
 </head>
 <body>
-    <header class="header-login">
-        <nav class="main-header-top-bar">
-            <a href="/views/home.html"><img src="/img/LOGO CELL NOW.jpg" class="logo"></a>
-                <div class="search">
-                    <div class="form">
-                        <input type="text" name="nombre" placeholder="Busca lo que quieras           " class="input">
-                    </div>  
-                    <div class="menu-right-header">
-                            <a href="/views/formulario-registro.html"><i class="fas fa-user"></i></a>
-                            <a href="/views/formulario-registro.html"><span class="header-usuraio">   username    </span></a>
-                            <a href= "/views/carrito-de-compras.html"><i class="fas fa-shopping-cart"></i></a>
-                            <i class="far fa-question-circle"></i> 
-                        </div>      
-                </div>     
-        </nav>
-            <div class="nombre">
-                CELLNOW.COM
-            </div>
-    </header>
+    <%- include('./partials/header')%>
+        
     <main class = "register">
         <h3 class="text-color">Registrate!</h3>
         <form action= "/" method="POST" class= "registerTotal">

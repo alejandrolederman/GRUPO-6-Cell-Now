@@ -13,40 +13,9 @@
     <title>mas que solo celulares</title>
 </head>
 <body>
-    <header class="header-login">
-        <nav class="main-header-top-bar">
-            <a href="/views/home.html"><img src="/img/LOGO CELL NOW.jpg" class="logo"></a>
-                <div class="search">
-                    <div class="form">
-                        <input type="text" name="nombre" placeholder="Busca lo que quieras           " class="input">
-                    </div>  
-                    <div class="menu-right-header">
-                            <a href="/views/formulario-registro.html"><i class="fas fa-user"></i></a>
-                            <a href="/views/formulario-registro.html"><span class="header-usuraio">   username    </span></a>
-                            <a href= "/trolley/carrito-de-compras"><i class="fas fa-shopping-cart"></i></a>
-                            <i class="far fa-question-circle"></i> 
-                        </div>      
-                </div>     
-        </nav>
-            <div class="nombre">
-                CELLNOW.COM
-            </div>
-     </header>
+  
+    <%- include('./partials/header')%>
 
-    <!-- <header class="main-header">
-            <div class="main-header-top-bar">
-               LISTO <a href="/views/home.html"><img src="/img/LOGO CELL NOW.jpg" class="logo"></a> 
-        
-                LISTO    <div class="form" action="#" method="GET">
-                        <input type="text" placeholder="Busca lo que quieras..." class="input"> 
-                    </div>
-                <div class="menu-right-header">
-                    <h3><a href="/views/formulario-registro.html"><i class="fas fa-user">  Usuario</i></a></h3>
-                    <a href= "/views/carrito-de-compras.html"><i class="fas fa-shopping-cart"></i></a>
-                    <i class="fas fa-question-circle"></i>
-                </div>
-            </div> 
-    </header>   -->
 
     <main class="main-first">
         <nav class="main-navbar-left">
@@ -83,7 +52,7 @@
     <main class="main-second">
         
         <div class="main-second-div">
-            <a href="/views/comprar.html"><img src="/img/galaxy fold 3.webp" class="no-disponible"></a>
+            <a href="/product/comprar"><img src="/img/galaxy fold 3.webp" class="no-disponible"></a>
             <h2>Precio</h2>
         </div>
         <div class="main-second-div">
