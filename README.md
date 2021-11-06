@@ -17,10 +17,6 @@
     
     - Daniela Kippes
          Mail: danielakippes26@gmail.com 
-    
-    - Federico Ortenzi
-         Mail: faortenzi@gmail.com 
-
 
 ● contamos con los siguientes referente para poder armar la web que usted necesita:
 
@@ -34,3 +30,4 @@
 
 link de trello:
 https://trello.com/alejandro50749293/boards
+(ya esta echo publico)
