@@ -13,12 +13,10 @@
     <title>mas que solo celulares</title>
 </head>
 <body>
-  
-    <%- include('./partials/header')%>
-
-
-    <main class="main-first">
-        <nav class="main-navbar-left">
+    <%- include('../partials/header')%>
+    
+    <main class="main-comprar">
+         <!-- <nav class="main-navbar-left">
                 <ul class="left-navbar">
                 <h2>¿ que celular estas buscando?</h2>
                 <li><a href="#">por marca</a></li> 
@@ -28,31 +26,45 @@
                 <li><a href="#">por reseña</a></li>
                 <li><a href="#">por ubicacion</a></li>
             </ul>
-        </nav>
-        <div>
-            <img src="/img/LOGO CELL NOW.jpg" class="imagen-main" alt="imagen">
-        </div>
-        <nav class="main-navbar-right">          
-            <ul class="right-navbar">
-                <h2><a href="/views/login.html"> cuenta </a></h2>
-                <li><a href="#">ultimos vistos por mi</a></li> 
-                <li><a href="#">mas vistos por mi</a></li> 
-                <li><a href="#">mis favoritos </a></li>
-                <li><a href="#">mis reseñas </a></li>
-                <li><a href="#">ayudanos a mejorar </a></li>
-                <li><a href="#">pociones de usuario </a></li>
-            </ul>
-        </nav>
+        </nav>  -->
+        
+        <article class="article-comprar">
+            <div class="producto-comprar">
+                <img src="/img/galaxy fold 3.webp" alt="" class="imagen-comprar">
+            </div>
+            <div class="descripcion-producto-comprar">
+                <H2>MARCA</H2>
+                <H3 class="texto-comprar">MODELO && REPUTACION</H3>
 
-         
+                <H3 class="texto-comprar">PRECIO</H3>
+
+                <ul>
+                    <li>Formas de Pago</li>
+                    <li>Promociones</li>
+                    <li>Descuentos</li>
+                    <li>Caracteristicas mas valoradas</li>
+                    <li>Especificaciones tecnicas</li>
+                    <li>Ver reseña</li>
+                </ul>
+
+                <div class="main-div-login button-comprar">
+                    <button class="button" name= "button"><span> COMPRAR</span></button> 
+                </div>
+            </div>
+
+        </article>
+
+        
     </main>
 
-    <h3 class="product">Productos Destacados</h3>
+    
+
+    <h3 class="product">Productos Similares</h3>
 
     <main class="main-second">
         
         <div class="main-second-div">
-            <a href="/product/comprar"><img src="/img/galaxy fold 3.webp" class="no-disponible"></a>
+            <a href="/views/comprar.html"><img src="/img/galaxy fold 3.webp" class="no-disponible"></a>
             <h2>Precio</h2>
         </div>
         <div class="main-second-div">

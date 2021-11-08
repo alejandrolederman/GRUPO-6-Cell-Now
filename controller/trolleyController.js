@@ -1,6 +1,6 @@
 const trolleyController = {
     trolley: (req, res) => {
-        res.render('carrito-de-compras');
+        res.render('./products/carrito-de-compras');
     }
 }
 
