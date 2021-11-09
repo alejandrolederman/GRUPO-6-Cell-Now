@@ -6,6 +6,10 @@ const userController = {
 
     registrer: (req, res) => {
         res.render('./users/formulario-registro');
+    },
+
+    selecBuyOrSell:(req, res)=>{
+        res.render('./users/selecBuyOrSell');
     }
 }
 

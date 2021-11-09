@@ -7,5 +7,7 @@ router.get('/login', userController.login);
 
 router.get('/formulario-registro', userController.registrer);
 
+router.get('/selecBuyOrSell', userController.selecBuyOrSell)
+
 module.exports = router;
 
