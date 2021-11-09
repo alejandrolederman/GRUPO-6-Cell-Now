@@ -51,11 +51,15 @@ i{
 }
 
 h2, h2 a, li{
-    color: gray
+    color: gray;
 }
 
 .product{
     color: grey;
+    display: flex;
+    justify-content: space-around;
+    letter-spacing: 5px;
+    border-top: black solid 1px;
 }
 
 .busqueda{
@@ -129,6 +133,8 @@ header .form .submit{
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    justify-content: space-between;
+    justify-content: space-around;
 }
 
 ul{
@@ -215,7 +221,7 @@ main ul li a{
 } 
 
 .boton-compra-carrito{
-    background-color: red;
+    background-color: darkblue;
     border:none;
     color: white;
     font-size: 20px;
@@ -233,23 +239,39 @@ main ul li a{
 
 
 .main-comprar{
-    width: 100%; 
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+    justify-items: center;
+    padding: 5px;
+    border-top: black solid 1px;
+    flex-wrap: nowrap;
+    padding: 20px;
+    padding: 5%;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
 }
 
 .texto-comprar{
-    color: #FFF;
+    color:black;
 }
 
 .article-comprar{
-    border: #000 solid 1px;
     margin: 10px;
     display: flex; 
     
 } 
 
 .imagen-comprar{
-    width: 100%;  
-  
+    width: 150%;
+    display: block;
+    justify-self: center;
+    padding-left: 100px ;
+    padding-top: 50% ;  
 } 
 
 .producto-comprar{
@@ -260,18 +282,17 @@ main ul li a{
     text-align: center;
     padding: 0 -15px;
     width: 100%;
-    
+    padding-left: 150px;
 } 
 .button-comprar{
     align-items: end;
 }
 
 .main-div-login{
-    border: solid blueviolet 1px;
+    margin-top: 20px;
     display: flex;
-    flex-direction: row;
-    
-
+    flex-direction:row;
+    justify-content: space-evenly;
 }
 
 /* article{
@@ -306,10 +327,11 @@ label{
 }
 
 .nombre-registro, .pass-registro{
-    width: 90%;
+    width: 75%;
     padding: 8px;
     margin: 15px;
     border-radius: 10px; 
+    letter-spacing: 5px;
     box-shadow: 10px 0px 10px rgb(127, 127, 129);
 }
 
@@ -325,7 +347,7 @@ label{
     font-family: "Roboto";
     color: white;
     border: none;
-    background: green;
+    background: darkblue;
     margin-top: 15px;
     font-size: 20px;
     width: 300px;
@@ -334,6 +356,7 @@ label{
     border-radius: 5px;
     position: relative;
     overflow: hidden;
+    align-self: center;
 }
 
 button::after{
@@ -343,7 +366,7 @@ button::after{
     z-index: 1;
     top: 0;
     left: calc(-100% - 80px);
-    border-bottom: 80px solid rgb(39, 182, 39);
+    border-bottom: 80px solid green (39, 182, 39);
     border-right: 80px solid transparent;
     transition: .4s ease-in-out all;
 }
@@ -356,31 +379,49 @@ button:hover::after{
     z-index: 2;
     transition: .3s ease all;
 }
+.componente-logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
 
 /* HASTA ACA ES EL HTML DEL FORMULARIO DE REGISTRO*/
 
 /* ACA COMIENZA EL HTML DEL LOGIN*/
 
 .h1-login{
-    color:#FFF
+    color:gray;
+    letter-spacing: 20px;
 }
 
 .main-login{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: gainsboro;
+    opacity: 70%;
 }
 .main-login form{
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
     align-content: center;
+    width: 1000px;
+    background-color: gainsboro;
+    border-radius: 20px;
 }
 
 .main-div-login{
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
+    justify-content: space-evenly;
+    flex-direction: row;
+}
+.caracteristicas {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1%;
 }
 
 
@@ -411,8 +452,8 @@ button:hover::after{
 
     .main-header-top-bar{
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
+        flex-direction: row;
+        justify-content: space-between;
         align-items: center;
         align-content: center;
     }
@@ -479,11 +520,12 @@ button:hover::after{
     .main-header-top-bar{
         
         display: flex;
-        flex-wrap: nowrap;
         align-items: center;
         align-content: center;
         height: 30px;
         padding: 15px;
+        flex-direction: row;
+        justify-content: space-between;
     }
 
     .input{
