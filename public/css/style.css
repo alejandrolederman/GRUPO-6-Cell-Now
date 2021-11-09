@@ -4,7 +4,14 @@
     box-sizing: border-box; 
     padding-top: 5px;
  } 
-
+ .header-login{
+     justify-content: space-between;
+     width: 100%;
+     background: white;
+     color: black;
+     position: fixed;
+     top: 10px;
+ }
 body{
     font-family: "Roboto";
      height: 100%;
@@ -12,8 +19,13 @@ body{
        /* background-image: url(/img/burbujas2.jpg);
      background-size: 100%; 
      background-size: 100%;   */
+     }
+/* aca esta el banner */
+.banner img{
+    margin-top: 100px;
+    width: 100%;
+    height: 250px;
 }
-
 p{
     font-size: 12px;
 }
@@ -410,9 +422,10 @@ button:hover::after{
     }
 
     .main-header-top-bar{
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-evenly;
+        justify-content: space-between;
         align-items: center;
         align-content: center;
     }
