@@ -1,13 +1,14 @@
 *{ 
     margin: 0px; 
-    padding: 0px; 
+    padding:0px; 
     box-sizing: border-box; 
+    padding-top: 5px;
  } 
 
 body{
     font-family: "Roboto";
      height: 100%;
-     background: rgb(160, 157, 157); 
+     background:grey (160, 157, 157); 
        /* background-image: url(/img/burbujas2.jpg);
      background-size: 100%; 
      background-size: 100%;   */
@@ -22,7 +23,7 @@ h3{
 }
 
 footer{
-    color: #FFF;
+    color:grey;
 }
 
 .main-header{
@@ -32,13 +33,13 @@ footer{
 }
 
 .logo{
-    width: 200px;
-    margin-top: 20px;
+    width: 100px;
+    margin-top: 10px;
 }
 
 i, a, .header-usuraio{
 text-decoration: none;
-color: #FFF;
+color: gray;
 }
 
 /* HASTA ACA ES EL BODY Y TODO LO GENERAL*/
@@ -46,15 +47,15 @@ color: #FFF;
 /* DESDE ACA ES EL HEDER, HUBICACION DEL LOGO, LA BARRA DE BUSQUEDA, REGISTRO DE USUARIO, CARRITO Y ICONO DE AYUDA*/
 
 i{
-    color: white;
+    color: gray;
 }
 
 h2, h2 a, li{
-    color: white;
+    color: gray
 }
 
 .product{
-    color: white;
+    color: grey;
 }
 
 .busqueda{
@@ -66,7 +67,7 @@ h2, h2 a, li{
     display: flex;
     flex-wrap: nowrap;
     justify-content: space-evenly;
-    color: #FFF;
+    color: grey;
 }
 
 .menu-right-header i{
@@ -75,7 +76,7 @@ h2, h2 a, li{
 }
 
 header .form .input{
-    background-color: #FFF;
+    background-color: white;
     border: 1px solid #000;
     color: #666;
     padding: 5px;
@@ -90,7 +91,7 @@ header .form .input{
 } 
 
 header .form .submit{
-    background-color: #FFF;
+    background-color: grey;
     border: 1px solid #000;
     color: #666;
     width: 10%;
@@ -103,7 +104,7 @@ header .form .submit{
 
 .nombre{
     margin: 5px 0px 0px 10px;
-    color: white;
+    color: grey;
     width: 130px;
     animation-name: agrandar;
     animation-iteration-count: infinite;
@@ -479,10 +480,10 @@ button:hover::after{
         
         display: flex;
         flex-wrap: nowrap;
-        justify-content:space-between;
         align-items: center;
         align-content: center;
-        
+        height: 30px;
+        padding: 15px;
     }
 
     .input{
@@ -512,7 +513,6 @@ button:hover::after{
     .main-header-top-bar{
         display: flex;
         flex-wrap: nowrap;
-        justify-content: space-around;
         align-items: center;
         align-content: center;
     }
