@@ -4,7 +4,14 @@
     box-sizing: border-box; 
     padding-top: 5px;
  } 
- 
+ div.selec{
+         display: flex;
+     justify-content: center;
+     justify-items: center;
+     margin-top: 200px;
+     width: inherit;
+     }
+    
  
 body{
     font-family: "Roboto";
