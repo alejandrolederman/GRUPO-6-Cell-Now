@@ -18,7 +18,7 @@ body{
 .banner img{
     margin-top: 100px;
     width: 100%;
-    height:
+
 }
 p{
     font-size: 12px;
@@ -317,6 +317,7 @@ label{
     color: #FFF;
 }
 .register{
+   margin: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -328,7 +329,7 @@ label{
 }
 
 .fecha-registro label, .text-color{
-    color: #FFF;
+    color: black;
     margin-left: 15px;
 }
 
@@ -565,6 +566,16 @@ button:hover::after{
 }
 
 @media(min-width: 768px){
+    .main-login{
+        margin-top: 100px}
+    .register{
+        margin-top:100px
+    }
+    .banner img{
+        margin-top: 100px;}
+    .main-first-carrito{
+        margin-top: 100px;
+    }
     .header-login{
     
         width: 100%;
