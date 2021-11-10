@@ -514,9 +514,7 @@ button:hover::after{
 }
 
 @media(max-width: 632px){
-    .header-login{
-        position: none;
-    }
+   
 
     .main-first{
         flex-wrap: wrap;
@@ -573,6 +571,9 @@ button:hover::after{
 }
 
 @media(min-width: 768px){
+    .main-comprar{
+        margin-top: 100px;
+    }
     .main-login{
         margin-top: 100px}
     .register{
