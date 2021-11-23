@@ -18,9 +18,25 @@
     <h3 class="product">Productos Destacados</h3>
 
     <main class="main-second">
-        
-        <div class="main-second-div">
-            <a href="/product/comprar"><img src="/img/galaxy fold 3.webp" class="no-disponible"></a>
+        <% visited.forEach(products =>{ %>
+            <% if(products.type == "nuevo"){ %>  
+            <section class="product-box">
+                <a href="/products/detail/<%=products.id%>">
+                    <figure class="product-box_image">
+                        <img src="/img/<%products.marca%>/<%=products.image%> " alt="imagen de producto">
+                    </figure>
+                    <article class="product-box_data">
+                        <h2><%=products.price%></h2>
+                        <span>D<%=products.discount %></span>
+                        <p><%=products.name%></p>
+                        <i class="fas fa-truck"></i>
+                    </article>
+                </a>
+            </section>
+            <% } %> 
+            <% }) %> 
+        <!-- <div class="main-second-div">
+            <a href="/product/detail"><img src="/img/galaxy fold 3.webp" class="no-disponible"></a>
             <h2>Precio</h2>
         </div>
         <div class="main-second-div">
@@ -38,7 +54,7 @@
         <div class="main-second-div">
             <img src="/img/iphone/IPHONE 8/iPhone 8_Black_Front_800.png" class="no-disponible">
             <h2>Precio</h2>
-        </div>
+        </div> -->
     </main>
     <footer>
 

@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 const publiPath = path.resolve(__dirname,"./public");
 app.use(express.static(publiPath));
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 3002;
 
 // Uso de las routes
 app.use('/', indexRouter);

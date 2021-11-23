@@ -10,6 +10,10 @@ const productController = {
 
     productEdit:(req, res) => {
         res.render('./products/productEdit');
+    },
+
+    productList:(req, res) => {
+        res.render('./products/productList');
     }
 }
 

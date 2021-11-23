@@ -1,12 +1,13 @@
 [
     {
         "id": 1,
-        "name": "Gold en Monkey",
+        "marca": "huawei",
+        "name": "Y 7",
         "description": "imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus",
-        "price": 3679.51,
+        "price": 24,
         "discount": 6,
-        "category": "te",
-        "image": "PRODUCTS-xanela-paraiso.jpg",
+        "category": "huawei",
+        "image": "11524115242dbdb8ff-3bfc-4c2a-b7be-24a489862739.jpg",
         "type": "nuevo"
     },
     {

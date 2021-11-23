@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')%>
+<body>
+   
+    <%- include('../partials/header')%>
+
+    <main class="main-second">
+        <% visited.forEach(products =>{ %>
+            
+            <section class="product-box">
+                <a href="/products/detail/<%=products.id%>">
+                    <figure class="product-box_image">
+                        <img src="/img/<%products.marca%>/<%=products.image%> " alt="imagen de producto">
+                    </figure>
+                    <article class="product-box_data">
+                        <h2><%=products.price%></h2>
+                        <span>D<%=products.discount %></span>
+                        <p><%=products.name%></p>
+                        <i class="fas fa-truck"></i>
+                    </article>
+                </a>
+            </section>
+            <% }) %> 
+    </main>
+    
+</body>
+</html>
