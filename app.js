@@ -22,7 +22,7 @@ const port = process.env.PORT || 3002;
 app.use('/', indexRouter);
 app.use('/trolley', trolleyRouter);
 app.use('/user', userRouter);
-app.use('/product',productRouter)
+app.use('/products',productRouter)
 
 
 app.listen (port, ()=>{

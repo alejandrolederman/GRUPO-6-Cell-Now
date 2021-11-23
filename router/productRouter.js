@@ -11,4 +11,20 @@ router.get ('/productForm', productController.productForm)
 
 router.get ('/productEdit', productController.productEdit)
 
+// CRUD
+
+router.get('/', productController.getAllProducts);
+
+router.get('/create', productController.createProductForm);
+
+router.get('/:id', productController.detailProduct);
+
+router.post('/', productController.createProduct);
+
+router.get('/:id/edit', productController.updateProductForm);
+
+router.put('/:id', productController.updateProduct);
+
+router.delete('/:id', productController.deleteProduct);
+
 module.exports = router;
