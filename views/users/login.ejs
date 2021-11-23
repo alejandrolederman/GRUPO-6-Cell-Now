@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head')%>
-<body>
-    
-    <%- include('../partials/header')%>
-    
-    <main>
-      <div class="main-login"> 
-        <h1 class="h1-login">BIENVENIDO</h1>
-        <form action="/" method="post">
-            <div class="main-div-login">
-            <!-- <label for="user"> NOMBRE DE USUARIO</label> -->
-            <input type="text" name="user"  placeholder="nombre de usuario" required minlength="8" requiere maxlength="16" class="nombre-registro"> 
-        </div>
-        <div class="main-div-login">
-            <!-- <label for="password"> CONTRASEÑA</label> -->
-            <input type= "password" name="pass" placeholder="contraseña" minlength="6" class="pass-registro">
-        </div>
-        <div class="main-div-login">
-            <button class="button" name= "button"><span> INGRESAR</span></button> 
-        </div>
-        </form>
-       </div>
-    </main>
-</body>
+<%- include('../partials/head')%>
+
+    <body>
+
+        <%- include('../partials/header')%>
+
+            <main>
+                <div class="main-login">
+                    <h1 class="h1-login">BIENVENIDO</h1>
+                    <form action="/" method="post">
+                        <div class="main-div-login">
+                            <!-- <label for="user"> NOMBRE DE USUARIO</label> -->
+                            <input type="text" name="user" placeholder="nombre de usuario" required minlength="8"
+                                requiere maxlength="16" class="nombre-registro">
+                        </div>
+                        <div class="main-div-login">
+                            <!-- <label for="password"> CONTRASEÑA</label> -->
+                            <input type="password" name="pass" placeholder="contraseña" minlength="6"
+                                class="pass-registro">
+                        </div>
+                        <div class="main-div-login">
+                            <a href="/"><button class="button" name="button"><span>
+                                        INGRESAR</span></button></a>
+                        </div>
+                    </form>
+                </div>
+            </main>
+    </body>
+
 </html>

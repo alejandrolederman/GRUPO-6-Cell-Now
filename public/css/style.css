@@ -405,7 +405,7 @@ button:hover::after{
 
 .h1-login{
     color:gray;
-    letter-spacing: 20px;
+    letter-spacing: 8px;
 }
 
 .main-login{
@@ -420,7 +420,7 @@ button:hover::after{
     flex-wrap: nowrap;
     flex-direction: column;
     align-content: center;
-    width: 1000px;
+    width: 100%;
     background-color: gainsboro;
     border-radius: 20px;
 }

@@ -1,0 +1,502 @@
+[
+    {
+        "id": 1,
+        "name": "Gold en Monkey",
+        "description": "imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus",
+        "price": 3679.51,
+        "discount": 6,
+        "category": "te",
+        "image": "PRODUCTS-xanela-paraiso.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 2,
+        "name": "Albaricoque Maracuyá",
+        "description": "rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia",
+        "price": 4448.18,
+        "discount": 16,
+        "category": "te",
+        "image": "PRODUCTS-golden-monkey.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 3,
+        "name": "Canela Paraiso",
+        "description": "vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum",
+        "price": 2799.77,
+        "discount": 3,
+        "category": "insumos",
+        "image": "PRODUCTS-xanela-paraiso.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 4,
+        "name": "Rooibos Caramelo",
+        "description": "egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci",
+        "price": 2501.75,
+        "discount": 43,
+        "category": "insumos",
+        "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
+        "type": "banner"
+    },
+    {
+        "id": 5,
+        "name": "Canela Paraiso",
+        "description": "volutpat eleifend donec ut dolor morbi vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id",
+        "price": 1517.91,
+        "discount": 41,
+        "category": "insumos",
+        "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 6,
+        "name": "Café Origen Tolima",
+        "description": "morbi vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget elit sodales scelerisque mauris sit amet eros suspendisse accumsan tortor quis turpis sed ante vivamus tortor duis",
+        "price": 1050.83,
+        "discount": 4,
+        "category": "te",
+        "image": "PRODUCTS-xanela-paraiso.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 7,
+        "name": "Café Origen Tolima",
+        "description": "vel lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet",
+        "price": 3757.6,
+        "discount": 24,
+        "category": "café",
+        "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 8,
+        "name": "Gold en Monkey",
+        "description": "velit donec diam neque vestibulum eget vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum",
+        "price": 3492.89,
+        "discount": 45,
+        "category": "insumos",
+        "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 9,
+        "name": "Café Orgánico Balanceado",
+        "description": "orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non",
+        "price": 3773.2,
+        "discount": 17,
+        "category": "te",
+        "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 10,
+        "name": "Café Orgánico Balanceado",
+        "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget",
+        "price": 1229.74,
+        "discount": 27,
+        "category": "café",
+        "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
+        "type": "banner"
+    },
+    {
+        "id": 11,
+        "name": "Rooibos Caramelo",
+        "description": "tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec",
+        "price": 3634.15,
+        "discount": 5,
+        "category": "insumos",
+        "image": "PRODUCTS-xanela-paraiso.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 12,
+        "name": "Filtro Tacita",
+        "description": "orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo",
+        "price": 2975.28,
+        "discount": 3,
+        "category": "insumos",
+        "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+        "type": "nuevo"
+    },
+    {
+        "id": 13,
+        "name": "Canela Paraiso",
+        "description": "in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut",
+        "price": 3069.07,
+        "discount": 11,
+        "category": "te",
+        "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 14,
+        "name": "Filtro Tacita",
+        "description": "a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra",
+        "price": 4024.42,
+        "discount": 38,
+        "category": "insumos",
+        "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 15,
+        "name": "Café Orgánico Balanceado",
+        "description": "vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus",
+        "price": 1434.22,
+        "discount": 3,
+        "category": "te",
+        "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 16,
+        "name": "Café Orgánico Balanceado",
+        "description": "amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis",
+        "price": 3491.12,
+        "discount": 31,
+        "category": "insumos",
+        "image": "PRODUCTS-xanela-paraiso.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 17,
+        "name": "Canela Paraiso",
+        "description": "feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea",
+        "price": 3605.48,
+        "discount": 24,
+        "category": "insumos",
+        "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 18,
+        "name": "Rooibos Caramelo",
+        "description": "semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus",
+        "price": 3695.43,
+        "discount": 0,
+        "category": "café",
+        "image": "PRODUCTS-golden-monkey.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 19,
+        "name": "Canela Paraiso",
+        "description": "id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce",
+        "price": 1275.78,
+        "discount": 6,
+        "category": "te",
+        "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 20,
+        "name": "Albaricoque Maracuyá",
+        "description": "rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut",
+        "price": 4222.13,
+        "discount": 36,
+        "category": "café",
+        "image": "PRODUCTS-xanela-paraiso.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 21,
+        "name": "Gold en Monkey",
+        "description": "in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae",
+        "price": 3720.99,
+        "discount": 0,
+        "category": "café",
+        "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 22,
+        "name": "Café Orgánico Balanceado",
+        "description": "sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi",
+        "price": 3473.42,
+        "discount": 32,
+        "category": "insumos",
+        "image": "PRODUCTS-golden-monkey.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 23,
+        "name": "Albaricoque Maracuyá",
+        "description": "donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede",
+        "price": 4219.73,
+        "discount": 44,
+        "category": "café",
+        "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+        "type": "banner"
+    },
+    {
+        "id": 24,
+        "name": "Café Orgánico Balanceado",
+        "description": "at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl",
+        "price": 1734.84,
+        "discount": 5,
+        "category": "insumos",
+        "image": "PRODUCTS-golden-monkey.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 25,
+        "name": "Filtro Tacita",
+        "description": "metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum",
+        "price": 1495.44,
+        "discount": 29,
+        "category": "insumos",
+        "image": "PRODUCTS-golden-monkey.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 26,
+        "name": "Canela Paraiso",
+        "description": "quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce",
+        "price": 3859.14,
+        "discount": 1,
+        "category": "insumos",
+        "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 27,
+        "name": "Canela Paraiso",
+        "description": "bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis",
+        "price": 3419.63,
+        "discount": 13,
+        "category": "te",
+        "image": "PRODUCTS-golden-monkey.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 28,
+        "name": "Rooibos Caramelo",
+        "description": "lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie",
+        "price": 2071.02,
+        "discount": 22,
+        "category": "café",
+        "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 29,
+        "name": "Albaricoque Maracuyá",
+        "description": "luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam",
+        "price": 3200.98,
+        "discount": 19,
+        "category": "te",
+        "image": "PRODUCTS-xanela-paraiso.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 30,
+        "name": "Filtro Tacita",
+        "description": "vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin",
+        "price": 4828.73,
+        "discount": 7,
+        "category": "insumos",
+        "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 31,
+        "name": "Café Orgánico Balanceado",
+        "description": "sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus",
+        "price": 4631.72,
+        "discount": 22,
+        "category": "insumos",
+        "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 32,
+        "name": "Café Orgánico Balanceado",
+        "description": "imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam",
+        "price": 4140.63,
+        "discount": 5,
+        "category": "café",
+        "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 33,
+        "name": "Rooibos Caramelo",
+        "description": "a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat",
+        "price": 2716.41,
+        "discount": 4,
+        "category": "café",
+        "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 34,
+        "name": "Albaricoque Maracuyá",
+        "description": "lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula",
+        "price": 1181.04,
+        "discount": 38,
+        "category": "café",
+        "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 35,
+        "name": "Filtro Tacita",
+        "description": "ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit",
+        "price": 4413.68,
+        "discount": 18,
+        "category": "insumos",
+        "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 36,
+        "name": "Gold en Monkey",
+        "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget",
+        "price": 4534.7,
+        "discount": 18,
+        "category": "te",
+        "image": "PRODUCTS-golden-monkey.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 37,
+        "name": "Rooibos Caramelo",
+        "description": "potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis",
+        "price": 3921.04,
+        "discount": 0,
+        "category": "te",
+        "image": "PRODUCTS-golden-monkey.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 38,
+        "name": "Café Origen Tolima",
+        "description": "curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor",
+        "price": 4175.91,
+        "discount": 32,
+        "category": "insumos",
+        "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 39,
+        "name": "Café Orgánico Balanceado",
+        "description": "sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis",
+        "price": 2830.03,
+        "discount": 29,
+        "category": "insumos",
+        "image": "PRODUCTS-xanela-paraiso.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 40,
+        "name": "Canela Paraiso",
+        "description": "justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt",
+        "price": 2885.91,
+        "discount": 2,
+        "category": "insumos",
+        "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 41,
+        "name": "Filtro Tacita",
+        "description": "nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac",
+        "price": 1583.74,
+        "discount": 5,
+        "category": "insumos",
+        "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 42,
+        "name": "Rooibos Caramelo",
+        "description": "quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci",
+        "price": 4868.15,
+        "discount": 30,
+        "category": "insumos",
+        "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 43,
+        "name": "Gold en Monkey",
+        "description": "bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam",
+        "price": 4406.22,
+        "discount": 19,
+        "category": "café",
+        "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 44,
+        "name": "Rooibos Caramelo",
+        "description": "vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget",
+        "price": 4154.0,
+        "discount": 38,
+        "category": "insumos",
+        "image": "PRODUCTS-golden-monkey.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 45,
+        "name": "Café Orgánico Balanceado",
+        "description": "consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus",
+        "price": 1035.0,
+        "discount": 30,
+        "category": "te",
+        "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
+        "type": "nuevo"
+    },
+    {
+        "id": 46,
+        "name": "Gold en Monkey",
+        "description": "a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel",
+        "price": 3171.02,
+        "discount": 9,
+        "category": "te",
+        "image": "PRODUCTS-xanela-paraiso.jpg",
+        "type": "mas-vendido"
+    },
+    {
+        "id": 47,
+        "name": "Café Orgánico Balanceado",
+        "description": "hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer",
+        "price": 4076.38,
+        "discount": 17,
+        "category": "te",
+        "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+        "type": "banner"
+    },
+    {
+        "id": 48,
+        "name": "Albaricoque Maracuyá",
+        "description": "iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit",
+        "price": 3095.97,
+        "discount": 38,
+        "category": "insumos",
+        "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
+        "type": "nuevo"
+    },
+    {
+        "id": 49,
+        "name": "Filtro Tacita",
+        "description": "suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est",
+        "price": 3126.44,
+        "discount": 13,
+        "category": "café",
+        "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
+        "type": "nuevo"
+    },
+    {
+        "id": 50,
+        "name": "Rooibos Caramelo",
+        "description": "nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis",
+        "price": 2132.16,
+        "discount": 24,
+        "category": "café",
+        "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
+        "type": "banner"
+    }
+]
