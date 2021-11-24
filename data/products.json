@@ -2,7 +2,7 @@
     {
         "id": 1,
         "marca": "huawei",
-        "name": "Y 7",
+        "name": "y7",
         "description": "imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus",
         "price": 24,
         "discount": 6,
@@ -12,12 +12,13 @@
     },
     {
         "id": 2,
-        "name": "Albaricoque Maracuyá",
+        "marca":"huawei",
+        "name": "y6",
         "description": "rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia",
         "price": 4448.18,
         "discount": 16,
         "category": "te",
-        "image": "PRODUCTS-golden-monkey.jpg",
+        "image": "Y6_White_Back_800.png",
         "type": "banner"
     },
     {

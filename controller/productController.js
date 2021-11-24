@@ -7,7 +7,7 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const productController = {
 
     product: (req, res) => {
-        res.render('./products/comprar');
+        res.render('./products/detail');
     },
 
     productForm: (req, res) => {
@@ -19,7 +19,7 @@ const productController = {
     },
 
     productList:(req, res) => {
-        res.render('./products/productList');
+        res.render('./products/productList', {visited : products});
     },
 
 
@@ -50,7 +50,13 @@ const productController = {
     },
     deleteProduct:(req, res) => {
         // La accion de borrado de producto
-        res.render('./products/productList');
+
+        let idCelular = req.params.id;
+        products = products.filter(unProducto => { 
+         return unProducto.id != idCelular;
+        
+        })
+        res.render('./products/productList',{products});
     }
 }
 
