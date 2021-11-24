@@ -1,12 +1,21 @@
+const createError = require('http-errors');
+const cookieParser = require('cookie-parser');
+const path = require("path");
 const express = require("express");
 const app = express();
-const path = require("path");
-
+const logger = require('morgan');
+const methodOverride =  require('method-override');
 
 const indexRouter = require('./router/indexRouter');
 const trolleyRouter = require('./router/trolleyRouter');
 const userRouter = require('./router/userRouter');
 const productRouter = require('./router/productRouter')
+
+app.use(express.urlencoded({ extended: false }));
+app.use(logger('dev'));
+app.use(express.json());
+app.use(cookieParser());
+app.use(methodOverride('_method'));
 
 
 // view engine setup

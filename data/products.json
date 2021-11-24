@@ -1,8 +1,8 @@
 [
     {
         "id": 1,
-        "marca": "huawei",
-        "name": "y7",
+        "marca": "samsung",
+        "name": "a70",
         "description": "imperdiet et commodo vulputate justo in blandit ultrices enim lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus",
         "price": 24,
         "discount": 6,

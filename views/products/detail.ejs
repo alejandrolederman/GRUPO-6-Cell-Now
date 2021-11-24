@@ -8,18 +8,19 @@
             
         <article class="article-comprar">
             <div class="producto-comprar">
-                <img src="/img/samsung/SAMSUNG A70/11897118974aa2ee1d-2d76-4f4b-a218-1b23bb5476b4.jpg" alt="" class="imagen-comprar">
+                <img src="/img/<%productos.marca%>/<% productos.name%>/<% productos.image %> " alt="" class="imagen-comprar">
             </div>
             <div class="descripcion-producto-comprar">
-                <h2>Samsung </h2>
+                <h2><%=productos.marca%> </h2>
+                
                 <br>
-                <h3 class="texto-comprar"><Samsung Galaxy A70 128></h3>
+                <h3 class="texto-comprar"><%=productos.name%> </h3>
                 <br>
-                <h3 class="texto-comprar"> $69.999</h3>
+                <h3 class="texto-comprar"> <%=productos.price%> </h3>
                 <br>
                 <ul>
                         <br>
-                        <li>Descuentos</li>
+                        <li><%=products.discount%> </li>
                         <div class="caracteristicas">
                             <br>
                             <i class="fas fa-percent " style="color:darkblue;"></i> <li>   en 9x $7.777,67 sin interés</li>
@@ -79,7 +80,7 @@
     <main class="main-second">
         
         <div class="main-second-div">
-            <a href="/views/comprar.html"><img src="/img/galaxy fold 3.webp" class="no-disponible"></a>
+            <img src="/img/galaxy fold 3.webp" class="no-disponible">
             <h2>Precio</h2>
         </div>
         <div class="main-second-div">
