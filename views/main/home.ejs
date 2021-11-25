@@ -19,21 +19,21 @@
 
     <main class="main-second">
         <% visited.forEach(products =>{ %>
-            <% if(products.type == "nuevo"){ %>  
+           
             <section class="product-box">
                 <a href="/products/detail/<%=products.id%>">
                     <figure class="product-box_image">
-                        <img src="/img/<%products.marca%>/<% products.name%>/<%=products.image%> " alt="imagen de producto">
+                        <img src="/img/<%=products.image%> " alt="imagen de producto" width="150px" height="305 px">
                     </figure>
                     <article class="product-box_data">
                         <h2><%=products.price%></h2>
-                        <span>D<%=products.discount %></span>
+                        <span>Descuento del <%=products.discount %></span>
                         <p><%=products.name%></p>
                         <i class="fas fa-truck"></i>
                     </article>
                 </a>
             </section>
-            <% } %> 
+           
             <% }) %> 
         <!-- <div class="main-second-div">
             <a href="/product/detail"><img src="/img/galaxy fold 3.webp" class="no-disponible"></a>

@@ -8,7 +8,7 @@
             
         <article class="article-comprar">
             <div class="producto-comprar">
-                <img src="/img/<%productos.marca%>/<% productos.name%>/<% productos.image %> " alt="" class="imagen-comprar">
+                <img src="/img/<%=productos.image %> " alt="" class="imagen-comprar">
             </div>
             <div class="descripcion-producto-comprar">
                 <h2><%=productos.marca%> </h2>
@@ -45,26 +45,27 @@
                         <div class="caracteristicas">
                             <i class="fas fa-mobile" style="color:darkblue;"></i>
                             <br>
-                            <li>Cámara frontal principal: 32 Mpx</li>
+                            <li>  Cámara frontal principal: <%=productos.camara%></li>
                         </div>
                         <div class="caracteristicas">
                             <i class="fas fa-fingerprint" style="color:darkblue;"></i>
                             <br>
-                            <li>Desbloqueo: Huella dactilar y reconocimiento facial</li>
+                            <li>  Desbloqueo: <%= productos.desbloqueo %> </li>
                         </div>
                         <div class="caracteristicas">
                             <i class="fas fa-sd-card"style="color:darkblue;"></i>
                             <br>
-                            <li>Memoria interna: 128 GB</li>
+                            <li>Memoria interna:<%=productos.memoria%></li>
                         </div>
                         <div>
                             <div class="caracteristicas">
-                                <i class="far fa-window-maximize" style="color:darkblue;"></i> <li>Tamaño de la pantalla: 6.7"</li>
+                                <i class="far fa-window-maximize" style="color:darkblue;"></i> <li> Tamaño de la pantalla: <%=productos.pantalla%> pulgadas</li>
                             </div>
                         </div>
                     </main>
                     <br>
-                    <h4>Ver reseña</h4>
+                    <h4><%=productos.description%></h4>
+                    
                 </ul>
             </div>
 
