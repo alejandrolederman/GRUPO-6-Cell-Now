@@ -18,9 +18,11 @@ const productController = require('../controller/productController');
 
 router.get('/detail/:id', productController.productDetail);
 
-router.get('/productList', productController.productList);
+router.get('/productsList', productController.productList);
 
-router.get ('/productForm', productController.productForm)
+router.get ('/producstForm', productController.productFormCreate)
+
+router.delete('/:id', productController.producDelete);
 
 
 

@@ -6,37 +6,57 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
 
-    // Root - Show all products
-    productList:(req, res) => {
-        res.render('./products/productList', {visited : products});
-    },
-
     productDetail: (req, res) => {
 		let elId = req.params.id;
 		let productos = products.find(unProducto => {
 			if (unProducto.id == elId){
 				return unProducto;
-			}
-			
+			}	
 		});
 		res.render('./products/detail',{ productos, products})
 	},
 
-    productForm: (req, res) => {
-        res.render('./products/productForm');
+    productList:(req, res) => {
+        res.render('./products/productList', {visited : products});
     },
 
+    productFormCreate: (req, res) => {
+
+        // falta la logica de creacion de producto
+
+        res.render('./products/producstForm');
+    },
+
+    
     productEdit:(req, res) => {
         res.render('./products/productEdit');
+    },
+
+    producDelete:(req, res) => {
+      //La accion de borrado de producto
+        
+        let idCelular = req.params.id;
+            products = products.filter(unProducto => { 
+            return unProducto.id != idCelular;
+                
+        })
+             res.render('./products/productList',{products});
+    },
+
+    productFormEdit:(req, res) => {
+            // Renderizar la vista del formulario de actualizacion de producto
+             res.render('./products/productList');
+     },
+     productEditUpdate:(req, res) => {
+             // La accion de actualizacion de producto
+             res.render('./products/productList');
     },
 
     
 
 
 //     // CRUD
-//     getAllProducts:(req, res) => {
-//         res.send(products)
-//     },
+//    
 //     createProductForm:(req, res) => {
 //         // Renderizar la vista del formulario
 //         res.render('./products/productList');
@@ -47,8 +67,8 @@ const productController = {
 //         res.send(productoBuscado != null ? productoBuscado : 'Producto no encontrado');
 //     },
 //     createProduct:(req, res) => {
-//         // Va a tener la logica de creacion del producto (lo tienn que agregar al json)
-//         res.render('./products/productList');
+//         // Va a tener la logica de creacion del producto 
+//         res.render('./products/productsForm');
 //     },
 //     updateProductForm:(req, res) => {
 //         // Renderizar la vista del formulario de actualizacion de producto
@@ -58,16 +78,7 @@ const productController = {
 //         // La accion de actualizacion de producto
 //         res.render('./products/productList');
 //     },
-//     deleteProduct:(req, res) => {
-//         // La accion de borrado de producto
 
-//         let idCelular = req.params.id;
-//         products = products.filter(unProducto => { 
-//          return unProducto.id != idCelular;
-        
-//         })
-//         res.render('./products/productList',{products});
-//     }
 }
 
 module.exports = productController;

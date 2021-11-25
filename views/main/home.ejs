@@ -19,7 +19,7 @@
 
     <main class="main-second">
         <% visited.forEach(products =>{ %>
-           
+           <% if(products.marca == "HUAWEI"){ %> 
             <section class="product-box">
                 <a href="/products/detail/<%=products.id%>">
                     <figure class="product-box_image">
@@ -32,9 +32,10 @@
                         <i class="fas fa-truck"></i>
                     </article>
                 </a>
-            </section>
-           
-            <% }) %> 
+               
+        </section>
+        <% } %> 
+        <% }) %> 
         <!-- <div class="main-second-div">
             <a href="/product/detail"><img src="/img/galaxy fold 3.webp" class="no-disponible"></a>
             <h2>Precio</h2>
