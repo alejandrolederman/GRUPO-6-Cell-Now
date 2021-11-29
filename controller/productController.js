@@ -17,7 +17,7 @@ const productController = {
 	},
 
     productList:(req, res) => {
-        res.send("./products/productList", {visited, products});
+        res.send('./products/producstForm', {productos, products});
     },
 
     productFormCreate: (req, res) => {
@@ -43,42 +43,7 @@ const productController = {
              res.render('./products/productList',{products});
     },
 
-    // productFormEdit:(req, res) => {
-    //         // Renderizar la vista del formulario de actualizacion de producto
-    //          res.render('./products/productList');
-    //  },
-    //  productEditUpdate:(req, res) => {
-    //          // La accion de actualizacion de producto
-    //          res.render('./products/productList');
-    // },
-
-    
-
-
-//     // CRUD
-//    
-//     createProductForm:(req, res) => {
-//         // Renderizar la vista del formulario
-//         res.render('./products/productList');
-//     },
-//     detailProduct:(req, res) => {
-//         let id = req.params.id;
-//         let productoBuscado = products.find(product => product.id == id);
-//         res.send(productoBuscado != null ? productoBuscado : 'Producto no encontrado');
-//     },
-//     createProduct:(req, res) => {
-//         // Va a tener la logica de creacion del producto 
-//         res.render('./products/productsForm');
-//     },
-//     updateProductForm:(req, res) => {
-//         // Renderizar la vista del formulario de actualizacion de producto
-//         res.render('./products/productList');
-//     },
-//     updateProduct:(req, res) => {
-//         // La accion de actualizacion de producto
-//         res.render('./products/productList');
-//     },
-
+ 
 }
 
 module.exports = productController;

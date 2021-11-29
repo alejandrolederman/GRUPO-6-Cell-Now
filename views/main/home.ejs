@@ -20,7 +20,7 @@
 
     <main class="main-second">
         <% visited.forEach(products =>{ %>
-           <% if(products.marca == "HUAWEI"){ %> 
+           <% if(products.type == "nuevo"){ %> 
             <section class="product-box">
                 <a href="/products/detail/<%=products.id%>">
                     <figure class="product-box_image">
@@ -37,26 +37,7 @@
         </section>
         <% } %> 
         <% }) %> 
-        <!-- <div class="main-second-div">
-            <a href="/product/detail"><img src="/img/galaxy fold 3.webp" class="no-disponible"></a>
-            <h2>Precio</h2>
-        </div>
-        <div class="main-second-div">
-            <img src="/img/motorola/MOTOROLA ONE ACTION/One Action_Blue_Front_800.png" class="no-disponible">
-            <h2>Precio</h2>
-        </div>
-        <div class="main-second-div">
-            <img src="/img/samsung/SAMSUNG GALAXY S10E/S10e_Black_Front_800.png" class="no-disponible">
-            <h2>Precio</h2>
-        </div>
-        <div class="main-second-div">
-            <img src="/img/iphone/IPHONE X 64 GB/iPhone X_White_Front_800.png" class="no-disponible">
-            <h2>Precio</h2>
-        </div>
-        <div class="main-second-div">
-            <img src="/img/iphone/IPHONE 8/iPhone 8_Black_Front_800.png" class="no-disponible">
-            <h2>Precio</h2>
-        </div> -->
+        
     </main>
     <footer>
 
