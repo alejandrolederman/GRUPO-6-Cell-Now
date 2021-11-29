@@ -17,7 +17,7 @@ const productController = {
 	},
 
     productList:(req, res) => {
-        res.render('./products/productList', {visited : products});
+        res.send("./products/productList", {visited, products});
     },
 
     productFormCreate: (req, res) => {
@@ -43,14 +43,14 @@ const productController = {
              res.render('./products/productList',{products});
     },
 
-    productFormEdit:(req, res) => {
-            // Renderizar la vista del formulario de actualizacion de producto
-             res.render('./products/productList');
-     },
-     productEditUpdate:(req, res) => {
-             // La accion de actualizacion de producto
-             res.render('./products/productList');
-    },
+    // productFormEdit:(req, res) => {
+    //         // Renderizar la vista del formulario de actualizacion de producto
+    //          res.render('./products/productList');
+    //  },
+    //  productEditUpdate:(req, res) => {
+    //          // La accion de actualizacion de producto
+    //          res.render('./products/productList');
+    // },
 
     
 
