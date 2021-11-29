@@ -16,9 +16,12 @@ const productController = {
 		res.render('./products/detail',{ productos, products})
 	},
 
-    productList:(req, res) => {
-        res.send('./products/producstForm', {productos, products});
-    },
+   // Root - Show all products
+	productList: (req, res) => {
+		res.render("/products/porductList", {
+			productos : products
+		});
+	},
 
     productFormCreate: (req, res) => {
 
@@ -27,20 +30,16 @@ const productController = {
         res.render('./products/producstForm');
     },
 
-    
     productEdit:(req, res) => {
+
+        //flalta la logica de editar producto
         res.render('./products/productEdit');
     },
 
     producDelete:(req, res) => {
       //La accion de borrado de producto
         
-        let idCelular = req.params.id;
-            products = products.filter(unProducto => { 
-            return unProducto.id != idCelular;
-                
-        })
-             res.render('./products/productList',{products});
+        res.render('./products/productList',{products});
     },
 
  
