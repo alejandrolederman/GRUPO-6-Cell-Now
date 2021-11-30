@@ -17,30 +17,31 @@ const productController = {
 	},
 
    // Root - Show all products
-	productList: (req, res) => {
-		res.render("/products/porductList", {
-			productos : products
-		});
-	},
-
-    productFormCreate: (req, res) => {
-
-        // falta la logica de creacion de producto
-
-        res.render('./products/producstForm');
+   productsList: (req, res) => {
+        res.render('./products/productsList', {
+          products
+        });
     },
+	
 
-    productEdit:(req, res) => {
+    // productFormCreate: (req, res) => {
 
-        //flalta la logica de editar producto
-        res.render('./products/productEdit');
-    },
+    //     // falta la logica de creacion de producto
 
-    producDelete:(req, res) => {
-      //La accion de borrado de producto
+    //     res.render('./products/producstForm');
+    // },
+
+    // productEdit:(req, res) => {
+
+    //     //flalta la logica de editar producto
+    //     res.render('./products/productEdit');
+    // },
+
+    // producDelete:(req, res) => {
+    //   //La accion de borrado de producto
         
-        res.render('./products/productList',{products});
-    },
+    //     res.render('./products/productList',{products});
+    // },
 
  
 }

@@ -10,7 +10,7 @@
 
      <main class="main-first">
         <div>
-            <a href="/products/productList"><img src="/img/mobile-devices-hd.png" class="imagen-main" alt="imagen" height="100px"></a>
+            <a href="/products/productsList"><img src="/img/mobile-devices-hd.png" class="imagen-main" alt="imagen" height="100px"></a>
             <p>LISTA DE PRODUCTOS</p>
         </div>
 
@@ -19,8 +19,8 @@
     <h3 class="product">Productos Destacados</h3>
 
     <main class="main-second">
-        <% visited.forEach(products =>{ %>
-           <% if(products.type == "nuevo"){ %> 
+        <% products.forEach(products =>{ %>
+           
             <section class="product-box">
                 <a href="/products/detail/<%=products.id%>">
                     <figure class="product-box_image">
@@ -35,7 +35,7 @@
                 </a>
                
         </section>
-        <% } %> 
+      
         <% }) %> 
         
     </main>

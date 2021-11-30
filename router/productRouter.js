@@ -7,10 +7,10 @@ const productController = require('../controller/productController');
 
 router.get('/detail/:id', productController.productDetail);
 
-router.get('/productsList', productController.productList);
+router.get('/productsList', productController.productsList);
 
-router.get ('/producstForm', productController.productFormCreate)
+// router.get ('/producstForm', productController.productFormCreate)
 
-router.delete('/:id', productController.producDelete);
+// router.delete('/:id', productController.producDelete);
 
 module.exports = router;

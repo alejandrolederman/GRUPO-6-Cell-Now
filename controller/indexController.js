@@ -8,7 +8,7 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const indexController = {
     home: (req, res) => {
         res.render('./main/home', {
-            visited : products
+         products
         });
     },
     search: (req, res) => {
