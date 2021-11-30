@@ -5,7 +5,7 @@
     
         <%- include('../partials/header')%>
     
-        <form action="/products/create" method="POST">
+        <form action="/products/productsForm" method="POST">
             <div class="text-color">
 
                 <label for="nombre" class="text-color"> Marca   </label>
@@ -13,7 +13,7 @@
                 <br>
                 <br>
                 <label for="nombre" class="text-color"> modelo  </label>
-                <input type="text" name="name" id="name" >
+                <input type="text" name="name" id="name">
                 <br>
                 <br>
                 <label for="nombre" class="text-color">Descripcion</label>             
@@ -91,9 +91,6 @@
             <br>
             <br>
         </form>
-
-
-
-
+        <%- include ('../partials/footer')%>
 </body>
 </html>
