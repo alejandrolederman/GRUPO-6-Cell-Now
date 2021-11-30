@@ -6,44 +6,71 @@ let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
 
-    productDetail: (req, res) => {
-		let elId = req.params.id;
-		let productos = products.find(unProducto => {
-			if (unProducto.id == elId){
-				return unProducto;
-			}	
-		});
-		res.render('./products/detail',{ productos, products})
-	},
 
-   // Root - Show all products
-   productsList: (req, res) => {
+    productDetail: (req, res) => {
+        let elId = req.params.id;
+        let productos = products.find(unProducto => {
+            if (unProducto.id == elId) {
+                return unProducto;
+            }
+        });
+        res.render('./products/detail', {
+            productos,
+            products
+        })
+    },
+
+    // Root - Show all products
+    productsList: (req, res) => {
         res.render('./products/productsList', {
-          products
+            products
         });
     },
-	
 
-    // productFormCreate: (req, res) => {
+    // Create - Form to create
+    create: (req, res) => {
+        res.render("productsForm");
+    },
 
-    //     // falta la logica de creacion de producto
+    // Create -  Method to store
+    store: (req, res) => {
+        const {
+            marca,
+            name,
+            price,
+            discount,
+            camara,
+            description,
+            desbloqueo,
+            pantalla,
+            memoria,
+            image,
+            type
+        } = req.body;
 
-    //     res.render('./products/producstForm');
-    // },
+        let cantidadProductos = 0;
+        for (let i = 0; i < products.length; i++) {
 
-    // productEdit:(req, res) => {
+            cantidadProductos = cantidadProductos + 1;
+        };
 
-    //     //flalta la logica de editar producto
-    //     res.render('./products/productEdit');
-    // },
+        let data = {
 
-    // producDelete:(req, res) => {
-    //   //La accion de borrado de producto
-        
-    //     res.render('./products/productList',{products});
-    // },
-
- 
+                id: cantidadProductos,
+                marca: marca,
+                name: name,
+                description: description,
+                price: price,
+                discount: discount,
+                camara: camara,
+                desbloqueo: desbloqueo,
+                pantalla: pantalla,
+                memoria: memoria,
+                image: image,
+                type: type
+            },      
+    }
 }
+;
 
 module.exports = productController;
