@@ -4,6 +4,96 @@
     <body>
     
         <%- include('../partials/header')%>
-    <h1>aca podes editar productos</h1>
+    
+        <form action="/products/productEdit/<%=productos.id %>?_method=PUT	" method="POST" >
+            <div class="text-color">
+
+                <label for="nombre" class="text-color"> Marca   </label>
+                <input type="text" name="marca" id="marca" >
+                <br>
+                <br>
+                <label for="nombre" class="text-color"> modelo  </label>
+                <input type="text" name="name" id="name" >
+                <br>
+                <br>
+                <label for="nombre" class="text-color">Descripcion</label>             
+                <input type="text" name="descripcion" id="Descripcion" placeholder="Ingresa Descripcion">
+                <br>
+                <br>
+                <label for="nombre" class="text-color"> precio del producto  </label>
+                <input type="text" name="price" id="price" >
+                <br>
+                <br> 
+                <label for="nombre" class="text-color"> cantidad de MP de la camara principal  </label>
+                <input type="text" name="camara" id="camara" >
+                <br>
+                <br>    
+                <label for="nombre" class="text-color"> modo de desbloqueo  </label>
+                <input type="text" name="desbloqueo" id="desbloqueo" >
+                <br>
+                <br> 
+                <label for="nombre" class="text-color"> tama&ntilde;o de pantalla  </label>
+                <input type="text" name="pantalla" id="pantalla" >
+                <br>
+                <br>
+                <label for="nombre" class="text-color"> capacidad de almacenamiento  </label>
+                <input type="text" name="memoria" id="memoria" >
+                <br>
+                <br>
+                              
+                <div class="interests"> 
+                    <div>
+                        <input type= "checkbox" name= "interests" value="a" id="a">
+                        <label for= "a" class="text-color">exelente estado</label>
+                    </div>
+                    <div>
+                        <input type= "checkbox" name= "interests" value="b" id="b">
+                        <label for= "b" class="text-color">muy buen estado</label>
+                    </div>
+                    <div>
+                        <input type= "checkbox" name= "interests" value="c" id="c">
+                        <label for= "c" class="text-color">buen estado</label>
+                    </div>
+                    <div>
+                        <input type= "checkbox" name= "interests" value="d" id="d">
+                        <label for= "d" class="text-color">roto pero funcionando</label>
+                    </div>
+                    <div>
+                        <input type= "checkbox" name= "interests" value="e" id="e">
+                        <label for= "e" class="text-color">roto sin funcionar</label>
+                    </div>
+                    
+                    <br>
+                    <br>
+                <h4 class="text-color imagen-perfil">agrega una imagen del producto</h4>
+                <input type= "file" name="image" id="image" class="imagen-producto">
+                <br>
+                <br>
+                <h4 class="text-color imagen-perfil">agrega una imagen del producto</h4>
+                <input type= "file" name="image" id="image" class="imagen-producto">
+                <br>
+                <br>
+                <h4 class="text-color imagen-perfil">agrega una imagen del producto</h4>
+                <input type= "file" name="image" id="image" class="imagen-producto">
+                <br>
+                <br>
+
+                </div>
+    
+            </div>  
+
+            <br>
+            <br>
+        <div>
+            <button class="button" name= "button"><span> ENVIAR</span></button> 
+            <button class="button" name= "button"><span> BORRAR</span></button>
+        </div> 
+            <br>
+            <br>
+        </form>
+
+
+
+
 </body>
 </html>
