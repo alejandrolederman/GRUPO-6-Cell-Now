@@ -1,415 +1,85 @@
-[{
+[
+{
+    "id": 1,
+    "marca": "Google",
+    "name": "Pixel 4 xl",
+    "price": "$348.999,00",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Tiene 2 cámaras traseras de 16Mpx/12.2Mpx.Cámaras delanteras de 8Mpx/0.3Mpx.Procesador Snapdragon 855 Octa-Core de 2.84GHz con 6GB de RAM.Batería de 3700mAh.Memoria interna de 64GB.Resistente al agua.Con reconocimiento facial.Tarjeta eSIM incluida.",
+    "camara":"16Mpx/12.2Mpx",
+    "pantalla":"Pantalla OLED de 6.3",
+    "memoria":"64GB",
+    "desbloqueo":"reconocimiento facial",
+    "imagen":"713N4SwTtKL._AC_SL1500_.jpg"
+},
+    
+{
+    "id": 2,
+    "marca": "Samsung",
+    "name": "Galaxy S20 5g",
+    "price": "$1.000.000,00",
+    "discount": "% 10",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Compatible con redes 5G.Pantalla Dynamic AMOLED 2X de 6.7.Tiene 4 cámaras traseras de 64 Mpx / 12 Mpx / 12 Mpx / 0.3 Mpx.Cámara delantera de 10 Mpx.Batería de 4500 mAh con carga inalámbrica.Memoria interna de 128 GB.Resistente al agua.Con reconocimiento facial y sensor de huella dactilar.Resistente al polvo.",
+    "camara": "64Mpx/12Mpx/12Mpx/0.3Mpx",
+    "pantalla": "Pantalla Dynamic AMOLED 2X de 6.7",
+    "memoria": "128GB",
+    "desbloqueo": "reconocimiento facial y sensor de huella dactilar",
+    "image": "41MpLFDoaNL._AC_.jpg"
+}, 
+
+{
     "id": 3,
-    "marca": "",
-    "name": "",
-    "price": "",
-    "camara": "",
-    "desbloqueo": "",
-    "pantalla": "",
-    "memoria": "",
-    "category": "insumos",
-    "description": "algo",
-    "image": "verduras-frescas-y-fruta-del-cajón-de-madera-36448034.jpg"
-}, {
+    "marca": "Apple",
+    "name": "iPhone XR",
+    "price": "$169.990,00",
+    "discount": "% 10",
+    "description": "El iPhone XR viene con una pantalla Liquid Retina de 6.1 pulgadas (2) y está disponible en seis colores increíbles.El avanzado sistema Face ID te permite desbloquearlo de forma segura e iniciar sesión en tus apps con sólo una mirada. El chip A12 Bionic usa el aprendizaje automático en tiempo real para llevar aún más allá todo lo que puedes hacer con tus fotos, juegos, realidad aumentada y más.El sistema de cámara única de 12 MP con modo Retrato, Iluminación de Retrato, bokeh mejorado y Control de Profundidad te permite tomar retratos con calidad de estudio. Además, es resistente al agua.",
+    "camara": "12Mpx",
+    "pantalla": "pantalla Liquid Retina de 6.1 pulgadas",
+    "memoria": "64GB",
+    "desbloqueo": "reconocimiento facial",
+    "image": "41ZjUOH6nRL._AC_.jpg"
+}, 
+
+{
     "id": 4,
-    "marca": "iPhone",
-    "name": "iPhone 7",
-    "description": "El Apple iPhone 7 es el sucesor del iPhone 6s del año pasado. Aunque conserva mucho de su diseño exterior, el iPhone 7 cuenta con mejoras en sus características, incluyendo su nuevo chip A10 Fusion, un 40 por ciento más rápido que el anterior A9. Su botón de inicio ahora es sensible al tacto, y cuenta con parlantes stereo. El iPhone 7 además elimina el conector de auriculares de 3.5mm, es resistente al agua, y mejora su cámara de 12 MP notablemente.",
-    "price": "$ 54.099",
-    "discount": "% 6",
-    "camara": "12  MP",
-    "desbloqueo": "lector de huellas",
-    "pantalla": "4.7",
-    "memoria": "32 GB",
-    "category": "insumos",
-    "image": "iPhone 7_Black_Front_800.png",
-    "type": "banner"
-}, {
-    "id": 9,
-    "name": "Café Orgánico Balanceado",
-    "description": "orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non",
-    "price": 3773.2,
-    "discount": 17,
-    "category": "te",
-    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-    "type": "banner"
-}, {
-    "id": 10,
-    "name": "Café Orgánico Balanceado",
-    "description": "curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget",
-    "price": 1229.74,
-    "discount": 27,
-    "category": "café",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "type": "banner"
-}, {
-    "id": 11,
-    "name": "Rooibos Caramelo",
-    "description": "tempor turpis nec euismod scelerisque quam turpis adipiscing lorem vitae mattis nibh ligula nec sem duis aliquam convallis nunc proin at turpis a pede posuere nonummy integer non velit donec",
-    "price": 3634.15,
-    "discount": 5,
-    "category": "insumos",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "type": "nuevo"
-}, {
-    "id": 12,
-    "name": "Filtro Tacita",
-    "description": "orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula consequat morbi a ipsum integer a nibh in quis justo",
-    "price": 2975.28,
-    "discount": 3,
-    "category": "insumos",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "type": "nuevo"
-}, {
-    "id": 13,
-    "name": "Canela Paraiso",
-    "description": "in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut",
-    "price": 3069.07,
-    "discount": 11,
-    "category": "te",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "type": "mas-vendido"
-}, {
-    "id": 14,
-    "name": "Filtro Tacita",
-    "description": "a nibh in quis justo maecenas rhoncus aliquam lacus morbi quis tortor id nulla ultrices aliquet maecenas leo odio condimentum id luctus nec molestie sed justo pellentesque viverra pede ac diam cras pellentesque volutpat dui maecenas tristique est et tempus semper est quam pharetra",
-    "price": 4024.42,
-    "discount": 38,
-    "category": "insumos",
-    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-    "type": "mas-vendido"
-}, {
-    "id": 15,
-    "name": "Café Orgánico Balanceado",
-    "description": "vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis sapien cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus",
-    "price": 1434.22,
-    "discount": 3,
-    "category": "te",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "type": "mas-vendido"
-}, {
-    "id": 16,
-    "name": "Café Orgánico Balanceado",
-    "description": "amet consectetuer adipiscing elit proin risus praesent lectus vestibulum quam sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis",
-    "price": 3491.12,
-    "discount": 31,
-    "category": "insumos",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "type": "mas-vendido"
-}, {
-    "id": 17,
-    "name": "Canela Paraiso",
-    "description": "feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce congue diam id ornare imperdiet sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis justo in hac habitasse platea",
-    "price": 3605.48,
-    "discount": 24,
-    "category": "insumos",
-    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-    "type": "banner"
-}, {
-    "id": 18,
-    "name": "Rooibos Caramelo",
-    "description": "semper porta volutpat quam pede lobortis ligula sit amet eleifend pede libero quis orci nullam molestie nibh in lectus pellentesque at nulla suspendisse potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus",
-    "price": 3695.43,
-    "discount": 0,
-    "category": "café",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "type": "mas-vendido"
-}, {
-    "id": 19,
-    "name": "Canela Paraiso",
-    "description": "id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae nulla dapibus dolor vel est donec odio justo sollicitudin ut suscipit a feugiat et eros vestibulum ac est lacinia nisi venenatis tristique fusce",
-    "price": 1275.78,
-    "discount": 6,
-    "category": "te",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "type": "mas-vendido"
-}, {
-    "id": 20,
-    "name": "Albaricoque Maracuyá",
-    "description": "rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce lacus purus aliquet at feugiat non pretium quis lectus suspendisse potenti in eleifend quam a odio in hac habitasse platea dictumst maecenas ut",
-    "price": 4222.13,
-    "discount": 36,
-    "category": "café",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "type": "banner"
-}, {
-    "id": 21,
-    "name": "Gold en Monkey",
-    "description": "in felis donec semper sapien a libero nam dui proin leo odio porttitor id consequat in consequat ut nulla sed accumsan felis ut at dolor quis odio consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae",
-    "price": 3720.99,
-    "discount": 0,
-    "category": "café",
-    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-    "type": "nuevo"
-}, {
-    "id": 22,
-    "name": "Café Orgánico Balanceado",
-    "description": "sapien varius ut blandit non interdum in ante vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae duis faucibus accumsan odio curabitur convallis duis consequat dui nec nisi volutpat eleifend donec ut dolor morbi",
-    "price": 3473.42,
-    "discount": 32,
-    "category": "insumos",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "type": "mas-vendido"
-}, {
-    "id": 23,
-    "name": "Albaricoque Maracuyá",
-    "description": "donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum imperdiet nullam orci pede",
-    "price": 4219.73,
-    "discount": 44,
-    "category": "café",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "type": "banner"
-}, {
-    "id": 24,
-    "name": "Café Orgánico Balanceado",
-    "description": "at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget tempus vel pede morbi porttitor lorem id ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl",
-    "price": 1734.84,
-    "discount": 5,
-    "category": "insumos",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "type": "banner"
-}, {
-    "id": 25,
-    "name": "Filtro Tacita",
-    "description": "metus sapien ut nunc vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae mauris viverra diam vitae quam suspendisse potenti nullam porttitor lacus at turpis donec posuere metus vitae ipsum aliquam non mauris morbi non lectus aliquam sit amet diam in magna bibendum",
-    "price": 1495.44,
-    "discount": 29,
-    "category": "insumos",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "type": "nuevo"
-}, {
-    "id": 26,
-    "name": "Canela Paraiso",
-    "description": "quam nec dui luctus rutrum nulla tellus in sagittis dui vel nisl duis ac nibh fusce",
-    "price": 3859.14,
-    "discount": 1,
-    "category": "insumos",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "type": "mas-vendido"
-}, {
-    "id": 27,
-    "name": "Canela Paraiso",
-    "description": "bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis",
-    "price": 3419.63,
-    "discount": 13,
-    "category": "te",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "type": "nuevo"
-}, {
-    "id": 28,
-    "name": "Rooibos Caramelo",
-    "description": "lorem ipsum dolor sit amet consectetuer adipiscing elit proin interdum mauris non ligula pellentesque ultrices phasellus id sapien in sapien iaculis congue vivamus metus arcu adipiscing molestie",
-    "price": 2071.02,
-    "discount": 22,
-    "category": "café",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "type": "mas-vendido"
-}, {
-    "id": 29,
-    "name": "Albaricoque Maracuyá",
-    "description": "luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam",
-    "price": 3200.98,
-    "discount": 19,
-    "category": "te",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "type": "mas-vendido"
-}, {
-    "id": 30,
-    "name": "Filtro Tacita",
-    "description": "vulputate ut ultrices vel augue vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae donec pharetra magna vestibulum aliquet ultrices erat tortor sollicitudin",
-    "price": 4828.73,
-    "discount": 7,
-    "category": "insumos",
-    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-    "type": "banner"
-}, {
-    "id": 31,
-    "name": "Café Orgánico Balanceado",
-    "description": "sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus",
-    "price": 4631.72,
-    "discount": 22,
-    "category": "insumos",
-    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-    "type": "mas-vendido"
-}, {
-    "id": 32,
-    "name": "Café Orgánico Balanceado",
-    "description": "imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam",
-    "price": 4140.63,
-    "discount": 5,
-    "category": "café",
-    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-    "type": "banner"
-}, {
-    "id": 33,
-    "name": "Rooibos Caramelo",
-    "description": "a odio in hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat",
-    "price": 2716.41,
-    "discount": 4,
-    "category": "café",
-    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-    "type": "nuevo"
-}, {
-    "id": 34,
-    "name": "Albaricoque Maracuyá",
-    "description": "lectus in quam fringilla rhoncus mauris enim leo rhoncus sed vestibulum sit amet cursus id turpis integer aliquet massa id lobortis convallis tortor risus dapibus augue vel accumsan tellus nisi eu orci mauris lacinia sapien quis libero nullam sit amet turpis elementum ligula vehicula",
-    "price": 1181.04,
-    "discount": 38,
-    "category": "café",
-    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-    "type": "mas-vendido"
-}, {
-    "id": 35,
-    "name": "Filtro Tacita",
-    "description": "ligula suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit",
-    "price": 4413.68,
-    "discount": 18,
-    "category": "insumos",
-    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-    "type": "mas-vendido"
-}, {
-    "id": 36,
-    "name": "Gold en Monkey",
-    "description": "eget rutrum at lorem integer tincidunt ante vel ipsum praesent blandit lacinia erat vestibulum sed magna at nunc commodo placerat praesent blandit nam nulla integer pede justo lacinia eget tincidunt eget",
-    "price": 4534.7,
-    "discount": 18,
-    "category": "te",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "type": "mas-vendido"
-}, {
-    "id": 37,
-    "name": "Rooibos Caramelo",
-    "description": "potenti cras in purus eu magna vulputate luctus cum sociis natoque penatibus et magnis dis parturient montes nascetur ridiculus mus vivamus vestibulum sagittis",
-    "price": 3921.04,
-    "discount": 0,
-    "category": "te",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "type": "nuevo"
-}, {
-    "id": 38,
-    "name": "Café Origen Tolima",
-    "description": "curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit amet erat nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor",
-    "price": 4175.91,
-    "discount": 32,
-    "category": "insumos",
-    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-    "type": "nuevo"
-}, {
-    "id": 39,
-    "name": "Café Orgánico Balanceado",
-    "description": "sapien urna pretium nisl ut volutpat sapien arcu sed augue aliquam erat volutpat in congue etiam justo etiam pretium iaculis",
-    "price": 2830.03,
-    "discount": 29,
-    "category": "insumos",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "type": "mas-vendido"
-}, {
-    "id": 40,
-    "name": "Canela Paraiso",
-    "description": "justo in hac habitasse platea dictumst etiam faucibus cursus urna ut tellus nulla ut erat id mauris vulputate elementum nullam varius nulla facilisi cras non velit nec nisi vulputate nonummy maecenas tincidunt",
-    "price": 2885.91,
-    "discount": 2,
-    "category": "insumos",
-    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-    "type": "nuevo"
-}, {
-    "id": 41,
-    "name": "Filtro Tacita",
-    "description": "nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac",
-    "price": 1583.74,
-    "discount": 5,
-    "category": "insumos",
-    "image": "PRODUCTS-product_f_i_filtro_detalle_tacita.jpg",
-    "type": "nuevo"
-}, {
-    "id": 42,
-    "name": "Rooibos Caramelo",
-    "description": "quis turpis sed ante vivamus tortor duis mattis egestas metus aenean fermentum donec ut mauris eget massa tempor convallis nulla neque libero convallis eget eleifend luctus ultricies eu nibh quisque id justo sit amet sapien dignissim vestibulum vestibulum ante ipsum primis in faucibus orci",
-    "price": 4868.15,
-    "discount": 30,
-    "category": "insumos",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "type": "mas-vendido"
-}, {
-    "id": 43,
-    "name": "Gold en Monkey",
-    "description": "bibendum imperdiet nullam orci pede venenatis non sodales sed tincidunt eu felis fusce posuere felis sed lacus morbi sem mauris laoreet ut rhoncus aliquet pulvinar sed nisl nunc rhoncus dui vel sem sed sagittis nam congue risus semper porta volutpat quam",
-    "price": 4406.22,
-    "discount": 19,
-    "category": "café",
-    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-    "type": "nuevo"
-}, {
-    "id": 44,
-    "name": "Rooibos Caramelo",
-    "description": "vestibulum velit id pretium iaculis diam erat fermentum justo nec condimentum neque sapien placerat ante nulla justo aliquam quis turpis eget",
-    "price": 4154,
-    "discount": 38,
-    "category": "insumos",
-    "image": "PRODUCTS-golden-monkey.jpg",
-    "type": "banner"
-}, {
-    "id": 45,
-    "name": "Café Orgánico Balanceado",
-    "description": "consequat varius integer ac leo pellentesque ultrices mattis odio donec vitae nisi nam ultrices libero non mattis pulvinar nulla pede ullamcorper augue a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus",
-    "price": 1035,
-    "discount": 30,
-    "category": "te",
-    "image": "PRODUCTS-cafe-organico-balanceado-juan-valdez.png",
-    "type": "nuevo"
-}, {
-    "id": 46,
-    "name": "Gold en Monkey",
-    "description": "a suscipit nulla elit ac nulla sed vel enim sit amet nunc viverra dapibus nulla suscipit ligula in lacus curabitur at ipsum ac tellus semper interdum mauris ullamcorper purus sit amet nulla quisque arcu libero rutrum ac lobortis vel",
-    "price": 3171.02,
-    "discount": 9,
-    "category": "te",
-    "image": "PRODUCTS-xanela-paraiso.jpg",
-    "type": "mas-vendido"
-}, {
-    "id": 47,
-    "name": "Café Orgánico Balanceado",
-    "description": "hac habitasse platea dictumst maecenas ut massa quis augue luctus tincidunt nulla mollis molestie lorem quisque ut erat curabitur gravida nisi at nibh in hac habitasse platea dictumst aliquam augue quam sollicitudin vitae consectetuer eget rutrum at lorem integer",
-    "price": 4076.38,
-    "discount": 17,
-    "category": "te",
-    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-    "type": "banner"
-}, {
-    "id": 48,
-    "name": "Albaricoque Maracuyá",
-    "description": "iaculis congue vivamus metus arcu adipiscing molestie hendrerit at vulputate vitae nisl aenean lectus pellentesque eget nunc donec quis orci eget orci vehicula condimentum curabitur in libero ut massa volutpat convallis morbi odio odio elementum eu interdum eu tincidunt in leo maecenas pulvinar lobortis est phasellus sit",
-    "price": 3095.97,
-    "discount": 38,
-    "category": "insumos",
-    "image": "PRODUCTS-cafe-origen-tolima-juan-valdez.png",
-    "type": "nuevo"
-}, {
-    "id": 49,
-    "name": "Filtro Tacita",
-    "description": "suspendisse ornare consequat lectus in est risus auctor sed tristique in tempus sit amet sem fusce consequat nulla nisl nunc nisl duis bibendum felis sed interdum venenatis turpis enim blandit mi in porttitor pede justo eu massa donec dapibus duis at velit eu est",
-    "price": 3126.44,
-    "discount": 13,
-    "category": "café",
-    "image": "PRODUCTS-te-blanco-albaricoque-maracuya.jpg",
-    "type": "nuevo"
-}, {
-    "id": 50,
-    "name": "Rooibos Caramelo",
-    "description": "nulla tempus vivamus in felis eu sapien cursus vestibulum proin eu mi nulla ac enim in tempor turpis nec euismod scelerisque quam turpis",
-    "price": 2132.16,
-    "discount": 24,
-    "category": "café",
-    "image": "PRODUCTS-ROOIBOS-CARAMELO.jpg",
-    "type": "banner"
-}, {
-    "id": 45,
-    "marca": "",
-    "name": "",
-    "price": "",
-    "camara": "",
-    "desbloqueo": "",
-    "pantalla": "",
-    "memoria": "",
-    "image": ["muchos-celulares.jpeg", "", ""]
-}]
+    "marca": "OnePlus",
+    "name": "8 Pro Dual SIM",
+    "price": "$249.890,00",
+    "discount": "% 10",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Compatible con redes 5G.Pantalla Fluid AMOLED de 6.78.Tiene 4 cámaras traseras de 48 Mpx / 48 Mpx / 8 Mpx / 5 Mpx.Cámara delantera de 16 Mpx.Procesador Snapdragon 865 Octa - Core de 2.84 GHz con 12 GB de RAM.Batería de 4510 mAh con carga inalámbrica.Memoria interna de 256 GB.Resistente al agua.Con reconocimiento facial y sensor de huella dactilar.Resistente al polvo.",
+    "camara": "48Mpx/48Mpx/8Mpx/5Mpx",
+    "pantalla": "Pantalla Fluid AMOLED de 6.78",
+    "memoria": "256GB",
+    "desbloqueo": "reconocimiento facial y sensor de huella dactilar",
+    "image": "71YRy9m7fVS._AC_SL1500_.jpg"
+}, 
+
+{
+    "id": 5,
+    "marca": "Samsung",
+    "name": "Galaxy A52",
+    "price": "$60.999,00",
+    "discount": "% 10",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Pantalla Super AMOLED de 6.5.Tiene 4 cámaras traseras de 64 Mpx / 12 Mpx / 5 Mpx / 5 Mpx.Cámara delantera de 32 Mpx.Procesador Snapdragon 720 G Octa - Core de 2.3 GHz con 6 GB de RAM.Batería de 4500 mAh.Memoria interna de 128 GB.Resistente al agua.Con sensor de huella dactilar.Resistente al polvo ",
+    "camara": "64Mpx/12Mpx/5Mpx/5Mpx",
+    "pantalla": "Pantalla Super AMOLED de 6.5",
+    "memoria": "128GB",
+    "desbloqueo": "sensor de huella dactilar",
+    "image": "41oF1wY1Z4S._AC_.jpg"
+}, 
+
+{
+    "id": 6,
+    "marca": "Apple",
+    "name": "iPhone 12 Pro Max",
+    "price": "$390.999,00",
+    "discount": "% 10",
+    "description": "Pantalla Super Retina XDR de 6.7 pulgadas.Ceramic Shield, más resistente que cualquier vidrio de smartphone.Chip A14 Bionic, el más rápido en un smartphone.Sistema de cámaras Pro de 12 MP (ultra gran angular, gran angular y teleobjetivo), rango de zoom óptico de 5x, modo Noche, Deep Fusion, HDR Inteligente 3, Apple ProRAW y grabación de video 4K HDR en Dolby Vision.Escáner LiDAR para mejores experiencias de realidad aumentada y retratos con modo Noche.Cámara frontal TrueDepth de 12 MP con modo Noche y grabación de video 4K HDR en Dolby Vision.Resistencia al agua IP68, la mejor de la industria.Compatibilidad con accesorios MagSafe que se adhieren magnéticamente a tu iPhone y permiten una carga inalámbrica más rápida.iOS 14 con widgets rediseñados en la pantalla de inicio, nueva Biblioteca de Apps, App Clips y mucho más.",
+    "camara": "12Mpx",
+    "pantalla": "Pantalla Super Retina XDR de 6.7",
+    "memoria": "128GB",
+    "desbloqueo": "reconocimiento facial",
+    "image": "71FuI8YvCNL._AC_SL1500_.jpg"
+}
+
+]
