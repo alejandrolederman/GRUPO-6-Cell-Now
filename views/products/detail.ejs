@@ -29,16 +29,16 @@
                     </div>
                     <article class="main-div-login button-comprar">
                         <button class="button" name="button"><span> AGREGAR AL CARRITO</span></button>
-                        <button class="button" name="button"><span> COMPRAR</span></button>
+                        <button class="button-enviar" name="button"><span> COMPRAR</span></button>
                     </article>
                     <article class="main-div-login button-comprar">
                     
                         <br>
-                        <a href="/products/productEdit/<%=productos.id%>"><button class="button" name="button"><span> EDITAR PRODUCTO</span></button></a>
+                        <a href="/products/productEdit/<%=productos.id%>"><button class="button-editar" name="button"><span> EDITAR PRODUCTO</span></button></a>
                         
                         <form action="/products/<%=productos.id%>?_method=delete " method="POST" style="display: inline-flex">
 
-							<button type="submit" class="button">ELIMINAR PRODUCTO</button>
+							<button type="submit" class="button-borrar">ELIMINAR PRODUCTO</button>
 
 						</form> 
                         <!-- <button class="button" name="button"><span> ELIMINAR PRODUCTO</span></button> -->

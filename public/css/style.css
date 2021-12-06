@@ -4,18 +4,65 @@
     box-sizing: border-box; 
     padding-top: 5px;
  } 
+ .button-enviar{
+    background: green;
+    font-family: "Roboto";
+    color: white;
+    border: none;
+    margin-top: 15px;
+    font-size: 20px;
+    width: 300px;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    align-self: center;
+ }
+ .button-editar{
+    background: orangered;
+    font-family: "Roboto";
+    color: white;
+    border: none;
+   
+    margin-top: 15px;
+    font-size: 20px;
+    width: 300px;
+    margin: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    align-self: center;
+ }
+ .button-borrar{
+     background: rgb(233, 10, 10);
+     font-family: "Roboto";
+     color: white;
+     border: none;
+    
+     margin-top: 15px;
+     font-size: 20px;
+     width: 300px;
+     margin: 15px;
+     cursor: pointer;
+     border-radius: 5px;
+     position: relative;
+     overflow: hidden;
+     align-self: center;
+ }
  footer{
      width: 100%;
      padding: 50px, 0;
  }
  .container-footer{
+     width: 100%;
      display: flex;
      /* flex-wrap: wrap; */
      justify-content:space-evenly;
      margin: auto;
      margin-top: 100px;
-     max-width: 1200px;
-     background: rgb(22, 22, 22);
+         background: rgb(22, 22, 22);
  }
  
  .box1{
