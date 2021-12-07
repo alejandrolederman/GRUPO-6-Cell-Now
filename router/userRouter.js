@@ -8,7 +8,7 @@ router.get('/login', userController.login);
 // ruta del login al  home
 router.post('/', userController.home);
 
-router.get('/formulario-registro', userController.registrer);
+router.get('/formularioRegistro', userController.registrer);
 
 router.get('/selecBuyOrSell', userController.selecBuyOrSell)
 

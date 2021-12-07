@@ -4,10 +4,12 @@
     <body>
     
         <%- include('../partials/header')%>
-    
+       
+            
+       
         <form action="/products/productEdit/<%=productos.id %>?_method=PUT	" method="POST" >
             <div class="text-color">
-
+               
                 <label for="nombre" class="text-color"> Marca   </label>
                 <input type="text" name="marca" id="marca" >
                 <br>
@@ -21,7 +23,7 @@
                 <br>
                 <br>
                 <label for="nombre" class="text-color"> precio del producto  </label>
-                <input type="text" name="price" id="price" >
+                <input type="text" name="price" id="price">
                 <br>
                 <br> 
                 <label for="nombre" class="text-color"> cantidad de MP de la camara principal  </label>
@@ -79,14 +81,14 @@
                 <br>
 
                 </div>
-    
+               
             </div>  
 
             <br>
             <br>
         <div>
-            <button class="button-enviar" name= "button"><span> ENVIAR</span></button> 
-            <button class="button-borrar" name= "button"><span> BORRAR</span></button>
+            <button class="button-enviar" name= "button"><span><i class="fa fa-share-square-o" aria-hidden="true"></i> ENVIAR</span></button> 
+            <button class="button-borrar" name= "button"><span><i class="fa fa-trash-o" aria-hidden="true"></i> BORRAR</span></button>
         </div> 
             <br>
             <br>

@@ -5,7 +5,7 @@ const userController = {
     },
 
     registrer: (req, res) => {
-        res.render('./users/formulario-registro');
+        res.render('./users/formularioRegistro');
     },
 
     selecBuyOrSell: (req, res) => {
