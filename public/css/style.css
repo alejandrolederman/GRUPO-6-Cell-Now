@@ -4,6 +4,27 @@
     box-sizing: border-box; 
     padding-top: 5px;
  } 
+ .fa-shopping-bag:before {
+    color: white;
+    content: "\f290";
+}
+
+ .fa.fa-pencil-square:before {
+     color: white;
+    content: "\f14b";
+}
+ .fa.fa-sign-in:before {
+     color: white;
+    content: "\f2f6";
+}
+ .fa.fa-trash-o:before {
+    color: white;
+    content: "\f2ed";
+}
+.fa.fa-share-square-o:before {
+color: white;
+    content: "\f14d";
+}
  .button-enviar{
     background: green;
     font-family: "Roboto";
