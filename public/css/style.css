@@ -4,7 +4,10 @@
     box-sizing: border-box; 
     padding-top: 5px;
  } 
- .fa-shopping-bag:before {
+ .recordar{
+     margin: auto;
+ }
+ .fa-shopping-bag:before  {
     color: white;
     content: "\f290";
 }
