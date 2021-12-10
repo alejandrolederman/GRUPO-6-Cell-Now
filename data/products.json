@@ -80,6 +80,172 @@
     "memoria": "128GB",
     "desbloqueo": "reconocimiento facial",
     "image": "71FuI8YvCNL._AC_SL1500_.jpg"
+},
+{
+    "id": 7,
+    "marca": "Google",
+    "name": "Pixel 4 xl",
+    "price": "$348.999,00",
+    "discount": "% 10",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Tiene 2 cámaras traseras de 16Mpx/12.2Mpx.Cámaras delanteras de 8Mpx/0.3Mpx.Procesador Snapdragon 855 Octa-Core de 2.84GHz con 6GB de RAM.Batería de 3700mAh.Memoria interna de 64GB.Resistente al agua.Con reconocimiento facial.Tarjeta eSIM incluida.",
+    "camara":"16Mpx/12.2Mpx",
+    "pantalla":"Pantalla OLED de 6.3",
+    "memoria":"64GB",
+    "desbloqueo":"reconocimiento facial",
+    "imagen":"713N4SwTtKL._AC_SL1500_.jpg"
+},
+    
+{
+    "id": 8,
+    "marca": "Samsung",
+    "name": "Galaxy S20 5g",
+    "price": "$1.000.000,00",
+    "discount": "% 10",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Compatible con redes 5G.Pantalla Dynamic AMOLED 2X de 6.7.Tiene 4 cámaras traseras de 64 Mpx / 12 Mpx / 12 Mpx / 0.3 Mpx.Cámara delantera de 10 Mpx.Batería de 4500 mAh con carga inalámbrica.Memoria interna de 128 GB.Resistente al agua.Con reconocimiento facial y sensor de huella dactilar.Resistente al polvo.",
+    "camara": "64Mpx/12Mpx/12Mpx/0.3Mpx",
+    "pantalla": "Pantalla Dynamic AMOLED 2X de 6.7",
+    "memoria": "128GB",
+    "desbloqueo": "reconocimiento facial y sensor de huella dactilar",
+    "image": "41MpLFDoaNL._AC_.jpg"
+}, 
+
+{
+    "id": 9,
+    "marca": "Apple",
+    "name": "iPhone XR",
+    "price": "$169.990,00",
+    "discount": "% 10",
+    "description": "El iPhone XR viene con una pantalla Liquid Retina de 6.1 pulgadas (2) y está disponible en seis colores increíbles.El avanzado sistema Face ID te permite desbloquearlo de forma segura e iniciar sesión en tus apps con sólo una mirada. El chip A12 Bionic usa el aprendizaje automático en tiempo real para llevar aún más allá todo lo que puedes hacer con tus fotos, juegos, realidad aumentada y más.El sistema de cámara única de 12 MP con modo Retrato, Iluminación de Retrato, bokeh mejorado y Control de Profundidad te permite tomar retratos con calidad de estudio. Además, es resistente al agua.",
+    "camara": "12Mpx",
+    "pantalla": "pantalla Liquid Retina de 6.1 pulgadas",
+    "memoria": "64GB",
+    "desbloqueo": "reconocimiento facial",
+    "image": "41ZjUOH6nRL._AC_.jpg"
+}, 
+
+{
+    "id": 10,
+    "marca": "OnePlus",
+    "name": "8 Pro Dual SIM",
+    "price": "$249.890,00",
+    "discount": "% 10",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Compatible con redes 5G.Pantalla Fluid AMOLED de 6.78.Tiene 4 cámaras traseras de 48 Mpx / 48 Mpx / 8 Mpx / 5 Mpx.Cámara delantera de 16 Mpx.Procesador Snapdragon 865 Octa - Core de 2.84 GHz con 12 GB de RAM.Batería de 4510 mAh con carga inalámbrica.Memoria interna de 256 GB.Resistente al agua.Con reconocimiento facial y sensor de huella dactilar.Resistente al polvo.",
+    "camara": "48Mpx/48Mpx/8Mpx/5Mpx",
+    "pantalla": "Pantalla Fluid AMOLED de 6.78",
+    "memoria": "256GB",
+    "desbloqueo": "reconocimiento facial y sensor de huella dactilar",
+    "image": "71YRy9m7fVS._AC_SL1500_.jpg"
+}, 
+
+{
+    "id": 11,
+    "marca": "Samsung",
+    "name": "Galaxy A52",
+    "price": "$60.999,00",
+    "discount": "% 10",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Pantalla Super AMOLED de 6.5.Tiene 4 cámaras traseras de 64 Mpx / 12 Mpx / 5 Mpx / 5 Mpx.Cámara delantera de 32 Mpx.Procesador Snapdragon 720 G Octa - Core de 2.3 GHz con 6 GB de RAM.Batería de 4500 mAh.Memoria interna de 128 GB.Resistente al agua.Con sensor de huella dactilar.Resistente al polvo ",
+    "camara": "64Mpx/12Mpx/5Mpx/5Mpx",
+    "pantalla": "Pantalla Super AMOLED de 6.5",
+    "memoria": "128GB",
+    "desbloqueo": "sensor de huella dactilar",
+    "image": "41oF1wY1Z4S._AC_.jpg"
+}, 
+
+{
+    "id": 12,
+    "marca": "Apple",
+    "name": "iPhone 12 Pro Max",
+    "price": "$390.999,00",
+    "discount": "% 10",
+    "description": "Pantalla Super Retina XDR de 6.7 pulgadas.Ceramic Shield, más resistente que cualquier vidrio de smartphone.Chip A14 Bionic, el más rápido en un smartphone.Sistema de cámaras Pro de 12 MP (ultra gran angular, gran angular y teleobjetivo), rango de zoom óptico de 5x, modo Noche, Deep Fusion, HDR Inteligente 3, Apple ProRAW y grabación de video 4K HDR en Dolby Vision.Escáner LiDAR para mejores experiencias de realidad aumentada y retratos con modo Noche.Cámara frontal TrueDepth de 12 MP con modo Noche y grabación de video 4K HDR en Dolby Vision.Resistencia al agua IP68, la mejor de la industria.Compatibilidad con accesorios MagSafe que se adhieren magnéticamente a tu iPhone y permiten una carga inalámbrica más rápida.iOS 14 con widgets rediseñados en la pantalla de inicio, nueva Biblioteca de Apps, App Clips y mucho más.",
+    "camara": "12Mpx",
+    "pantalla": "Pantalla Super Retina XDR de 6.7",
+    "memoria": "128GB",
+    "desbloqueo": "reconocimiento facial",
+    "image": "71FuI8YvCNL._AC_SL1500_.jpg"
+},
+{
+    "id": 13,
+    "marca": "Google",
+    "name": "Pixel 4 xl",
+    "price": "$348.999,00",
+    "discount": "% 10",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Tiene 2 cámaras traseras de 16Mpx/12.2Mpx.Cámaras delanteras de 8Mpx/0.3Mpx.Procesador Snapdragon 855 Octa-Core de 2.84GHz con 6GB de RAM.Batería de 3700mAh.Memoria interna de 64GB.Resistente al agua.Con reconocimiento facial.Tarjeta eSIM incluida.",
+    "camara":"16Mpx/12.2Mpx",
+    "pantalla":"Pantalla OLED de 6.3",
+    "memoria":"64GB",
+    "desbloqueo":"reconocimiento facial",
+    "imagen":"713N4SwTtKL._AC_SL1500_.jpg"
+},
+    
+{
+    "id": 14,
+    "marca": "Samsung",
+    "name": "Galaxy S20 5g",
+    "price": "$1.000.000,00",
+    "discount": "% 10",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Compatible con redes 5G.Pantalla Dynamic AMOLED 2X de 6.7.Tiene 4 cámaras traseras de 64 Mpx / 12 Mpx / 12 Mpx / 0.3 Mpx.Cámara delantera de 10 Mpx.Batería de 4500 mAh con carga inalámbrica.Memoria interna de 128 GB.Resistente al agua.Con reconocimiento facial y sensor de huella dactilar.Resistente al polvo.",
+    "camara": "64Mpx/12Mpx/12Mpx/0.3Mpx",
+    "pantalla": "Pantalla Dynamic AMOLED 2X de 6.7",
+    "memoria": "128GB",
+    "desbloqueo": "reconocimiento facial y sensor de huella dactilar",
+    "image": "41MpLFDoaNL._AC_.jpg"
+}, 
+
+{
+    "id": 15,
+    "marca": "Apple",
+    "name": "iPhone XR",
+    "price": "$169.990,00",
+    "discount": "% 10",
+    "description": "El iPhone XR viene con una pantalla Liquid Retina de 6.1 pulgadas (2) y está disponible en seis colores increíbles.El avanzado sistema Face ID te permite desbloquearlo de forma segura e iniciar sesión en tus apps con sólo una mirada. El chip A12 Bionic usa el aprendizaje automático en tiempo real para llevar aún más allá todo lo que puedes hacer con tus fotos, juegos, realidad aumentada y más.El sistema de cámara única de 12 MP con modo Retrato, Iluminación de Retrato, bokeh mejorado y Control de Profundidad te permite tomar retratos con calidad de estudio. Además, es resistente al agua.",
+    "camara": "12Mpx",
+    "pantalla": "pantalla Liquid Retina de 6.1 pulgadas",
+    "memoria": "64GB",
+    "desbloqueo": "reconocimiento facial",
+    "image": "41ZjUOH6nRL._AC_.jpg"
+}, 
+
+{
+    "id": 16,
+    "marca": "OnePlus",
+    "name": "8 Pro Dual SIM",
+    "price": "$249.890,00",
+    "discount": "% 10",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Compatible con redes 5G.Pantalla Fluid AMOLED de 6.78.Tiene 4 cámaras traseras de 48 Mpx / 48 Mpx / 8 Mpx / 5 Mpx.Cámara delantera de 16 Mpx.Procesador Snapdragon 865 Octa - Core de 2.84 GHz con 12 GB de RAM.Batería de 4510 mAh con carga inalámbrica.Memoria interna de 256 GB.Resistente al agua.Con reconocimiento facial y sensor de huella dactilar.Resistente al polvo.",
+    "camara": "48Mpx/48Mpx/8Mpx/5Mpx",
+    "pantalla": "Pantalla Fluid AMOLED de 6.78",
+    "memoria": "256GB",
+    "desbloqueo": "reconocimiento facial y sensor de huella dactilar",
+    "image": "71YRy9m7fVS._AC_SL1500_.jpg"
+}, 
+
+{
+    "id": 17,
+    "marca": "Samsung",
+    "name": "Galaxy A52",
+    "price": "$60.999,00",
+    "discount": "% 10",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Pantalla Super AMOLED de 6.5.Tiene 4 cámaras traseras de 64 Mpx / 12 Mpx / 5 Mpx / 5 Mpx.Cámara delantera de 32 Mpx.Procesador Snapdragon 720 G Octa - Core de 2.3 GHz con 6 GB de RAM.Batería de 4500 mAh.Memoria interna de 128 GB.Resistente al agua.Con sensor de huella dactilar.Resistente al polvo ",
+    "camara": "64Mpx/12Mpx/5Mpx/5Mpx",
+    "pantalla": "Pantalla Super AMOLED de 6.5",
+    "memoria": "128GB",
+    "desbloqueo": "sensor de huella dactilar",
+    "image": "41oF1wY1Z4S._AC_.jpg"
+}, 
+
+{
+    "id": 18,
+    "marca": "Apple",
+    "name": "iPhone 12 Pro Max",
+    "price": "$390.999,00",
+    "discount": "% 10",
+    "description": "Pantalla Super Retina XDR de 6.7 pulgadas.Ceramic Shield, más resistente que cualquier vidrio de smartphone.Chip A14 Bionic, el más rápido en un smartphone.Sistema de cámaras Pro de 12 MP (ultra gran angular, gran angular y teleobjetivo), rango de zoom óptico de 5x, modo Noche, Deep Fusion, HDR Inteligente 3, Apple ProRAW y grabación de video 4K HDR en Dolby Vision.Escáner LiDAR para mejores experiencias de realidad aumentada y retratos con modo Noche.Cámara frontal TrueDepth de 12 MP con modo Noche y grabación de video 4K HDR en Dolby Vision.Resistencia al agua IP68, la mejor de la industria.Compatibilidad con accesorios MagSafe que se adhieren magnéticamente a tu iPhone y permiten una carga inalámbrica más rápida.iOS 14 con widgets rediseñados en la pantalla de inicio, nueva Biblioteca de Apps, App Clips y mucho más.",
+    "camara": "12Mpx",
+    "pantalla": "Pantalla Super Retina XDR de 6.7",
+    "memoria": "128GB",
+    "desbloqueo": "reconocimiento facial",
+    "image": "71FuI8YvCNL._AC_SL1500_.jpg"
 }
 
 ]

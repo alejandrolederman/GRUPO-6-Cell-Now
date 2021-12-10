@@ -20,7 +20,7 @@
 
     <main class="main-second">
         <% products.forEach(products =>{ %>
-           
+            <% if(products.marca == "Samsung"){ %> 
             <section class="product-box">
                 <a href="/products/detail/<%=products.id%>">
                     <figure class="product-box_image">
@@ -35,7 +35,57 @@
                 </a>
                
         </section>
-      
+            <% } %> 
+        <% }) %> 
+        
+    </main>
+<br>
+<br>
+    <h3 class="product">Nuestra linea Apple</h3>
+
+    <main class="main-second">
+        <% products.forEach(products =>{ %>
+            <% if(products.marca == "Apple"){ %> 
+            <section class="product-box">
+                <a href="/products/detail/<%=products.id%>">
+                    <figure class="product-box_image">
+                        <img src="/img/baseDeDatos/<%=products.image%> "  width="150px" height="305 px">
+                    </figure>
+                    <article class="product-box_data">
+                        <h2><%=products.price%></h2>
+                        <span>Descuento del <%=products.discount %></span>
+                        <p><%=products.name%></p>
+                        <i class="fas fa-truck"></i>
+                    </article>
+                </a>
+               
+        </section>
+            <% } %> 
+        <% }) %> 
+        
+    </main>
+<br>
+<br>
+    <h3 class="product">LOS MAS ECONOMICOS</h3>
+
+    <main class="main-second">
+        <% products.forEach(products =>{ %>
+            <% if(products.price.length  < 11){ %> 
+            <section class="product-box">
+                <a href="/products/detail/<%=products.id%>">
+                    <figure class="product-box_image">
+                        <img src="/img/baseDeDatos/<%=products.image%> "  width="150px" height="305 px">
+                    </figure>
+                    <article class="product-box_data">
+                        <h2><%=products.price%></h2>
+                        <span>Descuento del <%=products.discount %></span>
+                        <p><%=products.name%></p>
+                        <i class="fas fa-truck"></i>
+                    </article>
+                </a>
+               
+        </section>
+            <% } %> 
         <% }) %> 
         
     </main>
