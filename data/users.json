@@ -3,6 +3,7 @@
         "id": 1,
         "first_name": "Gabriel",
         "last_name": "Timeby",
+        "nombre_usuario": "pepiro",
         "email": "gtimeby0@irs.gov",
         "password": "x24etJvnN",
         "category": "user",
