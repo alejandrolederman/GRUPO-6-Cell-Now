@@ -786,7 +786,7 @@ button:hover::after{
         height: 100px;
         position: fixed;
         /* top: 10px;} */
-
+    }
     .main-header-top-bar{
         display: flex;
         flex-wrap: nowrap;
