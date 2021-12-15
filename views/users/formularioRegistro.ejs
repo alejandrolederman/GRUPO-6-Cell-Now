@@ -1,38 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head')%>
-<body>
-    <%- include('../partials/header')%>
-        
-    <main class = "register">
-        <h3 class="text-color">Registrate!</h3>
-        <form action= "/" method="POST" class= "registerTotal">
-            <div>
-                <input type= "text" name="name" placeholder= "Nombre" required minlength="2" maxlength="10" id="first_name" class="nombre-registro">
-                <input type= "text" name="name" placeholder= "Apellido" required minlength="2" maxlength="10" id="last_name" class="nombre-registro">
-                <input type= "email" name="name" placeholder= "Email" required minlength="2" maxlength="10" id="email" class="nombre-registro">
-                <input type="text" name="user"  placeholder= "Nombre de usuario" id="nombre_usuario" required class="nombre-registro">
-                 <br>
-                <br>
-            
-           
-        <h4 class="text-color imagen-perfil">Elegí tu foto de perfil</h4>
-        <input type= "file" name="avatar" id="image" class="imagen-perfil">
-            <br>
-            <br>
-        <input type= "password" name="pass" placeholder="Elegí tu contraseña" minlength="6" id="password" class="pass-registro">
-        <input type= "password" name="pass_confirm" placeholder="Confirma tu contraseña" id="password" class="pass-registro">
-            <br>
-            <br>
-        <div>
-            <button class="button-enviar" name= "button"><span><i class="fa fa-share-square-o" aria-hidden="true"></i> ENVIAR</span></button> 
-            <button class="button-borrar" name= "button"><span><i class="fa fa-trash-o" aria-hidden="true"></i> BORRAR</span></button>
-        </div> 
-            <br>
-            <br>
-        </form>
-    </main>
-    <%- include ('../partials/footer')%>
-    
-</body>
+<%- include('../partials/head')%>
+
+    <body>
+        <%- include('../partials/header')%>
+
+            <main class="register">
+                <h3 class="text-color">Registrate!</h3>
+                <form action="/" method="POST" class="registerTotal">
+                    <div>
+                        <input type="text" name="name" placeholder="Nombre" required minlength="2" maxlength="10"
+                            id="first_name" class="nombre-registro">
+                        <input type="text" name="name" placeholder="Apellido" required minlength="2" maxlength="10"
+                            id="last_name" class="nombre-registro">
+                        <input type="email" name="name" placeholder="Email" required minlength="2" maxlength="10"
+                            id="email" class="nombre-registro">
+                        <input type="text" name="user" placeholder="Nombre de usuario" id="nombre_usuario" required
+                            class="nombre-registro">
+                        <br>
+                        <br>
+
+
+                        <h4 class="text-color imagen-perfil">Elegí tu foto de perfil</h4>
+                        <input type="file" name="avatar" id="image" class="imagen-perfil">
+                        <br>
+                        <br>
+                        <input type="password" name="pass" placeholder="Elegí tu contraseña" minlength="6" id="password"
+                            class="pass-registro">
+                        <input type="password" name="pass_confirm" placeholder="Confirma tu contraseña" id="password"
+                            class="pass-registro">
+                        <br>
+                        <br>
+                        <div>
+                            <button class="button-enviar" name="button"><span><i class="fa fa-share-square-o"
+                                        aria-hidden="true"></i> ENVIAR</span></button>
+                            <button class="button-borrar" name="button"><span><i class="fa fa-trash-o"
+                                        aria-hidden="true"></i> BORRAR</span></button>
+                        </div>
+                        <br>
+                        <br>
+                </form>
+            </main>
+            <%- include ('../partials/footer')%>
+
+    </body>
+
 </html>
