@@ -18,6 +18,7 @@ app.use(cookieParser());
 app.use(methodOverride('_method'));
 
 
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
@@ -32,6 +33,12 @@ app.use('/', indexRouter);
 app.use('/trolley', trolleyRouter);
 app.use('/user', userRouter);
 app.use('/products',productRouter)
+
+//ruta error 404 
+app.use((req, res,next)=>{
+    res.status(404).render("./main/notFound")
+});
+
 
 
 app.listen (port, ()=>{
