@@ -8,8 +8,9 @@ const userController = require('../controller/userController');
 router.get('/login', userController.login);
 // ruta del login al  home
 router.post('/', userController.home);
-
+//formulario del registro
 router.get('/formularioRegistro', userController.registrer);
+//procesar el registro
 router.post('/formularioRegistro', userController.processRegistrer);
 
 
