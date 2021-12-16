@@ -37,10 +37,10 @@ app.use('/user', userRouter);
 app.use('/products',productRouter)
 
 //ruta error 404 
-// app.use((req, res,next)=>{
-//     res.status(404).render("./main/notFound"),
-//     console.log (404);
-// });
+ app.use((req, res,next)=>{
+     res.status(404).render("./main/notFound"),
+     console.log (404);
+});
 
 
 

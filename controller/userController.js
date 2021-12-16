@@ -38,11 +38,54 @@ const userController = {
         res.render('./users/formularioRegistro');
     },
 
+    
+    // Create -  Method to store
+    storeUsers: (req, res) => {
+        const {
+            first_name,
+            last_name,
+            nombre_usuario,
+            email,
+            password,
+            category,
+            image
+            
+        } = req.body;
+
+        let cantidadUsuarios = 0;
+        for (let i = 0; i < users.length; i++) {
+
+            cantidadUsuarios = cantidadUsuarios + 1;
+        };
+
+        const data = {
+
+                id: cantidadUsuarios,
+                first_name:first_name,
+            last_name: last_name,
+            nombre_usuario: nombre_usuario,
+            email: email,
+            password: password,
+            category: category,
+            image: image
+            }
+            users.push(data);
+
+		fs.writeFileSync(usersFilePath,JSON.stringify(users),'utf-8');
+res.redirect("/");
+      
+    },
+
     processRegistrer: (req, res) => {
-        return res.send({
-            body: req.body,
-            file: req.file
-        });
+
+        let errors = validationResult(req);
+            res.send (errors);
+
+    },
+        // return res.send({
+        //     body: req.body,
+        //     file: req.file
+        // });
         //     const resultValidation = validationResult(req);
         //     if (resultValidation.errors.length > 0) {
         //         return res.render('./users/formularioRegistro',{
@@ -51,7 +94,7 @@ const userController = {
         //             oldDara: req.body
         //         });
         // },
-    },
+    
     selecBuyOrSell: (req, res) => {
         res.render('./users/selecBuyOrSell');
     },
