@@ -6,13 +6,14 @@ const User = {
     data: function () {
         return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'))
     },
-    generateId: function(){
-var allUsers= this.findAllUser();
-var lastUser= allUsers.pop();
-if(lastUser){
-return lastUser.id + 1;
-}
-return 1;
+    // metodo para generar un ID
+    generateId: function () {
+        var allUsers = this.findAllUser();
+        var lastUser = allUsers.pop();
+        if (lastUser) {
+            return lastUser.id + 1;
+        }
+        return 1;
     },
     //encontrar a todos los usuarios
     finAllUsers: function () {
@@ -31,12 +32,19 @@ return 1;
     //crear usuario
     create: function (userData) {
         var allUsers = this.finAllUsers();
-        var newUser ={
+        var newUser = {
             id: this.generateId(),
-...userData
+            ...userData
         }
-        allUsers.push(userData);
+        allUsers.push(newUser);
         fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ''))
+        return newUser
+    },
+    delete: function (id){
+        var allUsers = this.finAllUsers();
+        var finalUsers = allUsers.filter(oneUser=> oneUser.id!= id);
+        fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null, ''))
+        return true
     }
 }
-console.log(User.findByPk(100))
+module.exports= User;

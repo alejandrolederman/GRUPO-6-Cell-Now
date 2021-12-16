@@ -172,12 +172,13 @@
         "image": "user_19.jpg"
     },
     {
-        "id": 20,
-        "first_name": "Elden",
-        "last_name": "Navein",
-        "email": "enaveinj@time.com",
-        "password": "A4NbgK",
-        "category": "user",
-        "image": "user_20.jpg"
+    "id": 20,
+    "first_name": "Juan",
+    "last_name": "Melar",
+    "email": "mmelar@addtoany.com",
+    "password": "jQFEdG4",
+    "category": "user",
+    "image": "user_20.jpg"
     }
 ]
+module.export: User

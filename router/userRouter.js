@@ -10,6 +10,8 @@ router.get('/login', userController.login);
 router.post('/', userController.home);
 
 router.get('/formularioRegistro', userController.registrer);
+router.post('/formularioRegistro', userController.processRegistrer);
+
 
 router.get('/selecBuyOrSell', userController.selecBuyOrSell)
 
