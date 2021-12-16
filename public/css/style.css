@@ -784,7 +784,7 @@ button:hover::after{
         width: 100%;
         background: white;
         height: 100px;
-        position: fixed;
+        /* position: fixed; */
         /* top: 10px;} */
     }
     .main-header-top-bar{
