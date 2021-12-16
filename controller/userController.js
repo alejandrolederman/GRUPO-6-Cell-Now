@@ -13,16 +13,16 @@ const userController = {
     },
 
     processRegistrer: (req, res) => {
-
-        const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0) {
-            return res.render('./users/formularioRegistro',{
+return res.send("estas en post")
+    //     const resultValidation = validationResult(req);
+    //     if (resultValidation.errors.length > 0) {
+    //         return res.render('./users/formularioRegistro',{
                 
-            } errors: resultVlidator.mapped(),
-                oldDara: req.body
-            });
+    //         } errors: resultVlidator.mapped(),
+    //             oldDara: req.body
+    //         });
+    // },
     },
-
     selecBuyOrSell: (req, res) => {
         res.render('./users/selecBuyOrSell');
     },
