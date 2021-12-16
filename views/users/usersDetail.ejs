@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head')%>
+
+<body>
+    <%- include('../partials/header')%>
+
+    <main class="main-comprar">
+
+        <article class="article-comprar">
+            <div class="producto-comprar">
+                
+            </div>
+            <div class="descripcion-producto-comprar">
+                <h2>NOMBRE<%=users.first_name%> </h2>
+
+                <br>
+                <h3 class="texto-comprar">APELLIDO <%=users.last_name %> </h3>
+                <br>
+                <h3 class="texto-comprar"> USUARIO<%=users.nombre_usuario%></h3>
+                <br>
+                <h3 class="texto-comprar">APELLIDO <%=users.last_name %> </h3>
+                <br>
+                <h3 class="texto-comprar"> USUARIO<%=users.nombre_usuario%></h3>
+                <br>
+                <br>
+                <h3 class="texto-comprar"> USUARIO<%=users.email%></h3>
+                <br>
+                <br>
+                <h3 class="texto-comprar"> USUARIO<%=users.category%></h3>
+                <br>
+                    
+    </main>
+    <%- include ('../partials/footer')%>
+</body>
+
+</html>

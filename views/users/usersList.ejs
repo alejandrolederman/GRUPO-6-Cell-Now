@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head')%>
+<body >
+   
+    <%- include('../partials/header')%>
+    <main class="main-second">
+        <% users.forEach(users =>{ %>
+            
+    <section class="product-box">
+        <a href="/users/usersDetail/<%=users.id%>">
+
+            <figure class="product-box_image">
+            </figure>
+            <article class="product-box_data">
+                <span>NOMBRE<%=users.first_name%></span>
+                <span>APELLIDO <%=users.last_name %></span>
+                <p>USUARIO<%=users.nombre_usuario%></p>
+                <i class="fas fa-truck"></i>
+            </article>
+            </a>
+        </section>
+        <% }) %> 
+        
+    </main>
+    <%- include ('../partials/footer')%>
+</body>
+</html>

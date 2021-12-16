@@ -1,8 +1,34 @@
+const fs = require('fs');
+const path = require('path');
 const bcryptjs = require('bcryptjs');
-const {
-    validationResult
-} = require('express-validator');
+const {validationResult} = require('express-validator');
+
+
+const usersFilePath = path.join(__dirname, '../data/users.json');
+let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+
+
 const userController = {
+
+     // Root - Show all products
+     usersList: (req, res) => {
+        res.render('./users/usersList', {
+           users
+        });
+    },
+
+    usersDetail: (req, res) => {
+        let elId = req.params.id;
+        let usuario = users.find(unUsuario => {
+            if (unUsuario.id == elId) {
+                return unUsuario;
+            }
+        });
+        res.render('./users/usersDetail', {
+            usuario,
+            users
+        });
+    },
 
     login: (req, res) => {
         res.render('./users/login');

@@ -10,7 +10,8 @@ const methodOverride =  require('method-override');
 const indexRouter = require('./router/indexRouter');
 const trolleyRouter = require('./router/trolleyRouter');
 const userRouter = require('./router/userRouter');
-const productRouter = require('./router/productRouter')
+const productRouter = require('./router/productRouter');
+const { error } = require('console');
 
 app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
@@ -36,9 +37,10 @@ app.use('/user', userRouter);
 app.use('/products',productRouter)
 
 //ruta error 404 
-app.use((req, res,next)=>{
-    res.status(404).render("./main/notFound")
-});
+// app.use((req, res,next)=>{
+//     res.status(404).render("./main/notFound"),
+//     console.log (404);
+// });
 
 
 

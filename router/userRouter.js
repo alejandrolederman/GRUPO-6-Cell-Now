@@ -3,6 +3,10 @@ const router = express.Router();
 const multer = require("multer");
 const path = require('path');
 
+const validations = require('../middlewares/validacionRegistro');
+
+
+
 //multer
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -16,20 +20,21 @@ const storage = multer.diskStorage({
 })
 const uploadFile = multer({storage});
 const userController = require('../controller/userController');
+// listado de usuarios
+router.get('/usersList', userController.usersList);
 
-// const validations = [
-//     body("first_name").notEmpty(),
-//     body("email").notEmpty(),
-//     body("last_name").notEmpty(),
-//     body("first_name").notEmpty(),
+// detalle de ususario
+router.get('/usersDetail/:id', userController.usersDetail);
 
-// ]
 //ruta login
 router.get('/login', userController.login);
+
 // ruta del login al  home
 router.post('/', userController.home);
+
 //formulario del registro
 router.get('/formularioRegistro', userController.registrer);
+
 //procesar el registro
 router.post('/formularioRegistro',uploadFile.single('avatar'),validations, userController.processRegistrer);
 
