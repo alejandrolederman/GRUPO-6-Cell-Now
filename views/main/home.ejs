@@ -20,7 +20,7 @@
 
     <main class="main-second">
         <% products.forEach(products =>{ %>
-            <% if(products.marca == "Samsung"){ %> 
+            <% if(products.mark == "Samsung"){ %> 
             <section class="product-box">
                 <a href="/products/detail/<%=products.id%>">
                     <figure class="product-box_image">
@@ -29,7 +29,7 @@
                     <article class="product-box_data">
                         <h2><%=products.price%></h2>
                         <span>Descuento del <%=products.discount %></span>
-                        <p><%=products.name%></p>
+                        <p><%=products.model%></p>
                         <i class="fas fa-truck"></i>
                     </article>
                 </a>
@@ -45,7 +45,7 @@
 
     <main class="main-second">
         <% products.forEach(products =>{ %>
-            <% if(products.marca == "Apple"){ %> 
+            <% if(products.mark == "Apple"){ %> 
             <section class="product-box">
                 <a href="/products/detail/<%=products.id%>">
                     <figure class="product-box_image">
@@ -54,7 +54,7 @@
                     <article class="product-box_data">
                         <h2><%=products.price%></h2>
                         <span>Descuento del <%=products.discount %></span>
-                        <p><%=products.name%></p>
+                        <p><%=products.model%></p>
                         <i class="fas fa-truck"></i>
                     </article>
                 </a>
@@ -68,27 +68,7 @@
 <br>
     <h3 class="product">LOS MAS ECONOMICOS</h3>
 
-    <main class="main-second">
-        <% products.forEach(products =>{ %>
-            <% if(products.price.length  < 11){ %> 
-            <section class="product-box">
-                <a href="/products/detail/<%=products.id%>">
-                    <figure class="product-box_image">
-                        <img src="/img/baseDeDatos/<%=products.image%> "  width="150px" height="305 px">
-                    </figure>
-                    <article class="product-box_data">
-                        <h2><%=products.price%></h2>
-                        <span>Descuento del <%=products.discount %></span>
-                        <p><%=products.name%></p>
-                        <i class="fas fa-truck"></i>
-                    </article>
-                </a>
-               
-        </section>
-            <% } %> 
-        <% }) %> 
-        
-    </main>
+    
     <%- include ('../partials/footer')%>
 </body>
 </html>

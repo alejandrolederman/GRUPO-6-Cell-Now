@@ -2,11 +2,18 @@ const fs = require('fs');
 const path = require('path');
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const productController = {
 
+    // Root - Show all products
+    productsList: (req, res) => {
+        res.render('./products/productsList', {
+            products
+        });
+    },
 
+    // Detail - Detail from one product
     productDetail: (req, res) => {
         let elId = req.params.id;
         let productos = products.find(unProducto => {
@@ -20,13 +27,6 @@ const productController = {
         })
     },
 
-    // Root - Show all products
-    productsList: (req, res) => {
-        res.render('./products/productsList', {
-            products
-        });
-    },
-
     // Create - Form to create
     create: (req, res) => {
         res.render("./products/productsForm");
@@ -34,19 +34,8 @@ const productController = {
 
     // Create -  Method to store
     store: (req, res) => {
-        const {
-            marca,
-            name,
-            price,
-            discount,
-            camara,
-            description,
-            desbloqueo,
-            pantalla,
-            memoria,
-            image,
-            type
-        } = req.body;
+        const {mark, model, price, camera, description,
+            unlocking, screen, memory, image } = req.body;
 
         let cantidadProductos = 0;
         for (let i = 0; i < products.length; i++) {
@@ -57,19 +46,16 @@ const productController = {
         const data = {
 
                 id: cantidadProductos,
-                marca: marca,
-                name: name,
+                mark: mark,
+                model: model,
                 description: description,
                 price: price,
-                discount: discount,
-                camara: camara,
-                description: description,
-                desbloqueo: desbloqueo,
-                pantalla: pantalla,
-                memoria: memoria,
+                camera: camera,
+                unlocking: unlocking,
+                screen: screen,
+                memory: memory,
                 image: image,
-                type: type
-            }
+            };
             products.push(data);
 
 		fs.writeFileSync(productsFilePath,JSON.stringify(products),'utf-8');
@@ -94,15 +80,15 @@ res.redirect("/");
 	update: (req, res) => {
 
 		  const {
-            marca,
-            name,
+            mark,
+            model,
             price,
             discount,
-            camara,
+            camera,
             description,
-            desbloqueo,
-            pantalla,
-            memoria,
+            unlocking,
+            screen,
+            memory,
             image,
             type
         } = req.body;
@@ -114,15 +100,15 @@ res.redirect("/");
 
 		if(data.id == elId){
 
-			   data.marca= marca,
-               data.name= name,
+			   data.mark= mark,
+               data.model= model,
                data.description= description,
                data.price= price,
                data.discount= discount,
-               data.camara= camara,
-               data.desbloqueo= desbloqueo,
-               data.pantalla= pantalla,
-               data.memoria= memoria,
+               data.camera= camera,
+               data.unlocking= unlocking,
+               data.screen= screen,
+               data.memory= memory,
                data.image= image,
                data.type= type
 		}
