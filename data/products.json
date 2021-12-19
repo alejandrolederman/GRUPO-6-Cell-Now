@@ -203,15 +203,20 @@
     "image": "41oF1wY1Z4S._AC_.jpg"
 }, {
     "id": 18,
-    "mark": "Apple",
-    "model": "iPhone 12 Pro Max",
-    "price": "$390.999,00",
+    "mark": "algo",
+    "model": "Galaxy A52",
+    "price": "$60.999,00",
     "discount": "% 10",
-    "description": "Pantalla Super Retina XDR de 6.7 pulgadas.Ceramic Shield, más resistente que cualquier vidrio de smartphone.Chip A14 Bionic, el más rápido en un smartphone.Sistema de cámaras Pro de 12 MP (ultra gran angular, gran angular y teleobjetivo), rango de zoom óptico de 5x, modo Noche, Deep Fusion, HDR Inteligente 3, Apple ProRAW y grabación de video 4K HDR en Dolby Vision.Escáner LiDAR para mejores experiencias de realidad aumentada y retratos con modo Noche.Cámara frontal TrueDepth de 12 MP con modo Noche y grabación de video 4K HDR en Dolby Vision.Resistencia al agua IP68, la mejor de la industria.Compatibilidad con accesorios MagSafe que se adhieren magnéticamente a tu iPhone y permiten una carga inalámbrica más rápida.iOS 14 con widgets rediseñados en la pantalla de inicio, nueva Biblioteca de Apps, App Clips y mucho más.",
-    "camera": "12Mpx",
-    "screen": "Pantalla Super Retina XDR de 6.7",
+    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Pantalla Super AMOLED de 6.5.Tiene 4 cámaras traseras de 64 Mpx / 12 Mpx / 5 Mpx / 5 Mpx.Cámara delantera de 32 Mpx.Procesador Snapdragon 720 G Octa - Core de 2.3 GHz con 6 GB de RAM.Batería de 4500 mAh.memory interna de 128 GB.Resistente al agua.Con sensor de huella dactilar.Resistente al polvo ",
+    "camera": "64Mpx/12Mpx/5Mpx/5Mpx",
+    "screen": "Pantalla Super AMOLED de 6.5",
     "memory": "128GB",
-    "unlocking": "reconocimiento facial",
-    "image": "71FuI8YvCNL._AC_SL1500_.jpg"
-}
-]
+    "unlocking": "sensor de huella dactilar",
+    "image": "41oF1wY1Z4S._AC_.jpg"
+}, {
+    "id": 18
+}, {
+    "id": 19
+}, {
+    "id": 20
+}]

@@ -1,8 +1,10 @@
 const fs = require('fs');
 const path = require('path');
 
+
 const productsFilePath = path.join(__dirname, '../data/products.json');
-const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 
 const productController = {
 
@@ -48,12 +50,12 @@ const productController = {
                 id: cantidadProductos,
                 mark: mark,
                 model: model,
-                description: description,
                 price: price,
+                description: description,
                 camera: camera,
-                unlocking: unlocking,
                 screen: screen,
                 memory: memory,
+                unlocking: unlocking,
                 image: image,
             };
             products.push(data);
@@ -84,13 +86,13 @@ res.redirect("/");
             model,
             price,
             discount,
-            camera,
             description,
-            unlocking,
+            camera,
             screen,
             memory,
+            unlocking,
             image,
-            type
+
         } = req.body;
 
 		const elId = req.params.id;
@@ -102,15 +104,15 @@ res.redirect("/");
 
 			   data.mark= mark,
                data.model= model,
-               data.description= description,
                data.price= price,
+               data.description= description,
                data.discount= discount,
                data.camera= camera,
                data.unlocking= unlocking,
                data.screen= screen,
                data.memory= memory,
-               data.image= image,
-               data.type= type
+               data.image= image
+
 		}
 		productoNuevo.push(data);
 	});

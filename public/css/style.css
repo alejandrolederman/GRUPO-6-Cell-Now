@@ -1,5 +1,5 @@
 *{ 
-    margin: 0px; 
+    margin: 5px; 
     padding:0px; 
     box-sizing: border-box; 
      } 
@@ -149,6 +149,7 @@ footer{
 .logo{
     width: 100px;
     margin-top: 10px;
+    padding-top: 60px;
 }
 
 i, a, .header-usuraio{
