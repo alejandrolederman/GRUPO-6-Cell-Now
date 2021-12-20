@@ -44,7 +44,7 @@ const userController = {
         const {
             first_name,
             last_name,
-            nombre_usuario,
+            username,
             email,
             password,
             category,
@@ -60,10 +60,10 @@ const userController = {
 
         const data = {
 
-                id: cantidadUsuarios,
-                first_name:first_name,
+            id: cantidadUsuarios,
+            first_name:first_name,
             last_name: last_name,
-            nombre_usuario: nombre_usuario,
+            username: username,
             email: email,
             password: password,
             category: category,
