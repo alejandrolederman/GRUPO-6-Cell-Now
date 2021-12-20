@@ -6,12 +6,31 @@
         
     <main class = "register">
         <h3 class="text-color">Registrate!</h3>
+
+                    <%if(locals.errors) { %>
+             <%errors.forEach(error =>{%>
+                
+                <p><h1><%= error.msg %></h1> </p>
+
+            <% })} %>  
+
         <form action= "/user/formularioRegistro" method="POST"  class= "registerTotal">
             <div>
-                <input type= "text" name="first_name"  placeholder= "Nombre" class="nombre-registro">
-                <input type= "text" name="last_name"  placeholder= "Apellido"  class="nombre-registro">
-                <input type= "email" name="email"   placeholder= "Email"   class="nombre-registro">
-                <input type="text" name="username"   placeholder= "Nombre de usuario"  class="nombre-registro">
+                <label for="first_name" class="field">Nombre</label>
+                <br>
+                <input type= "text" name="first_name"  placeholder= "Nombre" value="<%= locals.old && old.first_name ? old.first_name : ""  %>" class="nombre-registro">
+                <br>
+                <label for="last_name"class="field">Apellido</label>
+                <br>
+                <input type= "text" name="last_name"  placeholder= "Apellido" value="<%= locals.old && old.last_name ? old.last_name : ""  %>" class="nombre-registro">
+                <br>
+                <label for="email" class="field">Email</label>
+                <br>
+                <input type= "text" name="email"   placeholder= "Email" value="<%= locals.old && old.email ? old.email : ""  %>"  class="nombre-registro">
+                <br>
+                <label for="username" class="field"> Nombre de usuario</label>
+                <br>
+                <input type="text" name="username"   placeholder= "Nombre de usuario" value="<%= locals.old && old.username ? old.username : ""  %>" class="nombre-registro">
                  <br>
                 <br>
             

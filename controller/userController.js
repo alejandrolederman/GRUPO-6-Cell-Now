@@ -41,6 +41,9 @@ const userController = {
     
     // Create -  Method to store
     storeUsers: (req, res) => {
+        let errors = validationResult(req);
+       if(errors.isEmpty()){
+
         const {
             first_name,
             last_name,
@@ -72,16 +75,20 @@ const userController = {
             users.push(data);
 
 		fs.writeFileSync(usersFilePath,JSON.stringify(users),'utf-8');
-res.redirect("/");
-      
+res.redirect("./login");
+} else {
+    res.render('./users/formularioRegistro', { errors: errors.array(), old: req.body
+    
+    });
+}
     },
 
-    processRegistrer: (req, res) => {
+    // processRegistrer: (req, res) => {
 
-        let errors = validationResult(req);
-            res.send (errors);
+    //     let errors = validationResult(req);
+    //         res.send (errors);
 
-    },
+    // },
         // return res.send({
         //     body: req.body,
         //     file: req.file

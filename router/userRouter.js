@@ -36,7 +36,8 @@ router.post('/', userController.home);
 router.get('/formularioRegistro', userController.registrer);
 
 //procesar el registro
-router.post('/formularioRegistro', userController.storeUsers);
+router.post('/formularioRegistro',validations, userController.storeUsers);
+
 // router.post('/formularioRegistro',uploadFile.single('avatar'),validations, userController.processRegistrer);
 
 

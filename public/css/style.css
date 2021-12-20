@@ -514,9 +514,16 @@ main ul li a{
 
 /*ACA COMIENZA EL HTML DEL FORMULARIO DE REGISTRO*/
 
-label{
+/* label{
     color: #FFF;
+} */
+
+.field label {
+    display: block;
+    margin-bottom: .25rem;
+    color: #000;
 }
+
 .register{
    margin: 30px;
     display: flex;
