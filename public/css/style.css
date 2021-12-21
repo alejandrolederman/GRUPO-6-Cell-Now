@@ -518,6 +518,13 @@ main ul li a{
     color: #FFF;
 } */
 
+.errorEpress{
+
+    color: red;
+    font-size: 25px;
+   
+}
+
 .field label {
     display: block;
     margin-bottom: .25rem;

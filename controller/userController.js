@@ -77,9 +77,10 @@ const userController = {
 		fs.writeFileSync(usersFilePath,JSON.stringify(users),'utf-8');
 res.redirect("./login");
 } else {
-    res.render('./users/formularioRegistro', { errors: errors.array(), old: req.body
+    res.render('./users/formularioRegistro', { errors: errors.mapped(), old: req.body
     
-    });
+    }
+    );
 }
     },
 

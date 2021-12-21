@@ -7,31 +7,43 @@
     <main class = "register">
         <h3 class="text-color">Registrate!</h3>
 
-                    <%if(locals.errors) { %>
-             <%errors.forEach(error =>{%>
-                
-                <p><h1><%= error.msg %></h1> </p>
+      
 
-            <% })} %>  
-
-        <form action= "/user/formularioRegistro" method="POST"  class= "registerTotal">
-            <div>
-                <label for="first_name" class="field">Nombre</label>
+        <form action= "/user/formularioRegistro" method="POST"  >
+            <div class= "registerTotal">
+                <!-- <label for="first_name" class="field">Nombre</label> -->
                 <br>
                 <input type= "text" name="first_name"  placeholder= "Nombre" value="<%= locals.old && old.first_name ? old.first_name : ""  %>" class="nombre-registro">
+                <div class="errorEpress">
+                <%if(locals.errors && errors.first_name) { %>
+                       <p class="errorEpress"><%= errors.first_name.msg %></p>
+                   <% } %>  
+                </div>
                 <br>
-                <label for="last_name"class="field">Apellido</label>
+                <!-- <label for="last_name"class="field">Apellido</label> -->
                 <br>
                 <input type= "text" name="last_name"  placeholder= "Apellido" value="<%= locals.old && old.last_name ? old.last_name : ""  %>" class="nombre-registro">
+                <div><%if(locals.errors && errors.last_name) { %>
+                    <p class="errorEpress"><%= errors.last_name.msg %> </p>
+                <% } %>
+                </div>
                 <br>
-                <label for="email" class="field">Email</label>
+                <!-- <label for="email" class="field">Email</label> -->
                 <br>
-                <input type= "text" name="email"   placeholder= "Email" value="<%= locals.old && old.email ? old.email : ""  %>"  class="nombre-registro">
+                <input type= "text" name="email"  placeholder= "Email" value="<%= locals.old && old.email ? old.email : ""  %>"  class="nombre-registro">
+                <div><%if(locals.errors && errors.email) { %>
+                    <p class="errorEpress"><%= errors.email.msg %> </p>
+                <% } %>
+                </div>
                 <br>
-                <label for="username" class="field"> Nombre de usuario</label>
+                <!-- <label for="username" class="field"> Nombre de usuario</label> -->
                 <br>
                 <input type="text" name="username"   placeholder= "Nombre de usuario" value="<%= locals.old && old.username ? old.username : ""  %>" class="nombre-registro">
-                 <br>
+                <div><%if(locals.errors && errors.username) { %>
+                    <p class="errorEpress"><%= errors.username.msg %> </p>
+                <% } %>
+                </div>
+                <br>
                 <br>
             
            
@@ -39,8 +51,21 @@
         <input type= "file" name="avatar" class="imagen-perfil">
             <br>
             <br>
-        <input type= "password" name="pass" placeholder="Elegí tu contraseña" minlength="6" id="password" class="pass-registro">
-        <input type= "password" name="pass_confirm" placeholder="Confirma tu contraseña" id="pass_confirm" class="pass-registro">
+            <!-- <label for="password" class="field"> Contraseña</label> -->
+            <br>
+            <input type= "password" name="pass" placeholder="Elegí tu contraseña" minlength="6" id="password" class="pass-registro">
+            <br>
+            <div><%if(locals.errors && errors.pass) { %>
+                <p class="errorEpress"><%= errors.pass.msg %> </p>
+            <% } %>
+            </div>
+            <!-- <label for="password" class="field"> confimacion de contraseña</label> -->
+            <br>
+            <input type= "password" name="passConfirm" placeholder="Confirma tu contraseña" id="pass_confirm" class="pass-registro">
+            <div><%if(locals.errors && errors.passConfirm) { %>
+                <p class="errorEpress"><%= errors.passConfirm.msg %> </p>
+            <% } %>
+            </div>
             <br>
             <br>
         <div>
