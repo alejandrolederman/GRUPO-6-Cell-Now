@@ -178,16 +178,23 @@
     "password": "jQFEdG4",
     "category": "user",
     "image": "user_20.jpg"
-},
-{
+}, {
     "id": 21,
-    "first_name": "ale",
-    "last_name": "ale",
-    "username": "superyo",
+    "first_name": "agustin",
+    "last_name": "lederman",
+    "email": "alejandro.lederman@live.com.ar",
+    "username": "al",
+    "avatar": "",
+    "pass": "123456",
+    "passConfirm": "123456",
+    "button": ""
+}, {
+    "id": 22,
+    "first_name": "alejandro",
+    "last_name": "lederman",
     "email": "ale@ale.com",
-    "password": "alejandro",
-    "category": "admin",
-    "image": "user_20.jpg"
-}
-
-]
+    "username": "ALE",
+    "pass": "123456",
+    "passConfirm": "123456",
+    "button": ""
+}]

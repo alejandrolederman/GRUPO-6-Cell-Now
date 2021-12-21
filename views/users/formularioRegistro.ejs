@@ -9,11 +9,11 @@
 
       
 
-        <form action= "/user/formularioRegistro" method="POST"  >
+        <form action= "/user/formularioRegistro" method="POST" enctype="multipart/form-data"  >
             <div class= "registerTotal">
                 <!-- <label for="first_name" class="field">Nombre</label> -->
                 <br>
-                <input type= "text" name="first_name"  placeholder= "Nombre" value="<%= locals.old && old.first_name ? old.first_name : ""  %>" class="nombre-registro">
+                <input type= "text" name="first_name" placeholder= "Nombre" value="<%= locals.old && old.first_name ? old.first_name : "" %>" class="nombre-registro">
                 <div class="errorEpress">
                 <%if(locals.errors && errors.first_name) { %>
                        <p class="errorEpress"><%= errors.first_name.msg %></p>
