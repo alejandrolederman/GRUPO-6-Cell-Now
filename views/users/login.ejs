@@ -7,28 +7,30 @@
 
         <main class="login">
             <div class="login-box">
-                <img class="avatar" src="/img/logo/logo_small_icon_only.jpg" alt="">
+                <a href="/"><img class="avatar" src="/img/logo/logo_small_icon_only.jpg" alt=""></a>
 
                 <h1>BIENVENIDO</h1>
-                <form action="/" method="post">
+                <form action="/user/login" method="POST">
 
-                   <label for="">Nombre de Usuario</label>
-                    <input class="usu" type="text" name="user" placeholder="Usuario" required minlength="8" requiere
-                        maxlength="16">
-                        <label for="">Contraseña</label>
-                    <input class="pas" type="password" name="pass" placeholder="Contraseña" minlength="6">
-
-
+                   <!-- <label for="">Email</label> -->
+                    <input class="usu" type="text" name="email" placeholder="Email" >
+                        <%if(locals.errors && errors.email) { %>
+                            <p class="errorEpress"><%= errors.email.msg %></p>
+                        <% } %>  
+                        <!-- <label for="">Contraseña</label> -->
+                    <input class="pas" type="password" name="pass" placeholder="Contraseña" >
+                    <%if(locals.errors && errors.pass) { %>
+                        <p class="errorEpress"><%= errors.pass.msg %></p>
+                    <% } %> 
                     
                     <label class="reco" for="recordar">Recordar Usuario</label>
                     <input type="checkbox" name="recordar" value="g" id="g">
 
-                    <a href="/"><button class="button-login" name="button"><i class="fa fa-sign-in" aria-hidden="true"></i>
-                            INGRESAR</span></button></a>
-
+                    <button type="submit" class="button-login" name="button"><i class="fa fa-sign-in" aria-hidden="true"></i>
+                    <span>INGRESAR</span></button>
 
                     <a class="href" href="#">¿Olvidaste tu contraseña?</a>
-                    <a class="href" href="/views/users/formularioRegistro.ejs">Registrate como cliente</a>
+                    <a class="href" href="/users/formularioRegistro">Registrate como cliente</a>
 
             </div>
             </form>

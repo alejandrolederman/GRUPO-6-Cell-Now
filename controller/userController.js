@@ -13,8 +13,7 @@ const userController = {
      // Root - Show all products
      usersList: (req, res) => {
         res.render('./users/usersList', {
-           users
-        });
+           users });
     },
 
     usersDetail: (req, res) => {
@@ -24,15 +23,44 @@ const userController = {
                 return unUsuario;
             }
         });
-        res.render('./users/usersDetail', {
-            usuario,
-            users
-        });
+        res.render('./users/usersDetail', { usuario, users});
     },
 
     login: (req, res) => {
         res.render('./users/login');
     },
+
+    processLogin: (req,res)=>{
+
+        res.send("./users/logueado");
+
+        //  let errors = validationResult(req);
+        //  if(errors.isEmpty()){
+        //      for(let i = 0; i<users.length; i++){
+
+        //          if ( users[i].email == req.body.email){
+                    
+        //             break;
+        //          }
+        //      }
+        },
+
+
+        
+    //     if(usuarioALoguearse == undefined){
+    //         return res.render ('./users/login', {errors:[
+    //             {
+    //                 msg: "credenciales no valida"
+    //             } ] 
+    //         })
+    //     }
+    //     req.session.usuarioLogueado = usuarioALoguearse;
+    //     res.send("entraste");
+    // } else {
+
+    //     res.render('./users/login', { errors: errors.mapped(), old: req.body})
+        
+
 
     registrer: (req, res) => {
         res.render('./users/formularioRegistro');

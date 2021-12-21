@@ -1,7 +1,7 @@
-//validator
+//validator del registro
 const { body } = require ("express-validator");
 
- const validations = [
+ const validationRecord = [
     body("first_name").notEmpty().withMessage("escribe tu nombre").bail(),
     body("last_name").notEmpty().withMessage("escribe tu apellido").bail(),
     body("email").notEmpty().withMessage("escribe tu mail").bail().isEmail().withMessage("debes escribir un formato de correo valido"),
@@ -11,4 +11,4 @@ const { body } = require ("express-validator");
 
     ]
 
-    module.exports = validations;
+    module.exports = validationRecord;

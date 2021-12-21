@@ -5,6 +5,7 @@ const express = require("express");
 const app = express();
 const logger = require('morgan');
 const methodOverride =  require('method-override');
+let session = require("express-session")
 
 
 const indexRouter = require('./router/indexRouter');
@@ -18,6 +19,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
+app.use(session({secret:"secreto"}));
 
 
 
