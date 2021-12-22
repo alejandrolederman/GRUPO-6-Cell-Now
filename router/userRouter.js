@@ -5,19 +5,10 @@ const path = require('path');
 
 const validationRecord = require('../middlewares/validationRecord');
 const validationLogin = require("../middlewares/validatorLogin")
-// const storage = require("../middlewares/multerStorange")
+ const storage = require("../middlewares/multerStorange")
 
 
-const storage = multer.diskStorage({
-    destination: (req, file, cb) => {
-        cb(null,'./public/img/avatars');
-    },
-    filename: (req, file, cb) => {
-        
-        let fileName = 'img_user' + Date.now() + path.extname(file.originalname);
-        cb(null, fileName);
-    }
-})
+
 
 
 const uploadFile = multer({storage});
