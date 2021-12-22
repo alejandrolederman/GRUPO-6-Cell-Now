@@ -49,6 +49,10 @@
            
         <h4 class="text-color imagen-perfil">Elegí tu foto de perfil</h4>
         <input type= "file" name="avatar" class="imagen-perfil">
+        <div><%if(locals.errors && errors.avatar) { %>
+            <p class="errorEpress"><%= errors.avatar.msg %> </p>
+        <% } %>
+        </div>
             <br>
             <br>
             <!-- <label for="password" class="field"> Contraseña</label> -->
@@ -68,13 +72,14 @@
             </div>
             <br>
             <br>
+        </form>
         <div>
             <button class="button-enviar" name= "button"><span><i class="fa fa-share-square-o" aria-hidden="true"></i> ENVIAR</span></button> 
             <button class="button-borrar" name= "button"><span><i class="fa fa-trash-o" aria-hidden="true"></i> BORRAR</span></button>
         </div> 
             <br>
             <br>
-        </form>
+        
     </main>
     <%- include ('../partials/footer')%>
     

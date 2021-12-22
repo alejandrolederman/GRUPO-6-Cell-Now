@@ -19,7 +19,7 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
-app.use(session({secret:"secreto"}));
+app.use(session({secret:"secreto",resave: false,saveUninitialized: false}));
 
 
 
