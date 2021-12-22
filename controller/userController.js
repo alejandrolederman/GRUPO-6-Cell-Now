@@ -102,6 +102,13 @@ const userController = {
         res.render('./users/login');
     },
 
+    profile: (req, res) => {
+
+        res.render('./users/logueado', {
+            user: req.session.userLogged
+        });
+    },
+
     loginProcess: (req, res) => {
 
         let userToLogin = User.findByField("email", req.body.email);
@@ -109,19 +116,19 @@ const userController = {
         if(userToLogin){
             let passOk = bcryptjs.compareSync(req.body.pass, userToLogin.pass)
             if(passOk){
-
-                return res.redner(" puedes ingresar")
-            
+                delete userToLogin.pass;
+                req.session.userLogged = userToLogin;
+                return res.redirect('./logueado');
             }
+
             return res.render('./users/login', {
                 errors: {
                     pass: {
                         msg: "las credenciales son invalidas"
                     }
                 }   
-            })
+            });
 
-           return res.send(userToLogin);
         }else{
             return res.render('./users/login', {
                 errors: {
