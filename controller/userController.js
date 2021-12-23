@@ -15,6 +15,18 @@ const userController = {
             users
         });
     },
+    // productDetail: (req, res) => {
+    //     let elId = req.params.id;
+    //     let productos = products.find(unProducto => {
+    //         if (unProducto.id == elId) {
+    //             return unProducto;
+    //         }
+    //     });
+    //     res.render('./products/detail', {
+    //         productos,
+    //         products
+    //     })
+    // },
 
     usersDetail: (req, res) => {
         let elId = req.params.id;
@@ -77,6 +89,7 @@ const userController = {
     loginProcess: (req, res) => {
 
         let userToLogin = User.findByField("email", req.body.email);
+        
 
         if(userToLogin){
             let passOk = bcryptjs.compareSync(req.body.pass, userToLogin.pass)

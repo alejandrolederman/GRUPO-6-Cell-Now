@@ -12,22 +12,19 @@
                 
             </div>
             <div class="descripcion-producto-comprar">
-                <h2>NOMBRE<%=users.first_name%> </h2>
+                <h3>NOMBRE :<%=usuario.first_name%> </h3>
 
                 <br>
-                <h3 class="texto-comprar">APELLIDO <%=users.last_name %> </h3>
+                <h3 class="texto-comprar">APELLIDO: <%=usuario.last_name%> </h3>
                 <br>
-                <h3 class="texto-comprar"> USUARIO<%=users.nombre_usuario%></h3>
+                <h3 class="texto-comprar"> USUARIO: <%=usuario.username%></h3>
                 <br>
-                <h3 class="texto-comprar">APELLIDO <%=users.last_name %> </h3>
+                <h3 class="texto-comprar"> CATEGORIA: <%=usuario.category%></h3>
                 <br>
-                <h3 class="texto-comprar"> USUARIO<%=users.nombre_usuario%></h3>
-                <br>
-                <br>
-                <h3 class="texto-comprar"> USUARIO<%=users.email%></h3>
+                <h3 class="texto-comprar"> EMAIL: <%=usuario.email%></h3>
                 <br>
                 <br>
-                <h3 class="texto-comprar"> USUARIO<%=users.category%></h3>
+                <img src="/img/avatars/<%= usuario.avatar %> " alt="">
                 <br>
                     
     </main>

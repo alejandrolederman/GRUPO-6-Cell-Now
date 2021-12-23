@@ -21,9 +21,16 @@
                     <div>
                         <a href="/user/userProfile"><i > <%= locals.userLogged.first_name %> </i></a>
                         <a href="/products/productsForm">Vender</a>
+                        <a href="/user/logout">Logout</a>
+                    <div>
+                        <a href="/user/usersList">listar usuarios registrados</a>
+
+                    </div>
+
                     </div>
                     <% } else { %> 
                     <div>
+                        <a href="/user/login">Vender</a>
                         <a href="/user/login"><i>login</i></a>
                         <a href="/user/formularioRegistro"><i class="header-usuraio">   Registrate   </i></a>
                         <% } %> 
