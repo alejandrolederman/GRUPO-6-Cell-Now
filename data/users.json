@@ -179,4 +179,13 @@
     "passConfirm": "123456",
     "button": "",
     "avatar": "img_user1640195521010.jpg"
+}, {
+    "id": 21,
+    "first_name": "AGUSTIN",
+    "last_name": "ZURITA",
+    "email": "QUE@TEIMPORTA.COM",
+    "username": "GATO",
+    "pass": "$2a$10$j..Mz9LdcW52eiyljOzB0.RqB57AfSw12NWYZWtL5UXFxO8SMs.oG",
+    "passConfirm": "123456",
+    "avatar": "img_user1640211847608.png"
 }]

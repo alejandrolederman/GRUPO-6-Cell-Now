@@ -1,11 +1,10 @@
+function guestMiddlewares(req, res, next) {
 
+    if (req.session.userLogged) {
 
-function guestMiddlewares(req, res, next){
-
-    if(req.session.userLogged){
-
-        return res.redirect('./logueado')
+        return res.redirect('./userProfile')
     }
+    next()
 };
 
-module.exports= guestMiddlewares;
+module.exports = guestMiddlewares;

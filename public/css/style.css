@@ -3,7 +3,37 @@
     padding: 0px;
     box-sizing: border-box;
 }
+.cell{
+    color: #fff;
+}
+.avatar-register{
+    width: 100px;
+    margin-top: 10px;
+    /* padding-top: 60px; */
+    border-radius: 50%;
+}
+.register-body{
+    background: #bdc3c7;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+}
+/* .registerTotal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} */
+.enviar {
+    height: 30px;
+    width: 150px;
+    cursor: pointer;
+    color: #fff;
+    background: blue;
+    border-radius: 20px;
+    font-size: 22px;
+    text-align: center;
+    border: none;
+}
 .login {
     margin: 0%;
     padding: 0%;
@@ -65,7 +95,7 @@
     }
     .button-login{
         cursor: pointer;
-        width: 100%;
+        width: 150px;
         margin-bottom: 20px;
         height: 40px;
         border: none;
@@ -109,7 +139,7 @@
 }
 
 .fa.fa-share-square-o:before {
-    color: white;
+    color: #fff;
     content: "\f14d";
 }
 
@@ -205,13 +235,21 @@ div.selec {
 }
 
 body {
-    font-family: "Roboto";
     height: 100%;
     background: grey (160, 157, 157);
+    font-family: acumin-pro, system-ui, sans-serif;
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-size: 14px;
+    background-color: #f4f4f4;
+    align-items: start;
+    min-height: 100vh;
+    }
     /* background-image: url(/img/burbujas2.jpg);
      background-size: 100%; 
      background-size: 100%;   */
-}
+
 
 
 /* aca esta el banner */
@@ -265,7 +303,9 @@ i {
 h2,
 h2 a,
 li {
+    text-align: center;
     color: gray;
+    font-family: 'Roboto', sans-serif;
 }
 
 .product {
@@ -634,6 +674,8 @@ main ul li a {
 }
 
 .register {
+    
+    
     margin: 30px;
     display: flex;
     flex-direction: column;
@@ -720,43 +762,111 @@ button:hover::after {
 
 /* ACA COMIENZA EL HTML DEL LOGIN*/
 
-.h1-login {
-    color: gray;
-    letter-spacing: 8px;
-}
-
-.main-login {
+.footer {
     display: flex;
-    flex-direction: column;
+    flex-flow: row wrap;
+    padding: 20px 20px 10px 20px;
+    color: #2f2f2f;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
+  }
+  
+  .footer > * {
+    flex:  1 100%;
+  }
+  
+  .footer__addr {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+  }
+  
+  .footer__logo {
+    font-family: acumin-pro, system-ui, sans-serif;
+    font-weight: 400;
+    text-transform: lowercase;
+    font-size: 1.5rem;
+  }
+  
+  .footer__addr h2 {
+    margin-top: 1.3em;
+    font-size: 15px;
+    font-weight: 400;
+    display:flex;
+    justify-content: flex-start;
+  }
+  
+  .nav__title {
+    font-weight: 400;
+    font-size: 15px;
+  }
+  
+  .footer address {
+    font-style: normal;
+    color: #999;
+  }
+  
+  .footer__btn {
+    display: flex;
     align-items: center;
-    background-color: gainsboro;
-    opacity: 70%;
-}
-
-.main-login form {
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    align-content: center;
-    width: 100%;
-    background-color: gainsboro;
-    border-radius: 20px;
-}
-
-.main-div-login {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: row;
-}
-
-.caracteristicas {
-    display: flex;
-    flex-direction: row;
     justify-content: center;
-    padding: 1%;
-}
-
+    height: 36px;
+    max-width: max-content;
+    background-color: rgb(33, 33, 33, 0.07);
+    border-radius: 100px;
+    color: #2f2f2f;
+    line-height: 0;
+    margin: 0.6em 0;
+    font-size: 1rem;
+    padding: 0 1.3em;
+  }
+  
+  .footer ul {
+    list-style: none;
+    padding-left: 0px;
+    padding-top: 5px;
+  }
+  
+  .footer li {
+    line-height: 2em;
+  }
+  
+  .footer a {
+    text-decoration: none;
+  }
+  
+  .footer__nav {
+    display: flex;
+      flex-flow: row wrap;
+  }
+  
+  .footer__nav > * {
+    flex: 1 50%;
+    margin-right: 1.25em;
+  }
+  
+  .nav__ul a {
+    color: #999;
+  }
+  
+  .nav__ul--extra {
+    column-count: 2;
+    column-gap: 1.25em;
+  }
+  
+  .legal {
+    display: flex;
+    flex-wrap: wrap;
+    color: #999;
+  }
+    
+  .legal__links {
+    display: flex;
+    align-items: center;
+  }
+  
+  .heart {
+    color: #2f2f2f;
+  }
 
 /* ACA VAN LAS @MEDIA*/
 
@@ -839,7 +949,31 @@ button:hover::after {
         align-self: center;
     }
 }
+    /*MEDIA DE FOOTER */
+    @media screen and (min-width: 24.375em) {
+        .legal .legal__links {
+          margin-left: auto;
+        }
+      }
+      @media screen and (min-width: 40.375em) {
+        .footer__nav > * {
+          flex: 1;
+        }
+        
+        .nav__item--extra {
+          flex-grow: 2;
+        }
+        
+        .footer__addr {
+          flex: 1 0px;
+        }
+        
+        .footer__nav {
+          flex: 2 0px;
+        }
+      }
 
+      /* MEDIA  */
 @media(min-width:632px) {
     .main-header-top-bar {
         display: flex;

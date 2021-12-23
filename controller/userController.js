@@ -102,13 +102,7 @@ const userController = {
         res.render('./users/login');
     },
 
-    profile: (req, res) => {
-
-        res.render('./users/logueado', {
-            user: req.session.userLogged
-        });
-    },
-
+    
     loginProcess: (req, res) => {
 
         let userToLogin = User.findByField("email", req.body.email);
@@ -118,7 +112,7 @@ const userController = {
             if(passOk){
                 delete userToLogin.pass;
                 req.session.userLogged = userToLogin;
-                return res.redirect('./logueado');
+                return res.redirect('./userProfile');
             }
 
             return res.render('./users/login', {
@@ -138,9 +132,19 @@ const userController = {
                 }   
             });
         }
+    },
 
-        
+    profile: (req, res) => {
 
+     return res.render('./users/userProfile', {
+			user: req.session.userLogged
+		 });
+	},
+
+    logout: (req, res) => {
+
+        req.session.destroy();
+        return res.redirect ('/')
     },
 
 

@@ -9,6 +9,7 @@ const storage = require("../middlewares/multerStorange")
 const uploadFile = multer({storage});
 const userController = require('../controller/userController');
 const guestMiddlewares = require("../middlewares/guestMiddlewares")
+const authMiddleware = require('../middlewares/authMiddleware')
 
 // listado de usuarios
 router.get('/usersList', userController.usersList);
@@ -17,10 +18,11 @@ router.get('/usersList', userController.usersList);
 router.get('/usersDetail/:id', userController.usersDetail);
 
 //ruta login y validacion
-router.get('/login',guestMiddlewares, userController.login);
+router.get('/login', guestMiddlewares,userController.login);
 router.post('/login', validationLogin,userController.loginProcess);
 
-router.get('/logueado', userController.profile);
+router.get('/userProfile',authMiddleware, userController.profile);
+router.get('/logout', userController.logout);
 
 
 // ruta del login al  home

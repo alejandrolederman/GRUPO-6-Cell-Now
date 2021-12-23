@@ -5,17 +5,34 @@
             <h5>CELLNOW.COM </h5>
         </a>
         </div>
+       
+
             <div class="search">
+
+                   
+
                 <div class="form">
                     <input type="text" name="nombre" placeholder="Busca lo que quieras           " class="input">
                 </div>  
+                <% if (locals.isLogged) { %>
                 <div class="menu-right-header">
                         <a href="/user/login"><i class="fas fa-user"></i></a>
                         <a href="/user/formularioRegistro"><i class="header-usuraio">   Registrate   </i></a>
+                    </div>
+                        
+                    <% } else { %> 
+
+                        <div class="menu-right-header">
+
                         <a href= "/trolley/carritoDeCompras"><i class="fas fa-shopping-cart" ></i></a>
                         <a href="/products/productsForm">Vender</a>
                         <i class="far fa-question-circle"></i> 
-                    </div>      
+                        <a href="/user/userProfile"><i class="fas fa-users"> profile</i></a>
+                    </div> 
+
+                    <% } %> 
+
+                         
             </div>    
     </nav>
  </header>

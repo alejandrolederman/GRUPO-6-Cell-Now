@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head')%>
-<body>
-    <%- include('../partials/header')%>
-        
+<body class="register-body">
+    <!-- <%- include('../partials/header')%> -->
+    <a href="/"><img src="/img/logo/logo_small_icon_only.jpg " class= avatar-register width="50%"></a>
+       <h3 class="cell"> CELL NOW</H3>
     <main class = "register">
-        <h3 class="text-color">Registrate!</h3>
+        <h3 class="cell">Registrate!</h3>
 
       
 
@@ -47,7 +48,7 @@
                 <br>
             
            
-        <h4 class="text-color imagen-perfil">Elegí tu foto de perfil</h4>
+        <h4 class="cell">Elegí tu foto de perfil</h4>
         <input type= "file" name="avatar" class="imagen-perfil">
         <div><%if(locals.errors && errors.avatar) { %>
             <p class="errorEpress"><%= errors.avatar.msg %> </p>
@@ -72,10 +73,12 @@
             </div>
             <br>
             <br>
+            </div>
         </form>
         <div>
-            <button class="button-enviar" name= "button"><span><i class="fa fa-share-square-o" aria-hidden="true"></i> ENVIAR</span></button> 
-            <button class="button-borrar" name= "button"><span><i class="fa fa-trash-o" aria-hidden="true"></i> BORRAR</span></button>
+            <!-- <button class="button-enviar" name= "button"><span><i class="fa fa-share-square-o" aria-hidden="true"></i> ENVIAR</span></button> 
+            <button class="button-borrar" name= "button"><span><i class="fa fa-trash-o" aria-hidden="true"></i> BORRAR</span></button> -->
+            <button class="button-login" type="submit"><i class="fa fa-share-square-o" aria-hidden="true"></i>Suscribirte</button>
         </div> 
             <br>
             <br>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head')%>
+
+    <body>
+
+		<%- include('../partials/header')%>
+    <div >
+		<div >
+			<div >
+				<h2>Hi <%= user.first_name + " "+ user.last_name %> </h2>
+
+				<a class="dropdown-item" href="/user/logout">Logout</a>
+
+				
+				<img src="/img/avatars/<%= user.avatar %> ">
+				<br>
+				<br>
+				<div ><%= user.email %> </div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
+

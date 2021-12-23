@@ -5,13 +5,14 @@ const express = require("express");
 const app = express();
 const logger = require('morgan');
 const methodOverride =  require('method-override');
-let session = require("express-session")
+const session = require("express-session");
 
 
 const indexRouter = require('./router/indexRouter');
 const trolleyRouter = require('./router/trolleyRouter');
 const userRouter = require('./router/userRouter');
 const productRouter = require('./router/productRouter');
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); 
 const { error } = require('console');
 
 app.use(express.urlencoded({ extended: false }));
@@ -20,6 +21,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 app.use(session({secret:"secreto",resave: false,saveUninitialized: false}));
+app.use(userLoggedMiddleware);
 
 
 
