@@ -2,7 +2,7 @@ const fs = require('fs');
 
 const User = {
 
-    fileName: './data/users.json',
+    filename: './data/users.json',
 
     //encontrar a todos los usuarios
     findAllUsers: function () {
@@ -11,7 +11,7 @@ const User = {
 
     //se trae a todos los usuarios
     getData: function () {
-        return JSON.parse(fs.readFileSync(this.fileName, 'utf-8'))
+        return JSON.parse(fs.readFileSync(this.filename, 'utf-8'))
     },
 
     //metodo para generar un ID
@@ -50,7 +50,7 @@ const User = {
             ...userData
         }
         allUsers.push(newData);
-        fs.writeFileSync(this.fileName, JSON.stringify(allUsers, null, ''))
+        fs.writeFileSync(this.filename, JSON.stringify(allUsers, null, ''))
         return newData;
     },
 
@@ -58,7 +58,7 @@ const User = {
     delete: function (id){
         let allUsers = this.findAllUsers();
         let finalUsers = allUsers.filter(oneUser=> oneUser.id!= id);
-        fs.writeFileSync(this.fileName, JSON.stringify(finalUsers, null, ''))
+        fs.writeFileSync(this.filename, JSON.stringify(finalUsers, null, ''))
         return true
     }
 }

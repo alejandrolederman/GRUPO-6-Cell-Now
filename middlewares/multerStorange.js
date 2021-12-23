@@ -7,11 +7,10 @@
     destination: (req, file, cb) => {
         cb(null,'./public/img/avatars');
     },
-    filename: (req, file, cb) => {
-        
-        let fileName = 'img_user' + Date.now() + path.extname(file.originalname);
-        cb(null, fileName);
-    }
+	filename: (req, file, cb) => {
+		let filename = `${Date.now()}_img${path.extname(file.originalname)}`;
+		cb(null, filename);
+	}
 })
-
-module.exports = storage;
+const uploadFile = multer({ storage });
+module.exports = uploadFile;

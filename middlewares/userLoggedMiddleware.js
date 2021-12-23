@@ -1,20 +1,19 @@
 const User = require('../models/Users');
 
 function userLoggedMiddleware(req, res, next) {
+	res.locals.isLogged = false;
 
-	res.locals.isLogged = true;
+	let emailCookie = req.cookies.userEmail;
+	let userCookie = User.findByField('email', emailCookie);
 
-	// let emailInCookie = req.cookies.userEmail;
-	// let userFromCookie = User.findByField('email', emailInCookie);
+	if (userCookie) {
+		req.session.userLogged = userCookie;
+	}
 
-	// if (userFromCookie) {
-	// 	req.session.userLogged = userFromCookie;
-	// }
-
-	// if (req.session.userLogged) {
-	// 	res.locals.isLogged = true;
-	// 	res.locals.userLogged = req.session.userLogged;
-	// }
+	if (req.session.userLogged) {
+		res.locals.isLogged = true;
+		res.locals.userLogged = req.session.userLogged;
+	}
 
 	next();
 }

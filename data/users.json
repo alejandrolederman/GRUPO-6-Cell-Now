@@ -173,19 +173,9 @@
     "id": 20,
     "first_name": "alejandro",
     "last_name": "lederman",
-    "email": "alejandro.lederman@live.com.ar",
+    "email": "ale@ale.com",
     "username": "ALE",
-    "pass": "$2a$10$KtwM1G1WgMcRlht01AtpDuA/zvtuqzb/ggE5qc03QuqByjVNNzpgi",
+    "pass": "$2a$10$92vqkj2S/Dp3OBBNGclkeeHnLYRa73Nt0xFW4oZHwB2Vtp/t.5kR6",
     "passConfirm": "123456",
-    "button": "",
-    "avatar": "img_user1640195521010.jpg"
-}, {
-    "id": 21,
-    "first_name": "AGUSTIN",
-    "last_name": "ZURITA",
-    "email": "QUE@TEIMPORTA.COM",
-    "username": "GATO",
-    "pass": "$2a$10$j..Mz9LdcW52eiyljOzB0.RqB57AfSw12NWYZWtL5UXFxO8SMs.oG",
-    "passConfirm": "123456",
-    "avatar": "img_user1640211847608.png"
+    "avatar": "1640280647619_img.jpg"
 }]

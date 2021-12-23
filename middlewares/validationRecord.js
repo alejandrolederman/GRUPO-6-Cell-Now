@@ -1,5 +1,5 @@
 //validator del registro
-const storage = require("../middlewares/multerStorange")
+const uploadFile = require("../middlewares/multerStorange")
 const multer = require("multer");
 const { body } = require("express-validator");
 const path = require('path');

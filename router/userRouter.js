@@ -5,8 +5,7 @@ const path = require('path');
 
 const validationRecord = require('../middlewares/validationRecord');
 const validationLogin = require("../middlewares/validatorLogin")
-const storage = require("../middlewares/multerStorange")
-const uploadFile = multer({storage});
+const uploadFile = require ("../middlewares/multerStorange")
 const userController = require('../controller/userController');
 const guestMiddlewares = require("../middlewares/guestMiddlewares")
 const authMiddleware = require('../middlewares/authMiddleware')
@@ -18,7 +17,7 @@ router.get('/usersList', userController.usersList);
 router.get('/usersDetail/:id', userController.usersDetail);
 
 //ruta login y validacion
-router.get('/login', guestMiddlewares,userController.login);
+router.get('/login',guestMiddlewares, userController.login);
 router.post('/login', validationLogin,userController.loginProcess);
 
 router.get('/userProfile',authMiddleware, userController.profile);

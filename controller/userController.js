@@ -29,80 +29,51 @@ const userController = {
         });
     },
 
-    
-
-    //  let errors = validationResult(req);
-    //  if(errors.isEmpty()){
-    //      for(let i = 0; i<users.length; i++){
-
-    //          if ( users[i].email == req.body.email){
-
-    //             break;
-    //          }
-    //      }
-
-
-
-
-    //     if(usuarioALoguearse == undefined){
-    //         return res.render ('./users/login', {errors:[
-    //             {
-    //                 msg: "credenciales no valida"
-    //             } ] 
-    //         })
-    //     }
-    //     req.session.usuarioLogueado = usuarioALoguearse;
-    //     res.send("entraste");
-    // } else {
-
-    //     res.render('./users/login', { errors: errors.mapped(), old: req.body})
-
-
-
     registrer: (req, res) => {
+
+        res.cookie("testing", "hola mundo", {maxAge: 1000 * 30})
+
         res.render('./users/formularioRegistro');
     },
 
     processRegistrer: (req, res) => {
+		const resultValidation = validationResult(req);
 
-        let userInDb = User.findByField("email", req.body.email);
-        if (userInDb) {
-            return res.render('./users/formularioRegistro', {
-                errors: {
-                    email: {
-                        msg: "este email ya esta registrado"
-                    }
-                },
-                old: req.body
-            });
-        }
+		if (resultValidation.errors.length > 0) {
+			return res.render('./users/formularioRegistro', {
+				errors: resultValidation.mapped(),
+				old: req.body
+			});
+		}
 
-        let userToCreate = {
-            ...req.body,
-            pass: bcryptjs.hashSync(req.body.pass, 10),
-            avatar: req.file.filename
-        };
+		let userInDB = User.findByField('email', req.body.email);
 
-        let errors = validationResult(req);
+		if (userInDB) {
+			return res.render('./users/formularioRegistro', {
+				errors: {
+					email: {
+						msg: 'Este email ya está registrado'
+					}
+				},
+				old: req.body
+			});
+		};
 
-        if (errors.isEmpty()) {
-            User.create(userToCreate);
-            return res.redirect('./login');
+		let userToCreate = {
+			...req.body,
+			pass: bcryptjs.hashSync(req.body.pass, 10),
+			avatar: req.file.filename
+		};
 
-        } else {
-            res.render('./users/formularioRegistro', {
-                errors: errors.mapped(),
-                old: req.body
-            })
-        };
+		let userCreated = User.create(userToCreate);
+
+		return res.redirect('./login');
     },
-
 
     login: (req, res) => {
         res.render('./users/login');
     },
 
-    
     loginProcess: (req, res) => {
 
         let userToLogin = User.findByField("email", req.body.email);
@@ -112,6 +83,11 @@ const userController = {
             if(passOk){
                 delete userToLogin.pass;
                 req.session.userLogged = userToLogin;
+
+                if(req.body.remember) {
+					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+				}
+
                 return res.redirect('./userProfile');
             }
 
@@ -142,34 +118,10 @@ const userController = {
 	},
 
     logout: (req, res) => {
-
+        res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect ('/')
     },
-
-
-    // let resultValidation = validationResult(req);
-
-    // if(resultValidation.errors.length > 0){
-
-    //     return res.render('./users/formularioRegistro', {
-    //         errors: resultValidation.mapped(),
-    //         oldData: req.body
-    //     });
-    // }
-
-    // return res.send({
-    //     body: req.body,
-    //     file: req.file
-    // });
-    //     const resultValidation = validationResult(req);
-    //     if (resultValidation.errors.length > 0) {
-    //         return res.render('./users/formularioRegistro',{
-
-    //         } errors: resultVlidator.mapped(),
-    //             oldDara: req.body
-    //         });
-
 
     selecBuyOrSell: (req, res) => {
         res.render('./users/selecBuyOrSell');
