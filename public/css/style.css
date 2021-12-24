@@ -1015,7 +1015,7 @@ button:hover::after {
         margin-top: 100px;
     }
     .header-login {
-        padding: 20px;
+        padding-top: 20px;
         width: 100%;
         background: white;
         height: 130px;
