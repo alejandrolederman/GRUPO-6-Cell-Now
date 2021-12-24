@@ -1,5 +1,5 @@
 * {
-    margin: 5px;
+    margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
@@ -12,7 +12,7 @@
     /* padding-top: 60px; */
     border-radius: 50%;
 }
-.register-body, .form {
+.register-body, .body-form {
     background: #bdc3c7;  /* fallback for old browsers */
 background: -webkit-linear-gradient(to right, #2c3e50, #bdc3c7);  /* Chrome 10-25, Safari 5.1-6 */
 background: linear-gradient(to right, #2c3e50, #bdc3c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -1015,11 +1015,12 @@ button:hover::after {
         margin-top: 100px;
     }
     .header-login {
+        padding: 20px;
         width: 100%;
         background: white;
-        height: 100px;
+        height: 130px;
         /* position: fixed; */
-        /* top: 10px;} */
+        /* top: 10px; */
     }
     .main-header-top-bar {
         display: flex;
