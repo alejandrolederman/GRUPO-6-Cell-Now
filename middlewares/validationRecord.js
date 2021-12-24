@@ -10,7 +10,6 @@ const validationRecord = [
    body("email").notEmpty().withMessage("escribe tu mail").bail().isEmail().withMessage("debes escribir un formato de correo valido"),
    body("username").notEmpty().withMessage("escribe tu nombre de usuario").bail(),
    body("pass").notEmpty().withMessage("escribe una contraseña valida").bail(),
-   body("passConfirm").notEmpty().withMessage("escribe la misma contraseña").bail(),
    body("avatar").custom((values, { req }) => {
 
       let file = req.file;

@@ -1,15 +1,4 @@
-[{
-    "id": 1,
-    "mark": "Google",
-    "model": "Pixel 4 xl",
-    "price": "$348.999,00",
-    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Tiene 2 cámaras traseras de 16Mpx/12.2Mpx.Cámaras delanteras de 8Mpx/0.3Mpx.Procesador Snapdragon 855 Octa-Core de 2.84GHz con 6GB de RAM.Batería de 3700mAh.memory interna de 64GB.Resistente al agua.Con reconocimiento facial.Tarjeta eSIM incluida.",
-    "camera": "16Mpx/12.2Mpx",
-    "screen": "Pantalla OLED de 6.3",
-    "memory": "64GB",
-    "unlocking": "reconocimiento facial",
-    "imagen": "713N4SwTtKL._AC_SL1500_.jpg"
-}, {
+[ {
     "id": 2,
     "mark": "Samsung",
     "model": "Galaxy S20 5g",
@@ -70,18 +59,6 @@
     "unlocking": "reconocimiento facial",
     "image": "71FuI8YvCNL._AC_SL1500_.jpg"
 }, {
-    "id": 7,
-    "mark": "Google",
-    "model": "Pixel 4 xl",
-    "price": "$348.999,00",
-    "discount": "% 10",
-    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Tiene 2 cámaras traseras de 16Mpx/12.2Mpx.Cámaras delanteras de 8Mpx/0.3Mpx.Procesador Snapdragon 855 Octa-Core de 2.84GHz con 6GB de RAM.Batería de 3700mAh.memory interna de 64GB.Resistente al agua.Con reconocimiento facial.Tarjeta eSIM incluida.",
-    "camera": "16Mpx/12.2Mpx",
-    "screen": "Pantalla OLED de 6.3",
-    "memory": "64GB",
-    "unlocking": "reconocimiento facial",
-    "imagen": "713N4SwTtKL._AC_SL1500_.jpg"
-}, {
     "id": 8,
     "mark": "Samsung",
     "model": "Galaxy S20 5g",
@@ -141,18 +118,6 @@
     "memory": "128GB",
     "unlocking": "reconocimiento facial",
     "image": "71FuI8YvCNL._AC_SL1500_.jpg"
-}, {
-    "id": 13,
-    "mark": "Google",
-    "model": "Pixel 4 xl",
-    "price": "$348.999,00",
-    "discount": "% 10",
-    "description": "Dispositivo liberado para que elijas la compañía telefónica que prefieras.Tiene 2 cámaras traseras de 16Mpx/12.2Mpx.Cámaras delanteras de 8Mpx/0.3Mpx.Procesador Snapdragon 855 Octa-Core de 2.84GHz con 6GB de RAM.Batería de 3700mAh.memory interna de 64GB.Resistente al agua.Con reconocimiento facial.Tarjeta eSIM incluida.",
-    "camera": "16Mpx/12.2Mpx",
-    "screen": "Pantalla OLED de 6.3",
-    "memory": "64GB",
-    "unlocking": "reconocimiento facial",
-    "imagen": "713N4SwTtKL._AC_SL1500_.jpg"
 }, {
     "id": 14,
     "mark": "Samsung",
