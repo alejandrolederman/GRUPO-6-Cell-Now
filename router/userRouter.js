@@ -30,7 +30,7 @@ router.post('/', userController.home);
 //formulario del registro
 router.get('/formularioRegistro',guestMiddlewares, userController.registrer);
 //procesar el registro
-router.post('/formularioRegistro', uploadFile.single('avatar'),validationRecord, userController.processRegistrer);
+router.post('/formularioRegistro', uploadFile.single('avatar'), userController.processRegistrer);
 
 
 router.get('/selecBuyOrSell', userController.selecBuyOrSell)
