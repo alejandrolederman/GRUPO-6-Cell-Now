@@ -89,20 +89,30 @@ const userController = {
     loginProcess: (req, res) => {
 
         let userToLogin = User.findByField("email", req.body.email);
+
+   
         
 
         if(userToLogin){
             let passOk = bcryptjs.compareSync(req.body.pass, userToLogin.pass)
             if(passOk){
                 delete userToLogin.pass;
+
                 req.session.userLogged = userToLogin;
 
+                if(userToLogin.category == "admin"){
+
+                    categoryAdmin = true;
+                }
+
                 if(req.body.remember) {
+
 					res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
 				}
 
                 return res.redirect('./userProfile');
             }
+
 
             return res.render('./users/login', {
                 errors: {
