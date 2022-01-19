@@ -1,6 +1,7 @@
 module.exports = (sequelize, DataTypes) => {
 
-    let alias = "Usuarios";
+    let alias = "Productos";
+
     let cols = {
 
         id: {
@@ -8,28 +9,29 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        nombre:{
+        mark:{
             type: DataTypes.INTEGER
         } ,
-        apellido: {
+        model: {
             type: DataTypes.INTEGER
         } ,
-        mail: {
+        description: {
             type: DataTypes.INTEGER
         },
         password: {
             type: DataTypes.INTEGER
         },
-        admin: {
-            type: DataTypes.BOOLEAN
+        price: {
+            type: DataTypes.INTEGER
         }
 
     };
+    
     let config = {
-        tableName: "usuarios",
+        tableName: "Productos",
         timestamps: false
     }
 
-    const user = sequelize.define(alias, cols, config);
-    return user;
+    const product = sequelize.define(alias, cols, config);
+    return product;
 }
