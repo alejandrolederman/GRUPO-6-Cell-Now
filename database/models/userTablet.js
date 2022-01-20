@@ -8,13 +8,13 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true,
             autoIncrement: true
         },
-        nombre:{
+        firstName:{
             type: DataTypes.INTEGER
         } ,
-        apellido: {
+        lastName: {
             type: DataTypes.INTEGER
         } ,
-        mail: {
+        email: {
             type: DataTypes.INTEGER
         },
         password: {
@@ -22,6 +22,9 @@ module.exports = (sequelize, DataTypes) => {
         },
         admin: {
             type: DataTypes.BOOLEAN
+        },
+        avatar:{
+            type: DataTypes.INTEGER
         }
 
     };

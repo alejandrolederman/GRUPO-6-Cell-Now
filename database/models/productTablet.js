@@ -18,15 +18,30 @@ module.exports = (sequelize, DataTypes) => {
         description: {
             type: DataTypes.INTEGER
         },
-        password: {
+        discount: {
             type: DataTypes.INTEGER
         },
         price: {
             type: DataTypes.INTEGER
+        },
+        camera: {
+            type: DataTypes.INTEGER
+        },
+        screen: {
+            type: DataTypes.INTEGER
+        },
+        memory: {
+            type: DataTypes.INTEGER
+        },
+        unlocking: {
+            type: DataTypes.INTEGER
+        },
+        image: {
+            type: DataTypes.INTEGER
         }
 
     };
-    
+
     let config = {
         tableName: "Productos",
         timestamps: false
