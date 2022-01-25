@@ -67,7 +67,7 @@
             <br>
             <!-- <label for="password" class="field"> Contraseña</label> -->
             <br>
-            <input type= "password" name="pass" placeholder="Elegí tu contraseña" minlength="6" id="password" class="pass-registro">
+            <input type= "password" name="pass" placeholder="Elegí tu contraseña" minlength="6" id="password" class="pass-registro" required>
             <br>
             <div><%if(locals.errors && errors.pass) { %>
                 <p class="errorEpress"><%= errors.pass.msg %> </p>
