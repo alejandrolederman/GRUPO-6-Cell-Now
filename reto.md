@@ -1,6 +1,6 @@
 el primer esprin no presento grandes complicaciones, pero creemos que podriamos haber colocado mas color y mas contenido a los wireframes
 
-  Retrospectiva - 1er Sprint
+     Retrospectiva - 1do Sprint
   
 Start doing:
     Reuniones más organizadas.
