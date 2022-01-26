@@ -51,5 +51,5 @@ app.use('/products',productRouter)
 
 
 app.listen (port, ()=>{
-    console.log ("el servidor inicio en el puerto: " + port)
+    console.log (`el servidor inicio en: localhost:${port}`);
 });
