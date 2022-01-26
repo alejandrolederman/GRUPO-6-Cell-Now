@@ -7,13 +7,15 @@ const logger = require('morgan');
 const methodOverride =  require('method-override');
 const session = require("express-session");
 
-
+const {connect} = require('./database/config/database.config')
 const indexRouter = require('./router/indexRouter');
 const trolleyRouter = require('./router/trolleyRouter');
 const userRouter = require('./router/userRouter');
 const productRouter = require('./router/productRouter');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); 
 const { error } = require('console');
+
+checkConnet()
 
 app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));

@@ -1,21 +1,24 @@
-const { Sequelize, DataTypes} = require("sequelize");
-const KeyDB = require("./key.db.config");
+// const { Sequelize, DataTypes} = require("sequelize");
+// const KeyDB = require("./key.db.config");
+
+// const sequelize = require("sequelize");
+// const sequelize = require("sequelize")
 
 
-const sqlize = new Sequelize(KeyDB.DATABASE, KeyDB.USER_NAME, KeyDB.PASSWORD, {
-  host: KeyDB.HOST,
-  dialect: KeyDB.DIALECT
-});
+// const sqlize = new Sequelize(KeyDB.DATABASE, KeyDB.USER_NAME, KeyDB.PASSWORD, {
+//   host: KeyDB.HOST,
+//   dialect: KeyDB.DIALECT
+// });
 
 
-const checkSqlize = async () => {
-  try {
-    await sqlize.authenticate();
-    console.log("Connection has been established successfully.");
-  } catch (error) {
-    console.error("Unable to connect to the database:", error);
-  }
-};
+// const checkSqlize = async () => {
+//   try {
+//     await sqlize.authenticate();
+//     console.log("Connection has been established successfully.");
+//   } catch (error) {
+//     console.error("Unable to connect to the database:", error);
+//   }
+// };
 
 // const UsersSyncDB = async (switchTF) => {
 //     try {
@@ -34,15 +37,35 @@ const checkSqlize = async () => {
 //    });
    
   
-module.exports = {
-    sqlize,
-    Sequelize,
-    models: {
-      Users
-    },
-    fnUtils: {
-      checkSqlize,
-      UsersSyncDB
+// module.exports = {
+//     sqlize,
+//     Sequelize,
+//     models: {
+//       Users
+//     },
+//     fnUtils: {
+//       checkSqlize,
+//       UsersSyncDB
+//     }
+//   };
+  const {Sequelize} = require("sequelize");
+  const connect = new Sequelize ("cellnow_db","root",null,{
+    host: 'localhost',
+    dialect:'mysql'
+  } );
+
+
+  async function checkConnet(){
+    try{
+      await connect.authenticate();
+      console.log("connet true");
+    } catch (err){
+      console.log("error/checkConnect", err);
+    }finally{
+      connect.close()
     }
-  };
-  
+  }
+ module,exports = {
+   connect,
+    };
+    checkConnet()
