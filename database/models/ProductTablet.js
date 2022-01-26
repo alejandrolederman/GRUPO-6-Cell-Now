@@ -37,3 +37,6 @@ module.exports = (sequelize, dataTypes) => {
     };
   
     const Product = sequelize.define(alias, cols, config);
+
+    return Product;
+};
