@@ -38,5 +38,12 @@ module.exports = (sequelize, dataTypes) => {
   
     const Product = sequelize.define(alias, cols, config);
 
+
+    Products.belongsToMany(models.trollyTablet, {
+      as: "trolly",
+      foreignKey: "product_id",
+      timestamps: false,
+    });
+
     return Product;
 };

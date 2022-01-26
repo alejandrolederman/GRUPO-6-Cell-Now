@@ -23,7 +23,20 @@ module.exports = (sequelize, dataTypes) => {
   
     const trolly = sequelize.define(alias, cols, config);
   
+    Trolly.associate = function (models) {
+      Trolly.belongsToMany(models.ProductTablet, {
+          as: "product",
+          foreignKey: "cart_id",
+          otherKey: "product_id",
+          timestamps: false,
+        });
     
+        trolly.belongsTo(models.UserTablet, {
+          as: "users",
+          foreignKey: "user_id",
+        });
+      
+  };
   
     return trolly;
   };

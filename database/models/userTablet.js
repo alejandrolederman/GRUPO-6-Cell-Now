@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Users";
+    let alias = "User";
     let cols = {
       id: {
         type: dataTypes.INTEGER,
@@ -35,7 +35,23 @@ module.exports = (sequelize, dataTypes) => {
     };
   
     const user = sequelize.define(alias, cols, config);
+
+    User.associate = function (models) {
+      User.belongsTo(models.trollyTablet, {
+      as: "trolly",
+      foreignKey: "trolly_id",
+    });
+
+      User.belogsToMeny(models.productTablet, {
+      as: "product",
+      foreignKey: "product_id",
+    });
+  };
   
+
+
+
+
       
     return user;
   };
