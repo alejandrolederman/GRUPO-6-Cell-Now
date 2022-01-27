@@ -1,32 +1,30 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "Modelo";
+    let alias ="Carrito";
     let cols = {
       id: {
         type: dataTypes.INTEGER,
         primaryKey: true,
         autoIncrement: true,
       },
-      model: {
+      user_id: {
         type: dataTypes.STRING(100),
       },
-      mark: {
+      prudct_id: {
         type: dataTypes.STRING(100),
+      },
+      amount: {
+        type: dataTypes.NUMBER(100),
       }
     };
     let config = {
-      tableName: "Models",
+      tableName: "Trolly",
       timestamps: false,
     };
   
-    const Modelo = sequelize.define(alias, cols, config);
-  Modelo.associate = function(models){
-    Modelo.belongsTo(models.Marca,{
-      as:"Marca",
-      foreignKey:"Mark_id"
-
-    })
-  }
-    
+    const Carrito = sequelize.define(alias, cols, config);
   
-    return Modelo;
+
+
+  
+    return trolly;
   };

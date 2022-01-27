@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-    let alias = "User";
+    let alias = "Usuario";
     let cols = {
       id: {
         type: dataTypes.INTEGER,
@@ -34,18 +34,17 @@ module.exports = (sequelize, dataTypes) => {
       timestamps: false,
     };
   
-    const user = sequelize.define(alias, cols, config);
+    const Usuario = sequelize.define(alias, cols, config);
 
-    User.associate = function (models) {
-      User.belongsTo(models.trollyTablet, {
-      as: "trolly",
-      foreignKey: "trolly_id",
+    Usuario.associate = function (models) {
+      Usuario.belogsToMeny(models.Producto, {
+      as: "Producto",
+      through: "Trolley",
+      foreignKey: "User_id",
+      otherKey:"product_id",
+      timetamps: false
     });
-
-      User.belogsToMeny(models.productTablet, {
-      as: "product",
-      foreignKey: "product_id",
-    });
+     
   };
   
 
