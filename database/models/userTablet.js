@@ -36,21 +36,16 @@ module.exports = (sequelize, dataTypes) => {
 
   const Usuario = sequelize.define(alias, cols, config);
 
-  Usuario.associate = function (models) {
-    Usuario.belogsToMeny(models.Producto, {
-      as: "Producto",
-      through: "Trolley",
-      foreignKey: "User_id",
-      otherKey: "product_id",
-      timetamps: false
-    });
+  // Usuario.associate = function (models) {
+  //   Usuario.belongsToMeny(models.ProductTablet, {
+  //     as: "Producto",
+  //     through: "Trolley",
+  //     foreignKey: "User_id",
+  //     otherKey: "product_id",
+  //     timetamps: false
+  //   });
 
-  };
+  
 
-
-
-
-
-
-  return user;
+  return Usuario;
 };

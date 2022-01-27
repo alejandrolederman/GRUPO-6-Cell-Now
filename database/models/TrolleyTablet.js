@@ -26,5 +26,5 @@ module.exports = (sequelize, dataTypes) => {
 
 
 
-  return trolly;
+  return Carrito;
 };

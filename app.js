@@ -15,7 +15,7 @@ const productRouter = require('./router/productRouter');
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); 
 const { error } = require('console');
 
-checkConnet()
+// checkConnet()
 
 app.use(express.urlencoded({ extended: false }));
 app.use(logger('dev'));
