@@ -30,8 +30,13 @@ const productController = {
     },
 
     // Create - Form to create
-    create: (req, res) => {
-        res.render("./products/productsForm");
+    create: function (req, res){
+        db.Marca,findAll()
+        then(function(generos){
+            return res.render("./products/productsForm", {generos:generos});
+
+        })
+        
     },
 
     // Create -  Method to store
