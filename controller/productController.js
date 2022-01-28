@@ -30,24 +30,24 @@ const productController = {
     },
 
     // Create - Form to create
-    create: (req, res) => {
+    crear: (req, res) => {
         res.render("./products/productsForm");
     },
 
     // Create -  Method to store
-    store: (req, res) => {
-
     
-            let cantidadProductos = 0;
-            for (let i = 0; i < products.length; i++) {
+
+            // let cantidadProductos = 0;
+            // for (let i = 0; i < products.length; i++) {
    
-                cantidadProductos = cantidadProductos + 1;
-            };
+            //     cantidadProductos = cantidadProductos + 1;
+            // };
+            store: (req, res) => {
+        db.Producto.create(
+            {
 
-        db.Producto.create({
-
-            mark: req.body.mark,
-            model: req.body.model,
+            mark_id: req.body.mark,
+            model_id: req.body.model,
             price: req.body.price,
             description: req.body.description,
             camera: req.body.camera,
@@ -55,9 +55,10 @@ const productController = {
             memory: req.body.memory,
             unlocking: req.body.unlocking,
             image: req.body.image,
-        });
+        }
+        );
 
-        console.log("mark")
+        
         res.redirect("/");
 
 

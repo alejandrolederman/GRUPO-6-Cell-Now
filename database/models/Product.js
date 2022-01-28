@@ -6,7 +6,7 @@ module.exports = (sequelize, dataTypes) => {
       primaryKey: true,
       autoIncrement: true,
     },
-    marks: {
+    mark_id: {
       type: dataTypes.STRING(61),
     },
     price: {
@@ -18,7 +18,7 @@ module.exports = (sequelize, dataTypes) => {
     camera: {
       type: dataTypes.INTEGER,
     },
-    model: {
+    model_id: {
       type: dataTypes.STRING(280),
     },
     screen: {
@@ -40,27 +40,27 @@ module.exports = (sequelize, dataTypes) => {
 
 
   Producto.associate = function (models) {
-    Producto.belogsToMeny(models.Producto, {
+    Producto.belongsToMany(models.Usuario, {
       as: "Usuario",
       through: "Trolley",
       foreignKey: "product_id",
       otherKey: "User_id",
       timetamps: false
     });
-  }
-  Producto.associate = function (models) {
+  
+  
     Producto.belongsTo(models.Marca, {
       as: "Marca",
       foreignKey: "Mark_id"
 
     });
-  }
-  Producto.associate = function (models) {
+  
+ 
     Producto.belongsTo(models.Modelo, {
       as: "Modelo",
       foreignKey: "Model_id"
 
     })
-  }
+  };
   return Producto;
 };
