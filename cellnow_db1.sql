@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 26-01-2022 a las 04:10:57
+-- Tiempo de generación: 28-01-2022 a las 01:01:44
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -49,7 +49,7 @@ INSERT INTO `marks` (`id`, `mark`) VALUES
 
 CREATE TABLE `models` (
   `id` int(11) NOT NULL,
-  `marks_id` varchar(30) NOT NULL,
+  `mark_id` int(30) NOT NULL,
   `model` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -57,10 +57,10 @@ CREATE TABLE `models` (
 -- Volcado de datos para la tabla `models`
 --
 
-INSERT INTO `models` (`id`, `marks_id`, `model`) VALUES
-(1, '1', 'Galaxy S20 5g'),
-(2, '2', 'iPhone XR'),
-(3, '3', '8 Pro Dual SIM');
+INSERT INTO `models` (`id`, `mark_id`, `model`) VALUES
+(1, 1, 'Galaxy S20 5g'),
+(2, 2, 'iPhone XR'),
+(3, 3, '8 Pro Dual SIM');
 
 -- --------------------------------------------------------
 
@@ -70,8 +70,8 @@ INSERT INTO `models` (`id`, `marks_id`, `model`) VALUES
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `mark_id` varchar(30) NOT NULL,
-  `model_id` varchar(30) NOT NULL,
+  `mark_id` int(30) NOT NULL,
+  `model_id` int(30) NOT NULL,
   `prince` varchar(20) NOT NULL,
   `discount` varchar(10) NOT NULL,
   `description` varchar(200) NOT NULL,
@@ -87,7 +87,7 @@ CREATE TABLE `products` (
 --
 
 INSERT INTO `products` (`id`, `mark_id`, `model_id`, `prince`, `discount`, `description`, `camera`, `screem`, `memory`, `unlocking`, `image`) VALUES
-(1, '1', '1', '$1.000.000,00', '% 10', 'Dispositivo liberado para que elijas la compañía telefónica que prefieras.Compatible con redes 5G.Pantalla Dynamic AMOLED 2X de 6.7.Tiene 4 cámaras traseras de 64 Mpx / 12 Mpx / 12 Mpx / 0.3 Mpx.Cámar', '64Mpx/12Mpx/12Mpx/0.3Mpx', 'Pantalla Dynamic AMOLED 2X de 6.7', '128GB', 'reconocimiento facial y sensor de huella dactilar\"', '41MpLFDoaNL._AC_.jpg');
+(1, 1, 1, '$1.000.000,00', '% 10', 'Dispositivo liberado para que elijas la compañía telefónica que prefieras.Compatible con redes 5G.Pantalla Dynamic AMOLED 2X de 6.7.Tiene 4 cámaras traseras de 64 Mpx / 12 Mpx / 12 Mpx / 0.3 Mpx.Cámar', '64Mpx/12Mpx/12Mpx/0.3Mpx', 'Pantalla Dynamic AMOLED 2X de 6.7', '128GB', 'reconocimiento facial y sensor de huella dactilar\"', '41MpLFDoaNL._AC_.jpg');
 
 -- --------------------------------------------------------
 
@@ -97,8 +97,8 @@ INSERT INTO `products` (`id`, `mark_id`, `model_id`, `prince`, `discount`, `desc
 
 CREATE TABLE `trolley` (
   `id` int(11) NOT NULL,
-  `user_id` varchar(30) NOT NULL,
-  `product_id` varchar(30) NOT NULL
+  `user_id` int(30) NOT NULL,
+  `product_id` int(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -132,19 +132,26 @@ ALTER TABLE `marks`
 -- Indices de la tabla `models`
 --
 ALTER TABLE `models`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `mark_id` (`mark_id`);
 
 --
 -- Indices de la tabla `products`
 --
 ALTER TABLE `products`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `mark_id` (`mark_id`),
+  ADD KEY `model_id` (`model_id`);
 
 --
 -- Indices de la tabla `trolley`
 --
 ALTER TABLE `trolley`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `user_id_2` (`user_id`),
+  ADD KEY `product_id_2` (`product_id`);
 
 --
 -- Indices de la tabla `users`
@@ -173,7 +180,7 @@ ALTER TABLE `models`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `trolley`
@@ -195,19 +202,21 @@ ALTER TABLE `users`
 -- Filtros para la tabla `models`
 --
 ALTER TABLE `models`
-  ADD CONSTRAINT `models_ibfk_1` FOREIGN KEY (`id`) REFERENCES `marks` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `models_ibfk_1` FOREIGN KEY (`mark_id`) REFERENCES `marks` (`id`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`id`) REFERENCES `models` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`model_id`) REFERENCES `models` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`mark_id`) REFERENCES `marks` (`id`);
 
 --
 -- Filtros para la tabla `trolley`
 --
 ALTER TABLE `trolley`
-  ADD CONSTRAINT `trolley_ibfk_1` FOREIGN KEY (`id`) REFERENCES `users` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `trolley_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `trolley_ibfk_2` FOREIGN KEY (`product_id`) REFERENCES `products` (`id`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
