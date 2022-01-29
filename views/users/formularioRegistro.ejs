@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <%- include('../partials/head')%>
+    <header>
+        <script src="/js/registro.js" type="text/javascript"></script>
+    </header>
 <body class="register-body">
    
     <a href="/"><img src="/img/logo/logo_small_icon_only.jpg " class= avatar-register width="50%"></a>
@@ -14,7 +17,7 @@
             <div class= "registerTotal">
                 <!-- <label for="first_name" class="field">Nombre</label> -->
                 <br>
-                <input type= "text" name="first_name" placeholder= "Nombre" value="<%= locals.old && old.first_name ? old.first_name : "" %>" class="nombre-registro">
+                <input id="nombreForm" type= "text" name="first_name" placeholder= "Nombre" value="<%= locals.old && old.first_name ? old.first_name : "" %>" class="nombre-registro">
                 <div class="errorEpress">
                 <%if(locals.errors && errors.first_name) { %>
                        <p class="errorEpress"><%= errors.first_name.msg %></p>
@@ -23,7 +26,7 @@
                 <br>
                 <!-- <label for="last_name"class="field">Apellido</label> -->
                 <br>
-                <input type= "text" name="last_name"  placeholder= "Apellido" value="<%= locals.old && old.last_name ? old.last_name : ""  %>" class="nombre-registro">
+                <input id="nombreForm" type= "text" name="last_name"  placeholder= "Apellido" value="<%= locals.old && old.last_name ? old.last_name : ""  %>" class="nombre-registro">
                 <div><%if(locals.errors && errors.last_name) { %>
                     <p class="errorEpress"><%= errors.last_name.msg %> </p>
                 <% } %>
@@ -31,7 +34,7 @@
                 <br>
                 <!-- <label for="email" class="field">Email</label> -->
                 <br>
-                <input type= "text" name="email"  placeholder= "Email" value="<%= locals.old && old.email ? old.email : ""  %>"  class="nombre-registro">
+                <input id="email" type= "text" name="email"  placeholder= "Email" value="<%= locals.old && old.email ? old.email : ""  %>"  class="nombre-registro">
                 <div><%if(locals.errors && errors.email) { %>
                     <p class="errorEpress"><%= errors.email.msg %> </p>
                 <% } %>
@@ -67,7 +70,7 @@
             <br>
             <!-- <label for="password" class="field"> Contraseña</label> -->
             <br>
-            <input type= "password" name="pass" placeholder="Elegí tu contraseña" minlength="6" id="password" class="pass-registro" required>
+            <input id="contrasenia" type= "password" name="pass" placeholder="Elegí tu contraseña" minlength="6" id="password" class="pass-registro" required>
             <br>
             <div><%if(locals.errors && errors.pass) { %>
                 <p class="errorEpress"><%= errors.pass.msg %> </p>
