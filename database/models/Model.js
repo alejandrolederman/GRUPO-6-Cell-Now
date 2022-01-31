@@ -1,12 +1,12 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "Modelo";
+  let alias = "Model";
   let cols = {
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    model: {
+    name: {
       type: dataTypes.STRING(100),
     },
     mark: {
@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes) => {
 
   const Modelo = sequelize.define(alias, cols, config);
   Modelo.associate = function (models) {
-    Modelo.belongsTo(models.Marca, {
+    Modelo.belongsTo(models.mark, {
       as: "Marca",
       foreignKey: "Mark_id"
 
