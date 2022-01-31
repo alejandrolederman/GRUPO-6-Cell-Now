@@ -9,25 +9,14 @@ let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userController = {
 
-    // Root - Show all products
+    /////////////////////////////////////////////
     usersList: (req, res) => {
         res.render('./users/usersList', {
             users
         });
     },
-    // productDetail: (req, res) => {
-    //     let elId = req.params.id;
-    //     let productos = products.find(unProducto => {
-    //         if (unProducto.id == elId) {
-    //             return unProducto;
-    //         }
-    //     });
-    //     res.render('./products/detail', {
-    //         productos,
-    //         products
-    //     })
-    // },
-
+    
+///////////////////////////////////////////////////
     usersDetail: (req, res) => {
         let elId = req.params.id;
         let usuario = users.find(unUsuario => {
@@ -41,12 +30,16 @@ const userController = {
         });
     },
 
+///////////////////////////////////////////////////////////    
+
     registrer: (req, res) => {
 
         res.cookie("testing", "hola mundo", {maxAge: 1000 * 30})
 
         res.render('./users/formularioRegistro');
     },
+
+////////////////////////////////////////////////////////////////////////////
 
     processRegistrer: (req, res) => {
 		const resultValidation = validationResult(req);
@@ -82,16 +75,17 @@ const userController = {
 		return res.redirect('./login');
     },
 
+///////////////////////////////////////////////////////////////////////////////////////////    
+
     login: (req, res) => {
         res.render('./users/login');
     },
 
+//////////////////////////////////////////////////////////////////////////////////////////////    
+
     loginProcess: (req, res) => {
 
         let userToLogin = User.findByField("email", req.body.email);
-
-   
-        
 
         if(userToLogin){
             let passOk = bcryptjs.compareSync(req.body.pass, userToLogin.pass)
@@ -133,6 +127,8 @@ const userController = {
         }
     },
 
+//////////////////////////////////////////////////////////////////////////////////////////////    
+
     profile: (req, res) => {
 
      return res.render('./users/userProfile', {
@@ -140,19 +136,29 @@ const userController = {
 		 });
 	},
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////    
+
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect ('/')
     },
 
+///////////////////////////////////////////////////////////////////////////////////////////////
+
     selecBuyOrSell: (req, res) => {
         res.render('./users/selecBuyOrSell');
     },
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
     home: (req, res) => {
         res.render("home");
     },
+//////////////////////////////////////////////////////////////////////
+
 }
 
 module.exports = userController;
