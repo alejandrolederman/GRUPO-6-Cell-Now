@@ -22,13 +22,13 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(280),
     },
     screen: {
-      type: dataTypes.DATE,
+      type: dataTypes.STRING,
     },
     unlocking: {
-      type: dataTypes.DATE,
+      type: dataTypes.STRING,
     },
     image: {
-      type: dataTypes.DATE,
+      type: dataTypes.STRING,
     },
   };
   let config = {
@@ -40,8 +40,8 @@ module.exports = (sequelize, dataTypes) => {
 
 
   Producto.associate = function (models) {
-    Producto.belongsToMany(models.Usuario, {
-      as: "Usuario",
+    Producto.belongsToMany(models.users, {
+      as: "users",
       through: "Trolley",
       foreignKey: "product_id",
       otherKey: "User_id",
@@ -49,14 +49,14 @@ module.exports = (sequelize, dataTypes) => {
     });
   
   
-    Producto.belongsTo(models.Marca, {
+    Producto.belongsTo(models.mark, {
       as: "Marca",
       foreignKey: "Mark_id"
 
     });
   
  
-    Producto.belongsTo(models.Modelo, {
+    Producto.belongsTo(models.Model, {
       as: "Modelo",
       foreignKey: "Model_id"
 

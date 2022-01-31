@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "Usuario";
+  let alias = "users";
   let cols = {
     id: {
       type: dataTypes.INTEGER,
@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) => {
     password: {
       type: dataTypes.STRING(100)
     },
-    category: {
+    user_category_id: {
       type: dataTypes.INTEGER
     },
     avatar: {
@@ -36,16 +36,15 @@ module.exports = (sequelize, dataTypes) => {
 
   const Usuario = sequelize.define(alias, cols, config);
 
-  // Usuario.associate = function (models) {
-  //   Usuario.belongsToMeny(models.ProductTablet, {
-  //     as: "Producto",
-  //     through: "Trolley",
-  //     foreignKey: "User_id",
-  //     otherKey: "product_id",
-  //     timetamps: false
-  //   });
-
+  Usuario.associate = function (models) {
+    Usuario.belongsToMany(models.Producto, {
+      as: "Producto",
+      through: "Trolley",
+      foreignKey: "User_id",
+      otherKey: "product_id",
+      timetamps: false
+    });
+  }
   
-
   return Usuario;
 };

@@ -61,11 +61,20 @@
 <br>
 
             <h4 class="cell"> Tipo de usuario</h4>
+            <div>
+                <select name="user_category">
+                    <% for (let i = 0; i <categoria.length; i++){ %> 
+                    <option value="<%= categoria[i].id %> ">
+                        <%= categoria[i].name %> 
+                    </option>
+                    <% } %> 
+                </select>
+            </div>
 <br>
-            <select name="category">
-                <option value="user">Usuario</option>
+            
+                <!-- <option value="user">Usuario</option>
                 <option value="admin">Administrador</option>
-            </select>
+            </select> -->
             <br>
             <br>
             <!-- <label for="password" class="field"> Contraseña</label> -->

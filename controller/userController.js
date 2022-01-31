@@ -3,31 +3,21 @@ const path = require('path');
 const User = require('../models/Users')
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const db = require("../database/models")
 
 const usersFilePath = path.join(__dirname, '../data/users.json');
 let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userController = {
 
-    // Root - Show all products
+    /////////////////////////////////////////////
     usersList: (req, res) => {
         res.render('./users/usersList', {
             users
         });
     },
-    // productDetail: (req, res) => {
-    //     let elId = req.params.id;
-    //     let productos = products.find(unProducto => {
-    //         if (unProducto.id == elId) {
-    //             return unProducto;
-    //         }
-    //     });
-    //     res.render('./products/detail', {
-    //         productos,
-    //         products
-    //     })
-    // },
-
+    
+///////////////////////////////////////////////////
     usersDetail: (req, res) => {
         let elId = req.params.id;
         let usuario = users.find(unUsuario => {
@@ -41,12 +31,46 @@ const userController = {
         });
     },
 
-    registrer: (req, res) => {
+///////////////////////////////////////////////////////////    
 
-        res.cookie("testing", "hola mundo", {maxAge: 1000 * 30})
+    // registrer: (req, res) => {
 
-        res.render('./users/formularioRegistro');
+    //     res.cookie("testing", "hola mundo", {maxAge: 1000 * 30})
+
+    //     res.render('./users/formularioRegistro');
+    // },
+
+    crear: function (req, res){
+        db.user_category.findAll()
+        .then(function(categoria){
+            return res.render("./users/formularioRegistro", {categoria:categoria})
+        })
+        .catch(function(err){
+            console.log(err)
+        })
     },
+
+////////////////////////////////////////////////////////////////////////////
+    guardar: function (req, res){
+
+        db.user.create({
+
+            first_name: req.body.first_name,
+            last_name: req.body.last_name,
+            user_name:req.body.user_name,
+            email: req.body.email,
+            password: req.body.password,
+            category: req.body.user_category,
+            avatar: req.body.avatar
+
+        })
+
+
+
+
+    },
+
+
 
     processRegistrer: (req, res) => {
 		const resultValidation = validationResult(req);
@@ -77,21 +101,22 @@ const userController = {
 			avatar: req.file.filename
 		};
 
-		let userCreated = User.create(userToCreate);
+		
 
 		return res.redirect('./login');
     },
+
+///////////////////////////////////////////////////////////////////////////////////////////    
 
     login: (req, res) => {
         res.render('./users/login');
     },
 
+//////////////////////////////////////////////////////////////////////////////////////////////    
+
     loginProcess: (req, res) => {
 
         let userToLogin = User.findByField("email", req.body.email);
-
-   
-        
 
         if(userToLogin){
             let passOk = bcryptjs.compareSync(req.body.pass, userToLogin.pass)
@@ -133,6 +158,8 @@ const userController = {
         }
     },
 
+//////////////////////////////////////////////////////////////////////////////////////////////    
+
     profile: (req, res) => {
 
      return res.render('./users/userProfile', {
@@ -140,19 +167,29 @@ const userController = {
 		 });
 	},
 
+
+//////////////////////////////////////////////////////////////////////////////////////////////    
+
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
         return res.redirect ('/')
     },
 
+///////////////////////////////////////////////////////////////////////////////////////////////
+
     selecBuyOrSell: (req, res) => {
         res.render('./users/selecBuyOrSell');
     },
 
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
     home: (req, res) => {
         res.render("home");
     },
+//////////////////////////////////////////////////////////////////////
+
 }
 
 module.exports = userController;

@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "Marca";
+  let alias = "mark";
   let cols = {
     id: {
       type: dataTypes.INTEGER,
@@ -17,7 +17,7 @@ module.exports = (sequelize, dataTypes) => {
 
   const Marca = sequelize.define(alias, cols, config);
   Marca.associate = function (models) {
-    Marca.hasMany(models.Modelo, {
+    Marca.hasMany(models.Model, {
       as: "modelos",
       foreignKey: "Mark_id"
     });
