@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-
+const db = require("../database/models")
 
 const productsFilePath = path.join(__dirname, '../data/products.json');
 let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -30,58 +30,84 @@ const productController = {
     },
 
     // Create - Form to create
-    create: (req, res) => {
+    crear: (req, res) => {
         res.render("./products/productsForm");
     },
 
     // Create -  Method to store
-    store: (req, res) => {
-        const {mark, model, price, camera, description,
-            unlocking, screen, memory, image } = req.body;
+    
 
-        let cantidadProductos = 0;
-        for (let i = 0; i < products.length; i++) {
+            // let cantidadProductos = 0;
+            // for (let i = 0; i < products.length; i++) {
+   
+            //     cantidadProductos = cantidadProductos + 1;
+            // };
+            store: (req, res) => {
+        db.Producto.create(
+            {
 
-            cantidadProductos = cantidadProductos + 1;
-        };
+            mark_id: req.body.mark,
+            model_id: req.body.model,
+            price: req.body.price,
+            description: req.body.description,
+            camera: req.body.camera,
+            screen: req.body.screen,
+            memory: req.body.memory,
+            unlocking: req.body.unlocking,
+            image: req.body.image,
+        }
+        );
 
-        const data = {
+        
+        res.redirect("/");
 
-                id: cantidadProductos,
-                mark: mark,
-                model: model,
-                price: price,
-                description: description,
-                camera: camera,
-                screen: screen,
-                memory: memory,
-                unlocking: unlocking,
-                image: image,
-            };
-            products.push(data);
 
-		fs.writeFileSync(productsFilePath,JSON.stringify(products),'utf-8');
-res.redirect("/");
-      
+        // const {mark, model, price, camera, description,
+        //     unlocking, screen, memory, image } = req.body;
+
+        //  let cantidadProductos = 0;
+        //  for (let i = 0; i < products.length; i++) {
+
+        //      cantidadProductos = cantidadProductos + 1;
+        //  };
+
+        // const data = {
+
+        //     id: cantidadProductos,
+        //     mark: mark,
+        //     model: model,
+        //     price: price,
+        //     description: description,
+        //     camera: camera,
+        //     screen: screen,
+        //     memory: memory,
+        //     unlocking: unlocking,
+        //     image: image,
+        // };
+        // products.push(data);
+
+        // fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
+        
+
     },
 
     // Update - Form to edit
-	edit: (req, res) => {
+    edit: (req, res) => {
 
-		let elId = req.params.id;
-	 	let productos = products.find(unProducto => {
-	 		if (unProducto.id == elId) {
-	 			return unProducto;
-	 		}
-	 	 });
-	 	res.render('./products/productEdit', { productos })
-	
-	 },
+        let elId = req.params.id;
+        let productos = products.find(unProducto => {
+            if (unProducto.id == elId) {
+                return unProducto;
+            }
+        });
+        res.render('./products/productEdit', { productos })
 
-	// Update - Method to update
-	update: (req, res) => {
+    },
 
-		  const {
+    // Update - Method to update
+    update: (req, res) => {
+
+        const {
             mark,
             model,
             price,
@@ -95,48 +121,48 @@ res.redirect("/");
 
         } = req.body;
 
-		const elId = req.params.id;
-		const productoNuevo = [];
+        const elId = req.params.id;
+        const productoNuevo = [];
 
-	products.map(data=> {
+        products.map(data => {
 
-		if(data.id == elId){
+            if (data.id == elId) {
 
-			   data.mark= mark,
-               data.model= model,
-               data.price= price,
-               data.description= description,
-               data.discount= discount,
-               data.camera= camera,
-               data.unlocking= unlocking,
-               data.screen= screen,
-               data.memory= memory,
-               data.image= image
+                data.mark = mark,
+                    data.model = model,
+                    data.price = price,
+                    data.description = description,
+                    data.discount = discount,
+                    data.camera = camera,
+                    data.unlocking = unlocking,
+                    data.screen = screen,
+                    data.memory = memory,
+                    data.image = image
 
-		}
-		productoNuevo.push(data);
-	});
+            }
+            productoNuevo.push(data);
+        });
 
-		fs.writeFileSync(productsFilePath,JSON.stringify(products),'utf-8');
+        fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
         res.redirect("/");
 
-	},
+    },
 
-    	// Delete - Delete one product from DB
-	destroy: (req, res) => {
-		let idProducto = req.params.id;
-		const productoEliminado = [];
-		
-		products.map(data=> {
-			if(data.id != idProducto){
+    // Delete - Delete one product from DB
+    destroy: (req, res) => {
+        let idProducto = req.params.id;
+        const productoEliminado = [];
 
-				productoEliminado.push(data);
-			}	
-		})
-		
-		fs.writeFileSync(productsFilePath,JSON.stringify(productoEliminado),'utf-8');
-		res.redirect("/");
-	}
+        products.map(data => {
+            if (data.id != idProducto) {
+
+                productoEliminado.push(data);
+            }
+        })
+
+        fs.writeFileSync(productsFilePath, JSON.stringify(productoEliminado), 'utf-8');
+        res.redirect("/");
+    }
 };
 
 module.exports = productController;
