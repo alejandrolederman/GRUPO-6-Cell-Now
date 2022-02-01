@@ -17,13 +17,13 @@ module.exports = (sequelize, dataTypes) => {
     };
   
     const categoria = sequelize.define(alias, cols, config);
-    categoria.associate = function (models) {
-        categoria.belongsTo(models.users, {
-        as: "users",
-        foreignKey: "user_category_id"
+    // categoria.associate = function (models) {
+    //     categoria.belongsTo(models.users, {
+    //     as: "users",
+    //     foreignKey: "user_category_id"
   
-      })
-    }
+      // })
+    // }
   
   
     return categoria;
