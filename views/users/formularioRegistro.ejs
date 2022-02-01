@@ -42,7 +42,7 @@
                 <br>
                 <!-- <label for="username" class="field"> Nombre de usuario</label> -->
                 <br>
-                <input type="text" name="username"   placeholder= "Nombre de usuario" value="<%= locals.old && old.username ? old.username : ""  %>" class="nombre-registro">
+                <input type="text" name="user_name"   placeholder= "Nombre de usuario" value="<%= locals.old && old.username ? old.username : ""  %>" class="nombre-registro">
                 <div><%if(locals.errors && errors.username) { %>
                     <p class="errorEpress"><%= errors.username.msg %> </p>
                 <% } %>
@@ -79,7 +79,7 @@
             <br>
             <!-- <label for="password" class="field"> Contraseña</label> -->
             <br>
-            <input id="contrasenia" type= "password" name="pass" placeholder="Elegí tu contraseña" minlength="6" id="password" class="pass-registro" required>
+            <input id="contrasenia" type= "password" name="password" placeholder="Elegí tu contraseña" minlength="6" id="password" class="pass-registro" required>
             <br>
             <div><%if(locals.errors && errors.pass) { %>
                 <p class="errorEpress"><%= errors.pass.msg %> </p>

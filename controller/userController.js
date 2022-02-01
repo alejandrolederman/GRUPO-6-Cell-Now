@@ -1,12 +1,12 @@
 const fs = require('fs');
 const path = require('path');
-const User = require('../models/Users')
+// const User = require('../models/Users')
 const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require("../database/models")
 
-const usersFilePath = path.join(__dirname, '../data/users.json');
-let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+// const usersFilePath = path.join(__dirname, '../data/users.json');
+// let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userController = {
 
@@ -52,59 +52,55 @@ const userController = {
 
 ////////////////////////////////////////////////////////////////////////////
     guardar: function (req, res){
+        const resultValidation = validationResult(req);
 
-        db.user.create({
+        db.users.create({
 
             first_name: req.body.first_name,
             last_name: req.body.last_name,
             user_name:req.body.user_name,
             email: req.body.email,
-            password: req.body.password,
+            password:bcryptjs.hashSync(req.body.password, 10),
             category: req.body.user_category,
             avatar: req.body.avatar
 
         })
 
-
-
-
+        return res.redirect('./login');
     },
+    // processRegistrer: (req, res) => {
+		// const resultValidation = validationResult(req);
 
+		// if (resultValidation.errors.length > 0) {
+		// 	return res.render('./users/formularioRegistro', {
+		// 		errors: resultValidation.mapped(),
+		// 		old: req.body
+		// 	});
+		// }
 
+	// 	let userInDB = User.findByField('email', req.body.email);
 
-    processRegistrer: (req, res) => {
-		const resultValidation = validationResult(req);
+	// 	if (userInDB) {
+	// 		return res.render('./users/formularioRegistro', {
+	// 			errors: {
+	// 				email: {
+	// 					msg: 'Este email ya está registrado'
+	// 				}
+	// 			},
+	// 			old: req.body
+	// 		});
+	// 	};
 
-		if (resultValidation.errors.length > 0) {
-			return res.render('./users/formularioRegistro', {
-				errors: resultValidation.mapped(),
-				old: req.body
-			});
-		}
-
-		let userInDB = User.findByField('email', req.body.email);
-
-		if (userInDB) {
-			return res.render('./users/formularioRegistro', {
-				errors: {
-					email: {
-						msg: 'Este email ya está registrado'
-					}
-				},
-				old: req.body
-			});
-		};
-
-		let userToCreate = {
-			...req.body,
-			pass: bcryptjs.hashSync(req.body.pass, 10), // contraseña 1234 -> #$#FGGGRR$$#$% 
-			avatar: req.file.filename
-		};
+	// 	let userToCreate = {
+	// 		...req.body,
+	// 		pass: bcryptjs.hashSync(req.body.pass, 10), // contraseña 1234 -> #$#FGGGRR$$#$% 
+	// 		avatar: req.file.filename
+	// 	};
 
 		
 
-		return res.redirect('./login');
-    },
+	// 	return res.redirect('./login');
+    // },
 
 ///////////////////////////////////////////////////////////////////////////////////////////    
 

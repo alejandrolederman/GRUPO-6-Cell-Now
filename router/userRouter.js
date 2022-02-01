@@ -30,14 +30,14 @@ router.post('/', userController.home);
 //formulario del registro
 // router.get('/formularioRegistro',guestMiddlewares, userController.registrer);
 //procesar el registro
-router.post('/formularioRegistro', uploadFile.single('avatar'), userController.processRegistrer);
+// router.post('/formularioRegistro', uploadFile.single('avatar'), userController.processRegistrer);
 
 router.get('/selecBuyOrSell', userController.selecBuyOrSell)
 
 //formulario del registro base de datos
 router.get('/formularioRegistro',guestMiddlewares, userController.crear);
 //procesar el registro base de datos
-router.post('/formularioRegistro', uploadFile.single('avatar'), userController.guardar);
+router.post('/formularioRegistro', uploadFile.single('avatar'),validationRecord, userController.guardar);
 
 module.exports = router;
 
