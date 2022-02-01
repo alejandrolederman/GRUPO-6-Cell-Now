@@ -22,7 +22,8 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(100)
     },
     user_category_id: {
-      type: dataTypes.INTEGER
+      type: dataTypes.INTEGER,
+      foreignKey: true,
     },
     avatar: {
       type: dataTypes.STRING(100)
@@ -34,10 +35,10 @@ module.exports = (sequelize, dataTypes) => {
     timestamps: false,
   };
 
-  const Usuario = sequelize.define(alias, cols, config);
+  const users = sequelize.define(alias, cols, config);
 
-  Usuario.associate = function (models) {
-    Usuario.belongsToMany(models.Producto, {
+  users.associate = function (models) {
+    users.belongsToMany(models.Producto, {
       as: "Producto",
       through: "Trolley",
       foreignKey: "User_id",
@@ -46,5 +47,5 @@ module.exports = (sequelize, dataTypes) => {
     });
   }
   
-  return Usuario;
+  return users;
 };

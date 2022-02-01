@@ -16,15 +16,14 @@ module.exports = (sequelize, dataTypes) => {
       timestamps: false,
     };
   
-    const categoria = sequelize.define(alias, cols, config);
-    // categoria.associate = function (models) {
-    //     categoria.belongsTo(models.users, {
-    //     as: "users",
-    //     foreignKey: "user_category_id"
+    const user_category = sequelize.define(alias, cols, config);
+    user_category.associate = function (models) {
+      user_category.hasMany(models.users, {
+        as: "users",
+        foreignKey: "user_category_id"
+      });
+    }
   
-      // })
-    // }
   
-  
-    return categoria;
+    return user_category;
   };
