@@ -22,21 +22,16 @@ document.addEventListener("DOMContentLoaded", () => {
             $email.style.border = "2px solid red";
             hayError = true;
 
-            ($contrasenia.value.length < 8 || $email.value == $contrasenia.value) {
+            if($contrasenia.value.length < 8 || $email.value == $contrasenia.value) {
             $contrasenia.style.border = "2px solid red";
             hayError = true; 
         }
 
 
         //Verifica si hay errores en los campos
-        if (
-            $hayError ||
-            nombreCondicion ||
-            emailCondicion ||
-            ) {
+        if ($hayError || nombreCondicion || emailCondicion) {
             e.preventDefault();
-        }
-        
-    });
-    
+        }        
+    };    
+});
 });
