@@ -58,7 +58,6 @@ const productController = {
         }
         );
 
-        
         res.redirect("/");
 
 

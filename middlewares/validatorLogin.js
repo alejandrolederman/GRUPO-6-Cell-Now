@@ -5,7 +5,7 @@ const { check } = require ("express-validator");
    
     check("email").notEmpty().withMessage("escribe tu mail").bail().isEmail().withMessage("debes escribir un formato de correo valido"),
    
-    check("pass").notEmpty().withMessage("escribe una contraseña valida").bail(),
+    check("password").notEmpty().withMessage("escribe una contraseña valida").bail(),
     
 
     ]

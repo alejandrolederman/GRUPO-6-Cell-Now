@@ -52,8 +52,6 @@ const userController = {
 
 ////////////////////////////////////////////////////////////////////////////
     guardar: function (req, res){
-
-      
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
 			return res.render('./users/formularioRegistro', {
@@ -89,9 +87,6 @@ const userController = {
     },
     // processRegistrer: (req, res) => {
 		// const resultValidation = validationResult(req);
-
-		
-
 	// 	let userInDB = User.findByField('email', req.body.email);
 
 	// 	if (userInDB) {
@@ -110,9 +105,6 @@ const userController = {
 	// 		pass: bcryptjs.hashSync(req.body.pass, 10), // contraseña 1234 -> #$#FGGGRR$$#$% 
 	// 		avatar: req.file.filename
 	// 	};
-
-		
-
 	// 	return res.redirect('./login');
     // },
 
@@ -125,17 +117,29 @@ const userController = {
 //////////////////////////////////////////////////////////////////////////////////////////////    
 
     loginProcess: (req, res) => {
+        //revicion de que email no esta vacio
+        if (req.body.email == 0) {
+            return res.render('login', {
+                errors: {
+                    email: {
+                        msg: 'Ingrese un email registrado'
+                    }
+                }
+            });
+        }
 
-        let userToLogin = User.findByField("email", req.body.email);
+        let userToLogin = db.users.findOne({where: { email: req.body.email }})
 
-        if(userToLogin){
-            let passOk = bcryptjs.compareSync(req.body.pass, userToLogin.pass)
+        .then(function(usuario){
+
+        if(usuario){
+            let passOk = bcryptjs.compareSync(req.body.password, usuario.password)
             if(passOk){
-                delete userToLogin.pass;
+                delete usuario.password;
 
-                req.session.userLogged = userToLogin;
+                req.session.userLogged = usuario;
 
-                if(userToLogin.category == "admin"){
+                if(usuario.category == "admin"){
 
                     categoryAdmin = true;
                 }
@@ -166,6 +170,7 @@ const userController = {
                 }   
             });
         }
+    })
     },
 
 //////////////////////////////////////////////////////////////////////////////////////////////    
