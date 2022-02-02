@@ -10,7 +10,7 @@ const db = require("../database/models")
 
 const userController = {
 
-    /////////////////////////////////////////////
+    ///////////////////////////////////////////////////////////////
     usersList: (req, res) => {
         db.users.findAll()
         .then(function(usuarios){
@@ -21,7 +21,7 @@ const userController = {
         }) 
     },
     
-///////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////
     usersDetail: (req, res) => {
         db.users.findByPk(req.params.id)
         .then(function(usuario){

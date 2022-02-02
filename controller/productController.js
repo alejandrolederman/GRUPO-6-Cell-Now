@@ -2,11 +2,12 @@ const fs = require('fs');
 const path = require('path');
 const db = require("../database/models")
 
-const productsFilePath = path.join(__dirname, '../data/products.json');
-let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+// const productsFilePath = path.join(__dirname, '../data/products.json');
+// let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 
 const productController = {
+///////////////////////////////////////////////////////////////
 
     // Root - Show all products
     productsList: (req, res) => {
@@ -14,6 +15,7 @@ const productController = {
             products
         });
     },
+///////////////////////////////////////////////////////////////
 
     // Detail - Detail from one product
     productDetail: (req, res) => {
@@ -28,33 +30,29 @@ const productController = {
             products
         })
     },
-
+////////////////////////////////////////////////////////////////////
     // Create - Form to create
     crear: (req, res) => {
         res.render("./products/productsForm");
     },
 
+///////////////////////////////////////////////////////////////
+
     // Create -  Method to store
     
-
-            // let cantidadProductos = 0;
-            // for (let i = 0; i < products.length; i++) {
-   
-            //     cantidadProductos = cantidadProductos + 1;
-            // };
-            store: (req, res) => {
+            store:function (req, res) {
         db.Producto.create(
             {
 
-            mark_id: req.body.mark,
-            model_id: req.body.model,
+            mark: req.body.mark,
+            model: req.body.model,
             price: req.body.price,
             description: req.body.description,
             camera: req.body.camera,
             screen: req.body.screen,
             memory: req.body.memory,
             unlocking: req.body.unlocking,
-            image: req.body.image,
+            image: req.body.image
         }
         );
 
@@ -89,6 +87,8 @@ const productController = {
         
 
     },
+//////////////////////////////////////////////////////////////////////////////
+
 
     // Update - Form to edit
     edit: (req, res) => {
@@ -102,6 +102,9 @@ const productController = {
         res.render('./products/productEdit', { productos })
 
     },
+
+///////////////////////////////////////////////////////////////
+
 
     // Update - Method to update
     update: (req, res) => {
@@ -147,6 +150,9 @@ const productController = {
 
     },
 
+//////////////////////////////////////////////////////////////////////////////////////
+
+
     // Delete - Delete one product from DB
     destroy: (req, res) => {
         let idProducto = req.params.id;
@@ -162,6 +168,9 @@ const productController = {
         fs.writeFileSync(productsFilePath, JSON.stringify(productoEliminado), 'utf-8');
         res.redirect("/");
     }
+
+/////////////////////////////////////////////////////////////////////////////////////
+
 };
 
 module.exports = productController;

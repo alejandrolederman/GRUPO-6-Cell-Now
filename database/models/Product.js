@@ -6,29 +6,29 @@ module.exports = (sequelize, dataTypes) => {
       primaryKey: true,
       autoIncrement: true,
     },
-    mark_id: {
+    mark: {
       type: dataTypes.STRING(61),
     },
     price: {
-      type: dataTypes.INTEGER,
+      type: dataTypes.STRING(280),
     },
     discount: {
-      type: dataTypes.INTEGER,
+      type: dataTypes.STRING(280),
     },
     camera: {
-      type: dataTypes.INTEGER,
+      type: dataTypes.STRING(280),
     },
-    model_id: {
+    model: {
       type: dataTypes.STRING(280),
     },
     screen: {
-      type: dataTypes.STRING,
+      type: dataTypes.STRING(280),
     },
     unlocking: {
-      type: dataTypes.STRING,
+      type: dataTypes.STRING(280),
     },
     image: {
-      type: dataTypes.STRING,
+      type: dataTypes.STRING(280),
     },
   };
   let config = {
@@ -49,18 +49,18 @@ module.exports = (sequelize, dataTypes) => {
     });
   
   
-    Producto.belongsTo(models.mark, {
-      as: "Marca",
-      foreignKey: "Mark_id"
+    // Producto.belongsTo(models.mark, {
+    //   as: "Marca",
+    //   foreignKey: "Mark_id"
 
-    });
+    // });
   
  
-    Producto.belongsTo(models.Model, {
-      as: "Modelo",
-      foreignKey: "Model_id"
+    // Producto.belongsTo(models.Model, {
+    //   as: "Modelo",
+    //   foreignKey: "Model_id"
 
-    })
+    // })
   };
   return Producto;
 };
