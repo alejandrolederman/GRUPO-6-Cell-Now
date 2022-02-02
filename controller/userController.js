@@ -43,7 +43,7 @@ const userController = {
     crear: function (req, res){
         db.user_category.findAll()
         .then(function(categoria){
-            return res.render("./users/formularioRegistro", {categoria:categoria})
+            return res.render("./users/formularioRegistro" , {categoria:categoria})
         })
         .catch(function(err){
             console.log(err)
@@ -52,31 +52,45 @@ const userController = {
 
 ////////////////////////////////////////////////////////////////////////////
     guardar: function (req, res){
+
+      
         const resultValidation = validationResult(req);
+        if (resultValidation.errors.length > 0) {
+			return res.render('./users/formularioRegistro', {
+				errors: resultValidation.mapped(),
+				old: req.body 
+			});
+		}
 
-        db.users.create({
-
-            first_name: req.body.first_name,
-            last_name: req.body.last_name,
-            user_name:req.body.user_name,
-            email: req.body.email,
-            password:bcryptjs.hashSync(req.body.password, 10),
-            category: req.body.user_category,
-            avatar: req.body.avatar
-
-        })
+        let userInDB = db.users.findOne({where: { email: req.body.email }})
+        if (userInDB) {
+            		return res.render('./users/formularioRegistro', {
+            			errors: {
+            				email: {
+            					msg: 'Este email ya está registrado'
+            				}
+            			},
+            			old: req.body
+            		});
+            	}
+                else {
+                    
+                    user ={
+                first_name: req.body.first_name,
+                last_name: req.body.last_name,
+                user_name:req.body.user_name,
+                email: req.body.email,
+                password:bcryptjs.hashSync(req.body.password, 10),
+                category: req.body.user_category,
+                avatar: req.body.avatar
+                    }}
 
         return res.redirect('./login');
     },
     // processRegistrer: (req, res) => {
 		// const resultValidation = validationResult(req);
 
-		// if (resultValidation.errors.length > 0) {
-		// 	return res.render('./users/formularioRegistro', {
-		// 		errors: resultValidation.mapped(),
-		// 		old: req.body
-		// 	});
-		// }
+		
 
 	// 	let userInDB = User.findByField('email', req.body.email);
 

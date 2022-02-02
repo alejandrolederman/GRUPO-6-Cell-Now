@@ -63,7 +63,7 @@
             <h4 class="cell"> Tipo de usuario</h4>
             <div>
                 <select name="user_category">
-                    <% for (let i = 0; i <categoria.length; i++){ %> 
+                    <% for (let i = 0; i < categoria.length; i++){ %> 
                     <option value="<%= categoria[i].id %> ">
                         <%= categoria[i].name %> 
                     </option>
@@ -81,8 +81,8 @@
             <br>
             <input id="contrasenia" type= "password" name="password" placeholder="Elegí tu contraseña" minlength="6" id="password" class="pass-registro" required>
             <br>
-            <div><%if(locals.errors && errors.pass) { %>
-                <p class="errorEpress"><%= errors.pass.msg %> </p>
+            <div><%if(locals.errors && errors.password) { %>
+                <p class="errorEpress"><%= errors.password.msg %> </p>
             <% } %>
             </div>
             <br>

@@ -37,7 +37,7 @@ router.get('/selecBuyOrSell', userController.selecBuyOrSell)
 //formulario del registro base de datos
 router.get('/formularioRegistro',guestMiddlewares, userController.crear);
 //procesar el registro base de datos
-router.post('/formularioRegistro', uploadFile.single('avatar'),validationRecord, userController.guardar);
+router.post('/formularioRegistro', uploadFile.single('avatar'), userController.guardar);
 
 module.exports = router;
 
