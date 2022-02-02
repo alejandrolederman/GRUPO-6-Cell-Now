@@ -5,22 +5,28 @@
    
     <%- include('../partials/header')%>
     <main class="main-second">
-        <% users.forEach(users =>{ %>
-            
+
+        <% for (let i = 0; i < usuarios.length; i++){ %> 
+           
+                
     <section class="product-box">
-        <a href="/user/usersDetail/<%=users.id%>">
+        <a href="/user/usersDetail/<%=usuarios[i].id%>">
 
             <figure class="product-box_image">
             </figure>
             <article class="product-box_data">
-                <span>NOMBRE<%=users.first_name%></span>
-                <span>APELLIDO <%=users.last_name %></span>
-                <p>USUARIO<%=users.nombre_usuario%></p>
-                <i class="fas fa-truck"></i>
+                <p>NOMBRE: <%=usuarios[i].first_name%></p>
+                <br>
+                <p>APELLIDO: <%=usuarios[i].last_name %></p>
+                <br>
+                <p>USUARIO:  <%=usuarios[i].user_name%></p>
+                <br>
+                <p>USUARIO:  <%=usuarios[i].email%></p>
+               
             </article>
             </a>
         </section>
-        <% }) %> 
+        <% } %> 
         
     </main>
     <%- include ('../partials/footer')%>

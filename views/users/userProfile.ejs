@@ -8,15 +8,18 @@
     <div >
 		<div >
 			<div >
-				<h2>Hi <%= user.first_name + " "+ user.last_name %> </h2>
+				<h2>Hi <%= users.first_name + " "+ users.last_name %> </h2>
 
 				
 
 				
-				<img src="/img/avatars/<%= user.avatar %> ">
+				<img src="/img/avatars/<%= users.avatar %> ">
 				<br>
 				<br>
-				<div ><%= user.email %> </div>
+				<div ><%= users.email %> </div>
+				<br>
+				<br>
+				<div ><%= users.user_category %> </div>
 			</div>
 		</div>
 	</div>
