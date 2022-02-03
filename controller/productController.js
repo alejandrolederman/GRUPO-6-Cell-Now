@@ -33,19 +33,28 @@ const productController = {
 ////////////////////////////////////////////////////////////////////
     // Create - Form to create
     crear: (req, res) => {
-        res.render("./products/productsForm");
+        db.mark.findAll()
+        .then(function(mark){
+            res.render("./products/productsForm", {mark:mark});
+        })
+        .catch(function(err){
+            console.log(err)
+        })
+        
     },
+
+
 
 ///////////////////////////////////////////////////////////////
 
     // Create -  Method to store
     
             store:function (req, res) {
-        db.Producto.create(
-            {
+            
+        db.Producto.create({
 
-            mark: req.body.mark,
-            model: req.body.model,
+            mark_id: req.body.mark,
+            model_id: req.body.model,
             price: req.body.price,
             description: req.body.description,
             camera: req.body.camera,
@@ -53,8 +62,7 @@ const productController = {
             memory: req.body.memory,
             unlocking: req.body.unlocking,
             image: req.body.image
-        }
-        );
+        })
 
         res.redirect("/");
 

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 01-02-2022 a las 01:31:37
+-- Tiempo de generación: 03-02-2022 a las 17:08:42
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -32,6 +32,18 @@ CREATE TABLE `marks` (
   `name` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `marks`
+--
+
+INSERT INTO `marks` (`id`, `name`) VALUES
+(1, 'Samsung'),
+(2, 'Motorola'),
+(3, 'OnePlus'),
+(4, 'LG'),
+(5, 'Xiaomi'),
+(6, 'iPhone');
+
 -- --------------------------------------------------------
 
 --
@@ -43,6 +55,13 @@ CREATE TABLE `models` (
   `name` varchar(50) NOT NULL,
   `mark_id` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `models`
+--
+
+INSERT INTO `models` (`id`, `name`, `mark_id`) VALUES
+(1, 'A20', 1);
 
 -- --------------------------------------------------------
 
@@ -92,6 +111,13 @@ CREATE TABLE `users` (
   `user_category_id` int(11) NOT NULL,
   `avatar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `user_name`, `email`, `password`, `user_category_id`, `avatar`) VALUES
+(3, 'ale', 'ale', 'ale', 'ale@ale.com', '$2a$10$tew0RS2Bww72x', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -166,13 +192,13 @@ ALTER TABLE `user_category`
 -- AUTO_INCREMENT de la tabla `marks`
 --
 ALTER TABLE `marks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `models`
 --
 ALTER TABLE `models`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
@@ -190,7 +216,7 @@ ALTER TABLE `trolly`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `user_category`

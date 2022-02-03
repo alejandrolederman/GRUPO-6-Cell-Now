@@ -42,13 +42,13 @@ const userController = {
 
 ////////////////////////////////////////////////////////////////////////////
     guardar: function (req, res){
-        const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0) {
-			return res.render('./users/formularioRegistro', {
-				errors: resultValidation.mapped(),
-				old: req.body
-			});
-		}
+        // const resultValidation = validationResult(req);
+        // if (resultValidation.errors.length > 0) {
+		// 	return res.render('./users/formularioRegistro', {
+		// 		errors: resultValidation.mapped(),
+		// 		old: req.body
+		// 	});
+		// }
 
         db.users.findOne({where: { email: req.body.email }})
         .then( function(userInDB){
