@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 03-02-2022 a las 17:08:42
+-- Tiempo de generación: 03-02-2022 a las 23:57:09
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -107,7 +107,7 @@ CREATE TABLE `users` (
   `last_name` varchar(20) NOT NULL,
   `user_name` varchar(20) NOT NULL,
   `email` varchar(20) NOT NULL,
-  `password` varchar(20) NOT NULL,
+  `password` varchar(500) NOT NULL,
   `user_category_id` int(11) NOT NULL,
   `avatar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -117,7 +117,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `user_name`, `email`, `password`, `user_category_id`, `avatar`) VALUES
-(3, 'ale', 'ale', 'ale', 'ale@ale.com', '$2a$10$tew0RS2Bww72x', 0, 0);
+(3, 'ale', 'ale', 'ale', 'ale@ale.com', '$2a$10$tew0RS2Bww72x', 0, 0),
+(4, 'al', 'al', 'al', 'false', '$2a$10$eKJ7pbtBbGXeP', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -216,7 +217,7 @@ ALTER TABLE `trolly`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT de la tabla `user_category`
