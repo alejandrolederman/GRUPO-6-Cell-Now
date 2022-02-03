@@ -59,6 +59,16 @@
         </div>
 <br>
 <br>
+<h4 class="cell"> Tipo de usuario</h4>
+<div>
+    <select name="user_category">
+        <% for (let i = 0; i < categoria.length; i++){ %> 
+        <option value="<%= categoria[i].id %> ">
+            <%= categoria[i].name %> 
+        </option>
+        <% } %> 
+    </select>
+</div>
 <br>
             
                 <!-- <option value="user">Usuario</option>

@@ -24,6 +24,8 @@ module.exports = (sequelize, dataTypes) => {
     user_category_id: {
       type: dataTypes.INTEGER,
       foreignKey: true,
+      allowNull: true
+
     },
     avatar: {
       type: dataTypes.STRING(100)
