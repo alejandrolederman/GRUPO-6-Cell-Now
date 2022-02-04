@@ -27,6 +27,9 @@ module.exports = (sequelize, dataTypes) => {
     unlocking: {
       type: dataTypes.STRING(280),
     },
+    description: {
+      type: dataTypes.STRING(500),
+    },
     image: {
       type: dataTypes.STRING(280),
     },

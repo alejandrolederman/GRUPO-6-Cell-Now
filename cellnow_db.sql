@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-02-2022 a las 13:33:18
+-- Tiempo de generación: 04-02-2022 a las 16:33:01
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -98,6 +98,14 @@ CREATE TABLE `products` (
   `description` varchar(500) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `products`
+--
+
+INSERT INTO `products` (`id`, `mark_id`, `price`, `discount`, `camera`, `model_id`, `screen`, `unlocking`, `image`, `description`) VALUES
+(9, 0, '120000', '', '56mp', 0, '8.4', 'huella ', '', ''),
+(10, 0, 'sdfsdfsdfs', '', 'sfsfds', 0, 'sdfsdf', 'sdfsdfsdfs', '', 'sdfsdfsd');
+
 -- --------------------------------------------------------
 
 --
@@ -127,6 +135,13 @@ CREATE TABLE `users` (
   `user_category_id` int(11) NOT NULL,
   `avatar` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `users`
+--
+
+INSERT INTO `users` (`id`, `first_name`, `last_name`, `user_name`, `email`, `password`, `user_category_id`, `avatar`) VALUES
+(8, 'ale', 'ale', 'ale', 'ale@ale.com', '$2a$10$d1Xmbv2It.G3bJ/ZTbrIUelS8Q/byZU6tAwrdh7e971MznEe9GkfK', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -215,7 +230,7 @@ ALTER TABLE `models`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT de la tabla `trolly`
@@ -227,43 +242,13 @@ ALTER TABLE `trolly`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `user_category`
 --
 ALTER TABLE `user_category`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `models`
---
-ALTER TABLE `models`
-  ADD CONSTRAINT `models_ibfk_1` FOREIGN KEY (`mark_id`) REFERENCES `marks` (`id`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `products`
---
-ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`mark_id`) REFERENCES `marks` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`model_id`) REFERENCES `models` (`id`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `trolly`
---
-ALTER TABLE `trolly`
-  ADD CONSTRAINT `trolly_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `trolly_ibfk_2` FOREIGN KEY (`prudct_id:`) REFERENCES `products` (`id`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `users`
---
-ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`user_category_id`) REFERENCES `user_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
