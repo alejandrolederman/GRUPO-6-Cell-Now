@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-02-2022 a las 00:01:27
+-- Tiempo de generación: 04-02-2022 a las 13:33:18
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -37,12 +37,12 @@ CREATE TABLE `marks` (
 --
 
 INSERT INTO `marks` (`id`, `name`) VALUES
-(1, 'Samsung'),
-(2, 'Motorola'),
-(3, 'OnePlus'),
-(4, 'LG'),
-(5, 'Xiaomi'),
-(6, 'iPhone');
+(7, 'Samsung'),
+(8, 'Motorola'),
+(9, 'OnePlus'),
+(10, 'LG'),
+(11, 'Xiaomi'),
+(12, 'iPhone');
 
 -- --------------------------------------------------------
 
@@ -61,7 +61,23 @@ CREATE TABLE `models` (
 --
 
 INSERT INTO `models` (`id`, `name`, `mark_id`) VALUES
-(1, 'A20', 1);
+(2, 'GALAXY S7', 7),
+(3, 'NOTE 8', 7),
+(4, 'GALAXY S20 PLUS', 7),
+(5, 'MOTO G100', 8),
+(6, 'MOTO G 9 POWER', 8),
+(7, 'MOTO G 200', 8),
+(8, 'G7 ONE', 10),
+(9, 'K12 PLUS', 10),
+(10, '8T', 9),
+(11, '8 PRO', 9),
+(12, '8', 9),
+(13, '13 PRO', 12),
+(14, '12 MINI', 12),
+(15, '6 S', 12),
+(16, 'POCO X3', 11),
+(17, 'MI 10 PRO', 11),
+(18, 'MI 11 T', 11);
 
 -- --------------------------------------------------------
 
@@ -128,8 +144,8 @@ CREATE TABLE `user_category` (
 --
 
 INSERT INTO `user_category` (`id`, `name`) VALUES
-(1, 'usuario'),
-(2, 'administrador');
+(3, 'usuario'),
+(4, 'administrador');
 
 --
 -- Índices para tablas volcadas
@@ -154,7 +170,9 @@ ALTER TABLE `models`
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `mark_id` (`mark_id`),
-  ADD KEY `model_id` (`model_id`);
+  ADD KEY `model_id` (`model_id`),
+  ADD KEY `mark_id_2` (`mark_id`),
+  ADD KEY `model_id_2` (`model_id`);
 
 --
 -- Indices de la tabla `trolly`
@@ -185,19 +203,19 @@ ALTER TABLE `user_category`
 -- AUTO_INCREMENT de la tabla `marks`
 --
 ALTER TABLE `marks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `models`
 --
 ALTER TABLE `models`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `trolly`
@@ -209,13 +227,43 @@ ALTER TABLE `trolly`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `user_category`
 --
 ALTER TABLE `user_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `models`
+--
+ALTER TABLE `models`
+  ADD CONSTRAINT `models_ibfk_1` FOREIGN KEY (`mark_id`) REFERENCES `marks` (`id`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `products`
+--
+ALTER TABLE `products`
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`mark_id`) REFERENCES `marks` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`model_id`) REFERENCES `models` (`id`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `trolly`
+--
+ALTER TABLE `trolly`
+  ADD CONSTRAINT `trolly_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `trolly_ibfk_2` FOREIGN KEY (`prudct_id:`) REFERENCES `products` (`id`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`user_category_id`) REFERENCES `user_category` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

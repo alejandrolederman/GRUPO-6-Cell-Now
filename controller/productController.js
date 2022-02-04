@@ -62,7 +62,10 @@ const productController = {
             memory: req.body.memory,
             unlocking: req.body.unlocking,
             image: req.body.image
+                 
         })
+        
+    
 
         res.redirect("/");
 

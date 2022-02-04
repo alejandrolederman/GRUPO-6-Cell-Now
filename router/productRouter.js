@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const multer = require("multer");
+const uploadFilePproducts = require ("../middlewares/multerStorangeProduct")
 
 
 const productController = require('../controller/productController');
@@ -14,7 +15,7 @@ router.get('/productsList', productController.productsList);
  /*** CREATE ONE PRODUCT ***/ 
  router.get('/productsForm', productController.crear); 
  
- router.post('/productsForm', productController.store); 
+ router.post('/productsForm',uploadFilePproducts.single('product'), productController.store); 
 
  /*** EDIT ONE PRODUCT ***/ 
  router.get('/productEdit/:id', productController.edit); 
