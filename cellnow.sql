@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-02-2022 a las 16:33:01
+-- Tiempo de generación: 05-02-2022 a las 04:48:51
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -18,8 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `cellnow_db`
+-- Base de datos: `cellnow`
 --
+CREATE DATABASE IF NOT EXISTS `cellnow` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `cellnow`;
 
 -- --------------------------------------------------------
 
@@ -53,14 +55,14 @@ INSERT INTO `marks` (`id`, `name`) VALUES
 CREATE TABLE `models` (
   `id` int(11) NOT NULL,
   `name` varchar(50) NOT NULL,
-  `mark_id` int(10) NOT NULL
+  `markId` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `models`
 --
 
-INSERT INTO `models` (`id`, `name`, `mark_id`) VALUES
+INSERT INTO `models` (`id`, `name`, `markId`) VALUES
 (2, 'GALAXY S7', 7),
 (3, 'NOTE 8', 7),
 (4, 'GALAXY S20 PLUS', 7),
@@ -87,11 +89,11 @@ INSERT INTO `models` (`id`, `name`, `mark_id`) VALUES
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `mark_id` int(50) NOT NULL,
+  `markId` int(50) NOT NULL,
   `price` varchar(10) NOT NULL,
   `discount` varchar(10) NOT NULL,
   `camera` varchar(50) NOT NULL,
-  `model_id` int(11) NOT NULL,
+  `modelId` int(11) NOT NULL,
   `screen` varchar(20) NOT NULL,
   `unlocking` varchar(20) NOT NULL,
   `image` varchar(20) NOT NULL,
@@ -102,7 +104,7 @@ CREATE TABLE `products` (
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `mark_id`, `price`, `discount`, `camera`, `model_id`, `screen`, `unlocking`, `image`, `description`) VALUES
+INSERT INTO `products` (`id`, `markId`, `price`, `discount`, `camera`, `modelId`, `screen`, `unlocking`, `image`, `description`) VALUES
 (9, 0, '120000', '', '56mp', 0, '8.4', 'huella ', '', ''),
 (10, 0, 'sdfsdfsdfs', '', 'sfsfds', 0, 'sdfsdf', 'sdfsdfsdfs', '', 'sdfsdfsd');
 
@@ -114,10 +116,29 @@ INSERT INTO `products` (`id`, `mark_id`, `price`, `discount`, `camera`, `model_i
 
 CREATE TABLE `trolly` (
   `id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `prudct_id:` int(11) NOT NULL,
+  `userId` int(11) NOT NULL,
+  `prudctId` int(11) NOT NULL,
   `amount` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `usercategory`
+--
+
+CREATE TABLE `usercategory` (
+  `id` int(11) NOT NULL,
+  `name` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `usercategory`
+--
+
+INSERT INTO `usercategory` (`id`, `name`) VALUES
+(3, 'usuario'),
+(4, 'administrador');
 
 -- --------------------------------------------------------
 
@@ -127,40 +148,26 @@ CREATE TABLE `trolly` (
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `first_name` varchar(20) NOT NULL,
-  `last_name` varchar(20) NOT NULL,
-  `user_name` varchar(20) NOT NULL,
+  `firstName` varchar(20) NOT NULL,
+  `lastName` varchar(20) NOT NULL,
+  `userName` varchar(20) NOT NULL,
   `email` varchar(20) NOT NULL,
   `password` varchar(500) NOT NULL,
-  `user_category_id` int(11) NOT NULL,
-  `avatar` int(11) NOT NULL
+  `userCategoryId` int(11) NOT NULL,
+  `avatar` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `first_name`, `last_name`, `user_name`, `email`, `password`, `user_category_id`, `avatar`) VALUES
-(8, 'ale', 'ale', 'ale', 'ale@ale.com', '$2a$10$d1Xmbv2It.G3bJ/ZTbrIUelS8Q/byZU6tAwrdh7e971MznEe9GkfK', 0, 0);
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `user_category`
---
-
-CREATE TABLE `user_category` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `user_category`
---
-
-INSERT INTO `user_category` (`id`, `name`) VALUES
-(3, 'usuario'),
-(4, 'administrador');
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `userName`, `email`, `password`, `userCategoryId`, `avatar`) VALUES
+(8, 'ale', 'ale', 'ale', 'ale@ale.com', '$2a$10$d1Xmbv2It.G3bJ/ZTbrIUelS8Q/byZU6tAwrdh7e971MznEe9GkfK', 0, '0'),
+(9, 'Agustín', 'Zurita', 'aguian', 'aguian0104@gmail.com', '$2a$10$scsGCoURz/NldBl0twzvI.Dm14x7qu/idF2rBOg25n8YCIss3pTZq', 3, '0'),
+(10, 'Agustína', 'Zurita', 'aguian', 'aguian01045@gmail.co', '$2a$10$nvg3OC/0QF8J.jHDhVUDV.awQDvh8Vi0o6l1/xmjiuctfvRy0/fNy', 3, '0'),
+(11, 'Agustín', 'Zurita', 'aguian', 'aguian0104@gmail.com', '$2a$10$rUMVm5ce9lGZn2ypt3z7peKn2Ph2TIWLnMUA96Tg90k9QwDKc7xS.', 3, '0'),
+(12, 'Agustín', 'Zurita', 'aguian', 'aguian010334@gmail.c', '$2a$10$td8wDpO6L8PY76SPfR.HXOkoGAkoqoFG2/ezrFzsHXJ1AcmR6/fCO', 3, '0'),
+(13, 'Agustín', 'Zurita', 'aguian', 'aguian0104@gmail.com', '$2a$10$jEdz3cFkbR/Xga44jJQOUOk7M6.EDcCah61cAo1bWb5ec4lw25K5i', 3, '0');
 
 --
 -- Índices para tablas volcadas
@@ -177,38 +184,38 @@ ALTER TABLE `marks`
 --
 ALTER TABLE `models`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `mark_id` (`mark_id`);
+  ADD KEY `mark_id` (`markId`);
 
 --
 -- Indices de la tabla `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `mark_id` (`mark_id`),
-  ADD KEY `model_id` (`model_id`),
-  ADD KEY `mark_id_2` (`mark_id`),
-  ADD KEY `model_id_2` (`model_id`);
+  ADD KEY `mark_id` (`markId`),
+  ADD KEY `model_id` (`modelId`),
+  ADD KEY `mark_id_2` (`markId`),
+  ADD KEY `model_id_2` (`modelId`);
 
 --
 -- Indices de la tabla `trolly`
 --
 ALTER TABLE `trolly`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `user_id` (`user_id`),
-  ADD KEY `prudct_id:` (`prudct_id:`);
+  ADD KEY `user_id` (`userId`),
+  ADD KEY `prudct_id:` (`prudctId`);
+
+--
+-- Indices de la tabla `usercategory`
+--
+ALTER TABLE `usercategory`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `users`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `user_category_id` (`user_category_id`);
-
---
--- Indices de la tabla `user_category`
---
-ALTER TABLE `user_category`
-  ADD PRIMARY KEY (`id`);
+  ADD KEY `user_category_id` (`userCategoryId`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -239,16 +246,16 @@ ALTER TABLE `trolly`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT de la tabla `usercategory`
+--
+ALTER TABLE `usercategory`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
-
---
--- AUTO_INCREMENT de la tabla `user_category`
---
-ALTER TABLE `user_category`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
