@@ -39,19 +39,15 @@ const productController = {
         })
         .catch(function(err){
             console.log(err)
-        })
-        
+        })  
     },
-
-
-
 ///////////////////////////////////////////////////////////////
 
     // Create -  Method to store
     
             store:function (req, res) {
             
-        db.Producto.create({
+        db.product.create({
 
             mark_id: req.body.mark,
             model_id: req.body.model,
@@ -64,40 +60,9 @@ const productController = {
             image: req.body.image
                  
         })
-        
-    
-
         res.redirect("/");
-
-
-        // const {mark, model, price, camera, description,
-        //     unlocking, screen, memory, image } = req.body;
-
-        //  let cantidadProductos = 0;
-        //  for (let i = 0; i < products.length; i++) {
-
-        //      cantidadProductos = cantidadProductos + 1;
-        //  };
-
-        // const data = {
-
-        //     id: cantidadProductos,
-        //     mark: mark,
-        //     model: model,
-        //     price: price,
-        //     description: description,
-        //     camera: camera,
-        //     screen: screen,
-        //     memory: memory,
-        //     unlocking: unlocking,
-        //     image: image,
-        // };
-        // products.push(data);
-
-        // fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
-        
-
     },
+
 //////////////////////////////////////////////////////////////////////////////
 
 

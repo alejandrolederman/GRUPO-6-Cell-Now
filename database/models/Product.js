@@ -1,5 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "Product";
+  let alias = "product";
   let cols = {
     id: {
       type: dataTypes.INTEGER,
@@ -34,16 +34,16 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(280),
     },
   };
-  // let config = {
-  //   tableName: "products",
-  //   timestamps: false,
-  // };
+  let config = {
+    tableName: "products",
+    timestamps: false,
+  };
 
-  const Product = sequelize.define(alias, cols, config);
+  const product = sequelize.define(alias, cols, config);
 
 
-  Product.associate = function (models) {
-    Product.belongsToMany(models.users, {
+  product.associate = function (models) {
+    product.belongsToMany(models.users, {
       as: "users",
       through: "Trolley",
       foreignKey: "productId",
@@ -52,18 +52,18 @@ module.exports = (sequelize, dataTypes) => {
     });
   
   
-    Product.belongsTo(models.mark, {
-      as: "Mark",
+    product.belongsTo(models.mark, {
+      as: "mark",
       foreignKey: "MarkId"
 
     });
   
  
-    Product.belongsTo(models.Model, {
+    product.belongsTo(models.model, {
       as: "Modelo",
       foreignKey: "Model_id"
 
     })
   };
-  return Product;
+  return product;
 };
