@@ -1,30 +1,30 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "Carrito";
+  let alias = "Trolly";
   let cols = {
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    user_id: {
-      type: dataTypes.STRING(100),
+    userId: {
+      type: dataTypes.INTEGER,
     },
-    prudct_id: {
-      type: dataTypes.STRING(100),
+    prudctId: {
+      type: dataTypes.INTEGER,
     },
     amount: {
       type: dataTypes.NUMBER(100),
     }
   };
-  let config = {
-    tableName: "Trolly",
-    timestamps: false,
-  };
+  // let config = {
+  //   tableName: "Trolly",
+  //   timestamps: false,
+  // };
 
-  const Carrito = sequelize.define(alias, cols, config);
-
-
+  const Trolly = sequelize.define(alias, cols, config);
 
 
-  return Carrito;
+
+
+  return Trolly;
 };

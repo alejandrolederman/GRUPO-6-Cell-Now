@@ -1,25 +1,25 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "Producto";
+  let alias = "Product";
   let cols = {
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    mark_id: {
-      type: dataTypes.STRING(200),
+    markId: {
+      type: dataTypes.INTEGER,
     },
     price: {
-      type: dataTypes.STRING(280),
+      type: dataTypes.INTEGER,
     },
     discount: {
       type: dataTypes.STRING(280),
     },
     camera: {
-      type: dataTypes.STRING(280),
+      type: dataTypes.INTEGER,
     },
-    model_id: {
-      type: dataTypes.STRING(280),
+    modelId: {
+      type: dataTypes.INTEGER,
     },
     screen: {
       type: dataTypes.STRING(280),
@@ -34,36 +34,36 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(280),
     },
   };
-  let config = {
-    tableName: "products",
-    timestamps: false,
-  };
+  // let config = {
+  //   tableName: "products",
+  //   timestamps: false,
+  // };
 
-  const Producto = sequelize.define(alias, cols, config);
+  const Product = sequelize.define(alias, cols, config);
 
 
-  Producto.associate = function (models) {
-    Producto.belongsToMany(models.users, {
+  Product.associate = function (models) {
+    Product.belongsToMany(models.users, {
       as: "users",
       through: "Trolley",
-      foreignKey: "product_id",
-      otherKey: "User_id",
+      foreignKey: "productId",
+      otherKey: "UserId",
       timetamps: false
     });
   
   
-    Producto.belongsTo(models.mark, {
-      as: "Marca",
-      foreignKey: "Mark_id"
+    Product.belongsTo(models.mark, {
+      as: "Mark",
+      foreignKey: "MarkId"
 
     });
   
  
-    Producto.belongsTo(models.Model, {
+    Product.belongsTo(models.Model, {
       as: "Modelo",
       foreignKey: "Model_id"
 
     })
   };
-  return Producto;
+  return Product;
 };

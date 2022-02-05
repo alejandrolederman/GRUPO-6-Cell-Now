@@ -1,18 +1,18 @@
 module.exports = (sequelize, dataTypes) => {
-  let alias = "users";
+  let alias = "User";
   let cols = {
     id: {
       type: dataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
     },
-    first_name: {
+    firstName: {
       type: dataTypes.STRING(100)
     },
-    last_name: {
+    lastName: {
       type: dataTypes.STRING(100)
     },
-    user_name: {
+    userName: {
       type: dataTypes.STRING(100)
     },
     email: {
@@ -21,10 +21,10 @@ module.exports = (sequelize, dataTypes) => {
     password: {
       type: dataTypes.STRING(100)
     },
-    user_category_id: {
+    userCategoryId: {
       type: dataTypes.INTEGER,
       foreignKey: true,
-      allowNull: true
+      
 
     },
     avatar: {
@@ -32,15 +32,15 @@ module.exports = (sequelize, dataTypes) => {
     }
 
   };
-  let config = {
-    tableName: "users",
-    timestamps: false,
-  };
+  // let config = {
+  //   tableName: "users",
+  //   timestamps: false,
+  // };
 
-  const users = sequelize.define(alias, cols, config);
+  const User= sequelize.define(alias, cols, config);
 
-  users.associate = function (models) {
-    users.belongsToMany(models.Producto, {
+  User.associate = function (models) {
+    User.belongsToMany(models.Producto, {
       as: "Producto",
       through: "Trolley",
       foreignKey: "User_id",
@@ -49,5 +49,5 @@ module.exports = (sequelize, dataTypes) => {
     });
   }
   
-  return users;
+  return User;
 };
