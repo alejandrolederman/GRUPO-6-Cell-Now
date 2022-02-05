@@ -33,9 +33,9 @@ const productController = {
 ////////////////////////////////////////////////////////////////////
     // Create - Form to create
     crear: (req, res) => {
-        db.mark.findAll()
-        .then(function(mark){
-            res.render("./products/productsForm", {mark:mark});
+        db.Mark.findAll()
+        .then(function(Mark){
+            res.render("./products/productsForm", {Mark});
         })
         .catch(function(err){
             console.log(err)
@@ -49,8 +49,8 @@ const productController = {
             
         db.product.create({
 
-            mark_id: req.body.mark,
-            model_id: req.body.model,
+            MarkId: req.body.Mark,
+            ModelId: req.body.ModelId,
             price: req.body.price,
             description: req.body.description,
             camera: req.body.camera,
@@ -86,8 +86,8 @@ const productController = {
     update: (req, res) => {
 
         const {
-            mark,
-            model,
+            Mark,
+            Model,
             price,
             discount,
             description,

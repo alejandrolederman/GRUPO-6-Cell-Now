@@ -12,9 +12,9 @@ const userController = {
 
     ///////////////////////////////////////////////////////////////
     usersList: (req, res) => {
-        db.users.findAll()
+        db.User.findAll()
         .then(function(usuarios){
-            res.render('./users/usersList', {usuarios:usuarios});
+            res.render('./users/usersList', {usuarios});
         })
         .catch(function(err){
             console.log(err)
@@ -23,15 +23,18 @@ const userController = {
     
 ///////////////////////////////////////////////////////////////////
     usersDetail: (req, res) => {
-        db.users.findByPk(req.params.id)
+        db.User.findByPk(req.params.id)
         .then(function(usuario){
-            res.render('./users/usersDetail', {usuario:usuario})  
-        });
+            res.render('./users/usersDetail', {usuario})  
+        })
+        .catch(function(err){
+            console.log(err)
+        }) 
     },
 
 ///////////////////////////////////////////////////////////    
     crear: function (req, res){
-        db.usercategory.findAll()
+        db.Usercategory.findAll()
         .then(function(categoria){
             return res.render("./users/formularioRegistro" , {categoria:categoria})
         })
@@ -50,7 +53,7 @@ const userController = {
 		// 	});
 		// }
 
-        db.users.findOne({where: { email: req.body.email }})
+        db.User.findOne({where: { email: req.body.email }})
         .then( function(userInDB){
             if (userInDB) {
                 return res.render('./users/formularioRegistro', {
@@ -63,15 +66,19 @@ const userController = {
         	    });
             }else {
                     
-                db.users.create({
-                    first_name: req.body.first_name,
-                    last_name: req.body.last_name,
-                    user_name:req.body.user_name,
+                db.User.create({
+                    firstName: req.body.first_name,
+                    lasName: req.body.last_name,
+                    userName:req.body.user_name,
                     email: req.body.email,
                     password:bcryptjs.hashSync(req.body.password, 10),
-                    user_category_id: req.body.user_category,
+                    usecategoryId: req.body.user_category,
                     avatar: req.body.avatar
                 })
+                
+        .catch(function(err){
+            console.log(err)
+        }) 
             }
 
             return res.redirect('./login');
@@ -99,7 +106,7 @@ const userController = {
             });
         }
         //busca el mail en la base de datos
-        db.users.findOne({where: { email: req.body.email }})
+        db.User.findOne({where: { email: req.body.email }})
         .then(function(userToLogin){
             
             //si esta confirma que la contraseña sea correcta

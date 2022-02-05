@@ -14,10 +14,10 @@
                 <input type="text" name="mark_id"  placeholder="Ingresa la marca" class="nombre-registro"> -->
                 <h4 lass="text-color"> Marca </h4>
                 <div>
-                    <select name="mark_id"class="nombre-registro">
-                        <% for (let i = 0; i < mark.length; i++){ %> 
-                        <option value="<%= mark[i].id %> ">
-                            <%= mark[i].name %> 
+                    <select name="MarkId"class="nombre-registro">
+                        <% for (let i = 0; i < Mark.length; i++){ %> 
+                        <option value="<%= Mark[i].id %> ">
+                            <%= Mark[i].name %> 
                         </option>
                         <% } %> 
                     </select>
@@ -26,7 +26,7 @@
                 <br>
                 <label for="model" class="text-color"> modelo  </label>
                 <br>
-                <input type="text" name="model_id"  placeholder="Ingresa el modelo"  class="nombre-registro">
+                <input type="text" name="ModelId"  placeholder="Ingresa el modelo"  class="nombre-registro">
                 <br>
                 <br>                
                 <label for="price" class="text-color"> precio del producto  </label>
