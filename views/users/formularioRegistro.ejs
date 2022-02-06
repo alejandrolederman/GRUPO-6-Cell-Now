@@ -32,22 +32,23 @@
                 <% } %>
                 </div>
                 <br>
-                <!-- <label for="email" class="field">Email</label> -->
-                <br>
-                <input id="email" type= "text" name="email" placeholder= "Email" value="<%= locals.old && old.email ? old.email : ""%>" class="nombre-registro">
-                <div><%if(locals.errors && errors.email) { %>
-                    <p class="errorEpress"><%= errors.email.msg %> </p>
-                <% } %>
-                </div>
-                <br>
+               
                 <!-- <label for="username" class="field"> Nombre de usuario</label> -->
                 <br>
                 <input type="text" name="user_name"   placeholder= "Nombre de usuario" value="<%= locals.old && old.user_name ? old.user_name : ""  %>" class="nombre-registro">
-                <div><%if(locals.errors && errors.username) { %>
-                    <p class="errorEpress"><%= errors.username.msg %> </p>
+                <div><%if(locals.errors && errors.user_name) { %>
+                    <p class="errorEpress"><%= errors.user_name.msg %> </p>
                 <% } %>
                 </div>
                 <br>
+                 <!-- <label for="email" class="field">Email</label> -->
+                 <br>
+                 <input id="email" type= "text" name="email" placeholder= "Email" value="<%= locals.old && old.email ? old.email : ""%>" class="nombre-registro">
+                 <div><%if(locals.errors && errors.email) { %>
+                     <p class="errorEpress"><%= errors.email.msg %> </p>
+                 <% } %>
+                 </div>
+                 <br>
                 <br>
             
            
