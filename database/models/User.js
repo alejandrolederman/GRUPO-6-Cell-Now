@@ -25,14 +25,16 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
       foreignKey: true,
       
-
     },
     avatar: {
       type: dataTypes.STRING(100)
     }
-
   };
-  const User = sequelize.define(alias, cols);
+  let config = {
+    tableName: "users",
+    timestamps: false,
+  };
+  const User = sequelize.define(alias, cols, config);
 
   User.associate = function (models) {
     User.belongsToMany(models.Product, {

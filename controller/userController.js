@@ -64,7 +64,7 @@ const userController = {
             	    },
             	    old: req.body
         	    });
-            }else {
+            } 
                     
                 db.User.create({
                     firstName: req.body.first_name,
@@ -75,14 +75,12 @@ const userController = {
                     usecategoryId: req.body.user_category,
                     avatar: req.body.avatar
                 })
-                
+                   
+             res.redirect('./login');
+        })
         .catch(function(err){
             console.log(err)
-        }) 
-            }
-
-            return res.redirect('./login');
-        });
+        })
     },
     
 
