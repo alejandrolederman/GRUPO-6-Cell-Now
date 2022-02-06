@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-02-2022 a las 04:48:51
+-- Tiempo de generación: 06-02-2022 a las 02:37:12
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -18,10 +18,10 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `cellnow`
+-- Base de datos: `cellnow_db`
 --
-CREATE DATABASE IF NOT EXISTS `cellnow` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
-USE `cellnow`;
+CREATE DATABASE IF NOT EXISTS `cellnow_db` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `cellnow_db`;
 
 -- --------------------------------------------------------
 
@@ -167,7 +167,8 @@ INSERT INTO `users` (`id`, `firstName`, `lastName`, `userName`, `email`, `passwo
 (10, 'Agustína', 'Zurita', 'aguian', 'aguian01045@gmail.co', '$2a$10$nvg3OC/0QF8J.jHDhVUDV.awQDvh8Vi0o6l1/xmjiuctfvRy0/fNy', 3, '0'),
 (11, 'Agustín', 'Zurita', 'aguian', 'aguian0104@gmail.com', '$2a$10$rUMVm5ce9lGZn2ypt3z7peKn2Ph2TIWLnMUA96Tg90k9QwDKc7xS.', 3, '0'),
 (12, 'Agustín', 'Zurita', 'aguian', 'aguian010334@gmail.c', '$2a$10$td8wDpO6L8PY76SPfR.HXOkoGAkoqoFG2/ezrFzsHXJ1AcmR6/fCO', 3, '0'),
-(13, 'Agustín', 'Zurita', 'aguian', 'aguian0104@gmail.com', '$2a$10$jEdz3cFkbR/Xga44jJQOUOk7M6.EDcCah61cAo1bWb5ec4lw25K5i', 3, '0');
+(13, 'Agustín', 'Zurita', 'aguian', 'aguian0104@gmail.com', '$2a$10$jEdz3cFkbR/Xga44jJQOUOk7M6.EDcCah61cAo1bWb5ec4lw25K5i', 3, '0'),
+(14, 'alej', '', 'ale', 'alej@alej.com', '$2a$10$b0AK4Uuzdql79iIYQpy31eJpUXPaedeLd9IQGrs1pb.S5mzNR21oS', 0, '');
 
 --
 -- Índices para tablas volcadas
@@ -255,7 +256,7 @@ ALTER TABLE `usercategory`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
