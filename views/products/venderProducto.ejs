@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <%- include('../partials/head')%>
+<body>
+
+    <%- include('../partials/header')%>
+    <% if(locals.isLogged) {%> 
+ <h2> ¡Felicitaciones,  <%= locals.userLogged.firstName %>! </h2>
+ <br>
+ <h3> Adquiriste el producto <h3>
+    <% } %> 
+     
+    <div>
+       <a href="/carritoDeCompras"> <button type="submit" class="button-enviar" name= "button" ><span><i class="fas fa-shopping-cart"aria-hidden="true"></i> Volver al carrito de compras</span></button> 
+    </div> 
+
+</body>
+<%- include ('../partials/footer')%>
+</html>

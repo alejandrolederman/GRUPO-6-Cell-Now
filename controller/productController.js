@@ -11,24 +11,44 @@ const productController = {
 
     // Root - Show all products
     productsList: (req, res) => {
-        res.render('./products/productsList', {
-            products
-        });
+        db.Product.findAll()
+        .then(function (products){
+        res.render('./products/productsList', {products:products});
+    })
+    .catch(function(err){
+        console.log(err)
+    })
+       
+        // res.render('./products/productsList', {
+        //     products
+        // });
     },
 ///////////////////////////////////////////////////////////////
 
     // Detail - Detail from one product
     productDetail: (req, res) => {
-        let elId = req.params.id;
-        let productos = products.find(unProducto => {
-            if (unProducto.id == elId) {
-                return unProducto;
-            }
-        });
-        res.render('./products/detail', {
-            productos,
-            products
+      
+        db.Product.findByPk(req.params.id)
+        .then(function(unProduct){
+            res.render('./products/detail', {unProduct})  
         })
+        .catch(function(err){
+            console.log(err)
+        }) 
+      
+      
+      
+      
+        // let elId = req.params.id;
+        // let productos = products.find(unProducto => {
+        //     if (unProducto.id == elId) {
+        //         return unProducto;
+        //     }
+        // });
+        // res.render('./products/detail', {
+        //     productos,
+        //     products
+        // })
     },
 ////////////////////////////////////////////////////////////////////
     // Create - Form to create
@@ -46,18 +66,19 @@ const productController = {
     
             store:function (req, res) {
             
-        db.product.create({
+        db.Product.create({
 
             MarkId: req.body.Mark,
             ModelId: req.body.ModelId,
             price: req.body.price,
+            di: req.body.discount,
             description: req.body.description,
             camera: req.body.camera,
             screen: req.body.screen,
             memory: req.body.memory,
             unlocking: req.body.unlocking,
             image: req.body.image
-                 
+        
         })
         res.redirect("/");
     },
@@ -68,15 +89,24 @@ const productController = {
     // Update - Form to edit
     edit: (req, res) => {
 
-        let elId = req.params.id;
-        let productos = products.find(unProducto => {
-            if (unProducto.id == elId) {
-                return unProducto;
-            }
-        });
-        res.render('./products/productEdit', { productos })
+            db.Product.findByPk(req.params.id)
+            .then(function(unProduct){
+                res.render('./products/productEdit', {unProduct})  
+            })
+            .catch(function(err){
+                console.log(err)
+            }) 
+        },       
 
-    },
+        // let elId = req.params.id;
+        // let productos = products.find(unProducto => {
+        //     if (unProducto.id == elId) {
+        //         return unProducto;
+        //     }
+        // });
+        // res.render('./products/productEdit', { productos })
+
+    
 
 ///////////////////////////////////////////////////////////////
 
@@ -85,8 +115,8 @@ const productController = {
     update: (req, res) => {
 
         const {
-            Mark,
-            Model,
+            MarkId,
+            ModelId,
             price,
             discount,
             description,
@@ -105,7 +135,7 @@ const productController = {
 
             if (data.id == elId) {
 
-                data.mark = mark,
+                    data.mark = mark,
                     data.model = model,
                     data.price = price,
                     data.description = description,
@@ -126,23 +156,43 @@ const productController = {
     },
 
 //////////////////////////////////////////////////////////////////////////////////////
+    venta: (req, res) =>{      
+
+        res.render('./products/confirmVenta');
+
+
+    },
+
+
+////////////////////////////////////////////////////////////////////////////////////////////
 
 
     // Delete - Delete one product from DB
-    destroy: (req, res) => {
-        let idProducto = req.params.id;
-        const productoEliminado = [];
-
-        products.map(data => {
-            if (data.id != idProducto) {
-
-                productoEliminado.push(data);
+    destroy: (req,res) =>{
+        db.Product.destroy({
+            where: {
+                id : req.params.id
             }
         })
+        .then(()=>  res.redirect('./products/venderProducto'))
+        .catch(error => console.log(error))
+    },
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(productoEliminado), 'utf-8');
-        res.redirect("/");
-    }
+
+    // destroy: (req, res) => {
+    //     db.Product.findByPk(req.params.id)
+    //     const productoEliminado = [];
+
+    //     products.map(data => {
+    //         if (data.id != idProducto) {
+
+    //             productoEliminado.push(data);
+    //         }
+    //     })
+
+    //     fs.writeFileSync(productsFilePath, JSON.stringify(productoEliminado), 'utf-8');
+    //     res.redirect("/");
+    // }
 
 /////////////////////////////////////////////////////////////////////////////////////
 

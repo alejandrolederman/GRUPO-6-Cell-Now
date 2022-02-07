@@ -15,14 +15,17 @@ router.get('/productsList', productController.productsList);
  /*** CREATE ONE PRODUCT ***/ 
  router.get('/productsForm', productController.crear); 
  
- router.post('/productsForm',uploadFilePproducts.single('product'), productController.store); 
+ router.post('/productsForm',uploadFilePproducts.single('image'), productController.store); 
 
  /*** EDIT ONE PRODUCT ***/ 
  router.get('/productEdit/:id', productController.edit); 
  
  router.put('/productEdit/:id', productController.update); 
 
- /*** DELETE ONE PRODUCT***/ 
+ /*** DELETE ONE PRODUCT***/                
+
+router.get('/venderProducto', productController.venta)
+
 router.delete('/:id', productController.destroy); 
 
 

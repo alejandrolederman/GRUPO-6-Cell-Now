@@ -9,19 +9,19 @@
 
         <article class="article-comprar">
             <div class="producto-comprar">
-                <img src="/img/baseDeDatos/<%=productos.image%> " alt="imagen de producto" width="150px" height="305 px">
+                <img src="/img/baseDeDatos/<%=unProduct.image%> " alt="imagen de producto" width="150px" height="305 px">
             </div>
             <div class="descripcion-producto-comprar">
-                <h2><%=productos.mark%> </h2>
+                <h2><%=unProduct.mark%> </h2>
 
                 <br>
-                <h3 class="texto-comprar"><%=productos.model%> </h3>
+                <h3 class="texto-comprar"><%=unProduct.model%> </h3>
                 <br>
-                <h3 class="texto-comprar"> <%=productos.price%> </h3>
+                <h3 class="texto-comprar"> <%=unProduct.price%> </h3>
                 <br>
                 <ul>
                     <br>
-                    <li><%=products.discount%> </li>
+                    <li><%=unProduct.discount%> </li>
                     <div class="caracteristicas">
                         <br>
                         <i class="fas fa-percent " style="color:darkblue;"></i>
@@ -29,14 +29,14 @@
                     </div>
                     <article class="main-div-login button-comprar">
                         <button class="button" name="button"><span><i class="fa fa-shopping-cart" aria-hidden="true" style="color: white;"></i> AGREGAR AL CARRITO</span></button>
-                        <button class="button-enviar" name="button"><span><i class="fa fa-shopping-bag" aria-hidden="true"></i> COMPRAR</span></button>
+                        <a href= "/productsForm"><button class="button-enviar" name="button"><span><i class="fa fa-shopping-bag" aria-hidden="true"></i> COMPRAR</span></button></a>
                     </article>
                     <article class="main-div-login button-comprar">
                     
                         <br>
-                        <a href="/products/productEdit/<%=productos.id%>"><button class="button-editar" name="button"><span><i class="fa fa-pencil-square" aria-hidden="true"></i> EDITAR PRODUCTO</span></button></a>
+                        <a href="/products/productEdit/<%=unProduct.id%>"><button class="button-editar" name="button"><span><i class="fa fa-pencil-square" aria-hidden="true"></i> EDITAR PRODUCTO</span></button></a>
                         
-                        <form action="/products/<%=productos.id%>?_method=delete " method="POST" style="display: inline-flex">
+                        <form action="/products/<%=unProduct.id%>?_method=delete " method="POST" style="display: inline-flex">
 
 							<button type="submit" class="button-borrar"><span><i class="fa fa-trash-o" aria-hidden="true"></i> ELIMINAR PRODUCTO</button>
 
@@ -61,27 +61,27 @@
                         <div class="caracteristicas">
                             <i class="fas fa-mobile" style="color:darkblue;"></i>
                             <br>
-                            <li> Cámara frontal principal: <%=productos.camera%></li>
+                            <li> Cámara frontal principal: <%=unProduct.camera%></li>
                         </div>
                         <div class="caracteristicas">
                             <i class="fas fa-fingerprint" style="color:darkblue;"></i>
                             <br>
-                            <li> Desbloqueo: <%= productos.unlocking %> </li>
+                            <li> Desbloqueo: <%= unProduct.unlocking %> </li>
                         </div>
                         <div class="caracteristicas">
                             <i class="fas fa-sd-card" style="color:darkblue;"></i>
                             <br>
-                            <li>Memoria interna:<%=productos.memory%></li>
+                            <li>Memoria interna:<%=unProduct.memory%></li>
                         </div>
                         <div>
                             <div class="caracteristicas">
                                 <i class="far fa-window-maximize" style="color:darkblue;"></i>
-                                <li> Tamaño de la pantalla: <%=productos.screen%> </li>
+                                <li> Tamaño de la pantalla: <%=unProduct.screen%> </li>
                             </div>
                         </div>
                     </main>
                     <br>
-                    <h4><%=productos.description%></h4>
+                    <h4><%=unProduct.description%></h4>
                 </ul>
             </div>
         </article>
