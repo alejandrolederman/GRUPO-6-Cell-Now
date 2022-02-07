@@ -10,8 +10,12 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(100),
     }
   };
+  let config = {
+    tableName: "marks",
+    timestamps: false,
+  };
 
-  const Mark = sequelize.define(alias, cols);
+  const Mark = sequelize.define(alias, cols, config);
   Mark.associate = function (models) {
     Mark.hasMany(models.Model, {
       as: "model",

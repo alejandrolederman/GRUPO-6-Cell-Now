@@ -35,7 +35,12 @@ module.exports = (sequelize, dataTypes) => {
     },
   };
 
-  const Product = sequelize.define(alias, cols);
+  let config = {
+    tableName: "products",
+    timestamps: false,
+  };
+
+  const Product = sequelize.define(alias, cols, config);
 
 
   Product.associate = function (models) {

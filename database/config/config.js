@@ -5,5 +5,8 @@ module.exports = {
     "database": "cellnow_db",
     "host": "localhost",
     "dialect": "mysql"
-  }
+  },
+  define: {
+    timestamps: false
+}
 };

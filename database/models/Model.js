@@ -13,7 +13,11 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(100),
     }
   };
-  const Model = sequelize.define(alias, cols);
+  let config = {
+    tableName: "models",
+    timestamps: false,
+  };
+  const Model = sequelize.define(alias, cols, config);
   Model.associate = function (models) {
     Model.belongsTo(models.Mark, {
       as: "Mark",
