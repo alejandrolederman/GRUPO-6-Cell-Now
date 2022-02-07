@@ -158,6 +158,13 @@ const productController = {
 //////////////////////////////////////////////////////////////////////////////////////
     venta: (req, res) =>{      
 
+        res.render('./products/productoVendido');
+
+
+    },
+
+    confirmarVenta: (req,res)=>{
+
         res.render('./products/confirmVenta');
 
 

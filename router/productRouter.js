@@ -5,6 +5,7 @@ const uploadFilePproducts = require ("../middlewares/multerStorangeProduct")
 
 
 const productController = require('../controller/productController');
+const { venta } = require('../controller/productController');
 
 /*** GET ONE PRODUCT ***/
 router.get('/detail/:id', productController.productDetail);
@@ -24,7 +25,9 @@ router.get('/productsList', productController.productsList);
 
  /*** DELETE ONE PRODUCT***/                
 
-router.get('/venderProducto', productController.venta)
+router.get('/productoVendido', productController.venta);
+
+router.get('/confirmVenta', productController.confirmarVenta);
 
 router.delete('/:id', productController.destroy); 
 
