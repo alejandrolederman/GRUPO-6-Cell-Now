@@ -15,7 +15,7 @@ module.exports = (sequelize, dataTypes) => {
   
 let config = {
   tableName: "usercategory",
-  freezeTableName: true,
+  // freezeTableName: true,
   timestamps: false
 }
 

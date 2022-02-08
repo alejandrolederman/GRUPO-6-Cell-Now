@@ -6,6 +6,11 @@ module.exports = (sequelize, dataTypes) => {
       primaryKey: true,
       autoIncrement: true,
     },
+    usercategoryId: {
+      type: dataTypes.INTEGER,
+      foreignKey: true,
+      
+    },
     firstName: {
       type: dataTypes.STRING(100)
     },
@@ -21,11 +26,7 @@ module.exports = (sequelize, dataTypes) => {
     password: {
       type: dataTypes.STRING(100)
     },
-    usercategoryId: {
-      type: dataTypes.INTEGER,
-      foreignKey: true,
-      
-    },
+    
     avatar: {
       type: dataTypes.STRING(100)
     }

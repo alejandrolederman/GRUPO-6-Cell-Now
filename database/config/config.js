@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "cellnow_db",
+    "database": "cellnow",
     "host": "localhost",
     "dialect": "mysql"
   },

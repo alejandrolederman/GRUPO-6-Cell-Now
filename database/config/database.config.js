@@ -49,7 +49,7 @@
 //     }
 //   };
   const {Sequelize} = require("sequelize");
-  const connect = new Sequelize ("cellnow_db","root",null,{
+  const connect = new Sequelize ("cellnow","root",null,{
     host: 'localhost',
     dialect:'mysql'
   } );
