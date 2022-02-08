@@ -25,11 +25,11 @@ router.get('/productsList', productController.productsList);
 
  /*** DELETE ONE PRODUCT***/                
 
-router.get('/productoVendido', productController.venta);
+// router.get('/productoVendido', productController.venta);
 
-router.get('/confirmVenta', productController.confirmarVenta);
+router.get('/confirmVenta/:id', productController.confirmarVenta);
 
-router.delete('/:id', productController.destroy); 
+router.delete('/productoVendido/:id', productController.destroy); 
 
 
 module.exports = router;

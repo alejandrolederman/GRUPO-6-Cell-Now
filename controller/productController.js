@@ -30,7 +30,7 @@ const productController = {
       
         db.Product.findByPk(req.params.id)
         .then(function(unProduct){
-            res.render('./products/detail', {unProduct})  
+            res.render('./products/detail', {unProduct: unProduct})  
         })
         .catch(function(err){
             console.log(err)
@@ -156,17 +156,22 @@ const productController = {
     },
 
 //////////////////////////////////////////////////////////////////////////////////////
-    venta: (req, res) =>{      
+    // venta: (req, res) =>{      
 
-        res.render('./products/productoVendido');
+    //     res.render('./products/productoVendido');
 
 
-    },
+    // },
 
     confirmarVenta: (req,res)=>{
 
-        res.render('./products/confirmVenta');
-
+        db.Product.findByPk(req.params.id)
+        .then(function(unProduct){
+            res.render('./products/confirmVenta', {unProduct})  
+        })
+        .catch(function(err){
+            console.log(err)
+        }) 
 
     },
 
@@ -181,7 +186,7 @@ const productController = {
                 id : req.params.id
             }
         })
-        .then(()=>  res.redirect('./products/venderProducto'))
+        .then(()=>  res.redirect('./products/productoVendido'))
         .catch(error => console.log(error))
     },
 
