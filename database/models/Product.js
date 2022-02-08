@@ -7,20 +7,20 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true,
     },
     markId: {
-      type: dataTypes.INTEGER,
-    },
-    price: {
-      type: dataTypes.INTEGER,
-    },
-    discount: {
-      type: dataTypes.STRING(280),
-    },
-    camera: {
+      
       type: dataTypes.INTEGER,
     },
     modelId: {
       type: dataTypes.INTEGER,
     },
+    price: {
+      type: dataTypes.STRING(280),
+    },
+    
+    camera: {
+      type: dataTypes.STRING(280),
+    },
+    
     screen: {
       type: dataTypes.STRING(280),
     },
@@ -31,6 +31,9 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.STRING(500),
     },
     image: {
+      type: dataTypes.STRING(280),
+    },
+    discount: {
       type: dataTypes.STRING(280),
     },
   };
@@ -61,7 +64,7 @@ module.exports = (sequelize, dataTypes) => {
   
  
     Product.belongsTo(models.Model, {
-      as: "Modelo",
+      as: "model",
       foreignKey: "modelId"
 
     })

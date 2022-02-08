@@ -68,16 +68,16 @@ const productController = {
             
         db.Product.create({
 
-            MarkId: req.body.Mark,
-            ModelId: req.body.ModelId,
+            markId: req.body.MarkId,
+            modelId: req.body.ModelId,
             price: req.body.price,
-            di: req.body.discount,
             description: req.body.description,
             camera: req.body.camera,
             screen: req.body.screen,
             memory: req.body.memory,
             unlocking: req.body.unlocking,
-            image: req.body.image
+            image: req.body.image,
+            discount: req.body.discount
         
         })
         res.redirect("/");
