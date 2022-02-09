@@ -30,6 +30,11 @@
     
 }
 
+.Fonts-right {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+}
+
 .slideshow-container {
         max-width: 1000px;
         position: relative;
