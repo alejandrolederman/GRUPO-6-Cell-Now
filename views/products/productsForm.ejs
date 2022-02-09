@@ -15,12 +15,17 @@
                 <h4 lass="text-color"> Marca </h4>
                 <div>
                     <select name="MarkId"class="nombre-registro">
+                        <option value="0">selecciona una marca</option>
                         <% for (let i = 0; i < Mark.length; i++){ %> 
                         <option value="<%= Mark[i].id %> ">
                             <%= Mark[i].name %> 
                         </option>
                         <% } %> 
                     </select>
+                </div>
+
+                <div>
+                    
                 </div>
                 <br>
                 <br>

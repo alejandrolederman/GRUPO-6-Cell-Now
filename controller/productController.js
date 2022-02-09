@@ -60,6 +60,14 @@ const productController = {
         .catch(function(err){
             console.log(err)
         })  
+
+        // db.Model.findAll()
+        // .then(function(model){
+        //     res.render("./products/productsForm", {model});
+        // })
+        // .catch(function(err){
+        //     console.log(err)
+        // }) 
     },
 //////////////////////////////////////////////////////////////
     // Create -  Method to store
