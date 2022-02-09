@@ -19,12 +19,12 @@
     <br>
     <h3 class="texto-comprar"> <%=unProduct.price%> </h3>
     <br>
-    <form action="/peliculas/borrar/<%= unProduct.id %> " method="POST">
-        <button type="submit">Borrar</button>
+    <form action="/products/productoVendido/<%= unProduct.id %> " method="POST">
+        <button type="submit">COMPRAR</button>
     </form>
-    <!-- <div>
-       <a href='/products/productoVendido'> <button type="submit" class="button-enviar" name= "button" ><span><i class="fas fa-cash-register"aria-hidden="true"></i> ¡SI, ESTOY SEGURO!</span></button> 
-    </div>  -->
+     <div>
+       <a href='/'> <button class="button-enviar" name= "button" ><span><i class="fas fa-cash-register"aria-hidden="true"></i> NO</span></button> 
+    </div> 
 
 </body>
 <%- include ('../partials/footer')%>

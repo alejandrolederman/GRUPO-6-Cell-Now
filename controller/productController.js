@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+
 const db = require("../database/models")
 
  const productsFilePath = path.join(__dirname, '../data/products.json');
@@ -122,55 +123,68 @@ const productController = {
     // Update - Method to update
     update: (req, res) => {
 
-        const {
-            MarkId,
-            ModelId,
-            price,
-            discount,
-            description,
-            camera,
-            screen,
-            memory,
-            unlocking,
-            image,
+        db.Product.update({
 
-        } = req.body;
+            markId: req.body.MarkId,
+            modelId: req.body.ModelId,
+            price: req.body.price,
+            description: req.body.description,
+            camera: req.body.camera,
+            screen: req.body.screen,
+            memory: req.body.memory,
+            unlocking: req.body.unlocking,
+            image: req.body.image,
+            discount: req.body.discount
+        
+        },
+    //     {where: 
+    //     id : req.params.id
+    // }
+        )
 
-        const elId = req.params.id;
-        const productoNuevo = [];
+        // const {
+        //     MarkId,
+        //     ModelId,
+        //     price,
+        //     discount,
+        //     description,
+        //     camera,
+        //     screen,
+        //     memory,
+        //     unlocking,
+        //     image,
 
-        products.map(data => {
+        // } = req.body;
 
-            if (data.id == elId) {
+        // const elId = req.params.id;
+        // const productoNuevo = [];
 
-                    data.mark = mark,
-                    data.model = model,
-                    data.price = price,
-                    data.description = description,
-                    data.discount = discount,
-                    data.camera = camera,
-                    data.unlocking = unlocking,
-                    data.screen = screen,
-                    data.memory = memory,
-                    data.image = image
+        // products.map(data => {
 
-            }
-            productoNuevo.push(data);
-        });
+        //     if (data.id == elId) {
 
-        fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
-        res.redirect("/");
+        //             data.mark = mark,
+        //             data.model = model,
+        //             data.price = price,
+        //             data.description = description,
+        //             data.discount = discount,
+        //             data.camera = camera,
+        //             data.unlocking = unlocking,
+        //             data.screen = screen,
+        //             data.memory = memory,
+        //             data.image = image
+
+        //     }
+        //     productoNuevo.push(data);
+        // });
+
+        // fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
+        // res.redirect("/");
 
     },
 
 //////////////////////////////////////////////////////////////////////////////////////
-    // venta: (req, res) =>{      
-
-    //     res.render('./products/productoVendido');
-
-
-    // },
-
+ 
     confirmarVenta: (req,res)=>{
 
         db.Product.findByPk(req.params.id)
@@ -180,13 +194,9 @@ const productController = {
         .catch(function(err){
             console.log(err)
         }) 
-
     },
     
-
-
 ////////////////////////////////////////////////////////////////////////////////////////////
-
 
     // Delete - Delete one product from DB
     borrar: (req,res) =>{
@@ -195,7 +205,7 @@ const productController = {
                 id : req.params.id
             }
         })
-        .then(()=>  res.redirect('/'))
+        .then(()=>  res.render('./products/productoVendido'))
         .catch(error => console.log(error))
     },
 
@@ -214,6 +224,13 @@ const productController = {
     //     fs.writeFileSync(productsFilePath, JSON.stringify(productoEliminado), 'utf-8');
     //     res.redirect("/");
     // }
+
+/////////////////////////////////////////////////////////////////////////////////////
+
+// vendido: (req, res) => {
+
+//     res.redirect('./products/productoVendido')
+// }
 
 /////////////////////////////////////////////////////////////////////////////////////
 
