@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-02-2022 a las 18:04:35
+-- Tiempo de generación: 09-02-2022 a las 19:00:59
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -80,6 +80,29 @@ CREATE TABLE `products` (
   `image` varchar(100) NOT NULL,
   `discount` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `products`
+--
+
+INSERT INTO `products` (`id`, `markId`, `modelId`, `price`, `camera`, `screen`, `unlocking`, `description`, `image`, `discount`) VALUES
+(16, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(21, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(22, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(30, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(37, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(38, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(39, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(40, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(41, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(42, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(43, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(44, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(45, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(46, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(47, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(48, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
+(49, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs');
 
 -- --------------------------------------------------------
 
@@ -203,7 +226,7 @@ ALTER TABLE `models`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
 
 --
 -- AUTO_INCREMENT de la tabla `usercategory`
@@ -231,8 +254,8 @@ ALTER TABLE `models`
 -- Filtros para la tabla `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`markId`) REFERENCES `marks` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`modelId`) REFERENCES `models` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`modelId`) REFERENCES `models` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `products_ibfk_3` FOREIGN KEY (`markId`) REFERENCES `marks` (`id`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `trolly`

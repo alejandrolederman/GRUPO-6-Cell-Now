@@ -29,18 +29,29 @@
                     </div>
                     <article class="main-div-login button-comprar">
                         <button class="button" name="button"><span><i class="fa fa-shopping-cart" aria-hidden="true" style="color: white;"></i> AGREGAR AL CARRITO</span></button>
-                        <a href= "/products/confirmVenta/<%= unProduct.id %> "><button class="button-enviar" name="button"><span><i class="fa fa-shopping-bag" aria-hidden="true"></i> COMPRAR</span></button></a>
-                    </article>
-                    <article class="main-div-login button-comprar">
-                    
-                        <br>
-                        <a href="/products/productEdit/<%=unProduct.id%>"><button class="button-editar" name="button"><span><i class="fa fa-pencil-square" aria-hidden="true"></i> EDITAR PRODUCTO</span></button></a>
+                        <% if(locals.isLogged) {%> 
+
+                            <a href= "/products/confirmVenta/<%= unProduct.id %> "><button class="button-enviar" name="button"><span><i class="fa fa-shopping-bag" aria-hidden="true"></i> COMPRAR</span></button></a>
+                        </article>
+                        <article class="main-div-login button-comprar">
                         
-                        <form action="/products/<%=unProduct.id%>?_method=delete " method="POST" style="display: inline-flex">
-
-							<button type="submit" class="button-borrar"><span><i class="fa fa-trash-o" aria-hidden="true"></i> ELIMINAR PRODUCTO</button>
-
-						</form> 
+                            <br>
+                            <a href="/products/productEdit/<%=unProduct.id%>"><button class="button-editar" name="button"><span><i class="fa fa-pencil-square" aria-hidden="true"></i> EDITAR PRODUCTO</span></button></a>
+                            
+                            <form action="/products/<%=unProduct.id%>?_method=delete " method="POST" style="display: inline-flex">
+    
+                                <button type="submit" class="button-borrar"><span><i class="fa fa-trash-o" aria-hidden="true"></i> ELIMINAR PRODUCTO</button>
+    
+                            </form> 
+                            
+                               <% } else { %> 
+                        
+                                <h2>registrate para realizar tus compras</h2>
+                                
+                        
+                                 <% } %> 
+                           
+                 
                         <!-- <button class="button" name="button"><span> ELIMINAR PRODUCTO</span></button> -->
                     </article>
                     <br>
