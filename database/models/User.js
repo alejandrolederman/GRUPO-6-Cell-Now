@@ -28,7 +28,7 @@ module.exports = (sequelize, dataTypes) => {
     },
     
     avatar: {
-      type: dataTypes.STRING(100)
+      type: dataTypes.STRING(500)
     }
   };
   let config = {
