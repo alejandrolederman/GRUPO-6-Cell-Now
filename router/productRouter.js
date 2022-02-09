@@ -28,8 +28,9 @@ router.get('/productsList', productController.productsList);
 // router.get('/productoVendido', productController.venta);
 
 router.get('/confirmVenta/:id', productController.confirmarVenta);
+router.post("/confirmVenta/:id", productController.borrar);
 
-router.delete('/productoVendido/:id', productController.destroy); 
+// router.delete('/productoVendido/:id', productController.destroy); 
 
 
 module.exports = router;

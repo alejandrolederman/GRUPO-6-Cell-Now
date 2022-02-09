@@ -182,19 +182,20 @@ const productController = {
         }) 
 
     },
+    
 
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
 
     // Delete - Delete one product from DB
-    destroy: (req,res) =>{
+    borrar: (req,res) =>{
         db.Product.destroy({
             where: {
                 id : req.params.id
             }
         })
-        .then(()=>  res.redirect('./products/productoVendido'))
+        .then(()=>  res.redirect('/'))
         .catch(error => console.log(error))
     },
 
