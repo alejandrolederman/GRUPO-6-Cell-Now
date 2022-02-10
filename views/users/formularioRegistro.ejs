@@ -62,14 +62,18 @@
 <br>
 <h4 class="cell"> Tipo de usuario</h4>
 <div>
-    <select name="user_category">
-        <option value="0">selcciona una categoria</option>
+    <select name="user_category" >
+        <option selected="true" disabled="disabled">seleccione una categoria</option>
         <% for (let i = 0; i < categoria.length; i++){ %> 
         <option value="<%= categoria[i].id %> ">
             <%= categoria[i].name %> 
         </option>
         <% } %> 
     </select>
+    <div><%if(locals.errors && errors.user_category) { %>
+        <p class="errorEpress"><%= errors.user_category.msg %> </p>
+    <% } %>
+    </div>
 </div>
 <br>
             

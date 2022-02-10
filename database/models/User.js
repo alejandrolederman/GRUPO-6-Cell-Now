@@ -9,7 +9,6 @@ module.exports = (sequelize, dataTypes) => {
     usercategoryId: {
       type: dataTypes.INTEGER,
       foreignKey: true,
-      
     },
     firstName: {
       type: dataTypes.STRING(100)
@@ -26,15 +25,16 @@ module.exports = (sequelize, dataTypes) => {
     password: {
       type: dataTypes.STRING(100)
     },
-    
     avatar: {
-      type: dataTypes.STRING(100)
+      type: dataTypes.STRING(500)
     }
   };
+
   let config = {
     tableName: "users",
     timestamps: false,
   };
+
   const User = sequelize.define(alias, cols, config);
 
   User.associate = function (models) {

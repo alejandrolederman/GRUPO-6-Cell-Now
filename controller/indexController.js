@@ -8,7 +8,8 @@ const products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 
 const indexController = {
     home: (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+            include: [{association: "Mark"}]})
         .then(function(products){
         res.render('./main/home', {
          products

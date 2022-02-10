@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-02-2022 a las 19:00:59
+-- Tiempo de generación: 10-02-2022 a las 18:47:35
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -39,28 +39,12 @@ CREATE TABLE `marks` (
 --
 
 INSERT INTO `marks` (`id`, `name`) VALUES
-(1, 'Samsung'),
-(2, 'iPhone');
-
--- --------------------------------------------------------
-
---
--- Estructura de tabla para la tabla `models`
---
-
-CREATE TABLE `models` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `markId` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `models`
---
-
-INSERT INTO `models` (`id`, `name`, `markId`) VALUES
-(1, 'A20', 1),
-(2, '8 Plus', 2);
+(13, 'Samsung'),
+(14, 'iPhone'),
+(15, 'OnePlus'),
+(16, 'LG'),
+(17, 'Xiaomi'),
+(18, 'iPhone');
 
 -- --------------------------------------------------------
 
@@ -71,38 +55,23 @@ INSERT INTO `models` (`id`, `name`, `markId`) VALUES
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
   `markId` int(11) NOT NULL,
-  `modelId` int(11) NOT NULL,
-  `price` varchar(50) NOT NULL,
-  `camera` varchar(100) NOT NULL,
-  `screen` varchar(100) NOT NULL,
-  `unlocking` varchar(100) NOT NULL,
+  `model` varchar(50) NOT NULL,
+  `price` varchar(20) NOT NULL,
+  `discount` varchar(10) NOT NULL,
+  `camera` varchar(50) NOT NULL,
+  `screen` varchar(50) NOT NULL,
+  `unlocking` varchar(50) NOT NULL,
   `description` varchar(500) NOT NULL,
-  `image` varchar(100) NOT NULL,
-  `discount` varchar(100) NOT NULL
+  `image` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `markId`, `modelId`, `price`, `camera`, `screen`, `unlocking`, `description`, `image`, `discount`) VALUES
-(16, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(21, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(22, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(30, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(37, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(38, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(39, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(40, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(41, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(42, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(43, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(44, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(45, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(46, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(47, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(48, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs'),
-(49, 2, 1, '123456', 'sdfsdf', 'sdfsfd', 'sfdsfd', 'sdfsfd', '71FuI8YvCNL._AC_SL1500_.jpg', 'sdfsfdsfs');
+INSERT INTO `products` (`id`, `markId`, `model`, `price`, `discount`, `camera`, `screen`, `unlocking`, `description`, `image`) VALUES
+(11, 13, 'A20', '$85.000', '% 5', '45 mp', '8.4', 'huella ', 'esta muy bueno', ''),
+(12, 14, '8 plus', '$113.000', '%5', '123', '8.4', 'huella ', 'muy bueno', '1644513941048_img.jpg');
 
 -- --------------------------------------------------------
 
@@ -114,7 +83,7 @@ CREATE TABLE `trolly` (
   `id` int(11) NOT NULL,
   `userId` int(11) NOT NULL,
   `prudctId` int(11) NOT NULL,
-  `amount` varchar(50) NOT NULL
+  `amount` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -133,8 +102,8 @@ CREATE TABLE `usercategory` (
 --
 
 INSERT INTO `usercategory` (`id`, `name`) VALUES
-(1, 'usuario'),
-(2, 'administrador');
+(5, 'usuario'),
+(6, 'administrador');
 
 -- --------------------------------------------------------
 
@@ -144,21 +113,22 @@ INSERT INTO `usercategory` (`id`, `name`) VALUES
 
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
-  `usercategoryId` int(11) NOT NULL,
-  `firstName` varchar(100) NOT NULL,
-  `lastName` varchar(100) NOT NULL,
-  `userName` varchar(100) NOT NULL,
-  `email` varchar(200) NOT NULL,
+  `firstName` varchar(20) NOT NULL,
+  `lastName` varchar(20) NOT NULL,
+  `userName` varchar(20) NOT NULL,
+  `email` varchar(20) NOT NULL,
   `password` varchar(500) NOT NULL,
-  `avatar` varchar(200) NOT NULL
+  `userCategoryId` int(11) NOT NULL,
+  `avatar` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `users`
 --
 
-INSERT INTO `users` (`id`, `usercategoryId`, `firstName`, `lastName`, `userName`, `email`, `password`, `avatar`) VALUES
-(6, 2, 'ale', 'ale', 'ale', 'ale@ale.com', '$2a$10$LjEUfsWPbLawOzc5rjXOwuMFt2fiEYwxfU3VtEVUGWCkGoHP3RK5C', '');
+INSERT INTO `users` (`id`, `firstName`, `lastName`, `userName`, `email`, `password`, `userCategoryId`, `avatar`) VALUES
+(14, 'alejandro', 'lederman', 'ale', 'ale@ale.com', '$2a$10$rTuNOOUINTUNAZa..XzOhOiSWh6DvdIT600cGWLrNJWUwOe4Zp8T2', 6, ''),
+(15, 'Alejandro', 'Lederman', 'ale', 'a@a.com', '$2a$10$b0SZ4SZoAckzZAqBb8Cf0Or2iGTuAAq9A.tAgcmFlEhBH/C2CvEL.', 6, '1644514524067_img.jpg');
 
 --
 -- Índices para tablas volcadas
@@ -171,27 +141,21 @@ ALTER TABLE `marks`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `models`
---
-ALTER TABLE `models`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `markId` (`markId`);
-
---
 -- Indices de la tabla `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `markId` (`markId`),
-  ADD KEY `modelId` (`modelId`);
+  ADD KEY `mark_id` (`markId`),
+  ADD KEY `mark_id_2` (`markId`),
+  ADD KEY `markId` (`markId`);
 
 --
 -- Indices de la tabla `trolly`
 --
 ALTER TABLE `trolly`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `userId` (`userId`),
-  ADD KEY `prudctId` (`prudctId`);
+  ADD KEY `user_id` (`userId`),
+  ADD KEY `prudct_id:` (`prudctId`);
 
 --
 -- Indices de la tabla `usercategory`
@@ -204,7 +168,7 @@ ALTER TABLE `usercategory`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `userCategoryId` (`usercategoryId`);
+  ADD KEY `user_category_id` (`userCategoryId`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -214,61 +178,54 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `marks`
 --
 ALTER TABLE `marks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT de la tabla `models`
---
-ALTER TABLE `models`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+
+--
+-- AUTO_INCREMENT de la tabla `trolly`
+--
+ALTER TABLE `trolly`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `usercategory`
 --
 ALTER TABLE `usercategory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `models`
---
-ALTER TABLE `models`
-  ADD CONSTRAINT `models_ibfk_1` FOREIGN KEY (`markId`) REFERENCES `marks` (`id`) ON UPDATE CASCADE;
-
---
 -- Filtros para la tabla `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`modelId`) REFERENCES `models` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `products_ibfk_3` FOREIGN KEY (`markId`) REFERENCES `marks` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`markId`) REFERENCES `marks` (`id`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `trolly`
 --
 ALTER TABLE `trolly`
-  ADD CONSTRAINT `trolly_ibfk_1` FOREIGN KEY (`prudctId`) REFERENCES `products` (`id`) ON UPDATE CASCADE,
-  ADD CONSTRAINT `trolly_ibfk_2` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `trolly_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `trolly_ibfk_2` FOREIGN KEY (`prudctId`) REFERENCES `products` (`id`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `users`
 --
 ALTER TABLE `users`
-  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`usercategoryId`) REFERENCES `usercategory` (`id`) ON UPDATE CASCADE;
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`userCategoryId`) REFERENCES `usercategory` (`id`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
