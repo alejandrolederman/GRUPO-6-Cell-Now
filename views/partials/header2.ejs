@@ -1,41 +1,37 @@
 <header class="header-login">
     <nav class="main-header-top-bar">
-        <div class="coponente-logo";>
-            <a href="/"><img src="/img/logo/logo_small_icon_only.png " class="logo" width="50%">
-            <h5>CELLNOW.COM </h5>
-        </a>
-        </div> 
-                <div class="form">
-                    <input type="text" name="search" placeholder="Busca lo que quieras           " class="input">
-                </div>  
-                
-                <div class="menu-right-header">
-                    <!-- <i class="fas fa-user"></i> -->
-                    <% if(locals.isLogged) {%> 
-                    <div>
-                        <a href="/user/userProfile"><i > <%= locals.userLogged.firstName %> </i></a>
-                        <br>
+        <div class="coponente-logo" ;>
+            <a href="/"><img src="/img/logo/logo_small_icon_only.jpg " class="logo" width="50%">
+                <h5>CELLNOW.COM </h5>
+            </a>
+        </div>
+
+        <div class="search">
+            <div class="form">
+               <input type="text" name="search" placeholder="Busca lo que quieras           " class="input">
+        </div>
+
+            <div class="menu-right-header">
+                <!-- <i class="fas fa-user"></i> -->
+                <% if(locals.isLogged) {%>
+                    <div class="cuandoEstaLogueado">
+                        <a href="/user/userProfile"><i><%= locals.userLogged.firstName %></i></a>
                         <a href="/products/productsForm">Vender</a>
                         <a href="/user/logout">Logout</a>
-                         
-                        <div>
-                            <a href="/user/usersList">Listar Usuarios Registrados</a>
-                        </div>
-                         
+                        <a href="/user/usersList">listar usuarios registrados</a>
                     </div>
-                    <% } else { %> 
-                    <div class="Fonts-right">
+                <% } else { %>
+                    <div class="cuandoNoEstaLogueado">
                         <a href="/user/login">Vender</a>
                         <a href="/user/login"><i>Login</i></a>
-                        <a href="/user/formularioRegistro"><i class="header-usuraio">   Registrate   </i></a>
-                        <% } %> 
-                        <!-- <a href= "/trolley/carritoDeCompras"><i class="fas fa-shopping-cart" ></i></a> -->
+                        <a href="/user/formularioRegistro"><i class="header-usuraio"> Registrate </i></a>
+                <% } %>
+                            <!-- <a href= "/trolley/carritoDeCompras"><i class="fas fa-shopping-cart" ></i></a> -->
                     </div>
                         <!-- <i class="far fa-question-circle"></i>  -->
-                       
                         <!-- class="fas fa-users"> -->
-                
-                    <!-- <ul class="navbar-nav align-items-center">
+            </div>
+            <!-- <ul class="navbar-nav align-items-center">
                        
                             <li class="nav-item dropdown">
                                 <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -54,7 +50,7 @@
                     </ul>
                     -->
 
-                         
-            </div>    
+
+        </div>
     </nav>
- </header>
+</header>
