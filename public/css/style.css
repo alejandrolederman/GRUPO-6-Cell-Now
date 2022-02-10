@@ -2,10 +2,73 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'herlvetica', sans-serif;
+}
+ /* <!--HEADER -->*/
+
+header {
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transition: 0,7s;
+    padding: 30px 20px;
+    z-index: 10;
+    align-items: center;
+}
+.busqueda {
+    display: flex;
+}
+
+.menu-right-header {
+    text-align: right;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    color: grey;
+}
+
+.menu-right-header i {
+    margin-left: 10px;
+    font-size: 15px;
+}
+header .logo {
+    position: relative;
+    color: #fff;
+    font-weight: 600;
+    font-size: 2em;
+    letter-spacing: 2px;
+    transition: 1.5s;
+    text-decoration: none;
+}
+.div .menu-completo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div .menu-completo ul{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.div .menu-completo ul li{
+    list-style: none;
+}
+.div .menu-completo ul li a{
+    position: relative;
+    font-family: helvetica;
+    margin: 0 15px;
+    text-decoration: none;
+    color:#fff;
+    letter-spacing: 2px;
+    font-weight: 600;
+    transition: 0,7s
 }
  /* <!--BANNER PRINCIPAL -->*/
-
 
 .slideshow-container {
         max-width: 1000px;
@@ -369,12 +432,7 @@ footer {
     padding-top: 60px;
 }
 
-i,
-a,
-.header-usuraio {
-    text-decoration: none;
-    color: gray;
-}
+
 
 
 /* HASTA ACA ES EL BODY Y TODO LO GENERAL*/
@@ -382,10 +440,8 @@ a,
 
 /* DESDE ACA ES EL HEDER, HUBICACION DEL LOGO, LA BARRA DE BUSQUEDA, REGISTRO DE USUARIO, CARRITO Y ICONO DE AYUDA*/
 
-i {
-    color: gray;
-}
 
+/* 
 h2,
 h2 a,
 li {
@@ -474,7 +530,7 @@ header .form .submit {
     animation-duration: 1s;
     animation-timing-function: linear;
     animation-direction: alternate;
-}
+} */
 
 
 /* HASTA ACA ES EL HEADER*/
@@ -1000,14 +1056,15 @@ button:hover::after {
         margin: 0 40px;
         font-size: 40px;
     }
+    .search {
+        display: flex;
+        flex-wrap: wrap;
+    }
     .main-header-top-bar {
         width: 100%;
         display: flex;
-        flex-wrap: wrap;
-        flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: center;
         align-items: center;
-        align-content: center;
     }
     .input {
         display: block;
@@ -1016,10 +1073,11 @@ button:hover::after {
     .header-usuraio {
         display: none;
     }
-    .menu-right-header {
+    .menu-header {
         display: flex;
-        justify-content: space-around;
-        margin: 15px 0;
+        position: relative;
+        justify-content: center;
+        align-items: center;
     }
     .nombre {
         text-align: center;
@@ -1096,7 +1154,7 @@ button:hover::after {
     .input {
         flex-grow: 0.3;
     }
-    .menu-right-header {
+    .menu-header {
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -1108,6 +1166,13 @@ button:hover::after {
     .search {
         display: flex;
         flex-wrap: wrap;
+    }
+    .header ul li {
+        list-style: none;
+    }
+    .header ul li a {
+        position: relative;
+        
     }
 }
 
@@ -1127,6 +1192,7 @@ button:hover::after {
     .main-first-carrito {
         margin-top: 100px;
     }
+<<<<<<< HEAD
     .header-login {
         padding-top: 20px;
         width: 100%;
@@ -1136,6 +1202,8 @@ button:hover::after {
         /* position: fixed; */
         /* top: 10px; */
     }
+=======
+>>>>>>> ffe6c5c5ea42be23b85907349d348fccece8a48d
     .main-header-top-bar {
         display: flex;
         flex-wrap: nowrap;
@@ -1144,5 +1212,11 @@ button:hover::after {
     }
     div .menu-right-header i {
         size: 5px;
+    }
+    .header-login {
+        padding-top: 20px;
+        width: 100%;
+        background: white;
+        height: 130px;
     }
 }
