@@ -14,19 +14,33 @@
                 <input type="text" name="mark_id"  placeholder="Ingresa la marca" class="nombre-registro"> -->
                 <h4 lass="text-color"> Marca </h4>
                 <div>
-                    <select name="mark_id"class="nombre-registro">
-                        <% for (let i = 0; i < mark.length; i++){ %> 
-                        <option value="<%= mark[i].id %> ">
-                            <%= mark[i].name %> 
+                    <select name="MarkId"class="nombre-registro">
+                        <option value="0">selecciona una marca</option>
+                        <% for (let i = 0; i < Mark.length; i++){ %> 
+                        <option value="<%= Mark[i].id %> ">
+                            <%= Mark[i].name %> 
                         </option>
                         <% } %> 
                     </select>
                 </div>
+
+                <div>
+                    
+                </div>
                 <br>
                 <br>
-                <label for="model" class="text-color"> modelo  </label>
+                <!-- <label for="model" class="text-color"> modelo  </label>
                 <br>
-                <input type="text" name="model_id"  placeholder="Ingresa el modelo"  class="nombre-registro">
+                <input type="text" name="ModelId"  placeholder="Ingresa el modelo"  class="nombre-registro"> -->
+                <select name="ModelId"class="nombre-registro">
+                    <option value="0">selecciona una marca</option>
+                    
+                    <% for (let i = 0; i < Mark.model.length; i++){ %> 
+                    <option value="<%= Mark.model[i].id %> ">
+                        <%= Mark.model[i].name %> 
+                    </option>
+                    <% } %> 
+                </select>
                 <br>
                 <br>                
                 <label for="price" class="text-color"> precio del producto  </label>
@@ -34,6 +48,11 @@
                 <input type="text" name="price" placeholder="Ingresa el precio" class="nombre-registro" >
                 <br>
                 <br> 
+                <label for="discount" class="text-color"> descuento del producto  </label>
+                <br>
+                 <input type="text" name="discount" placeholder="Ingresa el descuento" class="nombre-registro" >
+                 <br>
+                 <br> 
                 <label for="description" class="text-color">Descripcion</label>             
                 <br>
                 <input type="textarea" name="description"  placeholder="Ingresa Descripcion" class="nombre-registro">
@@ -51,12 +70,12 @@
                 <br>
                 <label for="memory" class="text-color"> capacidad de almacenamiento  </label>
                 <br>
-                <input type="text" name="memory"  class="nombre-registro">
+                <input type="text" name="memory" placeholder="capacidad de almacenamiento" class="nombre-registro">
                 <br>
                 <br>
                 <label for="unlocking" class="text-color"> modo de desbloqueo  </label>
                 <br>
-                <input type="text" name="unlocking" class="nombre-registro" >
+                <input type="text" name="unlocking" placeholder="modo de desbloqueo" class="nombre-registro" >
                 <br>
                 <br> 
                               

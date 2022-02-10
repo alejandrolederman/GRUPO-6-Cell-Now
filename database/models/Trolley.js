@@ -16,10 +16,6 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.NUMBER(100),
     }
   };
-  // let config = {
-  //   tableName: "Trolly",
-  //   timestamps: false,
-  // };
 
   const Trolly = sequelize.define(alias, cols);
 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <%- include('../partials/head')%>
+<body>
+
+    <%- include('../partials/header')%>
+
+       <% if(locals.isLogged) {%> 
+    <h2> ¡Felicitaciones,  <%= userLogged.firstName %>! </h2>
+    <br>
+    <h3> Adquiriste el producto <h3>
+       <% } else { %> 
+
+        <h2>¡Felicitaciones, por adquirir tu nuevo telefono</h2>
+        <h2>no olvides registrarte para poder cordinar el envio!!!</h2>
+
+         <% } %> 
+   
+       <div>
+          <a href="/"> <button type="submit" class="button-enviar" name= "button" ><span><i class="fas fa-shopping-cart"aria-hidden="true"></i> Volver al inicio</span></button> 
+       </div> 
+   
+
+
+</body>
+<%- include ('../partials/footer')%>
+</html>

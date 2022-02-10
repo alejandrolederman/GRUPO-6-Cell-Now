@@ -48,11 +48,19 @@
 //       UsersSyncDB
 //     }
 //   };
+<<<<<<< HEAD
 //   const {Sequelize} = require("sequelize");
 //   const connect = new Sequelize ("cellnow_db","root",null,{
 //     host: 'localhost',
 //     dialect:'mysql'
 //   } );
+=======
+  const {Sequelize} = require("sequelize");
+  const connect = new Sequelize ("cellnow","root",null,{
+    host: 'localhost',
+    dialect:'mysql'
+  } );
+>>>>>>> 0fbd0977caccde16881ddb02e1a06e0c506e3e6d
 
 
 //   async function checkConnet(){

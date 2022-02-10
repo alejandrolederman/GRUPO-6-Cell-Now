@@ -1,13 +1,12 @@
 <header class="header-login">
     <nav class="main-header-top-bar">
         <div class="coponente-logo";>
-            <a href="/"><img src="/img/logo/logo_small_icon_only.jpg " class="logo" width="50%">
+            <a href="/"><img src="/img/logo/logo_small_icon_only.png " class="logo" width="50%">
             <h5>CELLNOW.COM </h5>
         </a>
         </div>
        
 
-            <div class="search">
 
                    
 
@@ -19,23 +18,24 @@
                     <!-- <i class="fas fa-user"></i> -->
                     <% if(locals.isLogged) {%> 
                     <div>
-                        <a href="/user/userProfile"><i > <%= locals.userLogged.first_name %> </i></a>
+                        <a href="/user/userProfile"><i > <%= locals.userLogged.firstName %> </i></a>
+                        <br>
                         <a href="/products/productsForm">Vender</a>
                         <a href="/user/logout">Logout</a>
 
                          
 
                         <div>
-                            <a href="/user/usersList">listar usuarios registrados</a>
+                            <a href="/user/usersList">Listar Usuarios Registrados</a>
 
                         </div>
                          
 
                     </div>
                     <% } else { %> 
-                    <div>
+                    <div class="Fonts-right">
                         <a href="/user/login">Vender</a>
-                        <a href="/user/login"><i>login</i></a>
+                        <a href="/user/login"><i>Login</i></a>
                         <a href="/user/formularioRegistro"><i class="header-usuraio">   Registrate   </i></a>
                         <% } %> 
                         <!-- <a href= "/trolley/carritoDeCompras"><i class="fas fa-shopping-cart" ></i></a> -->
@@ -43,7 +43,7 @@
                         <!-- <i class="far fa-question-circle"></i>  -->
                        
                         <!-- class="fas fa-users"> -->
-                </div> 
+                
                     <!-- <ul class="navbar-nav align-items-center">
                        
                             <li class="nav-item dropdown">

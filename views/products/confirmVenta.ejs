@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <%- include('../partials/head')%>
+<body>
+
+    <%- include('../partials/header')%>
+     
+ <h2> ¿Estás seguro que deseas comprar el producto? </h2>
+ <br>
+ <div class="producto-comprar">
+    
+</div>
+<div class="descripcion-producto-comprar">
+    <h2><%=unProduct.mark%> </h2>
+
+    <br>
+    <h3 class="texto-comprar"><%=unProduct.model%> </h3>
+    <br>
+    <h3 class="texto-comprar"> <%=unProduct.price%> </h3>
+    <br>
+    <form action="/products/productoVendido/<%= unProduct.id %> " method="POST">
+        <button type="submit">COMPRAR</button>
+    </form>
+     <div>
+       <a href='/'> <button class="button-enviar" name= "button" ><span><i class="fas fa-cash-register"aria-hidden="true"></i> NO</span></button> 
+    </div> 
+
+</body>
+<%- include ('../partials/footer')%>
+</html>

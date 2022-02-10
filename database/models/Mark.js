@@ -8,12 +8,16 @@ module.exports = (sequelize, dataTypes) => {
     },
     name: {
       type: dataTypes.STRING(100),
+    },
+
+    markId : {
+      type: dataTypes.STRING(100),
     }
   };
-  // let config = {
-  //   tableName: "Marks",
-  //   timestamps: false,
-  // };
+  let config = {
+    tableName: "marks",
+    timestamps: false,
+  };
 
   const Mark = sequelize.define(alias, cols);
   // Mark.associate = function (models) {
