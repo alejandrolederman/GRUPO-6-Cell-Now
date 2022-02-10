@@ -29,9 +29,18 @@
                 </div>
                 <br>
                 <br>
-                <label for="model" class="text-color"> modelo  </label>
+                <!-- <label for="model" class="text-color"> modelo  </label>
                 <br>
-                <input type="text" name="ModelId"  placeholder="Ingresa el modelo"  class="nombre-registro">
+                <input type="text" name="ModelId"  placeholder="Ingresa el modelo"  class="nombre-registro"> -->
+                <select name="ModelId"class="nombre-registro">
+                    <option value="0">selecciona una marca</option>
+                    
+                    <% for (let i = 0; i < Mark.model.length; i++){ %> 
+                    <option value="<%= Mark.model[i].id %> ">
+                        <%= Mark.model[i].name %> 
+                    </option>
+                    <% } %> 
+                </select>
                 <br>
                 <br>                
                 <label for="price" class="text-color"> precio del producto  </label>

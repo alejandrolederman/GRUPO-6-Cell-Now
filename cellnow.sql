@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 09-02-2022 a las 19:00:59
+-- Tiempo de generación: 10-02-2022 a las 01:47:03
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -31,16 +31,17 @@ USE `cellnow`;
 
 CREATE TABLE `marks` (
   `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL
+  `name` varchar(50) NOT NULL,
+  `modelId` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `marks`
 --
 
-INSERT INTO `marks` (`id`, `name`) VALUES
-(1, 'Samsung'),
-(2, 'iPhone');
+INSERT INTO `marks` (`id`, `name`, `modelId`) VALUES
+(1, 'Samsung', 0),
+(2, 'iPhone', 0);
 
 -- --------------------------------------------------------
 
@@ -168,7 +169,8 @@ INSERT INTO `users` (`id`, `usercategoryId`, `firstName`, `lastName`, `userName`
 -- Indices de la tabla `marks`
 --
 ALTER TABLE `marks`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `modelId` (`modelId`);
 
 --
 -- Indices de la tabla `models`
@@ -254,7 +256,6 @@ ALTER TABLE `models`
 -- Filtros para la tabla `products`
 --
 ALTER TABLE `products`
-  ADD CONSTRAINT `products_ibfk_2` FOREIGN KEY (`modelId`) REFERENCES `models` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `products_ibfk_3` FOREIGN KEY (`markId`) REFERENCES `marks` (`id`) ON UPDATE CASCADE;
 
 --

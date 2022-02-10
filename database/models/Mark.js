@@ -8,6 +8,10 @@ module.exports = (sequelize, dataTypes) => {
     },
     name: {
       type: dataTypes.STRING(100),
+    },
+
+    markId : {
+      type: dataTypes.STRING(100),
     }
   };
   let config = {

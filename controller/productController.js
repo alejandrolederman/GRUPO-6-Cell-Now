@@ -54,9 +54,11 @@ const productController = {
 ////////////////////////////////////////////////////////////////////
     // Create - Form to create
     crear: (req, res) => {
-        db.Mark.findAll()
+        db.Mark.findAll( { include: ["model"]})
+
         .then(function(Mark){
             res.render("./products/productsForm", {Mark});
+            
         })
         .catch(function(err){
             console.log(err)
