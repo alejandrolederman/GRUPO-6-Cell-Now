@@ -16,13 +16,13 @@ module.exports = (sequelize, dataTypes) => {
     //   timestamps: false,
     // };
   
-    const UserCategory = sequelize.define(alias, cols, config);
-    UserCategory.associate = function (models) {
-      UserCategory.hasMany(models.users, {
-        as: "users",
-        foreignKey: "userCategoryId"
-      });
-    }
+    const UserCategory = sequelize.define(alias, cols);
+    // UserCategory.associate = function (models) {
+    //   UserCategory.hasMany(models.users, {
+    //     as: "users",
+    //     foreignKey: "userCategoryId"
+    //   });
+    // }
   
   
     return UserCategory;

@@ -21,7 +21,7 @@ module.exports = (sequelize, dataTypes) => {
   //   timestamps: false,
   // };
 
-  const Trolly = sequelize.define(alias, cols, config);
+  const Trolly = sequelize.define(alias, cols);
 
 
 

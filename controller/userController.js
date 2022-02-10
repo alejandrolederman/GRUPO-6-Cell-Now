@@ -31,7 +31,7 @@ const userController = {
 
 ///////////////////////////////////////////////////////////    
     crear: function (req, res){
-        db.user_category.findAll()
+        db.userCategory.findAll()
         .then(function(categoria){
             return res.render("./users/formularioRegistro" , {categoria:categoria})
         })

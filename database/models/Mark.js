@@ -15,13 +15,13 @@ module.exports = (sequelize, dataTypes) => {
   //   timestamps: false,
   // };
 
-  const Mark = sequelize.define(alias, cols, config);
-  Mark.associate = function (models) {
-    Mark.hasMany(models.Model, {
-      as: "model",
-      foreignKey: "markId"
-    });
-  }
+  const Mark = sequelize.define(alias, cols);
+  // Mark.associate = function (models) {
+  //   Mark.belongsTo(models.products, {
+  //     as: "Product",
+  //     foreignKey: "markId"
+  //   });
+  // }
 
 
   return Mark;

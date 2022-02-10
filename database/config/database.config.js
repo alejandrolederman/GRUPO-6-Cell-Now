@@ -48,24 +48,24 @@
 //       UsersSyncDB
 //     }
 //   };
-  const {Sequelize} = require("sequelize");
-  const connect = new Sequelize ("cellnow_db","root",null,{
-    host: 'localhost',
-    dialect:'mysql'
-  } );
+//   const {Sequelize} = require("sequelize");
+//   const connect = new Sequelize ("cellnow_db","root",null,{
+//     host: 'localhost',
+//     dialect:'mysql'
+//   } );
 
 
-  async function checkConnet(){
-    try{
-      await connect.authenticate();
-      console.log("connet true");
-    } catch (err){
-      console.log("error/checkConnect", err);
-    }finally{
-      connect.close()
-    }
-  }
- module,exports = {
-   connect,
-    };
-    checkConnet()
+//   async function checkConnet(){
+//     try{
+//       await connect.authenticate();
+//       console.log("connet true");
+//     } catch (err){
+//       console.log("error/checkConnect", err);
+//     }finally{
+//       connect.close()
+//     }
+//   }
+//  module,exports = {
+//    connect,
+//     };
+//     checkConnet()

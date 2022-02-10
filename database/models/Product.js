@@ -18,8 +18,8 @@ module.exports = (sequelize, dataTypes) => {
     camera: {
       type: dataTypes.INTEGER,
     },
-    modelId: {
-      type: dataTypes.INTEGER,
+    model: {
+      type: dataTypes.STRING,
     },
     screen: {
       type: dataTypes.STRING(280),
@@ -39,11 +39,11 @@ module.exports = (sequelize, dataTypes) => {
   //   timestamps: false,
   // };
 
-  const Product = sequelize.define(alias, cols, config);
+  const Product = sequelize.define(alias, cols);
 
 
   Product.associate = function (models) {
-    Product.belongsToMany(models.users, {
+    Product.belongsToMany(models.User, {
       as: "users",
       through: "Trolley",
       foreignKey: "productId",
@@ -52,18 +52,11 @@ module.exports = (sequelize, dataTypes) => {
     });
   
   
-    Product.belongsTo(models.mark, {
-      as: "Mark",
-      foreignKey: "MarkId"
+    // Product.belongsTo(models.mark, {
+    //   as: "Mark",
+    //   foreignKey: "MarkId"
 
-    });
-  
- 
-    Product.belongsTo(models.Model, {
-      as: "Modelo",
-      foreignKey: "Model_id"
-
-    })
-  };
+    // });
+    };
   return Product;
 };

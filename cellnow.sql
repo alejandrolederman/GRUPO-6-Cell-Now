@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-02-2022 a las 04:48:51
+-- Tiempo de generación: 10-02-2022 a las 02:40:49
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -49,41 +49,6 @@ INSERT INTO `marks` (`id`, `name`) VALUES
 -- --------------------------------------------------------
 
 --
--- Estructura de tabla para la tabla `models`
---
-
-CREATE TABLE `models` (
-  `id` int(11) NOT NULL,
-  `name` varchar(50) NOT NULL,
-  `markId` int(10) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Volcado de datos para la tabla `models`
---
-
-INSERT INTO `models` (`id`, `name`, `markId`) VALUES
-(2, 'GALAXY S7', 7),
-(3, 'NOTE 8', 7),
-(4, 'GALAXY S20 PLUS', 7),
-(5, 'MOTO G100', 8),
-(6, 'MOTO G 9 POWER', 8),
-(7, 'MOTO G 200', 8),
-(8, 'G7 ONE', 10),
-(9, 'K12 PLUS', 10),
-(10, '8T', 9),
-(11, '8 PRO', 9),
-(12, '8', 9),
-(13, '13 PRO', 12),
-(14, '12 MINI', 12),
-(15, '6 S', 12),
-(16, 'POCO X3', 11),
-(17, 'MI 10 PRO', 11),
-(18, 'MI 11 T', 11);
-
--- --------------------------------------------------------
-
---
 -- Estructura de tabla para la tabla `products`
 --
 
@@ -93,7 +58,7 @@ CREATE TABLE `products` (
   `price` varchar(10) NOT NULL,
   `discount` varchar(10) NOT NULL,
   `camera` varchar(50) NOT NULL,
-  `modelId` int(11) NOT NULL,
+  `model` varchar(50) NOT NULL,
   `screen` varchar(20) NOT NULL,
   `unlocking` varchar(20) NOT NULL,
   `image` varchar(20) NOT NULL,
@@ -104,9 +69,9 @@ CREATE TABLE `products` (
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `markId`, `price`, `discount`, `camera`, `modelId`, `screen`, `unlocking`, `image`, `description`) VALUES
-(9, 0, '120000', '', '56mp', 0, '8.4', 'huella ', '', ''),
-(10, 0, 'sdfsdfsdfs', '', 'sfsfds', 0, 'sdfsdf', 'sdfsdfsdfs', '', 'sdfsdfsd');
+INSERT INTO `products` (`id`, `markId`, `price`, `discount`, `camera`, `model`, `screen`, `unlocking`, `image`, `description`) VALUES
+(9, 0, '120000', '', '56mp', '0', '8.4', 'huella ', '', ''),
+(10, 0, 'sdfsdfsdfs', '', 'sfsfds', '0', 'sdfsdf', 'sdfsdfsdfs', '', 'sdfsdfsd');
 
 -- --------------------------------------------------------
 
@@ -180,21 +145,14 @@ ALTER TABLE `marks`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indices de la tabla `models`
---
-ALTER TABLE `models`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `mark_id` (`markId`);
-
---
 -- Indices de la tabla `products`
 --
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `mark_id` (`markId`),
-  ADD KEY `model_id` (`modelId`),
+  ADD KEY `model_id` (`model`),
   ADD KEY `mark_id_2` (`markId`),
-  ADD KEY `model_id_2` (`modelId`);
+  ADD KEY `model_id_2` (`model`);
 
 --
 -- Indices de la tabla `trolly`
@@ -226,12 +184,6 @@ ALTER TABLE `users`
 --
 ALTER TABLE `marks`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
---
--- AUTO_INCREMENT de la tabla `models`
---
-ALTER TABLE `models`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
