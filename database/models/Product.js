@@ -11,21 +11,14 @@ module.exports = (sequelize, dataTypes) => {
       type: dataTypes.INTEGER,
     },
     model: {
-      type: dataTypes.STRING,
+      type: dataTypes.STRING(280),
     },
     price: {
       type: dataTypes.STRING(280),
     },
     
     camera: {
-<<<<<<< HEAD
-      type: dataTypes.INTEGER,
-    },
-    model: {
-      type: dataTypes.STRING,
-=======
       type: dataTypes.STRING(280),
->>>>>>> 0fbd0977caccde16881ddb02e1a06e0c506e3e6d
     },
     
     screen: {
@@ -50,7 +43,7 @@ module.exports = (sequelize, dataTypes) => {
     timestamps: false,
   };
 
-  const Product = sequelize.define(alias, cols);
+  const Product = sequelize.define(alias, cols, config);
 
 
   Product.associate = function (models) {
@@ -63,27 +56,11 @@ module.exports = (sequelize, dataTypes) => {
     });
   
   
-<<<<<<< HEAD
     // Product.belongsTo(models.mark, {
     //   as: "Mark",
     //   foreignKey: "MarkId"
 
     // });
     };
-=======
-    Product.belongsTo(models.Mark, {
-      as: "mark",
-      foreignKey: "markId"
-
-    });
-  
- 
-    Product.belongsTo(models.Model, {
-      as: "model",
-      foreignKey: "modelId"
-
-    })
-  };
->>>>>>> 0fbd0977caccde16881ddb02e1a06e0c506e3e6d
   return Product;
 };

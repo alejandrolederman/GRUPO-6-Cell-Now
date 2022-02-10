@@ -6,34 +6,6 @@
 }
  /* <!--BANNER PRINCIPAL -->*/
 
- .header-login {
-    background: #2c3e50;
-    display: flex;
-    padding:0;
-    flex-direction: row;
-    align-self: center;
-    justify-content: space-between;
-}
-
-.slideshow-container{
-    padding-top: 40px;
-}
-
-.form {
-    padding-top: 50px;
-    padding-left: 50px;
-}
-
-.main-header-top-bar {
-    padding:0;
-    width: 100%;
-    
-}
-
-.Fonts-right {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-}
 
 .slideshow-container {
         max-width: 1000px;
@@ -422,11 +394,12 @@ li {
     display: flex;
 }
 
-
 .menu-right-header {
     text-align: right;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
     color: grey;
-    margin-top: 40px;
 }
 
 .menu-right-header i {
@@ -440,7 +413,7 @@ header .form .input {
     color: #666;
     padding: 5px;
     margin: 40px 40px;
-    text-align: center;
+    text-align: justify;
     width: 80%;
 }
 
@@ -1098,8 +1071,7 @@ button:hover::after {
     }
     .search {
         display: flex;
-        justify-content: center;
-        align-self: center;
+        flex-wrap: wrap;
     }
 }
 

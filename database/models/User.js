@@ -32,23 +32,11 @@ module.exports = (sequelize, dataTypes) => {
     }
   };
 
-  // let config = {
-  //   tableName: "users",
-  //   timestamps: false,
-  // };
+  let config = {
+    tableName: "users",
+    timestamps: false,
+  };
 
-  // const User= sequelize.define(alias, cols);
-
-  // User.associate = function (models) {
-  //   User.belongsToMany(models.Product, {
-  //     as: "Product",
-  //     through: "Trolley",
-  //     foreignKey: "UserId",
-
-  // // let config = {
-  // //   tableName: "users",
-  // //   timestamps: false,
-  // // };
   const User = sequelize.define(alias, cols, config);
 
   User.associate = function (models) {
@@ -56,7 +44,6 @@ module.exports = (sequelize, dataTypes) => {
       as: "product",
       through: "Trolley",
       foreignKey: "userId",
-
       otherKey: "productId",
       timetamps: false
     });
