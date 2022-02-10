@@ -72,7 +72,7 @@ const productController = {
             screen: req.body.screen,
             memory: req.body.memory,
             unlocking: req.body.unlocking,
-            image: req.body.image
+            image: req.file.filename
             
         })
         res.redirect("/");

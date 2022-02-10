@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-02-2022 a las 02:45:46
+-- Tiempo de generación: 10-02-2022 a las 18:47:35
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -39,12 +39,12 @@ CREATE TABLE `marks` (
 --
 
 INSERT INTO `marks` (`id`, `name`) VALUES
-(7, 'Samsung'),
-(8, 'Motorola'),
-(9, 'OnePlus'),
-(10, 'LG'),
-(11, 'Xiaomi'),
-(12, 'iPhone');
+(13, 'Samsung'),
+(14, 'iPhone'),
+(15, 'OnePlus'),
+(16, 'LG'),
+(17, 'Xiaomi'),
+(18, 'iPhone');
 
 -- --------------------------------------------------------
 
@@ -54,24 +54,24 @@ INSERT INTO `marks` (`id`, `name`) VALUES
 
 CREATE TABLE `products` (
   `id` int(11) NOT NULL,
-  `markId` int(50) NOT NULL,
-  `price` varchar(10) NOT NULL,
+  `markId` int(11) NOT NULL,
+  `model` varchar(50) NOT NULL,
+  `price` varchar(20) NOT NULL,
   `discount` varchar(10) NOT NULL,
   `camera` varchar(50) NOT NULL,
-  `model` varchar(50) NOT NULL,
-  `screen` varchar(20) NOT NULL,
-  `unlocking` varchar(20) NOT NULL,
-  `image` varchar(20) NOT NULL,
-  `description` varchar(500) NOT NULL
+  `screen` varchar(50) NOT NULL,
+  `unlocking` varchar(50) NOT NULL,
+  `description` varchar(500) NOT NULL,
+  `image` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `markId`, `price`, `discount`, `camera`, `model`, `screen`, `unlocking`, `image`, `description`) VALUES
-(9, 0, '120000', '', '56mp', '0', '8.4', 'huella ', '', ''),
-(10, 0, 'sdfsdfsdfs', '', 'sfsfds', '0', 'sdfsdf', 'sdfsdfsdfs', '', 'sdfsdfsd');
+INSERT INTO `products` (`id`, `markId`, `model`, `price`, `discount`, `camera`, `screen`, `unlocking`, `description`, `image`) VALUES
+(11, 13, 'A20', '$85.000', '% 5', '45 mp', '8.4', 'huella ', 'esta muy bueno', ''),
+(12, 14, '8 plus', '$113.000', '%5', '123', '8.4', 'huella ', 'muy bueno', '1644513941048_img.jpg');
 
 -- --------------------------------------------------------
 
@@ -102,8 +102,8 @@ CREATE TABLE `usercategory` (
 --
 
 INSERT INTO `usercategory` (`id`, `name`) VALUES
-(3, 'usuario'),
-(4, 'administrador');
+(5, 'usuario'),
+(6, 'administrador');
 
 -- --------------------------------------------------------
 
@@ -127,12 +127,8 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `userName`, `email`, `password`, `userCategoryId`, `avatar`) VALUES
-(8, 'ale', 'ale', 'ale', 'ale@ale.com', '$2a$10$d1Xmbv2It.G3bJ/ZTbrIUelS8Q/byZU6tAwrdh7e971MznEe9GkfK', 0, '0'),
-(9, 'Agustín', 'Zurita', 'aguian', 'aguian0104@gmail.com', '$2a$10$scsGCoURz/NldBl0twzvI.Dm14x7qu/idF2rBOg25n8YCIss3pTZq', 3, '0'),
-(10, 'Agustína', 'Zurita', 'aguian', 'aguian01045@gmail.co', '$2a$10$nvg3OC/0QF8J.jHDhVUDV.awQDvh8Vi0o6l1/xmjiuctfvRy0/fNy', 3, '0'),
-(11, 'Agustín', 'Zurita', 'aguian', 'aguian0104@gmail.com', '$2a$10$rUMVm5ce9lGZn2ypt3z7peKn2Ph2TIWLnMUA96Tg90k9QwDKc7xS.', 3, '0'),
-(12, 'Agustín', 'Zurita', 'aguian', 'aguian010334@gmail.c', '$2a$10$td8wDpO6L8PY76SPfR.HXOkoGAkoqoFG2/ezrFzsHXJ1AcmR6/fCO', 3, '0'),
-(13, 'Agustín', 'Zurita', 'aguian', 'aguian0104@gmail.com', '$2a$10$jEdz3cFkbR/Xga44jJQOUOk7M6.EDcCah61cAo1bWb5ec4lw25K5i', 3, '0');
+(14, 'alejandro', 'lederman', 'ale', 'ale@ale.com', '$2a$10$rTuNOOUINTUNAZa..XzOhOiSWh6DvdIT600cGWLrNJWUwOe4Zp8T2', 6, ''),
+(15, 'Alejandro', 'Lederman', 'ale', 'a@a.com', '$2a$10$b0SZ4SZoAckzZAqBb8Cf0Or2iGTuAAq9A.tAgcmFlEhBH/C2CvEL.', 6, '1644514524067_img.jpg');
 
 --
 -- Índices para tablas volcadas
@@ -150,9 +146,8 @@ ALTER TABLE `marks`
 ALTER TABLE `products`
   ADD PRIMARY KEY (`id`),
   ADD KEY `mark_id` (`markId`),
-  ADD KEY `model_id` (`model`),
   ADD KEY `mark_id_2` (`markId`),
-  ADD KEY `model_id_2` (`model`);
+  ADD KEY `markId` (`markId`);
 
 --
 -- Indices de la tabla `trolly`
@@ -183,13 +178,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `marks`
 --
 ALTER TABLE `marks`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `trolly`
@@ -201,13 +196,36 @@ ALTER TABLE `trolly`
 -- AUTO_INCREMENT de la tabla `usercategory`
 --
 ALTER TABLE `usercategory`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `products`
+--
+ALTER TABLE `products`
+  ADD CONSTRAINT `products_ibfk_1` FOREIGN KEY (`markId`) REFERENCES `marks` (`id`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `trolly`
+--
+ALTER TABLE `trolly`
+  ADD CONSTRAINT `trolly_ibfk_1` FOREIGN KEY (`userId`) REFERENCES `users` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `trolly_ibfk_2` FOREIGN KEY (`prudctId`) REFERENCES `products` (`id`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `users`
+--
+ALTER TABLE `users`
+  ADD CONSTRAINT `users_ibfk_1` FOREIGN KEY (`userCategoryId`) REFERENCES `usercategory` (`id`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
