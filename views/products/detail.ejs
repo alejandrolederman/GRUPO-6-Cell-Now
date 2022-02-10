@@ -12,8 +12,7 @@
                 <img src="/img/baseDeDatos/<%=unProduct.image%> " alt="imagen de producto" width="150px" height="305 px">
             </div>
             <div class="descripcion-producto-comprar">
-                <h2><%=unProduct.mark%> </h2>
-
+                <h2><%=unProduct.Mark.name%> </h2>
                 <br>
                 <h3 class="texto-comprar"><%=unProduct.model%> </h3>
                 <br>
@@ -28,7 +27,7 @@
                         <li> en 9x $7.777,67 sin interés</li>
                     </div>
                     <article class="main-div-login button-comprar">
-                        <button class="button" name="button"><span><i class="fa fa-shopping-cart" aria-hidden="true" style="color: white;"></i> AGREGAR AL CARRITO</span></button>
+                        <!-- <button class="button" name="button"><span><i class="fa fa-shopping-cart" aria-hidden="true" style="color: white;"></i> AGREGAR AL CARRITO</span></button> -->
                         <% if(locals.isLogged) {%> 
 
                             <a href= "/products/confirmVenta/<%= unProduct.id %> "><button class="button-enviar" name="button"><span><i class="fa fa-shopping-bag" aria-hidden="true"></i> COMPRAR</span></button></a>

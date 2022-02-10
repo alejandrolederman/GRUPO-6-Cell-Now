@@ -10,21 +10,20 @@ module.exports = (sequelize, dataTypes) => {
     name: {
       type: dataTypes.STRING(100),
     },
-
   };
+
   let config = {
     tableName: "marks",
     timestamps: false,
   };
 
   const Mark = sequelize.define(alias, cols, config);
-  // Mark.associate = function (models) {
-  //   Mark.belongsTo(models.products, {
-  //     as: "Product",
-  //     foreignKey: "markId"
-  //   });
-  // }
-
+  Mark.associate = function (models) {
+    Mark.hasMany(models.Product, {
+      as: "products",
+      foreignKey: "markId"
+    });
+  }
 
   return Mark;
 };

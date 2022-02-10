@@ -1,4 +1,5 @@
 module.exports = (sequelize, dataTypes) => {
+  
   let alias = "Usercategory";
   let cols = {
     id: {
@@ -9,15 +10,12 @@ module.exports = (sequelize, dataTypes) => {
     name: {
       type: dataTypes.STRING(100),
     }
-    
   };
  
-
-let config = {
-tableName: "usercategory",
-// freezeTableName: true,
-timestamps: false
-}
+  let config = {
+  tableName: "usercategory",
+  timestamps: false
+  }
 
   const Usercategory = sequelize.define(alias, cols, config);
   Usercategory.associate = function (models) {
@@ -26,7 +24,6 @@ timestamps: false
       foreignKey: "usercategoryId"
     });
   }
-
 
   return Usercategory;
 };

@@ -7,35 +7,33 @@ module.exports = (sequelize, dataTypes) => {
       autoIncrement: true,
     },
     markId: {
-      
       type: dataTypes.INTEGER,
     },
     model: {
-      type: dataTypes.STRING(280),
+      type: dataTypes.STRING(50),
     },
     price: {
-      type: dataTypes.STRING(280),
+      type: dataTypes.INTEGER(20),
     },
-    
+    discount: {
+      type: dataTypes.INTEGER(10),
+    },
     camera: {
-      type: dataTypes.STRING(280),
+      type: dataTypes.STRING(50),
     },
-    
     screen: {
-      type: dataTypes.STRING(280),
+      type: dataTypes.STRING(50),
     },
     unlocking: {
-      type: dataTypes.STRING(280),
+      type: dataTypes.STRING(50),
     },
     description: {
       type: dataTypes.STRING(500),
     },
     image: {
-      type: dataTypes.STRING(280),
+      type: dataTypes.STRING(50),
     },
-    discount: {
-      type: dataTypes.STRING(280),
-    },
+    
   };
 
   let config = {
@@ -44,7 +42,6 @@ module.exports = (sequelize, dataTypes) => {
   };
 
   const Product = sequelize.define(alias, cols, config);
-
 
   Product.associate = function (models) {
     Product.belongsToMany(models.User, {
@@ -55,12 +52,12 @@ module.exports = (sequelize, dataTypes) => {
       timetamps: false
     });
   
-  
-    // Product.belongsTo(models.mark, {
-    //   as: "Mark",
-    //   foreignKey: "MarkId"
+    Product.belongsTo(models.Mark, {
+      as: "Mark",
+      foreignKey: "markId"
 
-    // });
+    });
     };
+
   return Product;
 };

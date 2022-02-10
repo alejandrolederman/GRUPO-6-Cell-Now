@@ -9,7 +9,6 @@ const db = require("../database/models")
 // let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 const userController = {
-
     ///////////////////////////////////////////////////////////////
     usersList: (req, res) => {
         db.User.findAll()
@@ -34,9 +33,7 @@ const userController = {
 
 ///////////////////////////////////////////////////////////    
     crear: function (req, res){
-
         db.Usercategory.findAll()
-
         .then(function(categoria){
             return res.render("./users/formularioRegistro" , {categoria:categoria})
         })
@@ -66,16 +63,15 @@ const userController = {
             	    },
             	    old: req.body
         	    });
-            } 
-                    
-                db.User.create({
-                    firstName: req.body.first_name,
-                    lastName: req.body.last_name,
-                    userName:req.body.user_name,
-                    email: req.body.email,
-                    password:bcryptjs.hashSync(req.body.password, 10),
-                    usercategoryId: req.body.user_category,
-                    avatar: req.body.avatar
+            }      
+            db.User.create({
+                firstName: req.body.first_name,
+                lastName: req.body.last_name,
+                userName:req.body.user_name,
+                email: req.body.email,
+                password:bcryptjs.hashSync(req.body.password, 10),
+                usercategoryId: req.body.user_category,
+                avatar: req.body.avatar
                 })
                    
              res.redirect('./login');
@@ -85,15 +81,12 @@ const userController = {
         })
     },
     
-
-///////////////////////////////////////////////////////////////////////////////////////////    
-
+//////////////////////////////////////////////////////////////////////////////////  
     login: (req, res) => {
         res.render('./users/login');
     },
 
-//////////////////////////////////////////////////////////////////////////////////////////////    
-
+//////////////////////////////////////////////////////////////////////////////////  
     loginProcess: (req, res) => {
         //revicion de que email no esta vacio
         if (req.body.email == 0) {
@@ -107,8 +100,7 @@ const userController = {
         }
         //busca el mail en la base de datos
         db.User.findOne({where: { email: req.body.email }})
-        .then(function(userToLogin){
-            
+        .then(function(userToLogin){ 
             //si esta confirma que la contraseña sea correcta
             if(userToLogin){
                 let passOk = bcryptjs.compareSync(req.body.password, userToLogin.password);        
@@ -147,15 +139,12 @@ const userController = {
         })
     },
 //////////////////////////////////////////////////////////////////////////////////////////////    
-
     profile: (req, res) => {
-
-     return res.render('./users/userProfile', {
+        return res.render('./users/userProfile', {
 			users: req.session.userLogged
 		 });
 	},
 //////////////////////////////////////////////////////////////////////////////////////////////    
-
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
@@ -163,19 +152,14 @@ const userController = {
     },
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-
     selecBuyOrSell: (req, res) => {
         res.render('./users/selecBuyOrSell');
     },
 
-
 /////////////////////////////////////////////////////////////////////////////////////////////////
-
     home: (req, res) => {
         res.render("home");
     },
-//////////////////////////////////////////////////////////////////////
-
 }
 
 module.exports = userController;

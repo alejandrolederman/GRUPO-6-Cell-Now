@@ -9,10 +9,10 @@ const db = require("../database/models")
 
 const productController = {
 ///////////////////////////////////////////////////////////////
-
     // Root - Show all products
     productsList: (req, res) => {
-        db.Product.findAll()
+        db.Product.findAll({
+            include: [{association: "Mark"}]})
         .then(function (products){
         res.render('./products/productsList', {products:products});
     })
@@ -25,20 +25,17 @@ const productController = {
         // });
     },
 ///////////////////////////////////////////////////////////////
-
     // Detail - Detail from one product
     productDetail: (req, res) => {
       
-        db.Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id,{
+        include: [{association: "Mark"}]})
         .then(function(unProduct){
             res.render('./products/detail', {unProduct: unProduct})  
         })
         .catch(function(err){
             console.log(err)
         }) 
-      
-      
-      
       
         // let elId = req.params.id;
         // let productos = products.find(unProducto => {
@@ -55,49 +52,35 @@ const productController = {
     // Create - Form to create
     crear: (req, res) => {
         db.Mark.findAll()
-        .then(function(Mark){
-            res.render("./products/productsForm", {Mark});
+        .then(function(mark){
+            res.render("./products/productsForm", {mark:mark});
         })
         .catch(function(err){
             console.log(err)
         })    
-
-        // db.Model.findAll()
-        // .then(function(model){
-        //     res.render("./products/productsForm", {model});
-        // })
-        // .catch(function(err){
-        //     console.log(err)
-        // }) 
     },
 //////////////////////////////////////////////////////////////
     // Create -  Method to store
-    
-            store:function (req, res) {
-            
+    store:function (req, res) {            
         db.Product.create({
-
-            markId: req.body.MarkId,
+            markId: req.body.markId,
             model: req.body.model,
             price: req.body.price,
+            discount: req.body.discount,
             description: req.body.description,
             camera: req.body.camera,
             screen: req.body.screen,
             memory: req.body.memory,
             unlocking: req.body.unlocking,
-            image: req.body.image,
-            discount: req.body.discount
-        
+            image: req.body.image
+            
         })
         res.redirect("/");
     },
 
 //////////////////////////////////////////////////////////////////////////////
-
-
     // Update - Form to edit
     edit: (req, res) => {
-
             db.Product.findByPk(req.params.id)
             .then(function(unProduct){
                 res.render('./products/productEdit', {unProduct})  
@@ -115,16 +98,10 @@ const productController = {
         // });
         // res.render('./products/productEdit', { productos })
 
-    
-
 ///////////////////////////////////////////////////////////////
-
-
     // Update - Method to update
     update: (req, res) => {
-
         db.Product.update({
-
             markId: req.body.MarkId,
             model: req.body.model,
             price: req.body.price,
@@ -186,8 +163,8 @@ const productController = {
 //////////////////////////////////////////////////////////////////////////////////////
  
     confirmarVenta: (req,res)=>{
-
-        db.Product.findByPk(req.params.id)
+        db.Product.findByPk(req.params.id,{
+            include: [{association: "Mark"}]})
         .then(function(unProduct){
             res.render('./products/confirmVenta', {unProduct})  
         })
@@ -224,15 +201,6 @@ const productController = {
     //     fs.writeFileSync(productsFilePath, JSON.stringify(productoEliminado), 'utf-8');
     //     res.redirect("/");
     // }
-
-/////////////////////////////////////////////////////////////////////////////////////
-
-// vendido: (req, res) => {
-
-//     res.redirect('./products/productoVendido')
-// }
-
-/////////////////////////////////////////////////////////////////////////////////////
 
 };
 
