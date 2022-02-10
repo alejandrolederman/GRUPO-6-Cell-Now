@@ -17,10 +17,11 @@
                 <div class="menu-right-header">
                     <!-- <i class="fas fa-user"></i> -->
                     <% if(locals.isLogged) {%> 
-                    <div>
+                    <div class="logged-right">
                         <a href="/user/userProfile"><i > <%= locals.userLogged.firstName %> </i></a>
                         <br>
                         <a href="/products/productsForm">Vender</a>
+                        <br>
                         <a href="/user/logout">Logout</a>
 
                          

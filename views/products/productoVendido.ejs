@@ -5,24 +5,29 @@
 <body>
 
     <%- include('../partials/header')%>
-
-       <% if(locals.isLogged) {%> 
-    <h2> ¡Felicitaciones,  <%= userLogged.firstName %>! </h2>
+  <main class="productoVendido">     <% if(locals.isLogged) {%> 
+    <h2 class="H2Felicitaciones"> ¡Felicitaciones,  <%= userLogged.firstName %>! </h2>
     <br>
-    <h3> Adquiriste el producto <h3>
+
+
+
+    <br>
+    <h2> Adquiriste el producto <h2>
        <% } else { %> 
 
-        <h2>¡Felicitaciones, por adquirir tu nuevo telefono</h2>
+        <h1>¡Felicitaciones, por adquirir tu nuevo telefono</h1>
         <h2>no olvides registrarte para poder cordinar el envio!!!</h2>
 
          <% } %> 
-   
-       <div>
+
+         <img class="graciasimg" src="/img/Gracias.jpg" alt="" width="300" >
+
+       <div class=>
           <a href="/"> <button type="submit" class="button-enviar" name= "button" ><span><i class="fas fa-shopping-cart"aria-hidden="true"></i> Volver al inicio</span></button> 
        </div> 
    
 
-
+      </main>  
 </body>
 <%- include ('../partials/footer')%>
 </html>
