@@ -7,53 +7,72 @@
        
             
        
-        <form action="/products/productEdit/<%=unProduct.id %>?_method=PUT	" method="POST" class= "registerTotal">
+        <form action="" method="POST" enctype="multipart/form-data" class= "registerTotal">
             <div class="text-color">
                
-                <label for="nombre" class="text-color"> Marca   </label>
+               
+                <h4 lass="text-color"> Marca </h4>
+                <div>
+                    <select name="mark"class="nombre-registro">
+                        <option value="0">selecciona una marca</option>
+                        <% for (let i = 0; i < mark.length; i++){ %> 
+                        <option value="<%= mark[i].id %> ">
+                            <%= mark[i].name %> 
+                        </option>
+                        <% } %> 
+                    </select>
+                </div>
                 <br>
-                <input type="text" name="marca" id="marca" class="nombre-registro" placeholder="<%= unProduct.mark %>" >
                 <br>
+                <label for="model" class="text-color"> modelo  </label>
                 <br>
-                <label for="nombre" class="text-color"> modelo  </label>
+                <input type="text" name="model"  value="<%= unProduct.model %>"  class="nombre-registro">
                 <br>
-                <input type="text" name="name" id="name" class="nombre-registro" placeholder="<%= unProduct.model %>" >
-                <br>
-                <br>
-                <label for="nombre" class="text-color">Descripcion</label>  
-                <br>           
-                <input type="textarea" name="descripcion" id="Descripcion" class="nombre-registro" placeholder="<%= unProduct.description %>" >
-                <br>
-                <br>
-                <label for="nombre" class="text-color"> precio del producto  </label>
-                <br>
-                <input type="text" name="price" id="price" class="nombre-registro" placeholder="<%= unProduct.price %>">
+                <br>                
+                <label for="price" class="text-color"> precio del producto  </label>
+               <br>
+                <input type="text" name="price"  value="<%= unProduct.price %>" class="nombre-registro" >
                 <br>
                 <br> 
-                <label for="nombre" class="text-color"> cantidad de MP de la camara principal  </label>
+                <label for="discount" class="text-color"> descuento del producto  </label>
                 <br>
-                <input type="text" name="camara" id="camara" class="nombre-registro" placeholder="<%= unProduct.camera %>" >
+                 <input type="text" name="discount"  value="<%= unProduct.discount %>" class="nombre-registro" >
+                 <br>
+                 <br> 
+                <label for="description" class="text-color">Descripcion</label>             
+                <br>
+                <input type="textarea" name="description"   value="<%= unProduct.description %>" class="nombre-registro">
+                <br>
+                <br>
+                <label for="camera" class="text-color"> cantidad de MP de la camara principal  </label>
+                <br>
+                <input type="text" name="camera"  value="<%= unProduct.camera %>" class="nombre-registro" >
                 <br>
                 <br>    
-                <label for="nombre" class="text-color"> modo de desbloqueo  </label>
+                <label for="screen" class="text-color"> tama&ntilde;o de pantalla  </label>
                 <br>
-                <input type="text" name="desbloqueo" id="desbloqueo" class="nombre-registro"  placeholder="<%= unProduct.unlocking %>">
+                <input type="text" name="screen"  value="<%= unProduct.screen %>" class="nombre-registro">
+                <br>
+                <br>
+                <label for="memory" class="text-color"> capacidad de almacenamiento  </label>
+                <br>
+                <input type="text" name="memory"  value="<%= unProduct.memory %>" class="nombre-registro">
+                <br>
+                <br>
+                <label for="unlocking" class="text-color"> modo de desbloqueo  </label>
+                <br>
+                <input type="text" name="unlocking"  value="<%= unProduct.unlocking %>" class="nombre-registro" >
                 <br>
                 <br> 
-                <label for="nombre" class="text-color"> tama&ntilde;o de pantalla  </label>
-                <br>
-                <input type="text" name="pantalla" id="pantalla" class="nombre-registro" placeholder="<%= unProduct.screen %>">
+                              
                 <br>
                 <br>
-                <label for="nombre" class="text-color"> capacidad de almacenamiento  </label>
-                <br>
-                <input type="text" name="memoria" id="memoria" class="nombre-registro" placeholder="<%= unProduct.memory %>" >
-                <br>
-                <br>
-              
                 <h4 class="text-color imagen-perfil">agrega una imagen del producto</h4>
                 <input type= "file" name="image" id="image" class="imagen-producto">
-                <br>               
+                <br>
+                <br>
+                             </div>
+    
             </div>  
 
             <br>

@@ -81,9 +81,12 @@ const productController = {
 //////////////////////////////////////////////////////////////////////////////
     // Update - Form to edit
     edit: (req, res) => {
-            db.Product.findByPk(req.params.id)
-            .then(function(unProduct){
-                res.render('./products/productEdit', {unProduct})  
+            let pedidoProducto = db.Product.findByPk(req.params.id)
+            let pedidoMarcas = db.Mark.findAll() 
+
+            Promise.all ([pedidoProducto, pedidoMarcas])
+            .then(function([unProduct, mark]){
+                res.render('./products/productEdit', {unProduct:unProduct, mark:mark})  
             })
             .catch(function(err){
                 console.log(err)
@@ -100,63 +103,28 @@ const productController = {
 
 ///////////////////////////////////////////////////////////////
     // Update - Method to update
-    update: (req, res) => {
+    actualizar: (req, res) => {
+
         db.Product.update({
-            markId: req.body.MarkId,
+           markId: req.body.markId,
             model: req.body.model,
             price: req.body.price,
+            discount: req.body.discount,
             description: req.body.description,
             camera: req.body.camera,
             screen: req.body.screen,
             memory: req.body.memory,
             unlocking: req.body.unlocking,
-            image: req.body.image,
-            discount: req.body.discount
+            image: req.file.filename
         
         },
-    //     {where: 
-    //     id : req.params.id
-    // }
-        )
+        {
+            where: {
+                id:req.params.id
+            }
+        });
 
-        // const {
-        //     MarkId,
-        //     model,
-        //     price,
-        //     discount,
-        //     description,
-        //     camera,
-        //     screen,
-        //     memory,
-        //     unlocking,
-        //     image,
-
-        // } = req.body;
-
-        // const elId = req.params.id;
-        // const productoNuevo = [];
-
-        // products.map(data => {
-
-        //     if (data.id == elId) {
-
-        //             data.mark = mark,
-        //             data.model = model,
-        //             data.price = price,
-        //             data.description = description,
-        //             data.discount = discount,
-        //             data.camera = camera,
-        //             data.unlocking = unlocking,
-        //             data.screen = screen,
-        //             data.memory = memory,
-        //             data.image = image
-
-        //     }
-        //     productoNuevo.push(data);
-        // });
-
-        // fs.writeFileSync(productsFilePath, JSON.stringify(products), 'utf-8');
-        // res.redirect("/");
+        res.redirect('./products/detail/' + req.params.id);
 
     },
 
