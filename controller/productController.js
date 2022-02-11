@@ -124,8 +124,7 @@ const productController = {
             }
         });
 
-        res.redirect('./products/detail/' + req.params.id);
-
+        res.redirect('/')
     },
 
 //////////////////////////////////////////////////////////////////////////////////////

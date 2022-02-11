@@ -24,6 +24,9 @@ module.exports = (sequelize, dataTypes) => {
     screen: {
       type: dataTypes.STRING(50),
     },
+    memory:{
+      type: dataTypes.STRING(20),
+    },
     unlocking: {
       type: dataTypes.STRING(50),
     },
