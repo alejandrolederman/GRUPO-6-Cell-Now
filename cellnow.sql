@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 10-02-2022 a las 18:47:35
+-- Tiempo de generación: 11-02-2022 a las 01:41:08
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -60,6 +60,7 @@ CREATE TABLE `products` (
   `discount` varchar(10) NOT NULL,
   `camera` varchar(50) NOT NULL,
   `screen` varchar(50) NOT NULL,
+  `memory` varchar(50) NOT NULL,
   `unlocking` varchar(50) NOT NULL,
   `description` varchar(500) NOT NULL,
   `image` varchar(50) NOT NULL
@@ -69,9 +70,9 @@ CREATE TABLE `products` (
 -- Volcado de datos para la tabla `products`
 --
 
-INSERT INTO `products` (`id`, `markId`, `model`, `price`, `discount`, `camera`, `screen`, `unlocking`, `description`, `image`) VALUES
-(11, 13, 'A20', '$85.000', '% 5', '45 mp', '8.4', 'huella ', 'esta muy bueno', ''),
-(12, 14, '8 plus', '$113.000', '%5', '123', '8.4', 'huella ', 'muy bueno', '1644513941048_img.jpg');
+INSERT INTO `products` (`id`, `markId`, `model`, `price`, `discount`, `camera`, `screen`, `memory`, `unlocking`, `description`, `image`) VALUES
+(11, 13, 'A20', '$85.000', '%15', '84', '15', '512', 'huella ', 'esta muy bueno', '1644540001001_img.jpg'),
+(12, 14, '8 plus', '$113.000', '%5', '123', '8.4', '256', 'huella ', 'muy bueno', '1644539601468_img.jpg');
 
 -- --------------------------------------------------------
 
