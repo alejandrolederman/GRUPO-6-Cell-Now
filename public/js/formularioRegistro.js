@@ -1,38 +1,35 @@
-document.addEventListener("DOMContentLoaded", () => {
-  let $formRegister = document.querySelector("form");
+// document.addEventListener("DOMContentLoaded", () => {
 
+  const nombre = document.getElementById("name")
+  const apellido = document.getElementById("surname")
+  const nombreUsuario = document.getElementById("user-name")
+  const email = document.getElementById("email")
+  const pass = document.getElementById("password")
+  const form = document.getElementById("form")
+  const parrafo = document.getElementById("warnings")
   /* ==========================================================================
    FORMULARIO DE VALIDACION DE REGISTER
    ========================================================================== */
-  $formRegister.addEventListener("submit", (e) => {
-    let $nombre = document.getElementById("nombreForm");
-    let $email = document.getElementById("email");
-    let $contrasenia = document.getElementById("contrasenia");
-
-    let hayError = false;
-
-    if ($nombre.value.length < 3) {
-      $nombre.style.border = "2px solid red";
-      hayError = true;
-
-      if (
-        ($email.value =
-          !/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i
-            .test)
-      )
-        $email.style.border = "2px solid red";
-        $email.classList.add ("shake");
-      hayError = true;
-
-      if ($contrasenia.value.length < 8 || $email.value == $contrasenia.value) {
-        $contrasenia.style.border = "2px solid red";
-        hayError = true;
-      }
-
-      //Verifica si hay errores en los campos
-      if ($hayError || nombreCondicion || emailCondicion) {
-        e.preventDefault();
-      }
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    let warnings = ""
+    let entrar = false
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
+    parrafo.innerHTML= "" 
+    if(nombre.value.length <6){
+      warnings += "El nombre no es valido <br>"
+      entrar = true
     }
-  });
-});
+    if(!regexEmail.test(email.value)){
+      warnings += "El email no es valido <br>"
+      entrar = true
+    }
+    if(pass.value.length <8){
+      warnings += "La contraseña no es valido <br>"
+      entrar = true
+    }
+    if(entrar){
+      parrafo.innerHTML = warrings
+    }else{
+    parrafo.innerHTML = "Enviado"
+    }    
