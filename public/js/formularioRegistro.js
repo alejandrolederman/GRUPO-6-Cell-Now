@@ -10,8 +10,8 @@
   /* ==========================================================================
    FORMULARIO DE VALIDACION DE REGISTER
    ========================================================================== */
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
+  form.addEventListener("submit", e=>{
+    e.preventDefault()
     let warnings = ""
     let entrar = false
     let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
@@ -20,16 +20,25 @@
       warnings += "El nombre no es valido <br>"
       entrar = true
     }
+    if(apellido.value.length <2){
+      warnings += "El apellido no es valido <br>"
+      entrar = true
+    }
+    if(nombreUsuario.value.length <3){
+      warnings += "El nombre de usuario no es valido <br>"
+      entrar = true
+    }
     if(!regexEmail.test(email.value)){
-      warnings += "El email no es valido <br>"
+      warnings += "El email no es valida <br>"
       entrar = true
     }
     if(pass.value.length <8){
-      warnings += "La contraseña no es valido <br>"
+      warnings += "La contraseña no es valida <br>"
       entrar = true
     }
     if(entrar){
-      parrafo.innerHTML = warrings
+      parrafo.innerHTML = warnings
     }else{
     parrafo.innerHTML = "Enviado"
-    }    
+    }
+  })

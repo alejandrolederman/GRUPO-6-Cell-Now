@@ -5,9 +5,8 @@
     <form action="/user/formularioRegistro"  method="POST" id="form"> 
         <div class="form">
             <h1 class="registro">Registro</h1>
-
             <div class="grupo">
-                <input type= "text" id="name" name=""  value="<%= locals.old && old.first_name ? old.first_name : "" %>" required><span class="barra"></span>
+                <input type= "text" id="name" name=""  value="<%= locals.old && old.first_name ? old.first_name : "" %>"><span class="barra"></span>
                 <label for= "">Nombre</label>
                 <div><%if(locals.errors && errors.first_name) { %>
                 <p class="errorEpress"><%= errors.first_name.msg %></p> <% } %>
