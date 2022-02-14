@@ -111,8 +111,9 @@ input {
     display: block;
     width: 100%;
     border: none;
-    border-bottom: 1px solid var(--colorTextos:#000);
+    border-bottom: 1px solid var(--colorTextos #000);
 }
+
 .grupo-seleccionar{
     position:relative;
     margin:45px;

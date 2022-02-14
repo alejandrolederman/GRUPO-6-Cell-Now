@@ -29,12 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
           hayError = true;
         }
 
-
-
         //Verifica si hay errores en los campos
-        else ($hayError || nombreCondicion || pasCondicion) {
+        else if ($hayError || nombreCondicion || pasCondicion) {
           e.preventDefault();;
         }
       }
-    });
+    );
   });
