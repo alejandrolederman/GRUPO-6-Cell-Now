@@ -10,27 +10,32 @@
                 <a href="/"><img class="avatar" src="/img/logo/logo_small_icon_only.jpg" alt=""></a>
 
                 <h1>BIENVENIDO</h1>
-                <form action="/user/login" method="POST">
+                <form action="/user/login" method="POST" class="form-login">
 
-                   <!-- <label for="">Email</label> -->
-                    <input class="usu" type="text" name="email" placeholder="Email" >
-                        <%if(locals.errors && errors.email) { %>
-                            <p class="errorEpress"><%= errors.email.msg %></p>
-                        <% } %>  
-                        <!-- <label for="">Contraseña</label> -->
-                    <input class="pas" type="password" name="password" placeholder="Contraseña" >
-                    <%if(locals.errors && errors.pass) { %>
-                        <p class="errorEpress"><%= errors.pass.msg %></p>
-                    <% } %> 
-                    
-                    <label class="reco" for="recordar">Recordar Usuario</label>
-                    <input type="checkbox" name="remember">
+                    <!-- <label for="">Email</label> -->
+                    <input class="usu" type="text" name="email" placeholder="Email">
+                    <%if(locals.errors && errors.email) { %>
+                        <p class="errorEpress">
+                            <%= errors.email.msg %>
+                        </p>
+                        <% } %>
+                            <!-- <label for="">Contraseña</label> -->
+                            <input class="pas" type="password" name="password" placeholder="Contraseña">
+                            <%if(locals.errors && errors.pass) { %>
+                                <p class="errorEpress">
+                                    <%= errors.pass.msg %>
+                                </p>
+                                <% } %>
 
-                    <button type="submit" class="button-login" name="button"><i class="fa fa-sign-in" aria-hidden="true"></i>
-                    <span>INGRESAR</span></button>
+                                    <label class="reco" for="recordar">Recordar Usuario</label><br>
+                                    <input type="checkbox" name="remember"> <br><br>
 
-                    <!-- <a class="href" href="#">¿Olvidaste tu contraseña?</a> -->
-                    <a class="href" href="/user/formularioRegistro">Registrate</a>
+                                    <button type="submit" class="button-login" name="button"><i class="fa fa-sign-in"
+                                            aria-hidden="true"></i>
+                                        <span>INGRESAR</span></button>
+
+                                    <!-- <a class="href" href="#">¿Olvidaste tu contraseña?</a> -->
+                                    <a class="href" href="/user/formularioRegistro">Registrate</a>
 
             </div>
             </form>

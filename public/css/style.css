@@ -58,30 +58,28 @@
   }
 
 /* <!--FORMULARIO REGISTRO -->*/
-body{
+/* .body-register {
     font-family:"Roboto";
     background: #243B55;  /* fallback for old browsers */
     background: #141E30;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
     height: 650px;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.registro {
+} */
+ .registro {
     text-align: center;
     font-weight: 700;
-
-}
-input:focus~label,
+} 
+/* input:focus~label,
 input:valid~label {
     top: -14px;
     font-size:12px;
     color: #2196f3;
-}
-.barra {
+} */
+/* .barra {
     position:relative;
     display: block;
     width: 100%;
@@ -89,31 +87,35 @@ input:valid~label {
 .barra::before {
     content: "";
 }
-form {
+form{
     background: #fff;
-    padding: 40px 0;
+    padding: 20px;
     box-shadow: 0 0 6px 0 rbg(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
-form {
+    border-radius: 10px;x;
+    position:relative;
+} */
+
+/* div #form {
     width:100%;
-    margin: 60px;
+    margin: 10px;
+    margin-top: 100px;
 }
 .form .grupo {
     position:relative;
     margin:45px;
 }
-input {
+input .input-register {
     background: none;
     color: #c6c6c6;
     font-size: 18px;
-    padding: 10px 10px 10px 5px;
+    padding: 10px;
     display: block;
     width: 100%;
     border: none;
-    border-bottom: 1px solid var(--colorTextos:#000);
-}
-.grupo-seleccionar{
+    border-bottom: 1px solid var(--colorTextos #000);
+    border-radius: 10px;
+} */
+/* .grupo-seleccionar{
     position:relative;
     margin:45px;
 }
@@ -144,8 +146,8 @@ input:focus~.barra::before{
     margin: auto;
     color: #141E30;
     padding-top: 20px;
-}
-button {
+} */
+/* .button-register {
     font-family: "roboto";
     background: #243B55;
     background: #141E30;  /* fallback for old browsers */
@@ -157,7 +159,7 @@ button {
     margin: 10px auto;
     color: #fff;
     height: 40px;
-}
+} */
 
 
 
@@ -231,11 +233,17 @@ h3.cell {
     background-size: cover;
     height: 100vh;
 }
-
+.form-login {
+    margin: auto;
+    margin-top: 60px;
+    margin-left: 40px;
+    margin-right: 40px;
+}
 .login-box {
     width: 320px;
     height: 420px;
-    background: #000;
+    border-radius: 20px;
+    background-color: #000;
     color: #fff;
     top: 50%;
     left: 50%;
@@ -243,6 +251,10 @@ h3.cell {
     transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
+    margin: 0%;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
 
 }
 .login-box .avatar{
@@ -250,7 +262,7 @@ h3.cell {
     height: 100px;
     border-radius: 50%;
     position: absolute;
-    top: -50px;
+    top: -75px;
     left: 35%;
 }
 .login-box {
@@ -281,7 +293,12 @@ h3.cell {
     bottom: 166px;}
     
     label.reco{
-        margin-bottom: 20px;
+    color: #808080;
+    font-size: 10px;
+    position: absolute;
+    transition: 0.5s ease all;
+    pointer-events: none;
+    padding-bottom: 20px;
     }
     .button-login{
         cursor: pointer;
@@ -548,7 +565,7 @@ header .form .input {
     padding: 5px;
     margin: 40px 40px;
     text-align: center;
-    width: 80%;
+    width: 70%;
 }
 
 h3 i {
