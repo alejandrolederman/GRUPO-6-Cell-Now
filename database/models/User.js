@@ -45,7 +45,13 @@ module.exports = (sequelize, dataTypes) => {
       otherKey: "productId",
       timetamps: false
     });
+
+    User.belongsTo(models.Usercategory,{
+      as:"User",
+      foreignKey:"userCategoryId",
+    })
   }
+  
   
   return User;
 };

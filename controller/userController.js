@@ -22,7 +22,8 @@ const userController = {
     
 ///////////////////////////////////////////////////////////////////
     usersDetail: (req, res) => {
-        db.User.findByPk(req.params.id)
+        db.User.findByPk(req.params.id,{
+        include: [{association: "usercategory"}]})
         .then(function(usuario){
             res.render('./users/usersDetail', {usuario})  
         })
