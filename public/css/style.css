@@ -57,112 +57,8 @@
     .text {font-size: 11px}
   }
 
-/* <!--FORMULARIO REGISTRO -->*/
-body{
-    font-family:"Roboto";
-    background: #243B55;  /* fallback for old browsers */
-    background: #141E30;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
-    height: 650px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.registro {
-    text-align: center;
-    font-weight: 700;
-
-}
-input:focus~label,
-input:valid~label {
-    top: -14px;
-    font-size:12px;
-    color: #2196f3;
-}
-.barra {
-    position:relative;
-    display: block;
-    width: 100%;
-}
-.barra::before {
-    content: "";
-}
-form {
-    background: #fff;
-    padding: 40px 0;
-    box-shadow: 0 0 6px 0 rbg(255, 255, 255, 0.8);
-    border-radius: 10px;
-}
-form {
-    width:100%;
-    margin: 60px;
-}
-.form .grupo {
-    position:relative;
-    margin:45px;
-}
-input {
-    background: none;
-    color: #c6c6c6;
-    font-size: 18px;
-    padding: 10px 10px 10px 5px;
-    display: block;
-    width: 100%;
-    border: none;
-    border-bottom: 1px solid var(--colorTextos:#000);
-}
-.grupo-seleccionar{
-    position:relative;
-    margin:45px;
-}
-label {
-    color: var(--colorTextos);
-    font-size: 16px;
-    position: absolute;
-    left: 5px;
-    top: 10px;
-    transition: 0.5s ease all;
-    pointer-events: none;
-}
-.barra::before{
-    content: "";
-    height: 2px;
-    width: 0%;
-    bottom: absolute;
-    background: linear-gradient(to right, #B06AB3, #4568DC);
-    transition: 0.3s ease width;
-    left: 0;
-}
-input:focus~.barra::before{
-    width: 100%;
-}
-.warnings {
-    width: 200px;
-    text-align: center;
-    margin: auto;
-    color: #141E30;
-    padding-top: 20px;
-}
-button {
-    font-family: "roboto";
-    background: #243B55;
-    background: #141E30;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to right, #243B55, #141E30);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to right, #243B55, #141E30); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    border:none;
-    display: block;
-    width: 80%;
-    margin: 10px auto;
-    color: #fff;
-    height: 40px;
-}
-
-
-
-
-h4.cell{
+.cell{
     color: #fff;
     font-size: 25px;
     font-weight: 500;
@@ -175,9 +71,10 @@ h4.cell{
     border-radius: 50%;
 }
 h4.cell {
-    font-family: 'Roboto';
+    font-family: 'Poppins', sans-serif;
     color:rgb(22, 22, 22);
     font-size:medium;
+    font-weight: bold;
 }
 
 .main-not-found{
@@ -253,7 +150,7 @@ h3.cell {
     top: -50px;
     left: 35%;
 }
-.login-box {
+.login-box h1{
     margin: 0%;
     padding: 0 0 20px;
     text-align: center;
