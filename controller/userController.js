@@ -48,7 +48,10 @@ const userController = {
         if (resultValidation.errors.length > 0) {
 			return res.render('./users/formularioRegistro', {
 				errors: resultValidation.mapped(),
-				old: req.body
+                old: req.body.first_name,
+                old: req.body.last_name,
+                old:req.body.user_name,
+                old: req.body.email
 			});
 		}
 
