@@ -39,6 +39,6 @@ form.addEventListener("submit", (e) => {
     parrafo.innerHTML = warnings;
     e.preventDefault();
   } else {
-    parrafo.innerHTML = "Enviado";
+    form.submit();
   }
 });

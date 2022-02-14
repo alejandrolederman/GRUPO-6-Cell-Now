@@ -54,6 +54,12 @@ const userController = {
                 old: req.body.email
 			});
 		}
+        // let errors = validationResult(req);
+        // if(!errors.isEmpty()) {
+        //     return res.render('./users/formularioRegistro'), {
+        //       errors: errors.errors,  old: req.body
+        //     };
+        //   } 
 
         db.User.findOne({where: { email: req.body.email }})
         .then( function(userInDB){

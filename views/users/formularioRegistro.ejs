@@ -1,62 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
-    <%- include('../partials/head')%>
-<main class="body-register">
-    <form action="/user/formularioRegistro"  method="POST" id="form" class="caja-registro"> 
-        <div class="form">
-            <h1 class="registro">REGISTRATE</h1>
-            <div class="grupo">
-                <input type= "text" id="name" name="first_name" value="<%= locals.old && old.first_name ? old.first_name : "" %>"class= "input-register"><span class="barra-register"></span>
-                <label class= "label-register" for= "">Nombre</label>
-                <div><%if(locals.errors && errors.first_name) { %>
-                <p class="errorEpress"><%= errors.first_name.msg %></p> <% } %>
-            </div></div>
-            <div class="grupo">
-                <input type= "apellido" id="surname" name="last_name" value="<%= locals.old && old.first_name ? old.first_name : ""  %>" class= "input-register"><span class="barra-register"></span>
-                <label class= "label-register" for= "">Apellido</label>
-                <div><%if(locals.errors && errors.first_name) { %>
-                <p class="errorEpress"><%= errors.first_name.msg %></p><% } %>  
-            </div></div>
-            <div class="grupo">
-                <input type= "nombreUsuario" id="user-name" name="user_name" value="<%= locals.old && old.user_name ? old.user_name : ""  %>" class= "input-register"><span class="barra-register"></span>
-                <label class= "label-register" for= "">Nombre de Usuario</label>
-                <div><%if(locals.errors && errors.user_name) { %>
-                    <p class="errorEpress"><%= errors.user_name.msg %> </p><% } %>
-            </div></div>
-            <div class="grupo">
-                <input type= "email" id="email" name="email" value="<%= locals.old && old.last_name ? old.last_name : ""  %>" class= "input-register"><span class="barra-register"></span>
-                <label class= "label-register" for= "">Email</label>
-                <div><%if(locals.errors && errors.last_name) { %>
-                    <p class="errorEpress"><%= errors.last_name.msg %> </p><% } %> 
-            </div></div>
-            <div class="grupo-seleccionar">
-                <h4 class="cell">Elegí tu foto de perfil</h4>
-                <input type= "file" name="avatar" class="imagen-perfil">
-                <div><%if(locals.errors && errors.avatar) { %>
-                <p class="errorEpress"><%= errors.avatar.msg %> </p><% } %>
-            </div></div>
-            <div class="grupo-seleccionar">
-                <h4 class="cell"> Tipo de usuario</h4> 
-                <select name="user_category" >
-                <option selected="true" disabled="disabled">seleccione una categoria</option>
-                <% for (let i = 0; i < categoria.length; i++){ %> 
-                    <option value="<%= categoria[i].id %> "><%= categoria[i].name %></option>
-                <% } %> 
-                </select>
-                <div><%if(locals.errors && errors.user_category) { %>
-                <p class="errorEpress"><%= errors.user_category.msg %> </p><% } %>
-            </div></div>
-            <div class="grupo">
-                <input type= "password" id="password" name="password" class= "input-register"><span class="barra-register"></span>
-                <label class= "label-register" for= "">Password</label>
-                <div><%if(locals.errors && errors.password) { %>
-                <p class="errorEpress"><%= errors.password.msg %> </p><% } %>
-            </div></div>
+<%- include('../partials/head')%>
+    <main class="body-register">
+        <form action="/user/formularioRegistro" method="POST" enctype="multipart/form-data" id="form" class="caja-registro">
+            <div class="form">
+                <h1 class="registro">REGISTRATE</h1>
+                <div class="grupo">
+                    <input type="text" id="name" name="first_name"
+                        value="<%= locals.old && old.first_name ? old.first_name : "" %>" class="input-register">
+                        <span class="barra-register"></span>
+                    <label class="label-register" for="">Nombre</label>
+                    <div>
+                        <%if(locals.errors && errors.first_name) { %>
+                            <p class="errorEpress">
+                                <%= errors.first_name.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                </div>
+                <div class="grupo">
+                    <input type="apellido" id="surname" name="last_name"
+                        value="<%= locals.old && old.first_name ? old.first_name : ""  %>" class="input-register">
+                        <span class="barra-register"></span>
+                    <label class="label-register" for="">Apellido</label>
+                    <div>
+                        <%if(locals.errors && errors.first_name) { %>
+                            <p class="errorEpress">
+                                <%= errors.first_name.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                </div>
+                <div class="grupo">
+                    <input type="nombreUsuario" id="user-name" name="user_name"
+                        value="<%= locals.old && old.user_name ? old.user_name : ""  %>" class="input-register">
+                        <span class="barra-register"></span>
+                    <label class="label-register" for="">Nombre de Usuario</label>
+                    <div>
+                        <%if(locals.errors && errors.user_name) { %>
+                            <p class="errorEpress">
+                                <%= errors.user_name.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                </div>
+                <div class="grupo">
+                    <input type="email" id="email" name="email" 
+                        value="<%= locals.old && old.last_name ? old.last_name : ""  %>" class="input-register">
+                        <span class="barra-register"></span>
+                    <label class="label-register" for="">Email</label>
+                    <div>
+                        <%if(locals.errors && errors.last_name) { %>
+                            <p class="errorEpress">
+                                <%= errors.last_name.msg %>
+                            </p>
+                         <% } %>
+                    </div>
+                </div>
+                <div class="grupo-seleccionar">
+                    <h4 class="cell">Elegí tu foto de perfil</h4>
+                    <input type="file" name="avatar" class="imagen-perfil">
+                    <div>
+                        <%if(locals.errors && errors.avatar) { %>
+                            <p class="errorEpress">
+                                <%= errors.avatar.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                </div>
+                <div class="grupo-seleccionar">
+                    <h4 class="cell"> Tipo de usuario</h4>
+                    <select name="user_category">
+                        <option selected="true" disabled="disabled">seleccione una categoria</option>
+                        <% for (let i=0; i < categoria.length; i++){ %>
+                            <option value="<%= categoria[i].id %> ">
+                                <%= categoria[i].name %>
+                            </option>
+                            <% } %>
+                    </select>
+                
+                    <div>
+                        <%if(locals.errors && errors.user_category) { %>
+                            <p class="errorEpress">
+                                <%= errors.user_category.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                </div>
+                <div class="grupo">
+                    <input type="password" id="password" name="password" class="input-register">
+                    <span class="barra-register"></span>
+                    <label class="label-register" for="">Password</label>
+                    <div>
+                        <%if(locals.errors && errors.password) { %>
+                            <p class="errorEpress">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
+                    </div>
+                </div>
 
-            <button type="submit" class="button-register">Suscribirte</button>
-            <p class="warnings"id="warnings"></p>
-        </div>
-    </form>
-        <script src="/js/formularioRegistro.js" type="text/javascript"></script>
-</main>
+                <button type="submit" class="button-register">Suscribirte</button>
+                <p class="warnings" id="warnings"></p>
+            </div>
+        </form>
+        <!-- <script src="/js/formularioRegistro.js" type="text/javascript"></script> -->
+    </main>
+
 </html>
