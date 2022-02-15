@@ -45,16 +45,25 @@ const userController = {
 
 ////////////////////////////////////////////////////////////////////////////
     guardar: function (req, res){
-        const resultValidation = validationResult(req);
-        if (resultValidation.errors.length > 0) {
-			return res.render('./users/formularioRegistro', {
-				errors: resultValidation.mapped(),
-                old: req.body.first_name,
-                old: req.body.last_name,
-                old:req.body.user_name,
-                old: req.body.email
-			});
-		}
+        let errors = validationResult(req);
+        if(!errors.isEmpty()) {
+            return res.render(path.resolve(__dirname, './users/formularioRegistro'), {
+              errors: errors.errors,  old: req.body
+            });
+          } 
+        // const resultValidation = validationResult(req);
+        // if (resultValidation.errors.length > 0) {
+		// 	return res.render('./users/formularioRegistro', {
+		// 		errors: resultValidation.mapped(),
+        
+                // old: req.body.first_name,
+                // old: req.body.last_name,
+                // old:req.body.user_name,
+                // old: req.body.email
+            
+            
+			// });
+		// }
         // let errors = validationResult(req);
         // if(!errors.isEmpty()) {
         //     return res.render('./users/formularioRegistro'), {
