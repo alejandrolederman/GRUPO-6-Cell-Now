@@ -6,7 +6,7 @@
         <a href="/"><img src="/img/logo/logo_small_icon_only.jpg " class= avatar-register width="50%"></a>
       
     
-        <form action="/products/productsForm" method="POST" enctype="multipart/form-data" >
+        <form action="/products/productsForm" method="POST" enctype="multipart/form-data" id="form" >
             <div class="text-color">
 
                 <!-- <label for="mark" class="text-color"> Marca   </label>
@@ -14,7 +14,7 @@
                 <input type="text" name="mark_id"  placeholder="Ingresa la marca" class="nombre-registro"> -->
                 <h4 lass="text-color"> Marca </h4>
                 <div>
-                    <select name="markId"class="nombre-registro" id="name">
+                    <select name="markId"class="nombre-registro" >
                         <option value="0">selecciona una marca</option>
                         <% for (let i = 0; i < mark.length; i++){ %> 
                         <option value="<%= mark[i].id %> ">
@@ -27,7 +27,7 @@
                 <br>
                 <label for="model" class="text-color"> modelo  </label>
                 <br>
-                <input type="text" name="model"  placeholder="Ingresa el modelo"  class="nombre-registro">
+                <input type="text" name="model"  placeholder="Ingresa el modelo"  class="nombre-registro" id="name">
                 <br>
                 <br>                
                 <label for="price" class="text-color"> precio del producto  </label>
@@ -80,10 +80,12 @@
             <br>
         <div>
             <button type="submit" class="button-enviar" name= "button"><span><i class="fa fa-share-square-o" aria-hidden="true"></i> ENVIAR</span></button> 
+            <p class="warnings-login" id="warnings-login"></p>
             <button class="button-borrar" name= "button"><span><i class="fa fa-trash-o" aria-hidden="true"></i> BORRAR</span></button>
         </div> 
             <br>
             <br>
+            <script src="/js/productsForm.js" type="text/javascript"></script>
         </form>
         <%- include ('../partials/footer')%>
 </body>

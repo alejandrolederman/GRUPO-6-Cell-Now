@@ -101,6 +101,7 @@ const userController = {
         db.User.findOne({where: { email: req.body.email }})
         .then(function(userToLogin){ 
             //si esta confirma que la contraseña sea correcta
+            console.log(userToLogin);
             if(userToLogin){
                 let passOk = bcryptjs.compareSync(req.body.password, userToLogin.password);        
                 if(passOk){ //si es correcta lo pone en seccion inicada 

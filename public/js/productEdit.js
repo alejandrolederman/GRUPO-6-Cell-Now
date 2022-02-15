@@ -4,7 +4,7 @@ const imagen = document.getElementById("image");
 const form = document.getElementById("form");
 const parrafo = document.getElementById("warnings-login"); 
   //   /* ==========================================================================
-  //    FORMULARIO DE VALIDACION DE LOGIN
+  //    FORMULARIO DE VALIDACION DE PRODUCTS EDIT
   //    ========================================================================== */
   form.addEventListener("submit", (e) => {
     let warnings = "";
