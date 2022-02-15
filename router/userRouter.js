@@ -23,21 +23,24 @@ router.post('/login', validationLogin,userController.loginProcess);
 router.get('/userProfile',authMiddleware, userController.profile);
 router.get('/logout', userController.logout);
 
+// editar usuario
+router.get('/userEdit/:id', userController.edit);
+router.post('/userEdit/:id',uploadFile.single('avatar'), userController.actualizar); 
 
-// ruta del login al  home
-router.post('/', userController.home);
+// eliminar usuario
+router.get('/userDelete/:id', userController.unUsuarioDelete);
 
-//formulario del registro
-// router.get('/formularioRegistro',guestMiddlewares, userController.registrer);
-//procesar el registro
-// router.post('/formularioRegistro', uploadFile.single('avatar'), userController.processRegistrer);
-
-router.get('/selecBuyOrSell', userController.selecBuyOrSell)
+router.post("/userDelete/:id", userController.eliminar); 
 
 //formulario del registro base de datos
 router.get('/formularioRegistro', userController.crear);
 //procesar el registro base de datos
 router.post('/formularioRegistro', uploadFile.single('avatar'),validationRecord, userController.guardar);
+
+// ruta del login al  home
+router.post('/', userController.home);
+
+router.get('/selecBuyOrSell', userController.selecBuyOrSell)
 
 module.exports = router;
 

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/head')%>
+
+
+<body>
+    
+    <main class="body-register" >
+
+    <a href="/"><img src="/img/logo/logo_small_icon_only.png " class= avatar-Userregister width="50%"></a>
+        
+        <form action="" method="POST" enctype="multipart/form-data" id="form" class="caja-registro">
+            
+
+            <div class="form">
+                <h1 class="registro">REGISTRATE</h1>
+               
+                <br>
+                <input type="text" name="first_name"
+                 value = "<%= unUser.firstName %> "
+                  class="nombre-registro">
+                <br>
+                <br>
+                <input type="text" name="last_name"
+                 value = "<%= unUser.lastName %> "
+                  class="nombre-registro">
+                <br>
+                <br>
+                <input type="text" name="user_name"
+                 value = "<%= unUser.userName %> "
+                  class="nombre-registro">
+                <br>
+                <br>
+                <h4 class="cell">Elegí tu foto de perfil</h4>
+                <input type="file" name="avatar" class="imagen-perfil">
+                <br>
+                <br>
+                <label for="">Password</label>
+                <br>
+                <input type="password" name="password" class="nombre-registro">
+                    <span class="barra-register"></span>
+                    
+
+                <button class="button-register">actualziar</button>
+                <p class="warnings" id="warnings"></p>
+                
+            </div>
+        </form>
+        
+        
+    </main>
+</body>
+
+</html>

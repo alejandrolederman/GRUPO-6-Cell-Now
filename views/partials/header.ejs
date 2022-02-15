@@ -18,20 +18,18 @@
                 
                         <div><img class= fotoperfil src="/img/avatars/<%= locals.userLogged.avatar %> " alt="" width=80px ></div>
                         <a href="/user/userProfile"><i > <%= locals.userLogged.firstName %> </i></a>
-                        <br>
                         <a href="/products/productsForm">Vender</a>
-                        <br>
                         <a href="/user/logout">Logout</a>
                          
                         <div>
-                            <a href="/user/usersList">Listar Usuarios Registrados</a>
+                            <a href="/user/usersList">Listar Usuarios </a>
                         </div>
                          
                     </div>
                     <% } else { %> 
                     <div class="Fonts-right">
-                        <a href="/user/login">Vender</a>
-                        <a href="/user/login"><i>Login</i></a>
+                        <a href="/user/login">Vender   </a>
+                        <a href="/user/login"><i>Login   </i></a>
                         <a href="/user/formularioRegistro"><i class="header-usuraio">   Registrate   </i></a>
                         <% } %> 
                         <!-- <a href= "/trolley/carritoDeCompras"><i class="fas fa-shopping-cart" ></i></a> -->

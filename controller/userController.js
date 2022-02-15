@@ -5,11 +5,9 @@ const bcryptjs = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require("../database/models")
 
-// const usersFilePath = path.join(__dirname, '../data/users.json');
-// let users = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-
 const userController = {
     ///////////////////////////////////////////////////////////////
+    //llama a la lista de usuarios de la base de datos
     usersList: (req, res) => {
         db.User.findAll()
         .then(function(usuarios){
@@ -21,9 +19,10 @@ const userController = {
     },
     
 ///////////////////////////////////////////////////////////////////
+    //detalle de usuario
     usersDetail: (req, res) => {
-        db.User.findByPk(req.params.id,{
-        include: [{association: "UserCat"}]})
+        db.User.findByPk(req.params.id, {  
+        include: [{ association : "UserCat"}]})
         .then(function(usuario){
             res.render('./users/usersDetail', {usuario})  
         })
@@ -33,37 +32,23 @@ const userController = {
     },
 
 ///////////////////////////////////////////////////////////    
+    // llama al formulario de creacion de usuarios
     crear: function (req, res){
-        
-        
-            return res.render("./users/formularioRegistro")
+        return res.render("./users/formularioRegistro")
                
     },
 
-////////////////////////////////////////////////////////////////////////////
+///////////////////////////////////////////////////////////////////////////////////////
+    // guarda el usuario creado en la base de datos, validando los datos ingresados 
     guardar: function(req, res){
-        // let errors = validationResult(req);
-        // if(!errors.isEmpty()) {
-        //     return res.render ('./users/formularioRegistro', {
-        //       errors: errors.errors,  old: req.body
-        //     });
-        //   } 
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
 			return res.render('./users/formularioRegistro', {
 				errors: resultValidation.mapped(),
                 old: req.body
-           
-            
 			});
 		}
-        // let errors = validationResult(req);
-        // if(!errors.isEmpty()) {
-        //     return res.render('./users/formularioRegistro'), {
-        //       errors: errors.errors,  old: req.body
-        //     };
-        //   } 
-
+        
         db.User.findOne({where: { email: req.body.email }})
         .then( function(userInDB){
             if (userInDB) {
@@ -82,7 +67,7 @@ const userController = {
                 userName:req.body.user_name,
                 email: req.body.email,
                 password:bcryptjs.hashSync(req.body.password, 10),
-                usercategoryId: req.body.user_category,
+                usercategoryId: 5 ,
                 avatar: req.file.filename
                 })
                    
@@ -93,12 +78,14 @@ const userController = {
         })
     },
     
-//////////////////////////////////////////////////////////////////////////////////  
+////////////////////////////////////////////////////////////////////////////////// 
+    //llama al formulario de login para ingresar
     login: (req, res) => {
         res.render('./users/login');
     },
 
-//////////////////////////////////////////////////////////////////////////////////  
+////////////////////////////////////////////////////////////////////////////////// 
+    // valida el login y guarda en session y cookie al usuario registrado
     loginProcess: (req, res) => {
         //revicion de que email no esta vacio
         if (req.body.email == 0) {
@@ -150,13 +137,52 @@ const userController = {
             console.log(err)
         })
     },
+
+////////////////////////////////////////////////////////////////////////////////////////////// 
+    // llama al formulario de edicion
+    edit: (req, res) => {
+        let pedidoUsuario = db.User.findByPk(req.params.id)
+        let pedidoCategoria = db.Usercategory.findAll() 
+
+        Promise.all ([pedidoUsuario, pedidoCategoria])
+        .then(function([unUser, unaCat]){
+            res.render('./users/userEdit', {unUser:unUser, unaCat:unaCat})  
+        })
+        .catch(function(err){
+            console.log(err)
+        }) 
+    },       
+
+    ///////////////////////////////////////////////////////////////
+    // actualiza al usuario
+    actualizar: (req, res) => {
+         
+            db.User.update({
+                firstName: req.body.first_name,
+                lastName: req.body.last_name,
+                userName:req.body.user_name,
+                email: req.body.email,
+                password:bcryptjs.hashSync(req.body.password, 10),
+                usercategoryId: req.body.user_category,
+                avatar: req.file.filename
+            },
+            {
+                where: {
+                    id:req.params.id
+                }
+            })
+            res.redirect('/') 
+    },
+
 //////////////////////////////////////////////////////////////////////////////////////////////    
+    //
     profile: (req, res) => {
         return res.render('./users/userProfile', {
 			users: req.session.userLogged
 		 });
 	},
 //////////////////////////////////////////////////////////////////////////////////////////////    
+    //saca al usuario de la session
     logout: (req, res) => {
         res.clearCookie('userEmail');
         req.session.destroy();
@@ -167,6 +193,32 @@ const userController = {
     selecBuyOrSell: (req, res) => {
         res.render('./users/selecBuyOrSell');
     },
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+    // trae al usuario para su borrado de la base de datos
+    unUsuarioDelete: (req,res)=>{
+        db.User.findByPk(req.params.id,{
+            include: [{association: "UserCat"}]})
+        .then(function(unUser){
+            res.render('./users/userDelete', {unUser})  
+        })
+        .catch(function(err){
+            console.log(err)
+        }) 
+    },
+
+////////////////////////////////////////////////////////////////////////////////////////////
+    // borra al usuario de la base de datos
+    eliminar: (req,res) =>{
+        db.User.destroy({
+            where: {
+                id : req.params.id
+            }
+        })
+        .then(()=>  res.redirect('/'))
+        .catch(error => console.log(error))
+    },
+
 
 /////////////////////////////////////////////////////////////////////////////////////////////////
     home: (req, res) => {

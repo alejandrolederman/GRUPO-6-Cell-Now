@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <%- include('../partials/head')%>
+<body>
+
+    <%- include('../partials/header')%>
+     
+ <h2> ¿Estás seguro que deseas borrar este usuario? </h2>
+ <br>
+ <div class="producto-comprar">
+    
+</div>
+<div class="descripcion-producto-comprar">
+    <img src="/img/avatars/<%= unUser.avatar %> " alt="">
+
+    <h2><%=unUser.UserCat.name%> </h2>
+
+    <br>
+    <h3 class="texto-comprar">APELLIDO: <%=unUser.lastName%> </h3>
+                <br>
+                <h3 class="texto-comprar"> USUARIO: <%=unUser.userName%></h3>
+                <br>
+                <h3 class="texto-comprar"> CATEGORIA: <%=unUser.UserCat.name%></h3>
+                <br>
+                <h3 class="texto-comprar"> EMAIL: <%=unUser.email%></h3>
+    <br>
+    
+    <br>
+    <form action="/user/userDelete/<%= unUser.id %> " method="POST">
+        <button type="submit">BORRAR USUARIO</button>
+    </form>
+     <div>
+       <a href='/'> <button class="button-enviar" name= "button" ><span><i class="fas fa-cash-register"aria-hidden="true"></i> CANCELAR OPERACION</span></button> 
+    </div> 
+
+</body>
+<%- include ('../partials/footer')%>
+</html>

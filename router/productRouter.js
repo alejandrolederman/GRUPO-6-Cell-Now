@@ -5,25 +5,28 @@ const uploadFilePproducts = require ("../middlewares/multerStorangeProduct")
 const productController = require('../controller/productController');
 
 
-/*** GET ONE PRODUCT ***/
+/*** TRAER UN SOLO PRODUCTO ***/
 router.get('/detail/:id', productController.productDetail);
 
-/*** GET ALL PRODUCTS ***/ 
+/*** TRAER TODOS LOS PRODUCTOS ***/ 
 router.get('/productsList', productController.productsList);
 
- /*** CREATE ONE PRODUCT ***/ 
+ /*** CREAR UN PRODUCTO ***/ 
  router.get('/productsForm', productController.crear); 
  
  router.post('/productsForm',uploadFilePproducts.single('image'), productController.store); 
 
- /*** EDIT ONE PRODUCT ***/ 
+ /*** EDITAR UN PRODUCTO ***/ 
  router.get('/productEdit/:id', productController.edit); 
  
  router.post('/productEdit/:id',uploadFilePproducts.single('image'), productController.actualizar); 
 
- /*** DELETE ONE PRODUCT***/                
+ /*** ELIMINAR UN PRODUCTO***/ 
+ router.get('/productDelete/:id', productController.unProductoDelete);
 
-// router.get('/productoVendido', productController.venta);
+ router.post("/delete/:id", productController.eliminar);               
+
+/*** VENDER UN PRODUCTO***/ 
 
 router.get('/confirmVenta/:id', productController.confirmarVenta);
 

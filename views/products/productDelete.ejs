@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <%- include('../partials/head')%>
+<body>
+
+    <%- include('../partials/header')%>
+     
+ <h2> ¿Estás seguro que deseas borrar este producto? </h2>
+ <br>
+ <div class="producto-comprar">
+    
+</div>
+<div class="descripcion-producto-comprar">
+    <img src="/img/products/<%= unProduct.image %> " alt="">
+
+    <h2><%=unProduct.Mark.name%> </h2>
+
+    <br>
+    <h3 class="texto-comprar"><%=unProduct.model%> </h3>
+    <br>
+    
+    <br>
+    <form action="/products/delete/<%= unProduct.id %> " method="POST">
+        <button type="submit">BORRAR</button>
+    </form>
+     <div>
+       <a href='/'> <button class="button-enviar" name= "button" ><span><i class="fas fa-cash-register"aria-hidden="true"></i> NO</span></button> 
+    </div> 
+
+</body>
+<%- include ('../partials/footer')%>
+</html>
