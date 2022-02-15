@@ -57,6 +57,16 @@
     .text {font-size: 11px}
   }
 
+.avatar-Userregister{
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position:absolute;
+    top: 7%;
+    left: 35%;
+}
+
 /* <!--FORMULARIO REGISTRO -->*/
 .body-register {
     font-family:"Roboto";
@@ -89,6 +99,7 @@
     content: "";
 }
 form.caja-registro{
+    display:absolute;
     width: 40%;
     background: #fff;
     box-shadow: 0 0 6px 0 rbg(255, 255, 255, 0.8);
@@ -827,6 +838,10 @@ main ul li a {
 
 .texto-comprar {
     color: black;
+}
+
+.logoRedirect{
+    padding:50px
 }
 
 .article-comprar {

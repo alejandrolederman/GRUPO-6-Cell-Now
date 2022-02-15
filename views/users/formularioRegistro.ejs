@@ -1,8 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <%- include('../partials/head')%>
-    <main class="body-register">
+
+
+<body>
+    
+    <main class="body-register" >
+
+    <a href="/"><img src="/img/logo/logo_small_icon_only.png " class= avatar-Userregister width="50%"></a>
+        
         <form action="/user/formularioRegistro" method="POST" enctype="multipart/form-data" id="form" class="caja-registro">
+            
+
             <div class="form">
                 <h1 class="registro">REGISTRATE</h1>
                 <div class="grupo">
@@ -102,9 +111,12 @@
 
                 <button type="submit" class="button-register">Suscribirte</button>
                 <p class="warnings" id="warnings"></p>
+                
             </div>
         </form>
+        
         <script src="/js/formularioRegistro.js" type="text/javascript"></script>
     </main>
+</body>
 
 </html>
