@@ -13,7 +13,7 @@
                
                 <h4 lass="text-color"> Marca </h4>
                 <div>
-                    <select name="mark"class="nombre-registro">
+                    <select name="mark"class="nombre-registro" id="name">
                         <option value="0">selecciona una marca</option>
                         <% for (let i = 0; i < mark.length; i++){ %> 
                         <option value="<%= mark[i].id %> ">
@@ -26,7 +26,7 @@
                 <br>
                 <label for="model" class="text-color"> modelo  </label>
                 <br>
-                <input type="text" name="model"  value="<%= unProduct.model %>"  class="nombre-registro">
+                <input type="text" name="model" value="<%= unProduct.model %>"  class="nombre-registro">
                 <br>
                 <br>                
                 <label for="price" class="text-color"> precio del producto  </label>
@@ -36,12 +36,12 @@
                 <br> 
                 <label for="discount" class="text-color"> descuento del producto  </label>
                 <br>
-                 <input type="text" name="discount"  value="<%= unProduct.discount %>" class="nombre-registro" >
-                 <br>
-                 <br> 
+                <input type="text" name="discount"  value="<%= unProduct.discount %>" class="nombre-registro" >
+                <br>
+                <br> 
                 <label for="description" class="text-color">Descripcion</label>             
                 <br>
-                <input type="textarea" name="description"   value="<%= unProduct.description %>" class="nombre-registro">
+                <input type="textarea" name="description"   value="<%= unProduct.description %>" class="nombre-registro" id="descripcion">
                 <br>
                 <br>
                 <label for="camera" class="text-color"> cantidad de MP de la camara principal  </label>
@@ -71,10 +71,7 @@
                 <input type= "file" name="image" id="image" class="imagen-producto">
                 <br>
                 <br>
-                             </div>
-    
-            </div>  
-
+        </div></div>  
             <br>
             <br>
         <div>
