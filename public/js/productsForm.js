@@ -20,7 +20,7 @@ const parrafo = document.getElementById("warnings-login");
       hayError = true;
     }
     if (!imagenes.test(imagen.value)) {
-      warnings += "El archivo a adjuntar no es una imagen <br>";
+      warnings += "El archivo a adjuntar no es una imagen jpg o png <br>";
       hayError = true;
     }
     if (hayError) {

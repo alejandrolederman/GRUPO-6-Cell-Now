@@ -2,7 +2,7 @@ const nombre = document.getElementById("name");
 const descripcion = document.getElementById("descripcion");
 const imagen = document.getElementById("image");
 const form = document.getElementById("form");
-const parrafo = document.getElementById("warnings-login"); 
+const parrafo = document.getElementById("warnings"); 
   //   /* ==========================================================================
   //    FORMULARIO DE VALIDACION DE PRODUCTS EDIT
   //    ========================================================================== */
@@ -20,7 +20,7 @@ const parrafo = document.getElementById("warnings-login");
       hayError = true;
     }
     if (!imagenes.test(imagen.value)) {
-      warnings += "El archivo a adjuntar no es una imagen <br>";
+      warnings += "El archivo a adjuntar no es una imagen jpg o png <br>";
       hayError = true;
     }
     if (hayError) {
