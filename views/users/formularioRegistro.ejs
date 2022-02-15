@@ -68,25 +68,7 @@
                             <% } %>
                     </div>
                 </div>
-                <div class="grupo-seleccionar">
-                    <h4 class="cell"> Tipo de usuario</h4>
-                    <select name="user_category">
-                        <option selected="true" disabled="disabled">seleccione una categoria</option>
-                        <% for (let i=0; i < categoria.length; i++){ %>
-                            <option value="<%= categoria[i].id %> ">
-                                <%= categoria[i].name %>
-                            </option>
-                            <% } %>
-                    </select>
-                
-                    <div>
-                        <%if(locals.errors && errors.user_category) { %>
-                            <p class="errorEpress">
-                                <%= errors.user_category.msg %>
-                            </p>
-                            <% } %>
-                    </div>
-                </div>
+               
                 <div class="grupo">
                     <input type="password" id="password" name="password" class="input-register">
                     <span class="barra-register"></span>

@@ -23,7 +23,7 @@ const userController = {
 ///////////////////////////////////////////////////////////////////
     usersDetail: (req, res) => {
         db.User.findByPk(req.params.id,{
-        include: [{association: "usercategory"}]})
+        include: [{association: "UserCat"}]})
         .then(function(usuario){
             res.render('./users/usersDetail', {usuario})  
         })
@@ -34,25 +34,27 @@ const userController = {
 
 ///////////////////////////////////////////////////////////    
     crear: function (req, res){
-        db.Usercategory.findAll()
-        .then(function(categoria){
-            return res.render("./users/formularioRegistro" , {categoria:categoria})
-        })
-        .catch(function(err){
-            console.log(err)
-        })
+        
+        
+            return res.render("./users/formularioRegistro")
+               
     },
 
 ////////////////////////////////////////////////////////////////////////////
-    guardar: function (req, res){
+    guardar: function(req, res){
+        // let errors = validationResult(req);
+        // if(!errors.isEmpty()) {
+        //     return res.render ('./users/formularioRegistro', {
+        //       errors: errors.errors,  old: req.body
+        //     });
+        //   } 
         const resultValidation = validationResult(req);
         if (resultValidation.errors.length > 0) {
 			return res.render('./users/formularioRegistro', {
 				errors: resultValidation.mapped(),
-                old: req.body.first_name,
-                old: req.body.last_name,
-                old:req.body.user_name,
-                old: req.body.email
+                old: req.body
+           
+            
 			});
 		}
         // let errors = validationResult(req);

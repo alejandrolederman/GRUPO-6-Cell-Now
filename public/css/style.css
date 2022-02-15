@@ -841,6 +841,13 @@ main ul li a {
     display: flex;
 }
 
+.fotoperfil{
+    display:inline-block    ;
+    justify-content: center;
+    padding-top:30px;
+    text-align: center;
+}
+
 .imagen-comprar {
     width: 150%;
     display: block;
