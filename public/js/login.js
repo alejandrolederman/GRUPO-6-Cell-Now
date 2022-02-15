@@ -1,38 +1,28 @@
 
-const { check } = require("express-validator");
-
-document.addEventListener("DOMContentLoaded", () => {
-    let $formRegister = document.querySelector(".login");
-  
-    /* ==========================================================================
-     FORMULARIO DE VALIDACION DE LOGIN
-     ========================================================================== */
-    $formRegister.addEventListener("submit", (e) => {
-      let $email = document.getElementById("usu");
-      let $contrasenia = document.getElementById("pas");
-     // let $errorEpress =document.getElementById("errorEpress");//
-  
-      let hayError = false;
-  
-        if (
-          ($email.value =
-            !/^[_a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})/i
-              .test)
-        )
-          $email.style.border = "2px solid red";
-          setErrorFor( email, "El texto ingresado no coincide con el patrón requerido. Proporciona solo una dirección de correo corporativo de Cell Now ")
-          $email.classList.add ("shake", "error");
-          hayError = true;
-  
-        if ($pas.value.length < 8 || $pas.value == $pas.value) {
-          $pas.style.border = "2px solid red";
-          hayError = true;
-        }
-
-        //Verifica si hay errores en los campos
-        else if ($hayError || nombreCondicion || pasCondicion) {
-          e.preventDefault();;
-        }
-      }
-    );
+const email = document.getElementById("mail");
+const pass = document.getElementById("password");
+const form = document.getElementById("form");
+const parrafo = document.getElementById("warnings-login"); 
+  //   /* ==========================================================================
+  //    FORMULARIO DE VALIDACION DE LOGIN
+  //    ========================================================================== */
+  form.addEventListener("submit", (e) => {
+    let warnings = "";
+    let hayError = false;
+    let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    parrafo.innerHTML = "";
+    if (!regexEmail.test(email.value)) {
+      warnings += "El email no es valida <br>";
+      hayError = true;
+    }
+    if (pass.value.length < 8) {
+      warnings += "La contraseña no es valida <br>";
+      hayError = true;
+    }
+    if (hayError) {
+      parrafo.innerHTML = warnings;
+      e.preventDefault();
+    } else {
+      form.submit();
+    }
   });

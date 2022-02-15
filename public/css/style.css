@@ -159,6 +159,13 @@ input:focus~.barra::before{
     color: #141E30;
     padding-top: 20px;
 } 
+.warnings-login {
+    width: 200px;
+    text-align: center;
+    margin: auto;
+    color: #fff;
+    padding-top: 20px;
+} 
 .button-register {
     font-family: "roboto";
     background: #4A4AD1;
