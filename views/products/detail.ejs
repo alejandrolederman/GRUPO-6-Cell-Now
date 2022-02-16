@@ -36,32 +36,30 @@
                             </a>
                         </article>
 
-
-                        <% if(locals.userLogged.usercategoryId === 6) {%>
-                        
-                        
-                        <article class="main-div-login button-comprar">
-                            <br>
-                            <a href="/products/productEdit/<%=unProduct.id%>"><button class="button-editar" 
-                                name="button"><span><i class="fa fa-pencil-square" aria-hidden="true">
-                                </i> EDITAR PRODUCTO</span></button>
-                            </a>
-                            
-                               
-                                <a href="/products/productDelete/<%= unProduct.id %>"><button type="submit" class="button-borrar"><span><i class="fa fa-trash-o" aria-hidden="true"></i> ELIMINAR PRODUCTO</button></a>
-                                <!-- <button class="button" name="button"><span> ELIMINAR PRODUCTO</span></button> -->
-                            
-                                <% } %> 
-                            
-                               <% } else { %> 
-                        
-                                <h2>registrate para realizar tus compras</h2>
+                            <% if(locals.userLogged.usercategoryId === 6) {%>
+                                                        
+                                <article class="main-div-login button-comprar">
+                                    <br>
+                                    <a href="/products/productEdit/<%=unProduct.id%>"><button class="button-editar" 
+                                        name="button"><span><i class="fa fa-pencil-square" aria-hidden="true">
+                                        </i> EDITAR PRODUCTO</span></button>
+                                    </a>
+                                    
+                                    
+                                    <a href="/products/productDelete/<%= unProduct.id %>"><button type="submit"
+                                        class="button-borrar"><span><i class="fa fa-trash-o" aria-hidden="true">
+                                        </i> ELIMINAR PRODUCTO</button>
+                                    </a>
+                                </article>
                                 
+                            <% } %> 
+                            
+                        <% } else { %> 
                         
-                                 <% } %> 
-                           
-                 
-                        
+                            <h2>registrate para realizar tus compras</h2>
+                            <a href="/user/formularioRegistro"><i class="registrate-usuraio">   Registrate   </i></a>
+                                
+                        <% } %>    
                     </article>
                     <br>
                     <main>
