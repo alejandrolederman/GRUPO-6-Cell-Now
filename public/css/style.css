@@ -117,7 +117,7 @@ div #form {
     position:relative;
     margin:35px;
 }
-input#name,#email,#user-name,#surname,#password.input-register {
+/* input#name,#email,#user-name,#surname,#password.input-register {
     background: none;
     border-color: #bdc3c7;
     font-size: 18px;
@@ -126,7 +126,7 @@ input#name,#email,#user-name,#surname,#password.input-register {
     width: 100%;
     border-bottom: 1px solid var(--colorTextos #000);
     border-radius: 10px;
-} 
+}  */
 .grupo-seleccionar{
     position:relative;
     margin:45px;
@@ -1000,8 +1000,22 @@ text-align: center;
     color: black;
     margin-left: 15px;
 }
+.formProducts{
+    text-align: center;
+}
 
-.nombre-registro,
+.h4Form {
+    margin: 0px;
+}
+
+.nombre-registro{
+    align-items: center;
+    border-bottom: 1px solid var(--colorTextos #000);
+    border-radius: 10px;
+    padding: 5px;
+    text-align:center;
+    width: 30%;
+}
 .pass-registro {
     width: 75%;
     padding: 8px;
