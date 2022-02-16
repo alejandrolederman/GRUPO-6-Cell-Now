@@ -5,7 +5,7 @@
    
     <%- include('../partials/header')%>
     <main class="main-second">
-
+                
         <% for (let i = 0; i < usuarios.length; i++){ %> 
            
                 
@@ -25,7 +25,9 @@
                 <br>
                 <p>USUARIO:  <%=usuarios[i].userName%></p>
                 <br>
-                <p>USUARIO:  <%=usuarios[i].email%></p>
+                <p>EMAIL:  <%=usuarios[i].email%></p>
+                <br>
+                <p>CATEGORIA:  <%=usuarios[i].UserCat.name%></p>
                
             </article>
             </a>

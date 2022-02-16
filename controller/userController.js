@@ -9,7 +9,8 @@ const userController = {
     ///////////////////////////////////////////////////////////////
     //llama a la lista de usuarios de la base de datos
     usersList: (req, res) => {
-        db.User.findAll()
+        db.User.findAll({
+            include: [{association: "UserCat"}]})
         .then(function(usuarios){
             res.render('./users/usersList', {usuarios});
         })
