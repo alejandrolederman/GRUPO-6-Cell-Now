@@ -34,6 +34,18 @@
                 <h4 class="cell">Elegí tu foto de perfil</h4>
                 <input type="file" name="avatar" class="imagen-perfil">
                 <br>
+                <% if(locals.userLogged.usercategoryId === 6) {%>
+                <div>
+                    <select name="user_category"class="nombre-registro" >
+                        <option value="0">selecciona una categoria</option>
+                        <% for (let i = 0; i < unaCat.length; i++){ %> 
+                        <option value="<%= unaCat[i].id %> ">
+                            <%= unaCat[i].name %> 
+                        </option>
+                        <% } %> 
+                    </select>
+                </div>
+                <% } %> 
                 <br>
                 <label for="">Password</label>
                 <br>
@@ -42,6 +54,8 @@
                     
 
                 <button class="button-register">actualziar</button>
+                <!-- <a href='/'> <button class="button-enviar" name= "button" ><span><i class="fas fa-cash-register"aria-hidden="true"></i> CANCELAR </span></button>  -->
+                    <input type="button" value="Página anterior" button class="button-enviar" name= "button" onClick="history.go(-1);">
                 <p class="warnings" id="warnings"></p>
                 
             </div>

@@ -22,10 +22,10 @@
     <h3 class="texto-comprar"> <%=unProduct.price%> </h3>
     <br>
     <form action="/products/productoVendido/<%= unProduct.id %> " method="POST">
-        <button type="submit">COMPRAR</button>
+        <button type="submit" class="button-enviar"><span><i class="fas fa-cash-register"aria-hidden="true"></i>COMPRAR</span></button>
     </form>
      <div>
-       <a href='/'> <button class="button-enviar" name= "button" ><span><i class="fas fa-cash-register"aria-hidden="true"></i> NO</span></button> 
+       <a href='/'> <button class="button-enviar" name= "button" ><span><i class="fas fa-cash-register"aria-hidden="true"></i> CANCELAR COMPRA</span></button> 
     </div> 
 
 </body>
