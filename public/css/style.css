@@ -861,9 +861,37 @@ main ul li a {
     box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(255, 255, 255), 0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
 }
 
+.formasDePago{
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+.formasDePago li {
+    list-Style:none
+}
+
+.especificacionesTecnicas{
+    display: flex;
+    margin: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    text-align: center;
+}
+
+.especificacionesTecnicas li {
+    list-Style:none
+}
+
 .texto-comprar {
     color: black;
 }
+
+
 
 .logoRedirect{
     padding:50px
@@ -879,6 +907,19 @@ main ul li a {
     justify-content: center;
     padding-top:30px;
     text-align: center;
+}
+
+.UserProfile{
+padding-top: 30px;
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+}
+
+.imagenUserProfile{
+    padding-top: 50px;
+    align-self: center;
 }
 
 .imagen-comprar {

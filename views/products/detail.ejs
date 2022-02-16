@@ -28,7 +28,7 @@
                     </div>
                     <article class="main-div-login button-comprar">
                         <!-- <button class="button" name="button"><span><i class="fa fa-shopping-cart" aria-hidden="true" style="color: white;"></i> AGREGAR AL CARRITO</span></button> -->
-                        <% if(locals.isLogged) {%> 
+                        <% if(locals.userLogged) {%> 
 
                             <a href= "/products/confirmVenta/<%= unProduct.id %> "><button class="button-enviar" 
                                 name="button"><span><i class="fa fa-shopping-bag" aria-hidden="true">
@@ -57,13 +57,15 @@
                         <% } else { %> 
                         
                             <h2>registrate para realizar tus compras</h2>
-                            <a href="/user/formularioRegistro"><i class="registrate-usuraio">   Registrate   </i></a>
+                            <br>
+                            <h3><a href="/user/formularioRegistro"><i class="registrate-usuraio">   Registrate   </i></a></h3>
                                 
                         <% } %>    
                     </article>
                     <br>
-                    <main>
+                    <main class="formasDePago">
                         <h4>Formas de pago</h4>
+                        <br>
                         <div class="caracteristicas">
                             <i class="fab fa-cc-visa" style="color:darkblue;"></i>
                             <li>Tarjetas de crédito</li>
@@ -74,12 +76,13 @@
                             <li>Efectivo</li>
                         </div>
                     </main>
-                    <main>
+                    <main class="especificacionesTecnicas">
                         <h4>Especificaciones técnicas</h4>
+                        <br>
                         <div class="caracteristicas">
                             <i class="fas fa-mobile" style="color:darkblue;"></i>
                             <br>
-                            <li> Cámara frontal principal: <%=unProduct.camera%></li>
+                            <li > Cámara frontal principal: <%=unProduct.camera%></li>
                         </div>
                         <div class="caracteristicas">
                             <i class="fas fa-fingerprint" style="color:darkblue;"></i>
@@ -96,10 +99,13 @@
                                 <i class="far fa-window-maximize" style="color:darkblue;"></i>
                                 <li> Tamaño de la pantalla: <%=unProduct.screen%> </li>
                             </div>
+                            <br>
+                        
+                            <h4><%=unProduct.description%></h4>
                         </div>
                     </main>
                     <br>
-                    <h4><%=unProduct.description%></h4>
+                    
                 </ul>
             </div>
         </article>

@@ -7,16 +7,16 @@
 		<%- include('../partials/header')%>
     <div >
 		<div >
-			<div >
-				<h2>Hi <%= users.firstName + " "+ users.lastName %> </h2>
+			<div class="UserProfile">
+				<h2>Bienvenido, <%= users.firstName + " "+ users.lastName %> </h2>
 
 				
 
 				
-				<img src="/img/avatars/<%= users.avatar %> ">
+				<img class=imagenUserProfile src="/img/avatars/<%= users.avatar %> " width=350px>
 				<br>
 				<br>
-				<div ><%= users.email %> </div>
+				<div >Email: <%= users.email %> </div>
 				<br>
 				<br>
 				
