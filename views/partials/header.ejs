@@ -20,11 +20,12 @@
                         <a href="/user/userProfile"><i > <%= locals.userLogged.firstName %> </i></a>
                         <a href="/products/productsForm">Vender</a>
                         <a href="/user/logout">Logout</a>
-                         
+                        
+                        <% if(locals.userLogged.usercategoryId === 6) {%>
                         <div>
                             <a href="/user/usersList">Listar Usuarios </a>
-                        </div>
-                         
+                        </div>   
+                        <% } %> 
                     </div>
                     <% } else { %> 
                     <div class="Fonts-right">
