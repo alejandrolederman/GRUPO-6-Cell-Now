@@ -265,7 +265,7 @@ h3.cell {
 }
 .login-box {
     width: 320px;
-    height: 420px;
+    height: 530px;
     border-radius: 20px;
     background-color: #000;
     color: #fff;
@@ -295,10 +295,6 @@ h3.cell {
     margin-top: 50px;
 }
 
-.recordar{
-
-
-}
 
 /* .login-box h1{
     margin: 0%;
@@ -323,7 +319,7 @@ h3.cell {
     box-sizing: e;
     padding: 0;      
     display: flex;    
-    position: absolute;
+    /* position: absolute; */
     left: 0px;   
     bottom: 103px;}
     

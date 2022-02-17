@@ -10,7 +10,7 @@
 
                 <h1 class="h1Bienvenido">BIENVENIDO</h1>
                 <form action="/user/login" method="POST" class="form-login" id="form">
-                    <!-- <label for="">Email</label> -->
+                    <p class="errorFront" id="errorEmail"></p>
                     <input class="usu" type="text" name="email" placeholder="Email" id="mail">
                     <%if(locals.errors && errors.email) { %>
                         <p class="errorEpress">
@@ -18,6 +18,8 @@
                         </p>
                         <% } %>
                             <!-- <label for="">Contraseña</label> -->
+                            <p class="errorFront" id="errorPass"></p>
+                            <p class="errorFront" id="errorPassMayuscula"></p>
                             <input class="pas" type="password" name="password" placeholder="Contraseña" id="password">
                             <%if(locals.errors && errors.pass) { %>
                                 <p class="errorEpress">
@@ -26,12 +28,12 @@
                                 <% } %>
                                 <div class="recordar">
                                     <label class="reco" for="recordar">Recordar Usuario</label><br>
-                                    <input type="checkbox" name="remember"> <br><br>
+                                    <input type="checkbox" name="remember" class="checkbox"> <br><br>
                                 </div>
                                     <button type="submit" class="button-login" name="button"><i class="fa fa-sign-in"
                                     aria-hidden="true"></i>
                                     <span>INGRESAR</span></button>
-                                    <p class="warnings-login" id="warnings-login"></p>
+                                    <!-- <p class="warnings-login" id="warnings-login"></p> -->
 
                                     <!-- <a class="href" href="#">¿Olvidaste tu contraseña?</a> -->
                                     <a class="href" href="/user/formularioRegistro">Registrate</a>

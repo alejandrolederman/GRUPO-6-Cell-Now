@@ -10,14 +10,25 @@ const parrafo = document.getElementById("warnings-login");
     let warnings = "";
     let hayError = false;
     let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+    const regexPass = /(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
+
     parrafo.innerHTML = "";
     if (!regexEmail.test(email.value)) {
-      warnings += "El email no es valida <br>";
+      // warnings += "El email no es valida <br>";
+      errorEmail.innerHTML = "El email debe tener un formato válido"
       hayError = true;
+    }else{
+      hayError = false;
+      errorEmail.innerHTML = ""
     }
-    if (pass.value.length < 8) {
-      warnings += "La contraseña no es valida <br>";
+    if (!regexPass.test(pass.value)) {
+      // warnings += "La contraseña no es valida <br>";
+      errorPass.innerHTML = "La contraseña debe tener 8 caracteres mínimo, "
+      errorPassMayuscula.innerHTML = "con una mayuscula, numero y caracter especial"
       hayError = true;
+    }else{
+      hayError = false;
+      errorPass.innerHTML = ""
     }
     if (hayError) {
       parrafo.innerHTML = warnings;

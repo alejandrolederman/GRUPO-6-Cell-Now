@@ -50,7 +50,7 @@ form.addEventListener("submit", (e) => {
   }
   if (!regexEmail.test(email.value)) {
     // warnings += "El email no es valida <br>";
-    errorEmail.innerHTML = "El email debe email debe tener un formato válido"
+    errorEmail.innerHTML = "El email debe tener un formato válido"
     hayError = true;
   }else{
     hayError = false;
@@ -65,7 +65,7 @@ form.addEventListener("submit", (e) => {
     hayError = false;
     errorAvatar.innerHTML = ""
   }
-  regexPass
+  
   if (!regexPass.test(pass.value)) {
     // warnings += "La contraseña no es valida <br>";
     errorPass.innerHTML = "La contraseña debe tener 8 caracteres mínimo, "

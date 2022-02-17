@@ -89,7 +89,7 @@ const userController = {
     loginProcess: (req, res) => {
         //revicion de que email no esta vacio
         if (req.body.email == 0) {
-            return res.render('login', {
+            return res.render('./users/login', {
                 errors: {
                     email: {
                         msg: 'Ingrese un email registrado'
