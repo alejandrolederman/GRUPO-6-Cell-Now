@@ -1,7 +1,7 @@
 // document.addEventListener("DOMContentLoaded", () => {
-  const db = require("../database/models")
+  // const db = require("../database/models")
 
-const nombre = document.getElementById("name");
+const nombre = document.getElementById("#name");
 const apellido = document.getElementById("surname");
 const nombreUsuario = document.getElementById("user-name");
 const email = document.getElementById("email");
@@ -21,7 +21,7 @@ form.addEventListener("submit", (e) => {
   let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   parrafo.innerHTML = "";
   if (nombre.value === "") {
-    // warnings += "El nombre no es valido <br>";
+    warnings += "El nombre no es valido <br>";
     errorFirstName.innerHTML ="este campo no puede estar vacio"
     hayError = true;
   } 
@@ -41,34 +41,34 @@ form.addEventListener("submit", (e) => {
 
   if (nombreUsuario.value=== "") {
     // warnings += "El nombre de usuario no es valido <br>";
-    errorUserName.innerHTML ="este campo no puede estar vacio"
+    errorUserName.innerHTML = "este campo no puede estar vacio"
     hayError = true;
   }else if (nombreUsuario.value.length < 3) {
     errorLastName.innerHTML = "El nombre usuario tiene que contener mas de 3 caracteres "
     hayError = true;
   }
 
-  if (!regexEmail.test(email.value)) {
-    // warnings += "El email no es valida <br>";
-    errorEmail.innerHTML ="El email no es valida"
-    hayError = true;
-  }
-  else {
-    db.User.findOne({where: { email: req.body.email }})
-      .then( function(userInDB){
-        if (userInDB) {
-          errorEmail.innerHTML ="este email ya esta registrado"
-          hayError = true;
-        }  
-      })
-  }
+  // if (!regexEmail.test(email.value)) {
+  //   warnings += "El email no es valida <br>";
+  //   errorEmail.innerHTML ="El email no es valida"
+  //   hayError = true;
+  // }
+  // else {
+  //   db.User.findOne({where: { email: req.body.email }})
+  //     .then( function(userInDB){
+  //       if (userInDB) {
+  //         errorEmail.innerHTML ="este email ya esta registrado"
+  //         hayError = true;
+  //       }  
+  //     })
+  // }
   
   
    if (pass.value.length < 8) {
     warnings += "La contraseña no es valida <br>";
     hayError = true;
   }
-  if (hayError == true) {
+  if (hayError) {
     parrafo.innerHTML = warnings;
     e.preventDefault();
   } else {
