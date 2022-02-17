@@ -35,7 +35,7 @@ router.post("/userDelete/:id", userController.eliminar);
 //formulario del registro base de datos
 router.get('/formularioRegistro', userController.crear);
 //procesar el registro base de datos
-router.post('/formularioRegistro', uploadFile.single('avatar'), userController.guardar);
+router.post('/formularioRegistro', uploadFile.single('avatar'),validationRecord, userController.guardar);
 
 // ruta del login al  home
 router.post('/', userController.home);
