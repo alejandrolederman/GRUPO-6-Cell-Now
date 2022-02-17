@@ -83,7 +83,7 @@ const productController = {
     // actualiza producto
     actualizar: (req, res) => {
         db.Product.update({
-           markId: req.body.markId,
+            markId: req.body.markId,
             model: req.body.model,
             price: req.body.price,
             discount: req.body.discount,

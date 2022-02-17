@@ -28,6 +28,8 @@
                 <label for="model" class="text-color"> modelo  </label>
                 <br>
                 <input type="text" name="model" value="<%= unProduct.model %>"  class="nombre-registro" id="name">
+                <p class="errorFront" id="errorModel"></p>
+
                 <br>
                 <br>                
                 <label for="price" class="text-color"> precio del producto  </label>
@@ -41,6 +43,8 @@
                 <br>
                 <br> 
                 <label for="description" class="text-color">Descripcion</label>             
+                <p class="errorFront" id="errorDescription"></p>
+
                 <br>
                 <input type="textarea" name="description"   value="<%= unProduct.description %>" class="nombre-registro" id="descripcion">
                 <br>
@@ -70,6 +74,8 @@
                 <br>
                 <h4 class="text-color imagen-perfil">agrega una imagen del producto</h4>
                 <input type= "file" name="image" id="image" class="imagen-producto">
+                <p class="errorFront" id="errorImagen"></p>
+
                 <br>
                 <br>
         </div></div>  
