@@ -10,8 +10,6 @@ const form = document.getElementById("form");
 const parrafo = document.getElementById("warnings");
 const avatar = document.getElementById("avatar");
 
-
-
 /* ==========================================================================
    FORMULARIO DE VALIDACION DE REGISTER
    ========================================================================== */
@@ -21,12 +19,13 @@ form.addEventListener("submit", (e) => {
   let hayError = false;
   let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
   const regexImageFormat = /\.(jpe?g|png|gif)(?:\?.*|)$/i;
-  // const regexPass = ^(?=.[A-Za-z])(?=.\d)(?=.[@$!%#?&])[A-Za-z\d@$!%*#?&]{8,}$
+  const regexPass = /(?=^.{8,}$)((?=.*\d)(?=.*\W+))(?![.\n])(?=.*[A-Z])(?=.*[a-z]).*$/
+                        
   parrafo.innerHTML = "";
 
   if (nombre.value.length < 2 ) {
     // warnings += "El nombre no es valido <br>";
-    errorFirstName.innerHTML = " el nombre es muy corto"
+    errorFirstName.innerHTML = "El nombre debe tener al menos 2 caracteres"
     hayError = true;
   } else {
     hayError = false;
@@ -35,7 +34,7 @@ form.addEventListener("submit", (e) => {
   
   if (apellido.value.length < 2) {
     // warnings += "El apellido no es valido <br>";
-    errorLastName.innerHTML = " el apellido es muy corto"
+    errorLastName.innerHTML = "El apellido debe tener al menos 2 caracteres"
     hayError = true;
   } else{
     hayError = false;
@@ -43,7 +42,7 @@ form.addEventListener("submit", (e) => {
   }
   if (nombreUsuario.value.length < 3) {
     // warnings += "El nombre de usuario no es valido <br>";
-    errorUserName.innerHTML = "El nombre de usuario no es valido"
+    errorUserName.innerHTML = "El nombre de usuario debe tener al menos 3 caracteres"
     hayError = true;
   }else{
     hayError = false;
@@ -51,7 +50,7 @@ form.addEventListener("submit", (e) => {
   }
   if (!regexEmail.test(email.value)) {
     // warnings += "El email no es valida <br>";
-    errorEmail.innerHTML = "El email no es valida"
+    errorEmail.innerHTML = "El email debe email debe tener un formato válido"
     hayError = true;
   }else{
     hayError = false;
@@ -60,16 +59,17 @@ form.addEventListener("submit", (e) => {
   
   if (!(regexImageFormat.test(avatar.value)))  {
     // warnings += "El nombre de usuario no es valido <br>";
-    errorAvatar.innerHTML = "la extension no es valida "
+    errorAvatar.innerHTML = "Debes seleccionar una imagen de perfil (.jpg, .jpeg, .png) "
     hayError = true;
   }else{
     hayError = false;
     errorAvatar.innerHTML = ""
   }
-  
-  if (pass.value.length < 8) {
+  regexPass
+  if (!regexPass.test(pass.value)) {
     // warnings += "La contraseña no es valida <br>";
-    errorPass.innerHTML = "La contraseña no es valida"
+    errorPass.innerHTML = "La contraseña debe tener 8 caracteres mínimo, "
+    errorPassMayuscula.innerHTML = "con una mayuscula, numero y caracter especial"
     hayError = true;
   }else{
     hayError = false;

@@ -18,7 +18,7 @@
                     <input type="text" id="name" name="first_name" 
                         value="<%= locals.old && old.first_name ? old.first_name : "" %>" class="input-register" >
                         <span class="barra-register"></span>
-                        <p id="errorFirstName"></p>
+                        <p class="errorFront" id="errorFirstName"></p>
                     <label class="label-register" for="">Nombre</label>
                     <div>
                         <%if(locals.errors && errors.first_name) { %>
@@ -32,7 +32,7 @@
                     <input type="apellido" id="surname" name="last_name"
                         value="<%= locals.old && old.last_name ? old.last_name : ""  %>" class="input-register">
                         <span class="barra-register"></span>
-                        <p id="errorLastName"></p>
+                        <p class="errorFront" id="errorLastName"></p>
                         
                     <label class="label-register" for="">Apellido</label>
                     <div>
@@ -47,7 +47,7 @@
                     <input type="nombreUsuario" id="user-name" name="user_name"
                         value="<%= locals.old && old.user_name ? old.user_name : ""  %>" class="input-register">
                         <span class="barra-register"></span>
-                        <p id="errorUserName"></p>
+                        <p class="errorFront" id="errorUserName"></p>
                     <label class="label-register" for="">Nombre de Usuario</label>
                     <div>
                         <%if(locals.errors && errors.user_name) { %>
@@ -61,7 +61,7 @@
                     <input type="text" id="email" name="email" 
                         value="<%= locals.old && old.email ? old.email : ""  %>" class="input-register">
                         <span class="barra-register"></span>
-                        <p id="errorEmail"></p>
+                        <p class="errorFront" id="errorEmail"></p>
                     <label class="label-register" for="">Email</label>
                     <div>
                         <%if(locals.errors && errors.email) { %>
@@ -74,7 +74,7 @@
                 <div class="grupo-seleccionar">
                     <h4 class="cell">Elegí tu foto de perfil</h4>
                     <input type="file" id="avatar" name="avatar" class="imagen-perfil">
-                    <p id="errorAvatar"></p>
+                    <p class="errorFront" id="errorAvatar"></p>
                     <div>
                         <%if(locals.errors && errors.avatar) { %>
                             <p class="errorEpress">
@@ -88,7 +88,8 @@
                     <input type="password" id="password" name="password" class="input-register">
                     <span class="barra-register"></span>
                     <label class="label-register" for="">Password</label>
-                    <p id="errorPass"></p>
+                    <p class="errorFront" id="errorPass"></p>
+                    <p class="errorFront" id="errorPassMayuscula"></p>
                     <div>
                         <%if(locals.errors && errors.password) { %>
                             <p class="errorEpress">
