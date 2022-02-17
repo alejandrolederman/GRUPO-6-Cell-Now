@@ -108,6 +108,9 @@ form.caja-registro{
     align-items: center;
 } 
 
+.recordar {
+    display:flex
+}
 div #form {
     /* width:100%; */
     margin: 10px;
