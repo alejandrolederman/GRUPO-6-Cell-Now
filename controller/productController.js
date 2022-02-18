@@ -92,7 +92,8 @@ const productController = {
             screen: req.body.screen,
             memory: req.body.memory,
             unlocking: req.body.unlocking,
-            image: req.file.filename
+            image: req.file ? req.file.filename : req.body.oldImagen,
+
         },
         {
             where: {

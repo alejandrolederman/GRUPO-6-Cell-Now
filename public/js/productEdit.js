@@ -18,7 +18,7 @@ const parrafo = document.getElementById("warnings");
       hayError = true;
     } else {
       hayError = false;
-      errorFirstName.innerHTML = ""
+      errorModel.innerHTML = ""
     }
 
     if (descripcion.value.length < 5 ) {
@@ -27,17 +27,17 @@ const parrafo = document.getElementById("warnings");
       hayError = true;
     } else {
       hayError = false;
-      errorFirstName.innerHTML = ""
+      errorDescription.innerHTML = ""
     }
     
-    if (!regexImageFormat.test(imagen.value)) {
+    // if (!regexImageFormat.test(imagen.value)) {
       
-      errorImagen.innerHTML = "Debes adjuntar una imagen del producto (.jpg, .jpeg, .png) "
-      hayError = true;
-    }else{
-      hayError = false;
-      errorImagen.innerHTML = ""
-    }
+    //   errorImagen.innerHTML = "Debes adjuntar una imagen del producto (.jpg, .jpeg, .png) "
+    //   hayError = true;
+    // }else{
+    //   hayError = false;
+    //   errorImagen.innerHTML = ""
+    // }
     if (hayError) {
       parrafo.innerHTML = warnings;
       e.preventDefault();
