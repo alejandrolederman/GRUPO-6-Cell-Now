@@ -14,7 +14,7 @@ const UserAPIController = {
                 meta: {
                     status : 200,
                     total: users.length,
-                    url: '/api/users'
+                    url: '/data/user'
                 },
                 data: users.map(user=>{
                     return {
@@ -36,7 +36,7 @@ const UserAPIController = {
                 let respuesta = {
                     meta: {
                         status: 200,
-                        url: '/api/users/:id'
+                        url: '/data/users/:id'
                     },
                     data: user
                 }

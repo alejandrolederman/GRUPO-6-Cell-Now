@@ -12,7 +12,9 @@ const indexRouter = require('./router/indexRouter');
 const trolleyRouter = require('./router/trolleyRouter');
 const userRouter = require('./router/userRouter');
 const productRouter = require('./router/productRouter');
-const apiRouter = require ("./router/Api/users")
+const usersapiRouter = require ("./router/Api/users")
+const productapiRouter = require ("./router/Api/products")
+
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); 
 const { error } = require('console');
 
@@ -42,7 +44,9 @@ app.use('/', indexRouter);
 app.use('/trolley', trolleyRouter);
 app.use('/views/user', userRouter);
 app.use('/views/products',productRouter);
-app.use('/data/user', apiRouter);
+app.use('/data/user', usersapiRouter);
+app.use('/data/product', productapiRouter);
+
 
 //ruta error 404 
  app.use((req, res,next)=>{
