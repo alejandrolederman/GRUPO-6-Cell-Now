@@ -12,6 +12,7 @@ const indexRouter = require('./router/indexRouter');
 const trolleyRouter = require('./router/trolleyRouter');
 const userRouter = require('./router/userRouter');
 const productRouter = require('./router/productRouter');
+const apiRouter = require ("./router/Api/users")
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); 
 const { error } = require('console');
 
@@ -40,7 +41,8 @@ const port = process.env.PORT || 3002;
 app.use('/', indexRouter);
 app.use('/trolley', trolleyRouter);
 app.use('/user', userRouter);
-app.use('/products',productRouter)
+app.use('/products',productRouter);
+app.use('/api/users', apiRouter);
 
 //ruta error 404 
  app.use((req, res,next)=>{
