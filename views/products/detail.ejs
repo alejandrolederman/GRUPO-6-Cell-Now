@@ -30,7 +30,7 @@
                         <!-- <button class="button" name="button"><span><i class="fa fa-shopping-cart" aria-hidden="true" style="color: white;"></i> AGREGAR AL CARRITO</span></button> -->
                         <% if(locals.userLogged) {%> 
 
-                            <a href= "/products/confirmVenta/<%= unProduct.id %> "><button class="button-enviar" 
+                            <a href= "/views/products/confirmVenta/<%= unProduct.id %> "><button class="button-enviar" 
                                 name="button"><span><i class="fa fa-shopping-bag" aria-hidden="true">
                                 </i> COMPRAR</span></button>
                             </a>
@@ -40,13 +40,13 @@
                                                         
                                 <article class="main-div-login button-comprar">
                                     <br>
-                                    <a href="/products/productEdit/<%=unProduct.id%>"><button class="button-editar" 
+                                    <a href="/views/products/productEdit/<%=unProduct.id%>"><button class="button-editar" 
                                         name="button"><span><i class="fa fa-pencil-square" aria-hidden="true">
                                         </i> EDITAR PRODUCTO</span></button>
                                     </a>
                                     
                                     
-                                    <a href="/products/productDelete/<%= unProduct.id %>"><button type="submit"
+                                    <a href="/views/products/productDelete/<%= unProduct.id %>"><button type="submit"
                                         class="button-borrar"><span><i class="fa fa-trash-o" aria-hidden="true">
                                         </i> ELIMINAR PRODUCTO</button>
                                     </a>
@@ -58,7 +58,7 @@
                         
                             <h2>registrate para realizar tus compras</h2>
                             <br>
-                            <h3><a href="/user/formularioRegistro"><i class="registrate-usuraio">   Registrate   </i></a></h3>
+                            <h3><a href="/views/user/formularioRegistro"><i class="registrate-usuraio">   Registrate   </i></a></h3>
                                 
                         <% } %>    
                     </article>

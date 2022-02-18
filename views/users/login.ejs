@@ -9,7 +9,7 @@
                 <a href="/"><img class="avatar" src="/img/logo/logo_small_icon_only.jpg" alt=""></a>
 
                 <h1 class="h1Bienvenido">BIENVENIDO</h1>
-                <form action="/user/login" method="POST" class="form-login" id="form">
+                <form action="/views/user/login" method="POST" class="form-login" id="form">
                     <p class="errorFront" id="errorEmail"></p>
                     <input class="usu" type="text" name="email" placeholder="Email" id="mail">
                     <%if(locals.errors && errors.email) { %>
@@ -36,7 +36,7 @@
                                     <!-- <p class="warnings-login" id="warnings-login"></p> -->
 
                                     <!-- <a class="href" href="#">¿Olvidaste tu contraseña?</a> -->
-                                    <a class="href" href="/user/formularioRegistro">Registrate</a>
+                                    <a class="href" href="/views/user/formularioRegistro">Registrate</a>
             </div>
             </form>
             </div>

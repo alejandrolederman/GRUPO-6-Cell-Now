@@ -40,9 +40,9 @@ const port = process.env.PORT || 3002;
 // Uso de las routes
 app.use('/', indexRouter);
 app.use('/trolley', trolleyRouter);
-app.use('/user', userRouter);
-app.use('/products',productRouter);
-app.use('/api/users', apiRouter);
+app.use('/views/user', userRouter);
+app.use('/views/products',productRouter);
+app.use('/data/user', apiRouter);
 
 //ruta error 404 
  app.use((req, res,next)=>{

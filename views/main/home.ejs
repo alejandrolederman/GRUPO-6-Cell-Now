@@ -37,7 +37,7 @@
 
      <main class="main-first">
         <div>
-            <a href="/products/productsList"><img src="/img/muchos-celulares.jpeg" class="imagen-main" alt="imagen" height="100px"></a>
+            <a href="/views/products/productsList"><img src="/img/muchos-celulares.jpeg" class="imagen-main" alt="imagen" height="100px"></a>
             <p>LISTA DE PRODUCTOS</p>
         </div>
      </main>
@@ -48,7 +48,7 @@
         <% products.forEach(products =>{ %>
            
             <section class="product-box">
-                <a href="/products/detail/<%=products.id%>">
+                <a href="/views/products/detail/<%=products.id%>">
                     <figure class="product-box_image">
                         <img src="/img/products/<%= products.image %>  "  width="150px" height="305 px">
                     </figure>
@@ -75,7 +75,7 @@
         <% products.forEach(products =>{ %>
             <% if(products.mark == "Apple"){ %> 
             <section class="product-box">
-                <a href="/products/detail/<%=products.id%>">
+                <a href="/views/products/detail/<%=products.id%>">
                     <figure class="product-box_image">
                         <img src="/img/baseDeDatos/<%=products.image%> "  width="150px" height="305 px">
                     </figure>
