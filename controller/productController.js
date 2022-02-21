@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
-
 const db = require("../database/models")
+
 
  const productsFilePath = path.join(__dirname, '../data/products.json');
  let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
@@ -19,7 +19,6 @@ const productController = {
         .catch(function(err){
         console.log(err)
         })
-  
     },
 ///////////////////////////////////////////////////////////////
     // detalle de producto
@@ -110,13 +109,17 @@ const productController = {
         db.Product.findByPk(req.params.id,{
             include: [{association: "Mark"}]})
         .then(function(unProduct){
+            // let celular = unProduct
             res.render('./products/confirmVenta', {unProduct})  
         })
         .catch(function(err){
             console.log(err)
         })
-        
+
+        let user = req.session.userLogged
         "use strict";
+
+
         const nodemailer = require("nodemailer");
         
         // async..await is not allowed in global scope, must use a wrapper
@@ -134,9 +137,6 @@ const productController = {
               user: "cellnowdh@gmail.com", // generated ethereal user
               pass: "Digital123456+", // generated ethereal password
             },
-            // tls:{
-            //     rejectUnauthorized: false
-            // }
             
           });
           console.log(transporter)
@@ -144,9 +144,9 @@ const productController = {
           // send mail with defined transport object
           let info = await transporter.sendMail({
             from: '"cellnowDH@gmail.com"', // sender address
-            to: 'alejandro.lederman@live.com.ar', // list of receivers
-            subject: "Hello ✔", // Subject line
-            text: "Hello world?", // plain text body
+            to: user.email, // list of receivers
+            subject: "Compra realizada en Cell Now ✔", // Subject line
+            text: "has comprado el telefono de tus sueños ", // plain text body
             html: "<b>prueba </b>", // html body
           });
           console.log (info)

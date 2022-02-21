@@ -110,7 +110,7 @@ const userController = {
                     req.session.userLogged = userToLogin;
                     //lo guarda en cookys
                     if(req.body.remember) {
-                        res.cookie('userEmail', req.body.email, { maxAge: (1000 * 60) * 60 })
+                        res.cookie('userEmail', req.body.email, { maxAge: ((1000 * 60) * 60) * 60 })
                     };
                     
                     res.redirect('./userProfile');
