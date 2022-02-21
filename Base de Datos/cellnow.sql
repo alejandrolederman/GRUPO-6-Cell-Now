@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 11-02-2022 a las 01:41:08
+-- Tiempo de generación: 21-02-2022 a las 16:49:21
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -117,7 +117,7 @@ CREATE TABLE `users` (
   `firstName` varchar(20) NOT NULL,
   `lastName` varchar(20) NOT NULL,
   `userName` varchar(20) NOT NULL,
-  `email` varchar(20) NOT NULL,
+  `email` varchar(50) NOT NULL,
   `password` varchar(500) NOT NULL,
   `userCategoryId` int(11) NOT NULL,
   `avatar` varchar(50) NOT NULL
@@ -129,7 +129,8 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `userName`, `email`, `password`, `userCategoryId`, `avatar`) VALUES
 (14, 'alejandro', 'lederman', 'ale', 'ale@ale.com', '$2a$10$rTuNOOUINTUNAZa..XzOhOiSWh6DvdIT600cGWLrNJWUwOe4Zp8T2', 6, ''),
-(15, 'Alejandro', 'Lederman', 'ale', 'a@a.com', '$2a$10$b0SZ4SZoAckzZAqBb8Cf0Or2iGTuAAq9A.tAgcmFlEhBH/C2CvEL.', 6, '1644514524067_img.jpg');
+(15, 'Alejandro', 'Lederman', 'ale', 'a@a.com', '$2a$10$b0SZ4SZoAckzZAqBb8Cf0Or2iGTuAAq9A.tAgcmFlEhBH/C2CvEL.', 6, '1644514524067_img.jpg'),
+(16, 'Alejandro', 'Lederman', 'ale', 'alejandro.lederman@live.com.ar', '$2a$10$WbE0nxmx7wjajfJD56X.fuF0UUqe8MFOD4AfSE0y949HUHn0EDib2', 5, '1645458173549_img.jpg');
 
 --
 -- Índices para tablas volcadas
@@ -185,7 +186,7 @@ ALTER TABLE `marks`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `trolly`
@@ -203,7 +204,7 @@ ALTER TABLE `usercategory`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- Restricciones para tablas volcadas
