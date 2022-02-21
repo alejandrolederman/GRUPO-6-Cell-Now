@@ -29,7 +29,6 @@ app.use(session({secret:"secreto",resave: false,saveUninitialized: false}));
 
 app.use(userLoggedMiddleware);
 
-console.log(userLoggedMiddleware)
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');

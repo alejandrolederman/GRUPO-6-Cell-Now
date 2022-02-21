@@ -1,11 +1,11 @@
 const fs = require('fs');
 const path = require('path');
 const db = require("../database/models")
+const nodemailer = require("nodemailer");
 
 
  const productsFilePath = path.join(__dirname, '../data/products.json');
  let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 
 const productController = {
 ///////////////////////////////////////////////////////////////
@@ -32,7 +32,6 @@ const productController = {
             console.log(err)
         }) 
       
-  
     },
 ////////////////////////////////////////////////////////////////////
     // Create - Form to create
@@ -62,7 +61,6 @@ const productController = {
         })
         res.redirect("/");
     },
-
 //////////////////////////////////////////////////////////////////////////////
     // llama al producto para actualizar
     edit: (req, res) => {
@@ -77,7 +75,6 @@ const productController = {
                 console.log(err)
             }) 
         },      
-
 ///////////////////////////////////////////////////////////////
     // actualiza producto
     actualizar: (req, res) => {
@@ -102,11 +99,10 @@ const productController = {
 
         res.redirect('/')
     },
-
 //////////////////////////////////////////////////////////////////////////////////////
     //llama el producto para la venta
     confirmarVenta: (req,res)=>{
-        db.Product.findByPk(req.params.id,{
+    let prod = db.Product.findByPk(req.params.id,{
             include: [{association: "Mark"}]})
         .then(function(unProduct){
             // let celular = unProduct
@@ -115,19 +111,22 @@ const productController = {
         .catch(function(err){
             console.log(err)
         })
+    },
+///////////////////////////////////////////////////////////////////////////////////////////
+    // borra el producto vendido de la base de datos
+    borrar: (req,res) =>{        
+        db.Product.destroy({
+            where: {
+                id : req.params.id
+            }
+        })
+        .then(()=>  res.render('./products/productoVendido'))
+        .catch(error => console.log(error))
 
         let user = req.session.userLogged
-        "use strict";
-
-
-        const nodemailer = require("nodemailer");
-        
         // async..await is not allowed in global scope, must use a wrapper
         async function main() {
           // Generate test SMTP service account from ethereal.email
-          // Only needed if you don't have a real mail account for testing
-          let testAccount = await nodemailer.createTestAccount();
-        
           // create reusable transporter object using the default SMTP transport
           let transporter = nodemailer.createTransport({
             host: "smtp.gmail.com",
@@ -139,40 +138,19 @@ const productController = {
             },
             
           });
-          console.log(transporter)
         
           // send mail with defined transport object
           let info = await transporter.sendMail({
             from: '"cellnowDH@gmail.com"', // sender address
             to: user.email, // list of receivers
             subject: "Compra realizada en Cell Now ✔", // Subject line
-            text: "has comprado el telefono de tus sueños ", // plain text body
-            html: "<b>prueba </b>", // html body
+            text: "has comprado el telefono de tus sueños ✔ ", // plain text body
+            html: "has comprado el telefono de tus sueños ✔ ", // html body
           });
-          console.log (info)
-          console.log("Message sent: %s", info.messageId);
-          // Message sent: <b658f8ca-6296-ccf4-8306-87d57a0b4321@example.com>
-        
-          // Preview only available when sending through an Ethereal account
-          console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
-          // Preview URL: https://ethereal.email/message/WaQKMgKddxQDoou...
+          
         }
         
         main().catch(console.error);
-        
-    },
-    
-////////////////////////////////////////////////////////////////////////////////////////////
-    // borra el producto vendido de la base de datos
-    borrar: (req,res) =>{
-        db.Product.destroy({
-            where: {
-                id : req.params.id
-            }
-        })
-        .then(()=>  res.render('./products/productoVendido'))
-        .catch(error => console.log(error))
-
     },
 //////////////////////////////////////////////////////////////////////////////////////
     // llama al producto para borrar

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 21-02-2022 a las 16:49:21
+-- Tiempo de generación: 21-02-2022 a las 19:20:14
 -- Versión del servidor: 10.4.22-MariaDB
 -- Versión de PHP: 8.0.13
 
@@ -72,7 +72,22 @@ CREATE TABLE `products` (
 
 INSERT INTO `products` (`id`, `markId`, `model`, `price`, `discount`, `camera`, `screen`, `memory`, `unlocking`, `description`, `image`) VALUES
 (11, 13, 'A20', '$85.000', '%15', '84', '15', '512', 'huella ', 'esta muy bueno', '1644540001001_img.jpg'),
-(12, 14, '8 plus', '$113.000', '%5', '123', '8.4', '256', 'huella ', 'muy bueno', '1644539601468_img.jpg');
+(12, 14, '8 plus', '$113.000', '%5', '123', '8.4', '256', 'huella ', 'muy bueno', '1644539601468_img.jpg'),
+(14, 16, 'G3 ultimate', '$113.000', '15', '12', '8.4', '265', 'huella ', 'esta muy bueno', '1645462354659_img.jpg'),
+(18, 13, 'A20', '$85.000', '%15', '84', '15', '512', 'huella ', 'esta muy bueno', '1644540001001_img.jpg'),
+(20, 16, 'G3 ultimate', '$113.000', '15', '12', '8.4', '265', 'huella ', 'esta muy bueno', '1645462354659_img.jpg'),
+(21, 13, 'A20', '$85.000', '%15', '84', '15', '512', 'huella ', 'esta muy bueno', '1644540001001_img.jpg'),
+(22, 14, '8 plus', '$113.000', '%5', '123', '8.4', '256', 'huella ', 'muy bueno', '1644539601468_img.jpg'),
+(23, 16, 'G3 ultimate', '$113.000', '15', '12', '8.4', '265', 'huella ', 'esta muy bueno', '1645462354659_img.jpg'),
+(24, 13, 'A20', '$85.000', '%15', '84', '15', '512', 'huella ', 'esta muy bueno', '1644540001001_img.jpg'),
+(25, 14, '8 plus', '$113.000', '%5', '123', '8.4', '256', 'huella ', 'muy bueno', '1644539601468_img.jpg'),
+(26, 16, 'G3 ultimate', '$113.000', '15', '12', '8.4', '265', 'huella ', 'esta muy bueno', '1645462354659_img.jpg'),
+(27, 13, 'A20', '$85.000', '%15', '84', '15', '512', 'huella ', 'esta muy bueno', '1644540001001_img.jpg'),
+(28, 14, '8 plus', '$113.000', '%5', '123', '8.4', '256', 'huella ', 'muy bueno', '1644539601468_img.jpg'),
+(29, 16, 'G3 ultimate', '$113.000', '15', '12', '8.4', '265', 'huella ', 'esta muy bueno', '1645462354659_img.jpg'),
+(30, 13, 'A20', '$85.000', '%15', '84', '15', '512', 'huella ', 'esta muy bueno', '1644540001001_img.jpg'),
+(31, 14, '8 plus', '$113.000', '%5', '123', '8.4', '256', 'huella ', 'muy bueno', '1644539601468_img.jpg'),
+(32, 16, 'G3 ultimate', '$113.000', '15', '12', '8.4', '265', 'huella ', 'esta muy bueno', '1645462354659_img.jpg');
 
 -- --------------------------------------------------------
 
@@ -130,7 +145,8 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`id`, `firstName`, `lastName`, `userName`, `email`, `password`, `userCategoryId`, `avatar`) VALUES
 (14, 'alejandro', 'lederman', 'ale', 'ale@ale.com', '$2a$10$rTuNOOUINTUNAZa..XzOhOiSWh6DvdIT600cGWLrNJWUwOe4Zp8T2', 6, ''),
 (15, 'Alejandro', 'Lederman', 'ale', 'a@a.com', '$2a$10$b0SZ4SZoAckzZAqBb8Cf0Or2iGTuAAq9A.tAgcmFlEhBH/C2CvEL.', 6, '1644514524067_img.jpg'),
-(16, 'Alejandro', 'Lederman', 'ale', 'alejandro.lederman@live.com.ar', '$2a$10$WbE0nxmx7wjajfJD56X.fuF0UUqe8MFOD4AfSE0y949HUHn0EDib2', 5, '1645458173549_img.jpg');
+(16, 'Alejandro', 'Lederman', 'ale', 'alejandro.lederman@live.com.ar', '$2a$10$WbE0nxmx7wjajfJD56X.fuF0UUqe8MFOD4AfSE0y949HUHn0EDib2', 5, '1645458173549_img.jpg'),
+(17, 'martin', 'martin', 'martin', 'martintajman@gmail.com', '$2a$10$oVbgHXHb2XfNVAibtGJ/mOnGaoMg6zrrnpCsHITfm4p5POynYWJvi', 5, '1645462665039_img.jpg');
 
 --
 -- Índices para tablas volcadas
@@ -186,7 +202,7 @@ ALTER TABLE `marks`
 -- AUTO_INCREMENT de la tabla `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT de la tabla `trolly`
@@ -204,7 +220,7 @@ ALTER TABLE `usercategory`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- Restricciones para tablas volcadas
