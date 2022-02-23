@@ -14,6 +14,7 @@ const userRouter = require('./router/userRouter');
 const productRouter = require('./router/productRouter');
 const usersapiRouter = require ("./router/Api/users")
 const productapiRouter = require ("./router/Api/products")
+const markapiRouter = require ("./router/Api/marks")
 
 const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); 
 const { error } = require('console');
@@ -45,7 +46,7 @@ app.use('/views/user', userRouter);
 app.use('/views/products',productRouter);
 app.use('/data/user', usersapiRouter);
 app.use('/data/product', productapiRouter);
-
+app.use('/data/mark', markapiRouter);
 
 //ruta error 404 
  app.use((req, res,next)=>{

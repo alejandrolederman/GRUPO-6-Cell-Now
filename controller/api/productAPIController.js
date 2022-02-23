@@ -42,11 +42,11 @@ productDetail: (req, res) => {
                 status: 200,
                 url: '/data/product/:id'
             },
-            data: user
+            data: product
         }
         res.json(respuesta);
     });
-}
+},
 
 }
 
