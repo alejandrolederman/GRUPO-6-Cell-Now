@@ -8,12 +8,7 @@ const UserAPIController = {
     list: (req, res) => {
         db.User.findAll({
             include: [{association: "UserCat"}]})
-        .then(users => {
-<<<<<<< HEAD
-=======
-         
->>>>>>> 8793f6e430d290fd50528fba38e82c0fa7f403ec
-            let respuesta = {
+        .then(users => {           let respuesta = {
                 meta: {
                     status : 200,
                     total: users.length,
@@ -32,6 +27,8 @@ const UserAPIController = {
             }
                 res.json(respuesta);
             })
+
+            .catch(error => console.log(error))
     },
     
     detail: (req, res) => {
@@ -45,7 +42,8 @@ const UserAPIController = {
                     data: user
                 }
                 res.json(respuesta);
-            });
+            })
+            .catch(error => console.log(error))
     }
     
 }

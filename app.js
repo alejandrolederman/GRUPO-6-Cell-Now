@@ -37,7 +37,7 @@ app.set('view engine', 'ejs');
 const publiPath = path.resolve(__dirname,"./public");
 app.use(express.static(publiPath));
 
-const port = process.env.PORT || 3002;
+const PORT = process.env.PORT || 3002;
 
 // Uso de las routes
 app.use('/', indexRouter);
@@ -56,6 +56,6 @@ app.use('/data/mark', markapiRouter);
 
 
 
-app.listen (port, ()=>{
-    console.log (`el servidor inicio en: localhost:${port}`);
+app.listen (PORT, ()=>{
+    console.log (`el servidor inicio en: localhost:${PORT}`);
 });

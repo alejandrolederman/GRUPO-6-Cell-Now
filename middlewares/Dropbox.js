@@ -1,12 +1,11 @@
 
-var dbx = new Dropbox({ accessToken: sl.BChdBp2MF6YuL1gYo7-MSxb0cBARwOEAHeL-Rq1qiETuJGl9qZLYfFxwcHFy50M92GIzfeopXRW1RxTJr0X1Jxa9_mniSDxNupF_UeI9YiA2n_1559nQLxhFYwcHe0oVGW90AWoAIzfn });
 
 const  multerDbx  =  require ( 'multer-dropbox' ) ; 
 const  { Dropbox }  =  require ( 'dropbox' ) ; 
 const  fetch  =  require ( 'isomorphic-fetch' ) ;
 
 const  dbx  =  new  Dropbox ( { 
-  accessToken : sl.BChdBp2MF6YuL1gYo7-MSxb0cBARwOEAHeL-Rq1qiETuJGl9qZLYfFxwcHFy50M92GIzfeopXRW1RxTJr0X1Jxa9_mniSDxNupF_UeI9YiA2n_1559nQLxhFYwcHe0oVGW90AWoAIzfn ,
+  accessToken : sl.BCj_RA9qbsQdYaib-PlhCnoPnpHEhfmNgxFs15XOM4nJp6OiXBsuQzupblhP3vN6C9XDAmmpsmM4mX5bwGgkTRrtJbEgsesWm0EUTLyZfKaiQ99onIdT23B_9ceMMwyPdyxylZI ,
 //   ha podido recuperar
 });
 

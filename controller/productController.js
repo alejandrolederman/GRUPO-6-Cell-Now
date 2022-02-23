@@ -95,7 +95,10 @@ const productController = {
             where: {
                 id:req.params.id
             }
-        });
+        })
+        .catch(function(err){
+            console.log(err)
+        })
 
         res.redirect('/')
     },
@@ -118,21 +121,21 @@ const productController = {
     // borra el producto vendido de la base de datos
     vendido: (req,res) =>{     
 
-        let prod =  db.Product.findByPk(req.params.id,{
-            include: [{association: "Mark"}]})
+        let prod =  db.Product.findByPk(req.params.id)
         console.log(prod)
-        db.Sale.create({
-            markId: prod.markId,
-            model: prod.model,
-            price: prod.price,
-            discount: prod.discount,
-            description: prod.description,
-            camera: prod.camera,
-            screen: prod.screen,
-            memory: prod.memory,
-            unlocking: prod.unlocking,
-            image: prod.filename
-        })
+       
+        // db.Sale.create({
+        //     markId: prod.markId,
+        //     model: prod.model,
+        //     price: prod.price,
+        //     discount: prod.discount,
+        //     description: prod.description,
+        //     camera: prod.camera,
+        //     screen: prod.screen,
+        //     memory: prod.memory,
+        //     unlocking: prod.unlocking,
+        //     image: prod.filename
+        // })
         
 
         db.Product.destroy({

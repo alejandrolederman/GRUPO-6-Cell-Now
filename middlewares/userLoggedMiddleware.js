@@ -19,6 +19,10 @@ function userLoggedMiddleware(req, res, next) {
 			req.session.userLogged = user;
 			res.locals.userLogged = user
 		})
+
+		.catch(function(err){
+            console.log(err)
+        })
 	}
 
 	next();
