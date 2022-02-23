@@ -20,9 +20,10 @@ const UserAPIController = {
                     return {
                         id: user.id,
                         firstName: user.firstName,
-                        lastname: user.lastName,
+                        lastName: user.lastName,
                         email: user.email,
-                        userCategory: user.UserCat.name
+                        userCategory: user.UserCat.name,
+                        avatar: user.avatar
                     }
                 })
             }
@@ -31,12 +32,12 @@ const UserAPIController = {
     },
     
     detail: (req, res) => {
-        db.Users.findByPk(req.params.id)
+        db.User.findByPk(req.params.id)
             .then(user => {
                 let respuesta = {
                     meta: {
                         status: 200,
-                        url: '/data/users/:id'
+                        url: '/data/user/:id'
                     },
                     data: user
                 }
