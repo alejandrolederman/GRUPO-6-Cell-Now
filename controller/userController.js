@@ -49,7 +49,7 @@ const userController = {
 			});
 		}
         
-        db.User.findOne({where: { email: req.body.email }})
+        db.User.findOne({where: { email: req.body.email } || null})
         .then( function(userInDB){
             if (userInDB) {
                 return res.render('./users/formularioRegistro', {
