@@ -30,7 +30,7 @@ router.get('/productsList', productController.productsList);
 
 router.get('/confirmVenta/:id', productController.confirmarVenta);
 
- router.post("/productoVendido/:id", productController.borrar);
+ router.post("/productoVendido/:id", productController.vendido);
 
 
 module.exports = router;
