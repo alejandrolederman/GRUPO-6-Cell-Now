@@ -9,7 +9,7 @@ const UserAPIController = {
         db.User.findAll({
             include: [{association: "UserCat"}]})
         .then(users => {
-            console.log(users)
+         
             let respuesta = {
                 meta: {
                     status : 200,
