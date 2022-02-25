@@ -16,7 +16,7 @@ const usersapiRouter = require ("./router/Api/users")
 const productapiRouter = require ("./router/Api/products")
 const markapiRouter = require ("./router/Api/marks")
 
-// const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); 
+const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); 
 const { error } = require('console');
 
 // checkConnet()
@@ -28,7 +28,7 @@ app.use(methodOverride('_method'));
 app.use(cookieParser());
 app.use(session({secret:"secreto",resave: false,saveUninitialized: false}));
 
-// app.use(userLoggedMiddleware);
+app.use(userLoggedMiddleware);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -39,19 +39,19 @@ app.use(express.static(publiPath));
 
 const PORT = process.env.PORT || 3002;
 
-app.get('/', (req, res)  =>{
-    res.send("hola como estas ")
-}
-);
+// app.get('/', (req, res)  =>{
+//     res.send("hola como estas ")
+// }
+// );
 
 // Uso de las routes
-// app.use('/', indexRouter);
-// app.use('/trolley', trolleyRouter);
-// app.use('/views/user', userRouter);
-// app.use('/views/products',productRouter);
-// app.use('/data/user', usersapiRouter);
-// app.use('/data/product', productapiRouter);
-// app.use('/data/mark', markapiRouter);
+app.use('/', indexRouter);
+app.use('/trolley', trolleyRouter);
+app.use('/views/user', userRouter);
+app.use('/views/products',productRouter);
+app.use('/data/user', usersapiRouter);
+app.use('/data/product', productapiRouter);
+app.use('/data/mark', markapiRouter);
 
 //ruta error 404 
  app.use((req, res,next)=>{

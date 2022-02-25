@@ -3,10 +3,6 @@ const path = require('path');
 const db = require("../database/models")
 const nodemailer = require("nodemailer");
 
-
- const productsFilePath = path.join(__dirname, '../data/products.json');
- let products = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
 const productController = {
 ///////////////////////////////////////////////////////////////
     //llama a la lista de productos de la base de datos
