@@ -165,7 +165,7 @@ const userController = {
                 email: req.body.email,
                 password:bcryptjs.hashSync(req.body.password, 10),
                 usercategoryId: req.body.user_category,
-                avatar: req.file ? req.file.filename : req.body.oldImagen,
+                avatar: req.file ? req.file.filename : req.body.oldAvatar,
             },
             {
                 where: {

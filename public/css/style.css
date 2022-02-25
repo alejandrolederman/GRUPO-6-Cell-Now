@@ -13,7 +13,10 @@
         margin: auto;
         padding-top: 20px;
     }
-
+  .pesos{
+      color: white;
+  }
+    
 .numbertext {
     color: #f2f2f2;
     font-size: 12px;

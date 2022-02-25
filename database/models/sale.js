@@ -40,19 +40,21 @@ module.exports = (sequelize, dataTypes) => {
     };
   
     let config = {
-      tableName: "sales",
+      tableName: "seles",
       timestamps: false,
     };
   
     const Sale = sequelize.define(alias, cols, config);
 
-    // Sale.associate = function (models) {
-    //   Sale.belongsTo(models.Mark, {
-    //     as: "Mark",
-    //     foreignKey: "markId"
+    Sale.associate = function (models) {
+      Sale.belongsTo(models.Mark, {
+        as: "Mark",
+        foreignKey: "markId"
   
-    //   });
-    //   };
+      });
+      };
+
+    
 
     return Sale;
   };
