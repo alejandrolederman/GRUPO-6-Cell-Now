@@ -16,7 +16,7 @@ const usersapiRouter = require ("./router/Api/users")
 const productapiRouter = require ("./router/Api/products")
 const markapiRouter = require ("./router/Api/marks")
 
-const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); 
+// const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); 
 const { error } = require('console');
 
 // checkConnet()
@@ -28,7 +28,7 @@ app.use(methodOverride('_method'));
 app.use(cookieParser());
 app.use(session({secret:"secreto",resave: false,saveUninitialized: false}));
 
-app.use(userLoggedMiddleware);
+// app.use(userLoggedMiddleware);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
