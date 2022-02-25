@@ -38,14 +38,16 @@
      <main class="main-first">
         <div>
             <a href="/views/products/productsList"><img src="/img/muchos-celulares.jpeg" class="imagen-main" alt="imagen" height="100px"></a>
-            <p>LISTA DE PRODUCTOS</p>
+            <p>LISTA COMPLETO PRODUCTOS</p>
         </div>
      </main>
 
-    <h3 class="product">Productos Destacados</h3>
+    <h3 class="product">Nuestra linea Samsung</h3>
 
     <main class="main-second">
         <% products.forEach(products =>{ %>
+
+            <% if(products.Mark.name == "Samsung"){%> 
            
             <section class="product-box">
                 <a href="/views/products/detail/<%=products.id%>">
@@ -63,6 +65,7 @@
                 </a>
                
         </section>
+        <% } %> 
              
         <% }) %> 
         
@@ -73,16 +76,18 @@
 
     <main class="main-second">
         <% products.forEach(products =>{ %>
-            <% if(products.mark == "Apple"){ %> 
+            <% if(products.Mark.name == "iPhone"){ %> 
             <section class="product-box">
                 <a href="/views/products/detail/<%=products.id%>">
                     <figure class="product-box_image">
-                        <img src="/img/baseDeDatos/<%=products.image%> "  width="150px" height="305 px">
+                        <img src="/img/products/<%= products.image %>  "  width="150px" height="305 px">
                     </figure>
                     <article class="product-box_data">
+                        <h2><%=products.Mark.name%> </h2>
+                        <h2><%=products.model%></h2>
                         <h2><%=products.price%></h2>
                         <span>Descuento del <%=products.discount %></span>
-                        <p><%=products.model%></p>
+                        
                         <i class="fas fa-truck"></i>
                     </article>
                 </a>
