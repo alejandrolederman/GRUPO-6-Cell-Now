@@ -40,7 +40,7 @@ app.use(express.static(publiPath));
 const PORT = process.env.PORT || 3002;
 
 app.get('/', (req, res)  =>{
-    res.send("hola")
+    res.send("hola como estas ")
 }
 );
 
