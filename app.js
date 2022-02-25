@@ -39,14 +39,19 @@ app.use(express.static(publiPath));
 
 const PORT = process.env.PORT || 3002;
 
+app.get('/', (req, res)  =>{
+    res.send("hola")
+}
+);
+
 // Uso de las routes
-app.use('/', indexRouter);
-app.use('/trolley', trolleyRouter);
-app.use('/views/user', userRouter);
-app.use('/views/products',productRouter);
-app.use('/data/user', usersapiRouter);
-app.use('/data/product', productapiRouter);
-app.use('/data/mark', markapiRouter);
+// app.use('/', indexRouter);
+// app.use('/trolley', trolleyRouter);
+// app.use('/views/user', userRouter);
+// app.use('/views/products',productRouter);
+// app.use('/data/user', usersapiRouter);
+// app.use('/data/product', productapiRouter);
+// app.use('/data/mark', markapiRouter);
 
 //ruta error 404 
  app.use((req, res,next)=>{

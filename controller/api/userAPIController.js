@@ -1,6 +1,6 @@
 
 const path = require('path');
-const db = require("../../database/models");
+// const db = require("../../database/models");
 
 //Aqui tienen otra forma de llamar a cada uno de los modelos
 
