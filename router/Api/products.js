@@ -8,6 +8,7 @@ router.get('/', productAPIController.productsList);
 //Detalle de un cliente | /api/clientes/id
 router.get('/:id', productAPIController.productDetail);
 
+
 //
 
 module.exports = router;
