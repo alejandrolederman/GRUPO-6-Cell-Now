@@ -39,6 +39,11 @@ app.use(express.static(publiPath));
 
 const PORT = process.env.PORT || 3002;
 
+// app.get('/', (req, res)  =>{
+//     res.send("hola como estas ")
+// }
+// );
+
 // Uso de las routes
 app.use('/', indexRouter);
 app.use('/trolley', trolleyRouter);

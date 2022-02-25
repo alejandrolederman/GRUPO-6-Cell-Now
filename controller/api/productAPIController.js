@@ -15,7 +15,7 @@ const productAPIController ={
             data: products.map(product=>{
                 return {
                     id: product.id,
-                    markId: product.Mark.markId,
+                    markId: product.Mark.name,
                     model: product.model,
                     price: product.price,
                     discount: product.discount,
@@ -46,7 +46,7 @@ productDetail: (req, res) => {
         }
         res.json(respuesta);
     });
-},
+},  
 
 }
 

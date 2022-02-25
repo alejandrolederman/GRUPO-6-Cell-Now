@@ -40,7 +40,7 @@ module.exports = (sequelize, dataTypes) => {
     };
   
     let config = {
-      tableName: "sales",
+      tableName: "seles",
       timestamps: false,
     };
   
@@ -53,6 +53,8 @@ module.exports = (sequelize, dataTypes) => {
   
       });
       };
+
+    
 
     return Sale;
   };

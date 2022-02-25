@@ -6,4 +6,6 @@ const marksAPIController = require('../../controller/api/marksAPIController');
 //Listado de clientes | /api/clientes
 router.get('/', marksAPIController.markList);
 
+router.get('/totalMarks', marksAPIController.totalMarks);
+
 module.exports = router;
