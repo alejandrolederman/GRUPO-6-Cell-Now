@@ -540,13 +540,6 @@ footer {
     padding: 30px;
     font-size: 12px;
 }
-
-.logo {
-    width: 100px;
-    margin-top: 10px;
-    padding-top: 60px;
-}
-
 i,
 a,
 .header-usuraio {
@@ -578,13 +571,13 @@ i {
     color: gray;
 }
 
-h2,
+/* h2,
 h2 a,
 li {
     text-align: center;
     color: gray;
     font-family: 'Roboto', sans-serif;
-}
+} */
 
 .product {
     color: grey;
@@ -666,14 +659,22 @@ header .form .submit {
     animation-timing-function: linear;
     animation-direction: alternate;
 }
-.swiper-wrapper{
-
-}
 
 .swiper-slide{
     width: 250px !important;
 }
+.swiper-wrapper{
+    display: flex;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+}
 .section-box {
+    position: relative;
+    width: 100%;
+}
+.swiper-container {
     margin: 0px;
     padding:0px;
     font-family:montserrat,sans-serif;
@@ -720,19 +721,20 @@ header .form .submit {
     line-height: 35px;
 }
 .price {
-    color:#ffffff;
-    background-color: #ff555b;
+    color:#000;
     line-height: 20px;
 }
 .cart {
     position: absolute;
     bottom: 0px;
     height: 45px;
-    background-color: #ff696e;
+    background-color:#ff523b ;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 30px;
+    margin: 3%;
 }
 .cart a {
     color: #FFFFFF;
@@ -746,10 +748,12 @@ header .form .submit {
 }
 .cart:hover {
     transform: scale(1.1);
-    background-color: #fe9048;
+    color: #fff;
+    background-color: #563434;
     box-shadow: 2px 2px 12px rgba(47,47,47,0.40);
     transition:all ase 0.1s;
 }
+
 /* HASTA ACA ES EL HEADER*/
 
 
@@ -1207,11 +1211,11 @@ button:hover::after {
     left: 0;
 }
 
-.button span {
+/* .button span {
     position: relative;
     z-index: 2;
     transition: .3s ease all;
-}
+} */
 
 .componente-logo {
     display: flex;
@@ -1499,4 +1503,135 @@ button:hover::after {
     div .menu-right-header i {
         size: 5px;
     }
+}
+
+ /* <!--HOME -->*/
+ .navbar{
+     display: flex;
+     align-items: center;
+ }
+ nav {
+    flex:1;
+    text-align: right;
+ }
+ nav ul {
+    display: inline-block;
+    list-style-type: none;
+ }
+ nav ul li {
+     display: inline-block;
+     margin-right: 20px;
+ }
+ a{
+     text-decoration: none;
+     color:#555;
+ }
+ p {
+     color: #555;
+ }
+ .conteiner {
+    max-width: 1300px;
+    margin:auto;
+    padding-left: 25px;
+    padding-right: 25px;
+ }
+ .row {
+     display: flex;
+     align-items: center;
+     flex-wrap: wrap;
+     justify-content: space-around;
+     padding-bottom: 80px;
+ }
+ .col-2{
+     flex-basis: 50%;
+     min-width: 300px;
+     padding-left: 15%;
+ }
+ .col-2 img {
+     max-width: 80%;
+     padding: 50px 0;
+ }
+ .col-2 h1 {
+     font-size: 50px;
+     line-height: 60px;
+     margin: 25px 0;
+ }
+ .btn {
+     display: inline-block;
+     background: #ff523b;
+     color: #fff;
+     padding: 8px 30px;
+     margin: 30px 0;
+     border-radius: 30px;
+     transition: 0.5s;
+ }
+ .btn:hover{
+    background: #563434;
+ }
+ .header-home .row{
+    margin-top: 70px;
+ }
+ .categories {
+     margin:70px 0;
+ }
+ .col-3{
+     flex-basis: 30%;
+     min-width: 250px;
+     margin-bottom: 30px;
+ }
+ .col-3 img{
+     width: 100%;
+ }
+ .small-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+    display: flex;
+ }
+ .col-4{
+     flex-basis: 25%;
+     padding: 10px;
+     min-width: 200px;
+     margin-bottom: 50px;
+ }
+ .col-4 img {
+     width: 100%;
+ }
+ div .rating {
+     padding-top: 3%;
+     color:#ff523b;
+ }
+ .caja-seccion{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    padding-bottom: 80px;
+    height: 350px;
+    width: 250px;
+    padding-top: 3%;
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border: 1px solid rgba(187,187,187,0.50);
+ }
+ .titulo {
+    color:#ff523b;
+    width: 90%;
+    top:50%;
+    left:40%;
+    font-size: 32px;
+    align-items: center;
+    display:flex;
+    position:relative;
+}
+.row:hover .col-4 img{
+    transform: scale(1.07);
+    transition: al ease 0.3s;
+    border-radius: 5px;
 }
