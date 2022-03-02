@@ -1,31 +1,64 @@
-<header>
-    <div class="conteiner">
-    <nav class="navbar">
-        <div class="logo";>
-            <a href="/"><img src="/img/logo/logo_small_icon_only.png " width="90px">
-                <h5>CELLNOW</h5>
-        </a></div> 
-            <nav class="barra-nav">
-                <% if(locals.userLogged) {%> 
-                <div><ul>
-                    <li><a href="/views/user/userProfile"><img class= fotoperfil src="/img/avatars/<%= locals.userLogged.avatar %> " alt=""></a></div>
-                    <li><a href="/views/user/userProfile"><i > <%= locals.userLogged.userName %> </i></a>
-                    <li><a href="/views/products/productsForm">Vender</a>
-                    <li><a href="/views/user/logout">Logout</a>
-                </ul>     
-                    <% if(locals.userLogged.usercategoryId === 6) {%>
-                <div>
-                    <a href="/views/user/usersList">Listar Usuarios </a>
-                </div>   
+<header class="header-login">
+    <nav class="main-header-top-bar">
+        <div class="coponente-logo";>
+            <a href="/"><img src="/img/logo/logo_small_icon_only.png " class="logo" width="50%">
+            <h5>CELLNOW.COM </h5>
+        </a>
+        </div> 
+                <div class="form">
+                    <input type="text" name="search" placeholder="Busca lo que quieras           " class="input">
+                </div>  
+                
+                <div class="menu-right-header">
+                    <!-- <i class="fas fa-user"></i> -->
+                    <% if(locals.userLogged) {%> 
+                        
+                    <div class="logged-right">
+                        
+                
+                        <div><a href="/views/user/userProfile"><img class= fotoperfil src="/img/avatars/<%= locals.userLogged.avatar %> " alt="" width=80px ></a></div>
+                        <a href="/views/user/userProfile"><i > <%= locals.userLogged.userName %> </i></a>
+                        <a href="/views/products/productsForm">Vender</a>
+                        <a href="/views/user/logout">Logout</a>
+                        
+                        <% if(locals.userLogged.usercategoryId === 6) {%>
+                        <div>
+                            <a href="/views/user/usersList">Listar Usuarios </a>
+                        </div>   
                         <% } %> 
-                </div>
+                    </div>
                     <% } else { %> 
-                    <div><ul>
-                    <li><a href="/views/user/login">Vender   </a>
-                    <li><a href="/views/user/login"><i>Login   </i></a>
-                    <li><a href="/views/user/formularioRegistro"><i class="header-usuraio">   Registrate   </i></a>
+                    <div class="Fonts-right">
+                        <a href="/views/user/login">Vender   </a>
+                        <a href="/views/user/login"><i>Login   </i></a>
+                        <a href="/views/user/formularioRegistro"><i class="header-usuraio">   Registrate   </i></a>
                         <% } %> 
-                    </div>      
-                </nav>   
-    </nav></div>
+                        <!-- <a href= "/trolley/carritoDeCompras"><i class="fas fa-shopping-cart" ></i></a> -->
+                    </div>
+                        <!-- <i class="far fa-question-circle"></i>  -->
+                       
+                        <!-- class="fas fa-users"> -->
+                
+                    <!-- <ul class="navbar-nav align-items-center">
+                       
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="dropUser" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                         
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="/user/profile">My profile</a>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <a class="dropdown-item" href="/user/logout">Logout</a>
+                                </ul>
+                            </li>
+                       
+                            <li class="nav-item"><a class="nav-link" href="/user/register">Register</a></li>
+                            <li class="nav-item"><a class="nav-link" href="/user/login">Login</a></li>
+                       
+                    </ul>
+                    -->
+
+                         
+            </div>    
+    </nav>
  </header>
