@@ -1,6 +1,8 @@
 const db = require("../../database/models");
 
 const marksAPIController ={
+
+
 markList: (req, res) => {
     db.Mark.findAll()
     .then(marks => {
@@ -15,6 +17,7 @@ markList: (req, res) => {
                 return {
                     id: mark.id,
                     name: mark.name
+                     
                 }
             })
         }
@@ -22,7 +25,7 @@ markList: (req, res) => {
         })
 },
 
-totalMarks: (req, res) => {
+totalMarks: async (req, res) => {
 
     let Samsung = 0;
     let iPhone = 0;
@@ -47,22 +50,34 @@ totalMarks: (req, res) => {
                 return OnePlus++;
         }
     }
-    db.Product.findAll({
-        include: [{association: "Mark"}]})
-    .then(products => {
-        console.log(products)
-        let respuesta = {
-            meta: {
-                status : 200,
-                total: products.length,
-                url: '/data/totalMarks'
-            },
-            data: products.map(product=>{
-            switchMark(product.Mark.name)
-            })
-        }
-            res.json({Samsung, iPhone, Huawei, Xiaomi, LG, OnePlus});
-        })
+
+let productos = await db.Product.findAll({
+    include: [{association: "Mark"}]})
+
+    console.log(productos)
+    let productosTotales = [];
+    
+       for (let i = 0; i < productos.length; i++){
+        let marca = productos[i].Mark.dataValues.name;
+        let contador = 0;
+        
+         contador = contador ++
+                
+        productosTotales.push({marca, contador})
+
+   }
+
+    
+    let respuesta = {
+        meta: {
+            status : 200,
+            total: productosTotales.length,
+            url: '/data/totalMarks'
+        },
+        data: productosTotales
+    }
+        res.json(respuesta);
+    
 }
 }
 
