@@ -8,7 +8,6 @@
 
 
 .slideshow-container {
-        max-width: 1000px;
         position: relative;
         margin: auto;
         padding-top: 20px;
@@ -1272,7 +1271,6 @@ button:hover::after {
     }
     .menu-right-header i {
         margin: 0 40px;
-        font-size: 40px;
     }
     .main-header-top-bar {
         width: 100%;
