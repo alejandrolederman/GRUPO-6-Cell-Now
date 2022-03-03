@@ -534,35 +534,57 @@ a,
     color: gray;
 }
 
-.registrate-usuraio {
-    text-decoration: none;
-    color: green;
-    font-size: 30px;
-
-}
-
-.logueate-usuraio {
-    text-decoration: none;
-    color: blue;
-    font-size: 30px;
-
-}
-
+/* button */
+button {
+    display: inline-block;
+    border-radius: 4px;
+    background: rgb(74, 74, 209);
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 15px;
+    padding: 15px;
+    width: 130px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+   }
+   
+   button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+   }
+   
+   button span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+   }
 
 /* HASTA ACA ES EL BODY Y TODO LO GENERAL*/
 
 
 /* DESDE ACA ES EL HEDER, HUBICACION DEL LOGO, LA BARRA DE BUSQUEDA, REGISTRO DE USUARIO, CARRITO Y ICONO DE AYUDA*/
-
+.logueate-usuraio{
+    color: white;
+}
 i {
     color: gray;
+}
+h2 .titulo-detail {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30%;
 }
 
 h2,
 h2 a,
 li {
     text-align: center;
-    color: gray;
+    color: rgb(31, 30, 30);
     font-family: 'Roboto', sans-serif;
 }
 
