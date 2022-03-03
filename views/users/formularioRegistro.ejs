@@ -2,7 +2,6 @@
 <html lang="en">
 <%- include('../partials/head')%>
 
-
 <body>
     
     <main class="body-register" >
@@ -11,7 +10,6 @@
         
         <form action="/views/user/formularioRegistro" method="POST" enctype="multipart/form-data" id="form" class="caja-registro">
             
-
             <div class="form">
                 <h1 class="registro">REGISTRATE</h1>
                 <div class="grupo">
@@ -40,7 +38,7 @@
                             <p class="errorEpress">
                                 <%= errors.last_name.msg %>
                             </p>
-                            <% } %>
+                        <% } %>
                     </div>
                 </div>
                 <div class="grupo">
@@ -54,7 +52,7 @@
                             <p class="errorEpress">
                                 <%= errors.user_name.msg %>
                             </p>
-                            <% } %>
+                        <% } %>
                     </div>
                 </div>
                 <div class="grupo">
@@ -62,7 +60,7 @@
                         value="<%= locals.old && old.email ? old.email : ""  %>" class="input-register">
                         <span class="barra-register"></span>
                         <p class="errorFront" id="errorEmail"></p>
-                    <label class="label-register" for="">Email</label>
+                        <label class="label-register" for="">Email</label>
                     <div>
                         <%if(locals.errors && errors.email) { %>
                             <p class="errorEpress">
