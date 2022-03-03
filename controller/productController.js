@@ -55,6 +55,7 @@ const productController = {
             unlocking: req.body.unlocking,
             image: req.file.filename
         })
+        
         res.redirect("/");
     },
 //////////////////////////////////////////////////////////////////////////////
