@@ -225,6 +225,15 @@ const userController = {
     home: (req, res) => {
         res.render("home");
     },
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    dashboard: (req, res) => {
+        let id = req.session.userLogged.id
+        res.redirect('http://localhost:3000/'+id)
+    
+      },
 }
 
 module.exports = userController;

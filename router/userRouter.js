@@ -40,6 +40,8 @@ router.post('/formularioRegistro', uploadFile.single('avatar'),validationRecord,
 // ruta del login al  home
 router.post('/', userController.home);
 
+router.get('/dashboard', userController.dashboard);
+
 router.get('/selecBuyOrSell', userController.selecBuyOrSell)
 
 module.exports = router;
